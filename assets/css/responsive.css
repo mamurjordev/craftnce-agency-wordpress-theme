@@ -1,0 +1,21 @@
+@media only screen and (max-width: 575px) {
+    
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    
+}
+@media only screen and (min-width: 768px) and (max-width: 990px) {
+    .hero-h {
+        min-height: 80vh;
+    }
+}
+@media only screen and (min-width: 991px) and (max-width: 1199px) {
+    
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+    
+}
+
+@media only screen and (min-width: 1400px) {
+    
+}

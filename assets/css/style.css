@@ -1,0 +1,83 @@
+:root {
+    --primary-color: #007FE6;
+    --secondary-color: rgba(215, 233, 247, 0.46);
+
+    --primary-font: 'Inter', sans-serif;;
+    --para-font: ;
+
+}
+
+/* Basic Typography */
+body {
+    font-family: var(--primary-font);
+}
+.text-xsm {
+    font-size: 12px;
+    line-height: 16px;
+}
+.text-sm {
+    font-size: 14px;
+    line-height: 16px;
+}
+.text-md {
+    font-size: 16px;
+    line-height: 20px;
+}
+
+/* Bootstrap Class Override */
+.text-primary {
+    color: var(--primary-color) !important;
+}
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+.bg-secondary {
+    background-color: var(--secondary-color) !important;
+}
+.btn-primary {
+    background-color: var(--primary-color)
+}
+.btn-outline-primary {
+	color: var(--primary-color);
+	border-color: var(--primary-color);
+}
+.btn-outline-primary:hover {
+	background-color: var(--primary-color);
+	border-color: var(--primary-color);
+}
+.btn-check:focus + .btn-outline-primary,
+.btn-outline-primary:focus,
+.btn-primary:focus {
+	box-shadow: none;
+}
+.form-control:focus, .form-check:focus {
+    box-shadow: none;
+}
+.nav-link {
+    font-weight: 500;
+    color: #000 !important;
+}
+.nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+/* Header Section */
+.navbar-brand img {
+    width: 140px;
+}
+
+.navbar-toggler {
+	border: none;
+}
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+.home-hero {
+    background: var(--secondary-color);
+}
+
+.home-hero-title {
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 96.82px;
+}
