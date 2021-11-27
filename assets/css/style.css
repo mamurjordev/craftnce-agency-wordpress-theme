@@ -165,11 +165,6 @@ body {
 .accordion-button, .accordion-body {
     background: rgba(215, 233, 247, 0.46);
 }
-
-.accordion-button:not(.collapsed)::after {
-	background-image: none;
-}
-
 .accordion-button:focus {
 	box-shadow: none;
 }
@@ -179,4 +174,18 @@ body {
 .accordion-button:not(.collapsed) {
 	color: #0c63e4;
 	background-color: rgba(215, 233, 247, 0.46);
+}
+.accordion-item {
+    margin-top: 10px;
+}
+
+.news-letter {
+    background: url('../img/newsletter-bg.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.newsletter-overlay {
+    background: rgba(23, 45, 62, 0.7);
 }
