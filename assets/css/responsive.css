@@ -6,11 +6,27 @@
     .info-title {
         font-size: 33px;
     }
+    .testimonial-thumb img {
+        width: 50px;
+        margin: auto;
+    }
+    
+    .testimonial-thumb.slick-current img {
+        width: 70px;
+    }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
     .home-hero-title {
         font-size: 55px;
         line-height: 60px;
+    }
+    .testimonial-thumb img {
+        width: 50px;
+        margin: auto;
+    }
+    
+    .testimonial-thumb.slick-current img {
+        width: 70px;
     }
 }
 @media only screen and (min-width: 768px) and (max-width: 990px) {
