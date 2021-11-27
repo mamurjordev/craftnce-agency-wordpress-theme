@@ -47,6 +47,9 @@ body {
 .fs-72 {
     font-size: 72px;
 }
+.w-max {
+    width: max-content;
+}
 /* Bootstrap Class Override */
 .text-primary {
     color: var(--primary-color) !important;
@@ -132,4 +135,57 @@ body {
 }
 .counter-section-subtitle {
     color: var(--orange-color);
+}
+
+.testimonial-thumb img {
+	width: 70px;
+    margin: auto;
+}
+
+.testimonial-thumb.slick-current img {
+    width: 100px;
+}
+
+.slick-slider .slick-track, .slick-slider .slick-list {
+	-webkit-transform: translate3d(0, 0, 0);
+	-moz-transform: translate3d(0, 0, 0);
+	-ms-transform: translate3d(0, 0, 0);
+	-o-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+
+.rating img {
+    width: 25px;
+}
+
+.infography-section {
+    background: #082032;
+}
+
+.accordion-button, .accordion-body {
+    background: rgba(215, 233, 247, 0.46);
+}
+.accordion-button:focus {
+	box-shadow: none;
+}
+.accordion-button:not(.collapsed) {
+	color: #000;
+}
+.accordion-button:not(.collapsed) {
+	color: #0c63e4;
+	background-color: rgba(215, 233, 247, 0.46);
+}
+.accordion-item {
+    margin-top: 10px;
+}
+
+.news-letter {
+    background: url('../img/newsletter-bg.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.newsletter-overlay {
+    background: rgba(23, 45, 62, 0.7);
 }
