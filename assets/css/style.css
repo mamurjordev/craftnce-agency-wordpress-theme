@@ -1,10 +1,10 @@
 :root {
     --primary-color: #007FE6;
     --secondary-color: rgba(215, 233, 247, 0.46);
+    --orange-color: #FFC700;
 
-    --primary-font: 'Inter', sans-serif;;
-    --para-font: ;
-
+    --primary-font: 'Inter', sans-serif;
+    --main-shadow: 20px 20px 100px 40px rgba(73, 103, 255, 0.07);
 }
 
 /* Basic Typography */
@@ -23,7 +23,30 @@ body {
     font-size: 16px;
     line-height: 20px;
 }
-
+.text-xl {
+    font-size: 48px;
+    line-height: 55px;
+}
+.py-50 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.my-50 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.text-warning {
+    color: var(--orange-color) !important;
+}
+.fw-900 {
+    font-weight: 900;
+}
+.fs-48 {
+    font-size: 48px;
+}
+.fs-72 {
+    font-size: 72px;
+}
 /* Bootstrap Class Override */
 .text-primary {
     color: var(--primary-color) !important;
@@ -65,7 +88,6 @@ body {
 .navbar-brand img {
     width: 140px;
 }
-
 .navbar-toggler {
 	border: none;
 }
@@ -80,4 +102,34 @@ body {
     font-size: 72px;
     font-weight: 900;
     line-height: 96.82px;
+}
+.info-title {
+    font-size: 48px;
+    font-weight: 900;
+}
+.features-box h5 {
+    font-weight: 600;
+}
+
+.info-sec-p {
+    line-height: 25px;
+}
+.card.service {
+    box-shadow: var(--main-shadow);
+}
+.card.service img {
+    width: 40px;
+}
+
+.counter {
+    background: url('../img/counter-bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.counter-overlay {
+    background: rgba(8, 32, 50, 0.87);
+}
+.counter-section-subtitle {
+    color: var(--orange-color);
 }
