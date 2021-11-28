@@ -237,3 +237,7 @@ body {
     background-color: #fff;
     border-radius: 100%;
 }
+
+.breadcrumb a {
+    text-decoration: none;
+}
