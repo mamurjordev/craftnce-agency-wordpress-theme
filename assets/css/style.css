@@ -189,3 +189,9 @@ body {
 .newsletter-overlay {
     background: rgba(23, 45, 62, 0.7);
 }
+
+.left_bar {
+    width: 4px;
+    height: 16px;
+    background-color: var(--primary-color);
+}
