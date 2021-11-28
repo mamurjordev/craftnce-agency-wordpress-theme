@@ -237,7 +237,18 @@ body {
     background-color: #fff;
     border-radius: 100%;
 }
-
 .breadcrumb a {
     text-decoration: none;
+}
+.me-2point5 {
+    margin-right: 12px;
+}
+.slick-track {
+	display: flex;
+	align-items: center;
+}
+
+.testimonial-thumb .slick-active:nth-child(2) img, .testimonial-thumb .slick-active:nth-child(4) img {
+    width: 100px !important;
+    height: 100px !important;
 }
