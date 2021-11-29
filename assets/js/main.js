@@ -28,11 +28,14 @@ $(document).ready(function () {
 	});
 
 	$(".brand").slick({
-		dots: true,
-		infinite: false,
-		speed: 300,
+		dots: false,
+		autoplay: true,
+		autoplaySpeed: 2500,
+		infinite: true,
 		slidesToShow: 6,
 		slidesToScroll: 2,
+		nextArrow: '',
+		prevArrow: '',
 		responsive: [
 			{
 				breakpoint: 1324,
