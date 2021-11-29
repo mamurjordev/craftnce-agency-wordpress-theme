@@ -252,3 +252,24 @@ body {
     width: 100px !important;
     height: 100px !important;
 }
+
+.info2_bg-light {
+    background-color: #fff !important;
+}
+
+.info2_border {
+    border-radius: 20px;
+}
+
+.info-2-icons {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 100%;
+    box-shadow: 1px 25px 42px 0 rgba(0,0,0,.23);
+}
+
+.award-text-whidth {
+    width: 230px;
+}
