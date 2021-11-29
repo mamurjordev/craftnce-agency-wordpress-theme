@@ -273,3 +273,18 @@ body {
 .award-text-whidth {
     width: 230px;
 }
+
+.progress-item {
+    margin: 20px 0;
+}
+.progress-item:first-child {
+    margin-top: 0;
+}
+
+.improve-the-stability {
+    background-color: #FBFBFB;
+}
+
+.progress-bar-h {
+    min-height: 600px;
+}
