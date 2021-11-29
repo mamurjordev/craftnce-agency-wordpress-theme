@@ -77,7 +77,7 @@ $('#video').on('show.bs.modal', function (e) {
 	$(e.relatedTarget).data('id');
 	$('#video .modal-body').html('<iframe class="video-info" src="https://www.youtube.com/embed/8evDJtPFTp0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
 });
-//on close remove
-	$('#video').on('hidden.bs.modal', function () {
-		$('#video .modal-body').empty();
+
+$('#video').on('hidden.bs.modal', function () {
+	$('#video .modal-body').empty();
 });
