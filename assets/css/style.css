@@ -292,7 +292,7 @@ body {
 .team-member-card {
     height: 400px;
     border-radius: 7px;
-    box-shadow: 0px 5px 11px rgba(0, 0, 0, 0.25);
+    box-shadow: 1px 25px 42px 0 rgba(0,0,0,.23);
 }
 
 .team-social a i {
@@ -348,4 +348,49 @@ body {
 }
 .team-member-card:hover .team-social-container {
     transform: translateY(0);
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active, .nav-tabs .nav-link:hover {
+	border-color: transparent;
+}
+.nav-tabs {
+	border-bottom: none;
+}
+.nav-tabs .nav-link.active {
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.service-2nd-sec-item-img {
+	width: 70px;
+	height: 70px;
+}
+
+.service-video-info {
+    background: var(--secondary-color);
+    clip-path: ellipse(100% 55% at 48% 44%);
+}
+
+.video-btn {
+	width: 100px;
+	height: 100px;
+	line-height: 80px;
+	transform: translate(-50%,-50%);
+}
+.video-btn svg {
+    width: 50px;
+    height: 50px;
+    fill: #fff;
+}
+
+.video-feed {
+    margin-top: -220px;
+}
+
+.modal-dialog {
+	max-width: 1000px;
+}
+
+.video-info {
+    width: 100%;
+    height: 500px;
 }
