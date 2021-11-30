@@ -17,7 +17,7 @@
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <!-- Feather Light -->
     <link href="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.css" type="text/css" rel="stylesheet" />
@@ -86,7 +86,7 @@
 
     <div class="container py-5">
         <div class="col-md-8">
-            <img src="assets/img/single-portfolio.png" alt="">
+            <img src="assets/img/single-portfolio.png" class="img-fluid" alt="">
 
             <h2 class="my-4">Lorem ipsum dolor sit amet consectetur.</h2>
             
@@ -125,15 +125,65 @@
                 </div>
             </div>
 
-            <div>
-                
+            <div class="">
+                <h4 class="mt-4 mb-3">Project Timeline -</h4>
+
+                <div class="project-timeline">
+                    <div class="d-flex">
+                        <img src="assets/img/icons/timeline-circle.png" class="h-fit-content align-self-center me-4" alt="">
+                        <div class="fork-box d-flex text-xsm text-muted border rounded-pill px-3 w-max">
+                            <i class="fas fa-code-branch me-2 align-self-center"></i>
+                            <p class="align-self-center font-inconsolata m-0">Tamplating</p>
+                        </div>
+                    </div>
+
+                    <div class="project-timeline-wrapper position-relative">
+                        <img src="assets/img/icons/timeline-code.png" class="code-icon position-absolute mt-5 bg-light py-1" alt="">
+                        <ul class="list-unstyled main-wrapper">
+                            <li class="project-timeline-item">
+                                <ul class="child-wrapper">
+                                    <li>
+                                        <h4 class="font-inconsolata">Project Initialize, Template Ready and Project Board Initialize</h4>
+                                        <div class="fork-box d-flex text-xsm text-muted border rounded-pill px-3 w-max">
+                                            <i class="fas fa-code-branch me-2 align-self-center"></i>
+                                            <p class="align-self-center font-inconsolata m-0">Tamplating</p>
+                                        </div>
+                                        <p class="text-sm lh-base lead mt-2">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sit nam laboriosam magni, eius corrupti aperiam nemo nisi molestiae nostrum soluta. Aspernatur atque fuga enim facere incidunt dolorem praesentium provident!
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <h4 class="font-inconsolata">Project Initialize, Template Ready and Project Board Initialize</h4>
+                                        <div class="fork-box d-flex text-xsm text-muted border rounded-pill px-3 w-max">
+                                            <i class="fas fa-code-branch me-2 align-self-center"></i>
+                                            <p class="align-self-center font-inconsolata m-0">Tamplating</p>
+                                        </div>
+                                        <p class="text-sm lh-base lead mt-2">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sit nam laboriosam magni, eius corrupti aperiam nemo nisi molestiae nostrum soluta. Aspernatur atque fuga enim facere incidunt dolorem praesentium provident!
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <h4 class="font-inconsolata">Project Initialize, Template Ready and Project Board Initialize</h4>
+                                        <div class="fork-box d-flex text-xsm text-muted border rounded-pill px-3 w-max">
+                                            <i class="fas fa-code-branch me-2 align-self-center"></i>
+                                            <p class="align-self-center font-inconsolata m-0">Tamplating</p>
+                                        </div>
+                                        <p class="text-sm lh-base lead mt-2">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sit nam laboriosam magni, eius corrupti aperiam nemo nisi molestiae nostrum soluta. Aspernatur atque fuga enim facere incidunt dolorem praesentium provident!
+                                        </p>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="col-md-4"></div>
     </div>
 
     <!-- Portfolio Gallery -->
-    <section>
+    <section class="mt-5">
         <div class="container py-5">
             <h2 class="fw-900">Recent Project</h2>
             <div class="portfolio-filter row align-items-center py-5 mb-5 py-lg-0">
