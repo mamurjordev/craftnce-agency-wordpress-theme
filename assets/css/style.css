@@ -73,7 +73,7 @@ body {
 }
 .btn-check:focus + .btn-outline-primary,
 .btn-outline-primary:focus,
-.btn-primary:focus {
+.btn-primary:focus, .btn-light:focus {
 	box-shadow: none;
 }
 .form-control:focus, .form-check:focus {
@@ -85,6 +85,10 @@ body {
 }
 .nav-link.active {
     color: var(--primary-color) !important;
+}
+.btn-check:focus + .btn, .btn:focus {
+	outline: 0;
+	box-shadow: none;
 }
 
 /* Header Section */
@@ -393,4 +397,27 @@ body {
 .video-info {
     width: 100%;
     height: 500px;
+}
+
+.filter-active {
+    background: var(--primary-color);
+    color: #fff;
+}
+.filter-active:hover {
+    color: #fff;
+}
+.bg-portfolio {
+    background: rgba(23, 45, 62, 0.7);
+}
+
+.portfolio-overflow {
+    transform: scale(0);
+    transition: .5s;
+}
+
+.portfo-box:hover .portfolio-overflow {
+    transform: scale(1);
+}
+.portfolio-card {
+    height: 275px;
 }

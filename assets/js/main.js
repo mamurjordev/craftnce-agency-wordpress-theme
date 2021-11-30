@@ -71,6 +71,22 @@ $(document).ready(function () {
 			},
 		],
 	});
+
+	// Portfolio Filter
+	$('.filter-btn').click(function () {
+		const data_attr = $(this).attr('data-filter');
+
+		if (data_attr == 'all') {
+			$('.portfo-box').show('1000')
+		} else {
+			$('.portfo-box').not('.'+data_attr).hide('1000');
+			$('.portfo-box').filter('.'+data_attr).show('1000');
+		}
+	});
+
+	$('.filter-btn').click(function () {
+		$(this).addClass('filter-active').siblings().removeClass('filter-active');
+	});
 });
 
 $('#video').on('show.bs.modal', function (e) {
