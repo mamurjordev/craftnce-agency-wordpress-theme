@@ -2,6 +2,8 @@
     --primary-color: #007FE6;
     --secondary-color: rgba(215, 233, 247, 0.46);
     --orange-color: #FFC700;
+    --primary-gray: #dedede;
+    --font-inconsolata: 'Inconsolata', monospace;
 
     --primary-font: 'Inter', sans-serif;
     --main-shadow: 20px 20px 100px 40px rgba(73, 103, 255, 0.07);
@@ -49,6 +51,12 @@ body {
 }
 .w-max {
     width: max-content;
+}
+.text-gray {
+    color: var(--primary-gray) !important;
+}
+.font-inconsolata {
+    font-family: var(--font-inconsolata);
 }
 /* Bootstrap Class Override */
 .text-primary {
@@ -452,4 +460,55 @@ body {
     position: absolute;
     width: 0;
     height: 0;
+}
+
+/* Project Timeline */
+.project-timeline-wrapper .main-wrapper {
+    border-left: 2px solid var(--primary-gray);
+    margin-left: 7px;
+    margin-top: -2px;
+    padding-top: 100px;
+}
+.project-timeline-wrapper  .code-icon {
+    width: 20px;
+    margin-left: -3px;
+}
+.fork-box {
+    padding: 3px 0;
+}
+
+.project-timeline-item:last-child {
+    padding-bottom: 0px;
+}
+.h-fit-content {
+    height: fit-content;
+}
+
+.project-timeline-wrapper .child-wrapper {
+    position: relative;
+}
+.project-timeline-wrapper .child-wrapper::before {
+    content: url('../img/icons/timeline-curve-line.png');
+    position: absolute;
+    left: -1px;
+    top: -29px;
+}
+.project-timeline-wrapper .child-wrapper::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: var(--primary-gray);
+    left: 62px;
+    top: 101px;
+    z-index: -1;
+}
+.project-timeline-item .child-wrapper li {
+    margin: 0px 0 0 50px;
+    padding-top: 82px;
+    list-style-type: circle;
+}
+.project-timeline-item .child-wrapper li::marker {
+    font-size: 25px;
+    background-color: #fff;
 }
