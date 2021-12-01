@@ -42,8 +42,6 @@ $(document).ready(function () {
 				settings: {
 					slidesToShow: 4,
 					slidesToScroll: 2,
-					infinite: true,
-					dots: true,
 				},
 			},
 			{
@@ -51,8 +49,6 @@ $(document).ready(function () {
 				settings: {
 					slidesToShow: 3,
 					slidesToScroll: 3,
-					infinite: true,
-					dots: true,
 				},
 			},
 			{
@@ -96,4 +92,9 @@ $('#video').on('show.bs.modal', function (e) {
 
 $('#video').on('hidden.bs.modal', function () {
 	$('#video .modal-body').empty();
+});
+
+// AOS Init
+AOS.init({
+	duration: 1000,
 });
