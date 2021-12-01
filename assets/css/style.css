@@ -98,6 +98,9 @@ body {
 	outline: 0;
 	box-shadow: none;
 }
+.sticky-top {
+    top: 2.5em;
+}
 
 /* Header Section */
 .navbar-brand img {
@@ -511,4 +514,8 @@ body {
 .project-timeline-item .child-wrapper li::marker {
     font-size: 25px;
     background-color: #fff;
+}
+
+.sidebar-top, .sidebar-category, .sidebar-tag {
+    background-color: var(--secondary-color);
 }
