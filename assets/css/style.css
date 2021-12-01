@@ -504,7 +504,7 @@ body {
     z-index: -1;
 }
 .project-timeline-item .child-wrapper li {
-    margin: 0px 0 0 50px;
+    margin: 0px 0 0 48px;
     padding-top: 82px;
     list-style-type: circle;
 }
