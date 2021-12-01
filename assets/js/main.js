@@ -95,4 +95,6 @@ $('#video').on('hidden.bs.modal', function () {
 });
 
 // AOS Init
-AOS.init();
+AOS.init({
+	duration: 1000,
+});
