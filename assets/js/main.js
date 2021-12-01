@@ -93,3 +93,6 @@ $('#video').on('show.bs.modal', function (e) {
 $('#video').on('hidden.bs.modal', function () {
 	$('#video .modal-body').empty();
 });
+
+// AOS Init
+AOS.init();
