@@ -11,7 +11,7 @@
 
 /* Basic Typography */
 body {
-    font-family: var(--primary-font);
+    font-family: var(--primary-font) !important;
 }
 .text-xsm {
     font-size: 12px;
@@ -306,7 +306,7 @@ body {
 }
 
 .team-member-card {
-    height: 400px;
+    height: 330px;
     border-radius: 7px;
     box-shadow: 1px 25px 42px 0 rgba(0,0,0,.23);
 }
@@ -324,7 +324,7 @@ body {
 .team-avatar-img {
 	width: 120px;
 	height: 120px;
-	margin-top: 70px;
+	margin-top: 65px;
 }
 
 .team-member-card .team-avatar::before {
@@ -350,7 +350,7 @@ body {
 }
 
 .team-avatar img {
-    transition: all 0.9s ease 0s;
+    transition: all 0.4s ease 0s;
 }
 .team-member-card:hover .team-avatar-img {
     box-shadow: 0 0 0 7px var(--primary-color);
