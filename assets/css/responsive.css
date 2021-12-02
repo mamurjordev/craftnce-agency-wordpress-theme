@@ -3,7 +3,9 @@
         font-size: 35px;
         line-height: 50px;
     }
-    .info-title {
+    .info-title,
+    .text-xl,
+    .fs-48 {
         font-size: 33px;
     }
     .testimonial-thumb img {
@@ -43,6 +45,12 @@
         font-size: 45px;
         line-height: 60px;
     }
+    .about-info2-inner-box {
+        position: absolute;
+    }
+    .me-2point5 {
+        margin-right: 12px;
+    }
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
     .hero-h {
@@ -55,6 +63,12 @@
     .features-box {
         width: 300px;
     }
+    .about-info2-inner-box {
+        position: absolute;
+    }
+    .me-2point5 {
+        margin-right: 12px;
+    }
 }
 
 @media only screen and (min-width: 1400px) {
@@ -63,5 +77,11 @@
     }
     .features-box {
         width: 300px;
+    }
+    .about-info2-inner-box {
+        position: absolute;
+    }
+    .me-2point5 {
+        margin-right: 12px;
     }
 }
