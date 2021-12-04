@@ -12,6 +12,19 @@
         add_theme_support('custom-header');
         add_theme_support('custom-logo');
         add_theme_support('custom-background');
+
+        add_theme_support(
+			'html5',
+			array(
+				'comment-form',
+				'comment-list',
+				'gallery',
+				'caption',
+				'style',
+				'script',
+				'navigation-widgets',
+			)
+		);
     }
     add_action('after_setup_theme', 'craftnce_theme_setup');
 
