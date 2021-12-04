@@ -3,8 +3,8 @@
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <?php bloginfo( 'title-tag' ); ?>
+
+    <title><?php bloginfo( 'title-tag' ); ?></title>
     <?php wp_head(); ?>
 </head>
 <body class="<?php body_class(); ?>">
@@ -39,6 +39,14 @@
                             <a class="nav-link" href="#">Blog</a>
                         </li>
                     </ul>
+                    <?php
+                        // wp_nav_menu(array(
+                        //     'theme_location'            =>  'primary-menu',
+                        //     'menu_class'                =>  'navbar-nav ms-auto mb-2 mb-lg-0 text-sm',
+                        //     'menu_id'                   =>  'primary-menu',
+                        //     'menu-container'            =>  'ul'
+                        // ));
+                    ?>
                     <a href="#!" class="btn btn-primary rounded-pill text-sm">Contact Us</a>
                 </div>
             </div>

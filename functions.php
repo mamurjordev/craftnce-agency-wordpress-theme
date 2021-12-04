@@ -25,6 +25,10 @@
 				'navigation-widgets',
 			)
 		);
+
+        register_nav_menus(array(
+            'primary-menu'              =>  __('Primary Menu', 'craftnce'),
+        ));
     }
     add_action('after_setup_theme', 'craftnce_theme_setup');
 
