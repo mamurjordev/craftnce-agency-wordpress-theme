@@ -1,7 +1,13 @@
 <div class="breadcrumb bg-secondary py-4">
     <div class="container">
         <div class="d-flex justify-content-between">
+            <?php
+                if(!is_single()) {
+            ?>
             <h3 class="mb-0 align-self-center fw-900"><?php the_title(); ?></h3>
+            <?php
+                }
+            ?>
             <?php echo get_the_breadcrumb(); ?>
         </div>
     </div>

@@ -84,10 +84,10 @@
             echo 'Home';
             echo '</a></li>';
             if (is_category() || is_single()) {
-                echo '<li>';
+                echo '<li class="breadcrumb-item">';
                 the_category(' </li><li class="breadcrumb-item active"> / </li><li> ');
                 if (is_single()) {
-                    echo '</li><li class="breadcrumb-item active"> / </li><li>';
+                    echo '</li><li class="text-muted mx-2"> / </li><li class="breadcrumb-item active">';
                     the_title();
                     echo '</li>';
                 }
@@ -114,3 +114,9 @@
         elseif (is_search()) {echo'<li class="breadcrumb-item active">Search Results'; echo'</li>';}
         echo '</ol>';
     }
+
+    // Excerpt wrap by char limit
+    function excerpt_char_limit($e){
+		return substr($e,0,200);
+	}
+	add_filter('get_the_excerpt','excerpt_char_limit');

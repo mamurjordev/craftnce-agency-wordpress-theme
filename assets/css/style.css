@@ -567,3 +567,8 @@ body {
 	background-size: 1.25rem;
 	transition: transform .2s ease-in-out;
 }
+
+.single-post-cat a {
+    text-decoration: none;
+    color: #000;
+}

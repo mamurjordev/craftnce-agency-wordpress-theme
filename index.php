@@ -31,7 +31,7 @@
                         <div>
                             <h4 class="fw-bold my-3"><?php the_title(); ?></h4>
                             <p class="text-sm m-0 lh-base excerpt">
-                                <?php the_excerpt(); ?>
+                                <?php get_the_excerpt(); ?>
                             </p>
                         </div>
 

@@ -1,30 +1,18 @@
 <?php
     get_header();
+    the_post();
 ?>
 <?php get_template_part('template-parts/common/breadcrumb'); ?>
-
 <div class="container my-4 my-md-5">
     <div class="row">
         <div class="col-xl-8">
             <div class="row">
                 <div class="col">
-                    <?php
-                        if(has_post_thumbnail()) {
-                            the_post_thumbnail('large',array('class'=>'img-fluid w-100'));
-                        }
-                    ?>
+                    <img src="assets/img/wordpress-552922_1280.jpg" class="img-fluid w-100 rounded-3" alt="">
                     <div class="d-flex mb-2 text-muted mt-4">
                         <p class="m-0"><?php echo get_the_date(); ?></p>
                         <span class="mx-2 align-self-center text-primary fs-4 lh-1">•</span>
-                        <p class="m-0 single-post-cat">
-                            <?php
-                                $category = get_the_category();
-                                if(!empty($category)) {
-                                    $firstCategory = $category[0]->cat_name;
-                                    echo $firstCategory;
-                                }
-                            ?>
-                        </p>
+                        <p class="m-0"><?php the_category(); ?></p>
                     </div>
                     <h2 class="mb-4"><?php the_title(); ?></h2>
                     
@@ -101,7 +89,7 @@
                 <div class="sidebar-top rounded-3 p-4">
                     <h4 class="mb-1">Popular Posts</h4>
                     <a href="single-blog.html" class="text-decoration-none d-flex mt-3">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/recent-posts.png" class="img-fluid recent-post-thumb me-2" alt="">
+                        <img src="assets/img/recent-posts.png" class="img-fluid recent-post-thumb me-2" alt="">
                         <div>
                             <h5 class="text-dark">Moody’s was founded by John</h5>
                             <div class="mt-2 d-flex mb-2 text-muted">
@@ -113,7 +101,7 @@
                     </a>
 
                     <a href="single-blog.html" class="text-decoration-none d-flex mt-3">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/recent-posts.png" class="img-fluid recent-post-thumb me-2" alt="">
+                        <img src="assets/img/recent-posts.png" class="img-fluid recent-post-thumb me-2" alt="">
                         <div>
                             <h5 class="text-dark">Moody’s was founded by John</h5>
                             <div class="mt-2 d-flex mb-2 text-muted">
@@ -125,7 +113,7 @@
                     </a>
 
                     <a href="single-blog.html" class="text-decoration-none d-flex mt-3">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/recent-posts.png" class="img-fluid recent-post-thumb me-2" alt="">
+                        <img src="assets/img/recent-posts.png" class="img-fluid recent-post-thumb me-2" alt="">
                         <div>
                             <h5 class="text-dark">Moody’s was founded by John</h5>
                             <div class="mt-2 d-flex mb-2 text-muted">
@@ -137,7 +125,7 @@
                     </a>
 
                     <a href="single-blog.html" class="text-decoration-none d-flex mt-3">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/recent-posts.png" class="img-fluid recent-post-thumb me-2" alt="">
+                        <img src="assets/img/recent-posts.png" class="img-fluid recent-post-thumb me-2" alt="">
                         <div>
                             <h5 class="text-dark">Moody’s was founded by John</h5>
                             <div class="mt-2 d-flex mb-2 text-muted">
@@ -149,7 +137,7 @@
                     </a>
 
                     <a href="single-blog.html" class="text-decoration-none d-flex mt-3">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/recent-posts.png" class="img-fluid recent-post-thumb me-2" alt="">
+                        <img src="assets/img/recent-posts.png" class="img-fluid recent-post-thumb me-2" alt="">
                         <div>
                             <h5 class="text-dark">Moody’s was founded by John</h5>
                             <div class="mt-2 d-flex mb-2 text-muted">
