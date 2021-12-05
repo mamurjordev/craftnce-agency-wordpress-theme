@@ -21,31 +21,17 @@
                         <span class="navbar-toggler-icon"></span>
                 </button>
     
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-sm">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">About Us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact Us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Blog</a>
-                        </li>
-                    </ul>
+                <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
                     <?php
-                        // wp_nav_menu(array(
-                        //     'theme_location'            =>  'primary-menu',
-                        //     'menu_class'                =>  'navbar-nav ms-auto mb-2 mb-lg-0 text-sm',
-                        //     'menu_id'                   =>  'primary-menu',
-                        //     'menu-container'            =>  'ul'
-                        // ));
+                        wp_nav_menu(array(
+                            'theme_location'            =>  'primary-menu',
+                            'menu_class'                =>  '',
+                            'menu-container'            =>  'false',
+                            'fallback_cb' => '__return_false',
+                            'items_wrap' => '<ul id="%1$s" class="navbar-nav ms-auto mb-2 mb-lg-0 text-sm %2$s">%3$s</ul>',
+                            'depth' => 2,
+                            'walker' => new bootstrap_5_wp_nav_menu_walker(),
+                        ));
                     ?>
                     <a href="#!" class="btn btn-primary rounded-pill text-sm">Contact Us</a>
                 </div>
