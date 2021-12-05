@@ -118,7 +118,7 @@
                 <h2 class="fs-48 fw-900">Trusted over 100+ companies</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum asperiores labore tenetur?</p>
             </div>
-            <div class="brand my-5">
+            <div class="brand my-5 d-flex justify-content-between flex-wrap align-items-center align-content-center">
                 <div>
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/brand-01.png" alt="">
                 </div>
@@ -139,9 +139,6 @@
                 </div>
                 <div>
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/brand-06.png" alt="">
-                </div>
-                <div>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/brand-02.png" alt="">
                 </div>
             </div>
         </div>
