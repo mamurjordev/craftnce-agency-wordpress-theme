@@ -4,16 +4,16 @@
 
     <?php get_template_part('template-parts/common/breadcrumb'); ?>
 
-    <!-- Portfolio Gallery -->
+    <!-- Blog -->
     <section class="pb-5">
         <div class="container py-5">
             <div class="row text-center pb-5">
                 <div class="col-md-7 mx-auto">
-                    <h6 class="fw-bold fs-6 text-uppercase text-primary"><?php _e('Recent blog', 'craftnce'); ?></h6>
-                    <h2 class="fs-48 fw-900 text-uppercase"><?php _e('articles', 'craftnce'); ?></h2>
+                    <h6 class="fw-bold fs-6 text-uppercase text-primary"><?php echo _e(craftnce_get_data('blog_page_subheader')); ?></h6>
+                    <h2 class="fs-48 fw-900 text-uppercase"><?php echo _e(craftnce_get_data('blog_page_header')); ?></h2>
                 </div>
             </div>
-            
+              
             <?php if(have_posts()) : ?>
             <div class="articles-wrapper row align-items-center py-5 mb-5 py-lg-0">
                 <?php
@@ -31,7 +31,7 @@
                         <div>
                             <h4 class="fw-bold my-3"><?php the_title(); ?></h4>
                             <p class="text-sm m-0 lh-base excerpt">
-                                <?php get_the_excerpt(); ?>
+                                <?php the_excerpt(); ?>
                             </p>
                         </div>
 
