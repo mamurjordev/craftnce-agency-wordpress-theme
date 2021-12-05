@@ -1,36 +1,44 @@
 <?php
-    function craftnce_theme_setup() {
-        // Load Theme TextDomain
-        load_theme_textdomain('craftnce');
+    // TGM
+    get_template_part('inc/required-plugins');
 
-        // Theme Supports
-        add_theme_support('title-tag');
-        add_theme_support('description');
-        add_theme_support('menus');
-        add_theme_support('widgets');
-        add_theme_support('post-thumbnails');
-        add_theme_support('custom-header');
-        add_theme_support('custom-logo');
-        add_theme_support('custom-background');
+    // Codestar Initialize
+    get_template_part('lib/codestar-framework/codestar-framework');
 
-        add_theme_support(
-			'html5',
-			array(
-				'comment-form',
-				'comment-list',
-				'gallery',
-				'caption',
-				'style',
-				'script',
-				'navigation-widgets',
-			)
-		);
-
-        register_nav_menus(array(
-            'primary-menu'              =>  __('Primary Menu', 'craftnce'),
-        ));
+    if(!function_exists('craftnce_theme_setup')) {
+        function craftnce_theme_setup() {
+            // Load Theme TextDomain
+            load_theme_textdomain('craftnce');
+    
+            // Theme Supports
+            add_theme_support('title-tag');
+            add_theme_support('description');
+            add_theme_support('menus');
+            add_theme_support('widgets');
+            add_theme_support('post-thumbnails');
+            add_theme_support('custom-header');
+            add_theme_support('custom-logo');
+            add_theme_support('custom-background');
+    
+            add_theme_support(
+                'html5',
+                array(
+                    'comment-form',
+                    'comment-list',
+                    'gallery',
+                    'caption',
+                    'style',
+                    'script',
+                    'navigation-widgets',
+                )
+            );
+    
+            register_nav_menus(array(
+                'primary-menu'              =>  __('Primary Menu', 'craftnce'),
+            ));
+        }
+        add_action('after_setup_theme', 'craftnce_theme_setup');
     }
-    add_action('after_setup_theme', 'craftnce_theme_setup');
 
     function craftnce_assets_enqueue() {
         // Stylesheets Enqueue
