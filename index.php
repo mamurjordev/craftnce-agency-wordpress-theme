@@ -9,85 +9,40 @@
         <div class="container py-5">
             <div class="row text-center pb-5">
                 <div class="col-md-7 mx-auto">
-                    <h6 class="fw-bold fs-6 text-uppercase text-primary">Recent blog</h6>
-                    <h2 class="fs-48 fw-900 text-uppercase">articles</h2>
+                    <h6 class="fw-bold fs-6 text-uppercase text-primary"><?php _e('Recent blog', 'craftnce'); ?></h6>
+                    <h2 class="fs-48 fw-900 text-uppercase"><?php _e('articles', 'craftnce'); ?></h2>
                 </div>
             </div>
-              
+            
+            <?php if(have_posts()) : ?>
             <div class="articles-wrapper row align-items-center py-5 mb-5 py-lg-0">
-                <div class="portfo-box col-md-6 col-lg-4 mt-4 webdesign wordpress uiux">
+                <?php
+                    while(have_posts()) :
+                        the_post();
+                ?>
+                <div class="portfo-box col-md-6 col-lg-4 mt-4">
                     <div class="card border-0  rounded-3 blog-card">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/webdesign.jpg" class="img-fluid w-100 h-100" alt="">
+                        <?php
+                            if(has_post_thumbnail()) {
+                                the_post_thumbnail('large', array('class'=>'img-fluid w-100 h-100'));
+                            }
+                        ?>
 
                         <div>
-                            <h4 class="fw-bold my-3">Where does it come?</h4>
-                            <p class="text-sm m-0 lh-base excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis culpa, eligendi corporis at facilis animi possimus accusamus mollitia veritatis natus nesciunt beatae, consequatur, illum quae.</p>
+                            <h4 class="fw-bold my-3"><?php the_title(); ?></h4>
+                            <p class="text-sm m-0 lh-base excerpt">
+                                <?php the_excerpt(); ?>
+                            </p>
                         </div>
 
-                        <a href="single-blog.html" class="single-blog-read-more-btn position-relative mt-3 text-dark text-decoration-none w-max">Read More</a>
+                        <a href="<?php the_permalink(); ?>" class="single-blog-read-more-btn position-relative mt-3 text-dark text-decoration-none w-max">
+                            <?php _e('Read More', 'craftnce'); ?>
+                        </a>
                     </div>
                 </div>
-                <div class="portfo-box col-md-6 col-lg-4 mt-4 webdesign wordpress uiux">
-                    <div class="card border-0  rounded-3 blog-card">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/webdesign.jpg" class="img-fluid w-100 h-100" alt="">
-
-                        <div>
-                            <h4 class="fw-bold my-3">Where does it come?</h4>
-                            <p class="text-sm m-0 lh-base excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis culpa, eligendi corporis at facilis animi possimus accusamus mollitia veritatis natus nesciunt beatae, consequatur, illum quae.</p>
-                        </div>
-
-                        <a href="single-blog.html" class="single-blog-read-more-btn position-relative mt-3 text-dark text-decoration-none w-max">Read More</a>
-                    </div>
-                </div>
-                <div class="portfo-box col-md-6 col-lg-4 mt-4 webdesign wordpress uiux">
-                    <div class="card border-0  rounded-3 blog-card">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/webdesign.jpg" class="img-fluid w-100 h-100" alt="">
-
-                        <div>
-                            <h4 class="fw-bold my-3">Where does it come?</h4>
-                            <p class="text-sm m-0 lh-base excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis culpa, eligendi corporis at facilis animi possimus accusamus mollitia veritatis natus nesciunt beatae, consequatur, illum quae.</p>
-                        </div>
-
-                        <a href="single-blog.html" class="single-blog-read-more-btn position-relative mt-3 text-dark text-decoration-none w-max">Read More</a>
-                    </div>
-                </div>
-                <div class="portfo-box col-md-6 col-lg-4 mt-4 webdesign wordpress uiux">
-                    <div class="card border-0  rounded-3 blog-card">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/webdesign.jpg" class="img-fluid w-100 h-100" alt="">
-
-                        <div>
-                            <h4 class="fw-bold my-3">Where does it come?</h4>
-                            <p class="text-sm m-0 lh-base excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis culpa, eligendi corporis at facilis animi possimus accusamus mollitia veritatis natus nesciunt beatae, consequatur, illum quae.</p>
-                        </div>
-
-                        <a href="single-blog.html" class="single-blog-read-more-btn position-relative mt-3 text-dark text-decoration-none w-max">Read More</a>
-                    </div>
-                </div>
-                <div class="portfo-box col-md-6 col-lg-4 mt-4 webdesign wordpress uiux">
-                    <div class="card border-0  rounded-3 blog-card">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/webdesign.jpg" class="img-fluid w-100 h-100" alt="">
-
-                        <div>
-                            <h4 class="fw-bold my-3">Where does it come?</h4>
-                            <p class="text-sm m-0 lh-base excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis culpa, eligendi corporis at facilis animi possimus accusamus mollitia veritatis natus nesciunt beatae, consequatur, illum quae.</p>
-                        </div>
-
-                        <a href="single-blog.html" class="single-blog-read-more-btn position-relative mt-3 text-dark text-decoration-none w-max">Read More</a>
-                    </div>
-                </div>
-                <div class="portfo-box col-md-6 col-lg-4 mt-4 webdesign wordpress uiux">
-                    <div class="card border-0  rounded-3 blog-card">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/webdesign.jpg" class="img-fluid w-100 h-100" alt="">
-
-                        <div>
-                            <h4 class="fw-bold my-3">Where does it come?</h4>
-                            <p class="text-sm m-0 lh-base excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis culpa, eligendi corporis at facilis animi possimus accusamus mollitia veritatis natus nesciunt beatae, consequatur, illum quae.</p>
-                        </div>
-
-                        <a href="single-blog.html" class="single-blog-read-more-btn position-relative mt-3 text-dark text-decoration-none w-max">Read More</a>
-                    </div>
-                </div>
+                <?php endwhile; ?>
             </div>
+            <?php endif; ?>
         </div>
     </section>
 
