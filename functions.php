@@ -4,6 +4,7 @@
 
     // Codestar Initialize
     get_template_part('lib/codestar-framework/codestar-framework');
+    get_template_part('inc/codestar-config');
 
     if(!function_exists('craftnce_theme_setup')) {
         function craftnce_theme_setup() {
