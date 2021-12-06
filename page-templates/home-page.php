@@ -144,48 +144,26 @@
                 </h2>
             </div>
             <div class="row my-5">
+                <?php
+                    $service_items = get_craftnce_data('service_items');
+                    $service_count = count((array)$service_items);
+
+                    for($i = 0; $i < $service_count; $i++) :
+                ?>
                 <div class="col-md-6 col-lg-4 mt-4">
                     <div class="card service p-4 border-0">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/product 1.png" alt="">
-                        <h4 class="fw-bold my-3">Where does it come?</h4>
-                        <p class="text-sm text-muted lh-base">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin</p>
+                        <img src="<?php echo esc_url($service_items[$i]['service_icon']['url']); ?>" alt="">
+                        <h4 class="fw-bold my-3">
+                            <?php
+                                echo $service_items[$i]['service_item_title'];
+                            ?>
+                        </h4>
+                        <p class="text-sm text-muted lh-base">
+                            <?php echo $service_items[$i]['service_item_description']; ?>
+                        </p>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 mt-4">
-                    <div class="card service p-4 border-0">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/protection 1.png" alt="">
-                        <h4 class="fw-bold my-3">Where does it come?</h4>
-                        <p class="text-sm text-muted lh-base">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mt-4">
-                    <div class="card service p-4 border-0">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/scalable 1.png" alt="">
-                        <h4 class="fw-bold my-3">Where does it come?</h4>
-                        <p class="text-sm text-muted lh-base">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mt-4">
-                    <div class="card service p-4 border-0">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/shdhsjhd 1.png" alt="">
-                        <h4 class="fw-bold my-3">Where does it come?</h4>
-                        <p class="text-sm text-muted lh-base">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mt-4">
-                    <div class="card service p-4 border-0">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/product 1.png" alt="">
-                        <h4 class="fw-bold my-3">Where does it come?</h4>
-                        <p class="text-sm text-muted lh-base">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mt-4">
-                    <div class="card service p-4 border-0">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/protection 1.png" alt="">
-                        <h4 class="fw-bold my-3 ">Where does it come?</h4>
-                        <p class="text-sm text-muted lh-base">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin</p>
-                    </div>
-                </div>
+                <?php endfor; ?>
             </div>
         </div>
     </section>

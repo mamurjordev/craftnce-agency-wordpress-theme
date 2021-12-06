@@ -230,19 +230,26 @@
             ),
             array(
                 'title'                     =>  __('Services Item'),
-                'id'                        =>  'features_items',
+                'id'                        =>  'service_items',
                 'type'                      =>  'repeater',
                 'min'                       =>  1,
                 'fields'                    =>  array(
                     array(
-                        'title'             =>  __('Font-awesome Icon Class', 'craftnce'),
-                        'id'                =>  'features_item_icon_class',
-                        'type'              =>  'text',
+                        'title'             =>  __('Icon', 'craftnce'),
+                        'id'                =>  'service_icon',
+                        'type'              =>  'media',
                     ),
                     array(
                         'title'             =>  __('Item Title', 'craftnce'),
-                        'id'                =>  'features_item_title',
+                        'id'                =>  'service_item_title',
                         'type'              =>  'text',
+                    ),
+                    array(
+                        'title'             =>  __('Item Description', 'craftnce'),
+                        'id'                =>  'service_item_description',
+                        'type'              =>  'wp_editor',
+                        'height'            =>  '100px',
+                        'media_buttons'     =>  false
                     ),
                 ),
             ),
