@@ -169,93 +169,108 @@
     </section>
     <?php
         endif;
+        if(get_craftnce_data('is_show_counter_section')) :
     ?>
 
     <!-- Counter Section -->
     <section class="counter-bg">
         <div class="counter-overlay py-50">
             <div class="container text-center py-5">
-                <h6 class="text-uppercase text-md fw-bold counter-section-subtitle">featured case study</h6>
-                <h2 class="text-uppercase text-light fw-900 text-xl mt-3">Helping dreams to do</h2>
+                <h6 class="text-uppercase text-md fw-bold counter-section-subtitle">
+                    <?php
+                        echo get_craftnce_data('service_counter_subtitle');
+                    ?>
+                </h6>
+                <h2 class="text-uppercase text-light fw-900 text-xl mt-3">
+                    <?php
+                        echo get_craftnce_data('service_counter_title');
+                    ?>
+                </h2>
 
                 <div class="row mt-5">
+                    <?php
+                        $counter_items = get_craftnce_data('counter_items');
+                        $_counter = count((array)$counter_items);
+                        
+                        for($i = 0; $i < $_counter; $i++) :
+                    ?>
                     <div class="col-sm-6 col-lg-3 text-uppercase">
-                        <i class="ri-code-s-slash-line text-warning fs-48"></i>
-                        <h2 class="text-uppercase text-light fw-bold fs-48">200</h2>
-                        <p class="text-white">Lines of code</p>
+                        <i class="<?php echo esc_attr($counter_items[$i]['counter_icon']); ?> text-warning fs-48 mb-3"></i>
+                        <h2 class="text-uppercase text-light fw-900 fs-48">
+                            <?php echo $counter_items[$i]['countable_numbers']; ?>
+                        </h2>
+                        <p class="text-white">
+                            <?php echo $counter_items[$i]['counter_title']; ?>
+                        </p>
                     </div>
-                    <div class="col-sm-6 col-lg-3 text-uppercase">
-                        <i class="ri-user-line text-warning fs-48"></i>
-                        <h2 class="text-uppercase text-light fw-bold fs-48">100+</h2>
-                        <p class="text-white">Happy clients</p>
-                    </div>
-                    <div class="col-sm-6 col-lg-3 text-uppercase">
-                        <i class="ri-code-s-slash-line text-warning fs-48"></i>
-                        <h2 class="text-uppercase text-light fw-bold fs-48">250+</h2>
-                        <p class="text-white">projects</p>
-                    </div>
-                    <div class="col-sm-6 col-lg-3 text-uppercase">
-                        <i class="ri-award-fill text-warning fs-48"></i>
-                        <h2 class="text-uppercase text-light fw-bold fs-48">30</h2>
-                        <p class="text-white">awards</p>
-                    </div>
+                    <?php endfor; ?>
                 </div>
             </div>
         </div>
     </section>
+    <?php
+        endif;
+        if(get_craftnce_data('is_show_testimonial_section')) :
+    ?>
 
     <!-- Testimonial Section -->
     <section>
         <div class="py-50">
             <div class="container text-center py-5">
-                <h6 class="text-uppercase text-md fw-bold text-primary">
-                    testimonial
-                </h6>
-                <h2 class="text-uppercase fw-900 text-xl mt-3">Our worldwide clients<br>says about us</h2>
+                <div class="row">
+                    <div class="col-lg-7 mx-auto">
+                        <h6 class="text-uppercase text-md fw-bold text-primary">
+                            <?php
+                                echo get_craftnce_data('testimonial_section_subtitle');
+                            ?>
+                        </h6>
+                        <h2 class="text-uppercase fw-900 text-xl mt-3">
+                            <?php
+                                echo get_craftnce_data('testimonial_section_title');
+                            ?>
+                        </h2>
+                    </div>
+                </div>
 
                 <div class="row position-relative mt-5 pt-5">
                     <div class="col-xl-10 offset-xl-1" >
                         <div class="testimonial-nav mb-30 d-flex justify-items-center">
+                            <?php
+                                $testimonial_items_avatar = get_craftnce_data('testimonial_items');
+                                $testimonial_avatar_count = count((array)$testimonial_items_avatar);
+                                
+                                for($i = 0; $i < $testimonial_avatar_count; $i++) :
+                            ?>
                             <div class="testimonial-thumb">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/avatar.png" alt="">
+                                <img src="<?php echo esc_url($testimonial_items_avatar[$i]['testimonial_thumbnail']['url']); ?>" alt="">
                             </div>
-                            <div class="testimonial-thumb">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/avatar.png" alt="">
-                            </div>
-                            <div class="testimonial-thumb">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/avatar.png" alt="">
-                            </div>
-                            <div class="testimonial-thumb">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/avatar.png" alt="">
-                            </div>
-                            <div class="testimonial-thumb">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/avatar.png" alt="">
-                            </div>
-
-                            <div class="testimonial-thumb">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/avatar.png" alt="">
-                            </div>
-                            <div class="testimonial-thumb">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/avatar.png" alt="">
-                            </div>
-                            <div class="testimonial-thumb">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/avatar.png" alt="">
-                            </div>
-                            <div class="testimonial-thumb">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/avatar.png" alt="">
-                            </div>
-
-                            <div class="testimonial-thumb">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/avatar.png" alt="">
-                            </div>
+                            <?php endfor; ?>
                         </div>
                         <div class="testimonial-active mt-5">
+                            <?php
+                                $testimonial_items = get_craftnce_data('testimonial_items');
+                                $testimonial_count = count((array)$testimonial_items);
+                                
+                                for($i = 0; $i < $testimonial_count; $i++) :
+                            ?>
                             <div class="testimonial-item text-center">
                                 <div class="designation mb-30">
-                                    <h3>- Tanvir Ahamed -</h3>
-                                    <span>Digital Marketer</span>
+                                    <h3>
+                                        <?php
+                                            echo $testimonial_items[$i]['testimonial_title'];
+                                        ?>
+                                    </h3>
+                                    <span>
+                                        <?php
+                                            echo $testimonial_items[$i]['testimonial_person_designation'];
+                                        ?>
+                                    </span>
                                 </div>
-                                <p>“ Fruitful was seasons unto won't the fowl light deep more then regular before piece sixth them dominion cattle fish cattle first midst moved greater divided so love nature tree days for two every wherein green fruitful also</p>
+                                <p>
+                                    <?php
+                                        echo $testimonial_items[$i]['testimonial_message'];
+                                    ?>
+                                </p>
                                 <div class="rating w-max mx-auto d-flex">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
@@ -264,133 +279,7 @@
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
                                 </div>
                             </div>
-                            <div class="testimonial-item text-center">
-                                <div class="designation mb-30">
-                                    <h3>- Mousumi Ahamed -</h3>
-                                    <span>Graphic Designer</span>
-                                </div>
-                                <p>“ Fruitful was seasons unto won't the fowl light deep more then regular before piece sixth them dominion cattle fish cattle first midst moved greater divided so love nature tree days for two every wherein green fruitful also</p>
-                                <div class="rating w-max mx-auto d-flex">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                </div>
-                            </div>
-                            <div class="testimonial-item text-center">
-                                <div class="designation mb-30">
-                                    <h3>- Tanvir Ahamed -</h3>
-                                    <span>Web Developer</span>
-                                </div>
-                                <p>“ Days for two every wherein green fruitful also fruitful was seasons unto won't the fowl light deep more then regular before piece sixth them dominion cattle fish cattle first midst moved greater divided so dove nature tree disappear relax bring Cattle fish cattle first midst moved greater divided so bring.”</p>
-                                <div class="rating w-max mx-auto d-flex">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                </div>
-                            </div>
-                            <div class="testimonial-item text-center">
-                                <div class="designation mb-30">
-                                    <h3>- Walid Hossaing -</h3>
-                                    <span>Software Engineer</span>
-                                </div>
-                                <p>“ Fruitful was seasons unto won't the fowl light deep more then regular before piece sixth them dominion cattle fish cattle first midst moved greater divided so dove nature tree bisapper relan days for two every wherein green fruitful also bring Cattle fish cattle first midst moved greater divided so bring.”</p>
-                                <div class="rating w-max mx-auto d-flex">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                </div>
-                            </div>
-                            <div class="testimonial-item text-center">
-                                <div class="designation mb-30">
-                                    <h3>- Walid Hossaing -</h3>
-                                    <span>Software Engineer</span>
-                                </div>
-                                <p>“ Fruitful was seasons unto won't the fowl light deep more then regular before piece sixth them dominion cattle fish cattle first midst moved greater divided so dove nature tree bisapper relan days for two every wherein green fruitful also bring Cattle fish cattle first midst moved greater divided so bring.”</p>
-                                <div class="rating w-max mx-auto d-flex">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                </div>
-                            </div>
-                            <div class="testimonial-item text-center">
-                                <div class="designation mb-30">
-                                    <h3>- Walid Hossaing -</h3>
-                                    <span>Software Engineer</span>
-                                </div>
-                                <p>“ Fruitful was seasons unto won't the fowl light deep more then regular before piece sixth them dominion cattle fish cattle first midst moved greater divided so dove nature tree bisapper relan days for two every wherein green fruitful also bring Cattle fish cattle first midst moved greater divided so bring.”</p>
-                                <div class="rating w-max mx-auto d-flex">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                </div>
-                            </div>
-                            <div class="testimonial-item text-center">
-                                <div class="designation mb-30">
-                                    <h3>- Walid Hossaing -</h3>
-                                    <span>Software Engineer</span>
-                                </div>
-                                <p>“ Fruitful was seasons unto won't the fowl light deep more then regular before piece sixth them dominion cattle fish cattle first midst moved greater divided so dove nature tree bisapper relan days for two every wherein green fruitful also bring Cattle fish cattle first midst moved greater divided so bring.”</p>
-                                <div class="rating w-max mx-auto d-flex">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                </div>
-                            </div>
-                            <div class="testimonial-item text-center">
-                                <div class="designation mb-30">
-                                    <h3>- Walid Hossaing -</h3>
-                                    <span>Software Engineer</span>
-                                </div>
-                                <p>“ Fruitful was seasons unto won't the fowl light deep more then regular before piece sixth them dominion cattle fish cattle first midst moved greater divided so dove nature tree bisapper relan days for two every wherein green fruitful also bring Cattle fish cattle first midst moved greater divided so bring.”</p>
-                                <div class="rating w-max mx-auto d-flex">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                </div>
-                            </div>
-                            <div class="testimonial-item text-center">
-                                <div class="designation mb-30">
-                                    <h3>- Walid Hossaing -</h3>
-                                    <span>Software Engineer</span>
-                                </div>
-                                <p>“ Fruitful was seasons unto won't the fowl light deep more then regular before piece sixth them dominion cattle fish cattle first midst moved greater divided so dove nature tree bisapper relan days for two every wherein green fruitful also bring Cattle fish cattle first midst moved greater divided so bring.”</p>
-                                <div class="rating w-max mx-auto d-flex">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                </div>
-                            </div>
-
-                            <div class="testimonial-item text-center">
-                                <div class="designation mb-30">
-                                    <h3>- Walid Hossaing -</h3>
-                                    <span>Software Engineer</span>
-                                </div>
-                                <p>“ Fruitful was seasons unto won't the fowl light deep more then regular before piece sixth them dominion cattle fish cattle first midst moved greater divided so dove nature tree bisapper relan days for two every wherein green fruitful also bring Cattle fish cattle first midst moved greater divided so bring.”</p>
-                                <div class="rating w-max mx-auto d-flex">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                </div>
-                            </div>
+                            <?php endfor; ?>
                         </div>
                     </div>
                     <div class="d-flex justify-content-between top-50 position-absolute">
@@ -401,6 +290,7 @@
             </div>
         </div>
     </section>
+    <?php endif; ?>
 
     <!-- Infography Section -->
     <section class="infography-section">
