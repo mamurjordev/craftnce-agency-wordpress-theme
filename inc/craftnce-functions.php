@@ -1,7 +1,7 @@
 <?php
     // Get Codestar Option
-    if ( ! function_exists( 'craftnce_get_data' ) ) {
-        function craftnce_get_data( $option = '', $default = null ) {
+    if ( ! function_exists( 'get_craftnce_data' ) ) {
+        function get_craftnce_data( $option = '', $default = null ) {
             $options = get_option( 'craftnce_options' );
             return ( isset( $options[$option] ) ) ? $options[$option] : $default;
         }

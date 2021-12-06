@@ -6,34 +6,65 @@
     get_header();
 ?>
 
+    <?php
+        if(get_craftnce_data('is_show_hero_section')) :
+    ?>
     <!-- Homepage Hero -->
     <section class="home-hero">
         <div class="container">
             <div class="row hero-h align-items-center py-5 py-lg-0">
                 <div class="col-lg-7">
-                    <h6 class="text-uppercase fw-bold text-sm text-primary">Digital Service Agency</h6>
-                    <h1 class="home-hero-title text-uppercase">Digital Service Agency</h1>
+                    <h6 class="text-uppercase fw-bold text-sm text-primary">
+                        <?php
+                            echo get_craftnce_data('hero_section_subtitle');
+                        ?>
+                    </h6>
+                    <h1 class="home-hero-title text-uppercase"><?php echo get_craftnce_data('hero_section_title'); ?></h1>
+                    <?php
+                        if(get_craftnce_data('is_show_hero_buttons')) :
+                    ?>
                     <div class="d-flex mt-4">
-                        <a href="#!" class="btn btn-primary text-sm py-2 px-3 rounded-pill me-2"><i class="fas fa-long-arrow-alt-down me-1"></i>Get Started</a>
-                        <a href="#!" class="btn btn-outline-primary text-sm py-2 px-3 rounded-pill"><i class="fas fa-envelope-open-text me-1"></i></i>Get Started</a>
+                        <?php
+                            if(get_craftnce_data('is_show_hero_first_buttons')) :
+                        ?>
+                            <i class="<?php echo get_craftnce_data('hero_first_button_icon_class'); ?> me-1"></i>
+                            <?php echo get_craftnce_data('hero_first_button_label'); ?>
+                        </a>
+                        <?php
+                            endif;
+                            if(get_craftnce_data('is_show_hero_second_buttons')) :
+                        ?>
+                        <a href="<?php echo get_craftnce_data('hero_second_button_link')['url']; ?>" class="btn btn-outline-primary text-sm py-2 px-3 rounded-pill">
+                            <i class="<?php echo get_craftnce_data('hero_second_button_icon_class'); ?> me-1"></i></i>
+                            <?php echo get_craftnce_data('hero_second_button_label'); ?>
+                        </a>
+                        <?php
+                            endif;
+                        ?>
                     </div>
+                    <?php endif; ?>
                 </div>
                 <div class="col-lg-5" data-aos="fade-left">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hero-right-image.png" class="img-fluid mt-4 mt-md-0" alt="">
+                    <img src="<?php echo get_craftnce_data('hero_section_image')['url']; ?>" class="img-fluid mt-4 mt-md-0" alt="">
                 </div>
             </div>
         </div>
     </section>
+    <?php
+        endif;
+    ?>
 
     <!-- Info Section -->
     <section class="home-info">
         <div class="container">
             <div class="row hero-h align-items-center py-5 py-lg-0">
                 <div class="col-lg-5">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/info-left.png" class="img-fluid mt-4 mt-md-0 px-4 px-md-0 pe-md-5" alt="">
+                    <img src="<?php echo get_craftnce_data('first_info_section_left_image')['url']; ?>" class="img-fluid mt-4 mt-md-0 px-4 px-md-0 pe-md-5" alt="">
                 </div>
                 <div class="col-lg-7 mt-5 mt-lg-0">
-                    <h6 class="text-uppercase fw-bold text-sm text-primary">about company</h6>
+                    <h6 class="text-uppercase fw-bold text-sm text-primary">
+                        <?php echo get_craftnce_data(''); ?>
+                    </h6>
                     <h2 class="info-title text-uppercase">WE'RE LEADING DIGITAL BUSINESS AGENCY</h2>
                     <p class="info-sec-p text-muted my-3">
                         There are many variations of passages of Lorem Ipsum available but the majority have  suffered alteration in some form, by injected humour. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.
