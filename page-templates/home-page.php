@@ -98,92 +98,78 @@
     </section>
     <?php
         endif;
+
+        if(get_craftnce_data('is_show_features_section')) :
     ?>
 
     <!-- Features Section -->
     <section>
         <div class="container py-4 py-lg-5">
             <div class="row">
+                <?php
+                    $features_items = get_craftnce_data('features_items');
+                    $_count = count((array)$features_items);
+
+                    for($i = 0; $i < $_count; $i++) :
+                ?>
                 <div class="col-sm-6 col-lg-3 mt-2">
                     <div class="features-box d-flex">
-                        <i class="fas fa-code-branch fs-4 me-3 mt-1"></i>
-                        <h5 class="">Stock Free Amazing Resources</h5>
+                        <i class="<?php echo esc_attr($features_items[$i]['features_item_icon_class']); ?> fs-4 me-3 mt-1"></i>
+                        <h5 class="features-item-title">
+                            <?php
+                                echo $features_items[$i]['features_item_title'];
+                            ?>
+                        </h5>
                     </div>
                 </div>
-                <div class="col-sm-6 col-lg-3 mt-2">
-                    <div class="features-box d-flex">
-                        <i class="fas fa-drafting-compass fs-4 me-3 mt-1"></i>
-                        <h5 class="">Amazing Exclusive Designs</h5>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3 mt-2">
-                    <div class="features-box d-flex">
-                        <i class="fas fa-file-alt fs-4 me-3 mt-1"></i>
-                        <h5 class="">Proper<br>Documentations</h5>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3 mt-2">
-                    <div class="features-box d-flex">
-                        <i class="fas fa-tools fs-4 me-3 mt-1"></i>
-                        <h5 class="">Creative Services<br>Outlines</h5>
-                    </div>
-                </div>
+                <?php endfor; ?>
             </div>
         </div>
     </section>
 
+    <?php
+        endif;
+
+        if(get_craftnce_data('is_show_service_section')) :
+    ?>
+
     <section>
         <div class="container py-5">
             <div class="row text-center">
-                <h6 class="text-uppercase fw-bold text-md text-primary">Our amazing services</h6>
-                <h2 class="text-capitalize fw-900 text-xl mt-3">Your Success With Solution</h2>
+                <h6 class="text-uppercase fw-bold text-md text-primary">
+                    <?php echo get_craftnce_data('service_section_subtitle'); ?>
+                </h6>
+                <h2 class="text-capitalize fw-900 text-xl mt-3">
+                    <?php echo get_craftnce_data('service_section_title'); ?>
+                </h2>
             </div>
             <div class="row my-5">
+                <?php
+                    $service_items = get_craftnce_data('service_items');
+                    $service_count = count((array)$service_items);
+
+                    for($i = 0; $i < $service_count; $i++) :
+                ?>
                 <div class="col-md-6 col-lg-4 mt-4">
                     <div class="card service p-4 border-0">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/product 1.png" alt="">
-                        <h4 class="fw-bold my-3">Where does it come?</h4>
-                        <p class="text-sm text-muted lh-base">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin</p>
+                        <img src="<?php echo esc_url($service_items[$i]['service_icon']['url']); ?>" alt="">
+                        <h4 class="fw-bold my-3">
+                            <?php
+                                echo $service_items[$i]['service_item_title'];
+                            ?>
+                        </h4>
+                        <p class="text-sm text-muted lh-base">
+                            <?php echo $service_items[$i]['service_item_description']; ?>
+                        </p>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 mt-4">
-                    <div class="card service p-4 border-0">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/protection 1.png" alt="">
-                        <h4 class="fw-bold my-3">Where does it come?</h4>
-                        <p class="text-sm text-muted lh-base">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mt-4">
-                    <div class="card service p-4 border-0">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/scalable 1.png" alt="">
-                        <h4 class="fw-bold my-3">Where does it come?</h4>
-                        <p class="text-sm text-muted lh-base">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mt-4">
-                    <div class="card service p-4 border-0">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/shdhsjhd 1.png" alt="">
-                        <h4 class="fw-bold my-3">Where does it come?</h4>
-                        <p class="text-sm text-muted lh-base">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mt-4">
-                    <div class="card service p-4 border-0">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/product 1.png" alt="">
-                        <h4 class="fw-bold my-3">Where does it come?</h4>
-                        <p class="text-sm text-muted lh-base">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mt-4">
-                    <div class="card service p-4 border-0">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/protection 1.png" alt="">
-                        <h4 class="fw-bold my-3 ">Where does it come?</h4>
-                        <p class="text-sm text-muted lh-base">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin</p>
-                    </div>
-                </div>
+                <?php endfor; ?>
             </div>
         </div>
     </section>
+    <?php
+        endif;
+    ?>
 
     <!-- Counter Section -->
     <section class="counter-bg">
