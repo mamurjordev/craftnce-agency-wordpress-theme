@@ -98,45 +98,50 @@
     </section>
     <?php
         endif;
+
+        if(get_craftnce_data('is_show_features_section')) :
     ?>
 
     <!-- Features Section -->
     <section>
         <div class="container py-4 py-lg-5">
             <div class="row">
+                <?php
+                    $features_items = get_craftnce_data('features_items');
+                    $_count = count((array)$features_items);
+
+                    for($i = 0; $i < $_count; $i++) :
+                ?>
                 <div class="col-sm-6 col-lg-3 mt-2">
                     <div class="features-box d-flex">
-                        <i class="fas fa-code-branch fs-4 me-3 mt-1"></i>
-                        <h5 class="">Stock Free Amazing Resources</h5>
+                        <i class="<?php echo esc_attr($features_items[$i]['features_item_icon_class']); ?> fs-4 me-3 mt-1"></i>
+                        <h5 class="features-item-title">
+                            <?php
+                                echo $features_items[$i]['features_item_title'];
+                            ?>
+                        </h5>
                     </div>
                 </div>
-                <div class="col-sm-6 col-lg-3 mt-2">
-                    <div class="features-box d-flex">
-                        <i class="fas fa-drafting-compass fs-4 me-3 mt-1"></i>
-                        <h5 class="">Amazing Exclusive Designs</h5>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3 mt-2">
-                    <div class="features-box d-flex">
-                        <i class="fas fa-file-alt fs-4 me-3 mt-1"></i>
-                        <h5 class="">Proper<br>Documentations</h5>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3 mt-2">
-                    <div class="features-box d-flex">
-                        <i class="fas fa-tools fs-4 me-3 mt-1"></i>
-                        <h5 class="">Creative Services<br>Outlines</h5>
-                    </div>
-                </div>
+                <?php endfor; ?>
             </div>
         </div>
     </section>
 
+    <?php
+        endif;
+
+        if(get_craftnce_data('is_show_service_section')) :
+    ?>
+
     <section>
         <div class="container py-5">
             <div class="row text-center">
-                <h6 class="text-uppercase fw-bold text-md text-primary">Our amazing services</h6>
-                <h2 class="text-capitalize fw-900 text-xl mt-3">Your Success With Solution</h2>
+                <h6 class="text-uppercase fw-bold text-md text-primary">
+                    <?php echo get_craftnce_data('service_section_subtitle'); ?>
+                </h6>
+                <h2 class="text-capitalize fw-900 text-xl mt-3">
+                    <?php echo get_craftnce_data('service_section_title'); ?>
+                </h2>
             </div>
             <div class="row my-5">
                 <div class="col-md-6 col-lg-4 mt-4">
@@ -184,6 +189,9 @@
             </div>
         </div>
     </section>
+    <?php
+        endif;
+    ?>
 
     <!-- Counter Section -->
     <section class="counter-bg">

@@ -4,6 +4,7 @@
         'id'                        => 'front_page',
     ));
 
+    // Hero Section
     CSF::createSection($option_prefix, array(
         'title'                     =>  __('Hero Section', 'craftnce'),
         'parent'                    =>  'front_page',
@@ -11,7 +12,7 @@
             array(
                 'type'    => 'notice',
                 'style'   => 'info',
-                'content' => '<h1>Hero Section</h1>',
+                'content' => __('<h1>Hero Section</h1>', 'craftnce'),
             ),
             // Text and Image
             array(
@@ -81,6 +82,7 @@
         ),
     ));
 
+    // Info Section
     CSF::createSection($option_prefix, array(
         'title'                     =>  __('Info Section Under Hero', 'craftnce'),
         'parent'                    =>  'front_page',
@@ -88,7 +90,7 @@
             array(
                 'type'    => 'notice',
                 'style'   => 'info',
-                'content' => '<h1>About Us Info Section</h1>',
+                'content' => __('<h1>About Us Info Section</h1>', 'craftnce'),
             ),
             array(
                 'title'                 =>  __('Show info section inder hero'),
@@ -160,6 +162,89 @@
                 'title'                 =>  __('FontAwesome Icon Class', 'craftnce'),
                 'id'                    =>  'about_us_info_second_button_icon',
                 'type'                  =>  'text',
+            ),
+        ),
+    ));
+
+    // Features Info Section
+    CSF::createSection($option_prefix, array(
+        'title'                     =>  __('Features Info', 'craftnce'),
+        'parent'                    =>  'front_page',
+        'fields'                    =>  array(
+            array(
+                'type'    => 'notice',
+                'style'   => 'info',
+                'content' => __('<h1>Features Info</h1>', 'craftnce'),
+            ),
+            array(
+                'title'                     =>  __('Show Section'),
+                'id'                        =>  'is_show_features_section',
+                'type'                      =>  'switcher',
+            ),
+            array(
+                'title'                     =>  __('Features Item'),
+                'id'                        =>  'features_items',
+                'type'                      =>  'repeater',
+                'min'                       =>  1,
+                'max'                       =>  4,
+                'fields'                    =>  array(
+                    array(
+                        'title'             =>  __('Font-awesome Icon Class', 'craftnce'),
+                        'id'                =>  'features_item_icon_class',
+                        'type'              =>  'text',
+                    ),
+                    array(
+                        'title'             =>  __('Item Title', 'craftnce'),
+                        'id'                =>  'features_item_title',
+                        'type'              =>  'text',
+                    ),
+                ),
+            ),
+        ),
+    ));
+
+    // Services Section
+    CSF::createSection($option_prefix, array(
+        'title'                     =>  __('Services', 'craftnce'),
+        'parent'                    =>  'front_page',
+        'fields'                    =>  array(
+            array(
+                'type'    => 'notice',
+                'style'   => 'info',
+                'content' => __('<h1>Services</h1>', 'craftnce'),
+            ),
+            array(
+                'title'                     =>  __('Show Section'),
+                'id'                        =>  'is_show_service_section',
+                'type'                      =>  'switcher',
+            ),
+            array(
+                'title'                     =>  __('Section Subtitle'),
+                'id'                        =>  'service_section_subtitle',
+                'type'                      =>  'text',
+            ),
+            array(
+                'title'                     =>  __('Section Title'),
+                'id'                        =>  'service_section_title',
+                'type'                      =>  'text',
+            ),
+            array(
+                'title'                     =>  __('Services Item'),
+                'id'                        =>  'features_items',
+                'type'                      =>  'repeater',
+                'min'                       =>  1,
+                'fields'                    =>  array(
+                    array(
+                        'title'             =>  __('Font-awesome Icon Class', 'craftnce'),
+                        'id'                =>  'features_item_icon_class',
+                        'type'              =>  'text',
+                    ),
+                    array(
+                        'title'             =>  __('Item Title', 'craftnce'),
+                        'id'                =>  'features_item_title',
+                        'type'              =>  'text',
+                    ),
+                ),
             ),
         ),
     ));
