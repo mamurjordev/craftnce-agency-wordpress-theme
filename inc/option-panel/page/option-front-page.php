@@ -204,6 +204,34 @@
         ),
     ));
 
+    // Features Info Section
+    CSF::createSection($option_prefix, array(
+        'title'                     =>  __('Service Section', 'craftnce'),
+        'parent'                    =>  'front_page',
+        'fields'                    =>  array(
+            array(
+                'type'    => 'notice',
+                'style'   => 'info',
+                'content' => __('<h1>Service Section</h1>', 'craftnce'),
+            ),
+            array(
+                'title'                     =>  __('Show Section'),
+                'id'                        =>  'is_show_front_page_service_section',
+                'type'                      =>  'switcher',
+            ),
+            array(
+                'title'                     =>  __('Section Subtitle'),
+                'id'                        =>  'service_section_subtitle',
+                'type'                      =>  'text',
+            ),
+            array(
+                'title'                     =>  __('Section Title'),
+                'id'                        =>  'service_section_title',
+                'type'                      =>  'text',
+            ),
+        ),
+    ));
+
     // Infography Section
     CSF::createSection($option_prefix, array(
         'title'                     =>  __('Infography', 'craftnce'),
