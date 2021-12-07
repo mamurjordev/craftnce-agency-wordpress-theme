@@ -9,3 +9,4 @@
     include_once get_template_directory().'/inc/option-panel/sections/option-testimonial.php';
     include_once get_template_directory().'/inc/option-panel/sections/option-brand-logo.php';
     include_once get_template_directory().'/inc/option-panel/sections/option-blog-section.php';
+    include_once get_template_directory().'/inc/option-panel/sections/option-team.php';
