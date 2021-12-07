@@ -126,81 +126,79 @@
     <!-- Counter Section -->
     <?php get_template_part('template-parts/common/section-counter'); ?>
 
+    <?php
+        if(get_craftnce_data('is_show_about_page_skill_section')) :
+    ?>
     <!-- Skill Progressbar Section -->
     <section class="home-info">
         <div class="container">
             <div class="row progress-bar-h align-items-center py-5 py-lg-0">
                 <div class="col-lg-6 mt-5 mt-lg-0">
-                    <h2 class="info-title text-capitalize">We Have achieved<br>Experiences & Skills</h2>
+                    <h2 class="info-title text-capitalize">
+                        <?php
+                            echo get_craftnce_data('about_page_skill_section_title');
+                        ?>
+                    </h2>
 
-                    <div class="d-flex py-4">
-                        <i class="fas fa-award fs-72 text-primary me-4"></i>
-                        <h2 class="award-text-whidth fw-bold">25 Awards is in our hands</h2>
+                    <?php
+                        if(get_craftnce_data('is_show_about_page_skill_section_award_box')) :
+                    ?>
+                    <div class="skills-award-box d-flex py-4">
+                        <i class="<?php echo get_craftnce_data('about_page_skill_section_award_box_icon'); ?> fs-72 text-primary me-4"></i>
+                        <h2 class="award-text-width fw-bold">
+                            <?php
+                                echo get_craftnce_data('about_page_skill_section_award_box_title');
+                            ?>
+                        </h2>
                     </div>
+                    <?php endif; ?>
 
                     <p class="info-sec-p text-muted my-3">
-                        There are many variations of passages of Lorem Ipsum available but the majority have  suffered alteration in some form, by injected humour. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.
+                        <?php
+                            echo get_craftnce_data('about_page_skill_section_award_box_description');
+                        ?>
                     </p>
                 </div>
                 <div class="col-lg-6">
+                    <?php
+                        $skill_progress_bars = get_craftnce_data('about_page_skill_progress_bars');
+                        $progress_bar_count = count((array)$skill_progress_bars);
+                        
+                        for($i = 0; $i < $progress_bar_count; $i++) :
+                    ?>
                     <div class="progress-item">
                         <div class="d-flex justify-content-between">
-                            <h6>Web Design</h6>
-                            <h6>85%</h6>
+                            <h6>
+                                <?php
+                                    echo $skill_progress_bars[$i]['skill_title'];
+                                ?>
+                            </h6>
+                            <h6>
+                                <?php
+                                    echo $skill_progress_bars[$i]['skill_percentage_text'] . '%';
+                                ?>
+                            </h6>
                         </div>
                         <div class="progress mt-2">
-                            <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div 
+                                class="progress-bar" 
+                                role="progressbar" 
+                                style="width: <?php echo esc_attr($skill_progress_bars[$i]['skill_percentage_progress']); ?>%" 
+                                aria-valuenow="<?php echo esc_attr($skill_progress_bars[$i]['skill_percentage_progress']); ?>" 
+                                aria-valuemin="0" 
+                                aria-valuemax="100">
+                            </div>
                         </div>
                     </div>
-                    <div class="progress-item">
-                        <div class="d-flex justify-content-between">
-                            <h6>Web Design</h6>
-                            <h6>85%</h6>
-                        </div>
-                        <div class="progress mt-2">
-                            <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="progress-item">
-                        <div class="d-flex justify-content-between">
-                            <h6>Web Design</h6>
-                            <h6>85%</h6>
-                        </div>
-                        <div class="progress mt-2">
-                            <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="progress-item">
-                        <div class="d-flex justify-content-between">
-                            <h6>Web Design</h6>
-                            <h6>85%</h6>
-                        </div>
-                        <div class="progress mt-2">
-                            <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="progress-item">
-                        <div class="d-flex justify-content-between">
-                            <h6>Web Design</h6>
-                            <h6>85%</h6>
-                        </div>
-                        <div class="progress mt-2">
-                            <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="progress-item">
-                        <div class="d-flex justify-content-between">
-                            <h6>Web Design</h6>
-                            <h6>85%</h6>
-                        </div>
-                        <div class="progress mt-2">
-                            <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
+                    <?php endfor; ?>
                 </div>
             </div>
         </div>
     </section>
+
+    <?php
+        endif;
+    ?>
 
     <!-- Improve The Stability -->
     <section class="improve-the-stability">
