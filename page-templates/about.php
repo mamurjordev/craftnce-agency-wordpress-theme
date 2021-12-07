@@ -8,90 +8,120 @@
 
 <?php get_template_part('template-parts/common/breadcrumb'); ?>
 
+    <?php
+        if(get_craftnce_data('is_show_about_page_info_section')) :
+    ?>
     <!-- Info Section -->
     <section class="home-info">
         <div class="container">
             <div class="row hero-h align-items-center py-5 py-lg-0">
                 <div class="col-lg-6">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about-info.png" class="img-fluid mt-4 mt-md-0 px-4 px-md-0 pe-md-5" alt="">
+                    <img src="<?php echo esc_url(get_craftnce_data('about_page_info_feat_image')['url']); ?>" class="img-fluid mt-4 mt-md-0 px-4 px-md-0 pe-md-5" alt="">
                 </div>
                 <div class="col-lg-6 mt-5 mt-lg-0">
-                    <h6 class="text-uppercase fw-bold text-sm text-primary">history</h6>
-                    <h2 class="fs-1 fw-900 text-capitalize">For the next generation of big businesses</h2>
+                    <h6 class="text-uppercase fw-bold text-sm text-primary">
+                        <?php
+                            echo get_craftnce_data('about_page_info_subtitle');
+                        ?>
+                    </h6>
+                    <h2 class="fs-1 fw-900 text-capitalize">
+                        <?php
+                            echo get_craftnce_data('about_page_info_title');
+                        ?>
+                    </h2>
                     <p class="info-sec-p text-muted my-3">
-                        There are many variations of passages of Lorem Ipsum available but the majority have  suffered alteration in some form, by injected humour. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.
-                    </p>
-                    <p class="info-sec-p text-muted my-3">
-                        There are many variations of passages of Lorem Ipsum available but the majority have  suffered alteration in some form.
+                        <?php
+                            echo get_craftnce_data('about_page_info_description');
+                        ?>
                     </p>
                 </div>
             </div>
         </div>
     </section>
+
+    <?php
+        endif;
+
+        if(get_craftnce_data('is_show_about_page_case_study_section')) :
+    ?>
 
     <section>
         <div class="container mb-5">
             <div class="row">
                 <div class="col-md-6">
                     <h2 class="fw-900 fs-1">
-                        We're Leading Digital<br>Business Agency
+                        <?php
+                            echo get_craftnce_data('about_page_case_study_title');
+                        ?>
                     </h2>
                 </div>
                 <div class="col-md-6 align-self-center">
                     <p>
-                        There are many variations of passages of Lorem Ipsum available, but the
-                        majority have suffered alteration in some form, by injected humour. If you
-                        are going to use a passage of Lorem Ipsum, you need to be sure.
+                        <?php
+                            echo get_craftnce_data('about_page_case_study_short_description');
+                        ?>
                     </p>
                 </div>
             </div>
             <div class="row position-relative mt-4 pe-0">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about-info2.png" class="img-fluid" alt="">
+                <img src="<?php echo esc_url(get_craftnce_data('about_page_case_study_feat_image')['url']); ?>" class="img-fluid" alt="">
 
+                <?php
+                    if(get_craftnce_data('is_show_about_page_case_study_box')) :
+                ?>
                 <div class="about-info2-inner-box info2_bg-light bottom-0 end-0 pt-4 ps-4 pe-4 pe-lg-0 col-lg-7 me-2point5">
                     <h5 class="fw-bold">
-                        If you are going to use a passage of Lorem Ipsum you need to be sure. Compare us between others companies.
+                        <?php
+                            echo get_craftnce_data('about_page_case_study_box_title');
+                        ?>
                     </h5>
                     <p class="text-muted text-md">
-                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour. If you are going to use a passage of Lorem Ipsum, you need to be sure.
+                        <?php
+                            echo get_craftnce_data('about_page_case_study_box_short_description');
+                        ?>
                     </p>
 
                     <div class="border border-2 border-primary info2_border p-3 mt-4">
                         <div class="row pe-0">
-                            <div class="col-sm-6">
-                                <div class="d-flex">
-                                    <i class="fas fa-tools info2-col-ico me-3 mt-1 text-primary fs-5"></i>
-                                    <div>
-                                        <h5>Standard Lorem Ipsum</h5>
-                                        <p class="text-md text-muted lh-base mb-0">
-                                            There are many variations of
-                                            passages of Lorem Ipsum available.
-                                            There are many variations of
-                                            passages of Lorem.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                            <?php
+                                $about_page_case_study = get_craftnce_data('about_page_case_study_info_grid');
+                                $case_study_info_grid_count = count((array)$about_page_case_study);
+                                
+                                for($i = 0; $i < $case_study_info_grid_count; $i++) :
+                            ?>
                             <div class="col-sm-6 mt-4 mt-sm-0">
                                 <div class="d-flex">
-                                    <i class="fas fa-tools info2-col-ico me-3 mt-1 text-primary fs-5"></i>
+                                    <i class="<?php echo $about_page_case_study[$i]['case_study_info_grid_icon']; ?> info2-col-ico me-3 mt-1 text-primary fs-5"></i>
                                     <div>
-                                        <h5>Standard Lorem Ipsum</h5>
-                                        <p class="text-md text-muted lh-base mb-0">
-                                            There are many variations of
-                                            passages of Lorem Ipsum available.
-                                            There are many variations of
-                                            passages of.
+                                        <h5>
+                                            <?php
+                                                echo $about_page_case_study[$i]['case_study_info_grid_title'];
+                                            ?>
+                                        </h5>
+                                        <p class="text-sm text-muted lh-base mb-0">
+                                            <?php
+                                                echo $about_page_case_study[$i]['case_study_info_grid_description'];
+                                            ?>
                                         </p>
                                     </div>
                                 </div>
                             </div>
+                            <?php
+                                endfor;
+                            ?>
                         </div>
                     </div>
                 </div>
+                <?php
+                    endif;
+                ?>
             </div>
         </div>
     </section>
+
+    <?php
+        endif;
+    ?>
 
     <!-- Counter Section -->
     <section class="counter-bg">
