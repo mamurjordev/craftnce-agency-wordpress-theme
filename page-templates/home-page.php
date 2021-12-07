@@ -290,67 +290,65 @@
             </div>
         </div>
     </section>
-    <?php endif; ?>
+    <?php
+        endif;
+        if(get_craftnce_data('is_show_infography_section')) :
+    ?>
 
     <!-- Infography Section -->
     <section class="infography-section">
         <div class="container">
             <div class="row align-items-center py-5">
                 <div class="col-lg-6 mt-5 mt-lg-0">
-                    <h2 class="fs-1 fw-900 text-light text-uppercase">Do you have  any projects in your mind?</h2>
+                    <h2 class="fs-1 fw-900 text-light text-uppercase">
+                        <?php
+                            echo get_craftnce_data('infography_section_title');
+                        ?>
+                    </h2>
                     <p class="info-sec-p text-light my-3">
-                        We achived honour experience in last <span class="text-warning">25 years.</span>
+                        <?php
+                            echo get_craftnce_data('infography_section_subtitle');
+                        ?>
                     </p>
                     
                     <div class="accordion accordion-flush mt-4" id="accordionFlushExample">
+                        <?php
+                            $infography_accordion_items = get_craftnce_data('infography_accordion_items');
+                            $accordion_count = count((array)$infography_accordion_items);
+                            
+                            for($i = 0; $i < $accordion_count; $i++) :
+                        ?>
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="flush-headingOne">
-                            <button class="accordion-button collapsed text-light" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne1" aria-expanded="false" aria-controls="flush-collapseOne">
-                                Accordion Item #1
+                            <button class="accordion-button collapsed text-light" type="button" data-bs-toggle="collapse" data-bs-target="#<?php echo 'infography_accordion_' . $i; ?>" aria-expanded="false" aria-controls="flush-collapseOne">
+                                <?php
+                                    echo $infography_accordion_items[$i]['infography_accordion_title'];
+                                ?>
                             </button>
                             </h2>
-                            <div id="flush-collapseOne1" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body text-light">Placeholder content for this accordion, which is intended to demonstrate the accordion-flush class. This is the first item's accordion body.</div>
+                            <div id="<?php echo 'infography_accordion_' . $i; ?>" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body text-light">
+                                <?php
+                                    echo $infography_accordion_items[$i]['infography_accordion_description'];
+                                ?>
+                            </div>
                             </div>
                         </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-headingOne">
-                            <button class="accordion-button collapsed text-light" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne2" aria-expanded="false" aria-controls="flush-collapseOne">
-                                Accordion Item #1
-                            </button>
-                            </h2>
-                            <div id="flush-collapseOne2" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body text-light">Placeholder content for this accordion, which is intended to demonstrate the accordion-flush class. This is the first item's accordion body.</div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-headingOne">
-                            <button class="accordion-button collapsed text-light" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne3" aria-expanded="false" aria-controls="flush-collapseOne">
-                                Accordion Item #1
-                            </button>
-                            </h2>
-                            <div id="flush-collapseOne3" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body text-light">Placeholder content for this accordion, which is intended to demonstrate the accordion-flush class. This is the first item's accordion body.</div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-headingOne4">
-                            <button class="accordion-button collapsed text-light" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne4" aria-expanded="false" aria-controls="flush-collapseOne">
-                                Accordion Item #1
-                            </button>
-                            </h2>
-                            <div id="flush-collapseOne4" class="accordion-collapse collapse" aria-labelledby="flush-headingOne4" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body text-light">Placeholder content for this accordion, which is intended to demonstrate the accordion-flush class. This is the first item's accordion body.</div>
-                            </div>
-                        </div>
+                        <?php
+                            endfor;
+                        ?>
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/infography.png" class="img-fluid mt-4 mt-md-0 px-4 px-md-0 pe-md-5" alt="">
+                    <img src="<?php echo esc_url(get_craftnce_data('infography_image')['url']); ?>" class="img-fluid mt-4 mt-md-0 px-4 px-md-0 pe-md-5" alt="">
                 </div>
             </div>
         </div>
     </section>
+
+    <?php
+        endif;
+    ?>
 
     <!-- Band Logo Section -->
     <section>

@@ -56,7 +56,7 @@
             array(
                 'title'                 =>  __('First Button Font Awesome Icon Class', 'craftnce'),
                 'id'                    =>  'hero_first_button_icon_class',
-                'type'                  =>  'text',
+                'type'                  =>  'icon',
             ),
             // Second Button
             array(
@@ -77,7 +77,7 @@
             array(
                 'title'                 =>  __('Second Button Font Awesome Icon Class', 'craftnce'),
                 'id'                    =>  'hero_second_button_icon_class',
-                'type'                  =>  'text',
+                'type'                  =>  'icon',
             ),
         ),
     ));
@@ -140,9 +140,10 @@
             array(
                 'title'                 =>  __('FontAwesome Icon Class', 'craftnce'),
                 'id'                    =>  'about_us_info_first_button_icon',
-                'type'                  =>  'text',
+                'type'                  =>  'icon',
             ),
 
+            // Second Button
             array(
                 'title'                 =>  __('Show Second Button', 'craftnce'),
                 'id'                    =>  'is_show_about_us_info_second_button',
@@ -161,7 +162,7 @@
             array(
                 'title'                 =>  __('FontAwesome Icon Class', 'craftnce'),
                 'id'                    =>  'about_us_info_second_button_icon',
-                'type'                  =>  'text',
+                'type'                  =>  'icon',
             ),
         ),
     ));
@@ -191,7 +192,7 @@
                     array(
                         'title'             =>  __('Font-awesome Icon Class', 'craftnce'),
                         'id'                =>  'features_item_icon_class',
-                        'type'              =>  'text',
+                        'type'              =>  'icon',
                     ),
                     array(
                         'title'             =>  __('Item Title', 'craftnce'),
@@ -359,6 +360,62 @@
                         'title'             =>  __('Testimonial Message', 'craftnce'),
                         'id'                =>  'testimonial_message',
                         'type'              =>  'text',
+                    ),
+                ),
+            ),
+        ),
+    ));
+
+    // Counter Section
+    CSF::createSection($option_prefix, array(
+        'title'                     =>  __('Infography', 'craftnce'),
+        'parent'                    =>  'front_page',
+        'fields'                    =>  array(
+            array(
+                'type'    => 'notice',
+                'style'   => 'info',
+                'content' => __('<h1>Infography section with accordion</h1>', 'craftnce'),
+            ),
+            array(
+                'title'                     =>  __('Show Section'),
+                'id'                        =>  'is_show_infography_section',
+                'type'                      =>  'switcher',
+            ),
+            array(
+                'title'                     =>  __('Infography Image'),
+                'id'                        =>  'infography_image',
+                'type'                      =>  'media',
+            ),
+            array(
+                'title'                     =>  __('Section Subtitle'),
+                'id'                        =>  'infography_section_subtitle',
+                'type'                      =>  'wp_editor',
+                'media_buttons'             =>  false,
+                'height'                    =>  '100px',
+            ),
+            array(
+                'title'                     =>  __('Section Title'),
+                'id'                        =>  'infography_section_title',
+                'type'                      =>  'text',
+            ),
+            array(
+                'title'                     =>  __('Accordion Item'),
+                'id'                        =>  'infography_accordion_items',
+                'type'                      =>  'repeater',
+                'min'                       =>  1,
+                'max'                       =>  4,
+                'fields'                    =>  array(
+                    array(
+                        'title'             =>  __('Title', 'craftnce'),
+                        'id'                =>  'infography_accordion_title',
+                        'type'              =>  'text',
+                    ),
+                    array(
+                        'title'             =>  __('Description', 'craftnce'),
+                        'id'                =>  'infography_accordion_description',
+                        'type'              =>  'wp_editor',
+                        'media_buttons'     =>  false,
+                        'height'            =>  '100px',
                     ),
                 ),
             ),
