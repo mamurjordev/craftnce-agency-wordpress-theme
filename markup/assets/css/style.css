@@ -13,6 +13,9 @@
 body {
     font-family: var(--primary-font) !important;
 }
+.craftnce_shadow {
+    box-shadow: var(--main-shadow);
+}
 .text-xsm {
     font-size: 12px;
     line-height: 16px;

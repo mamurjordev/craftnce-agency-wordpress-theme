@@ -348,39 +348,37 @@
 
     <?php
         endif;
+
+        if(get_craftnce_data('is_show_brand_slider_section')) :
     ?>
 
     <!-- Band Logo Section -->
     <section>
         <div class="container py-5">
             <div class="brand my-5">
+                <?php
+                    global $craftnce_options;
+
+                    $gallery_opt = get_craftnce_data('brand_slider_logo');
+                    $gallery_ids = explode( ',', $gallery_opt );
+                    
+                    if ( ! empty( $gallery_ids ) ) :
+                        foreach ( $gallery_ids as $gallery_item_id ) :
+                ?>
                 <div>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/brand-01.png" alt="">
+                    <img src="<?php echo wp_get_attachment_url($gallery_item_id); ?>" alt="">
                 </div>
-                <div>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/brand-02.png" alt="">
-                </div>
-                <div>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/brand-03.png" alt="">
-                </div>
-                <div>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/brand-04.png" alt="">
-                </div>
-                <div>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/brand-05.png" alt="">
-                </div>
-                <div>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/brand-03.png" alt="">
-                </div>
-                <div>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/brand-06.png" alt="">
-                </div>
-                <div>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/brand-02.png" alt="">
-                </div>
+                <?php
+                        endforeach;
+                    endif;
+                ?>
             </div>
         </div>
     </section>
+
+    <?php
+        endif;
+    ?>
 
     <!-- Newsletter -->
     <section class="news-letter">
@@ -402,6 +400,10 @@
         </div>
     </section>
 
+    <?php
+        if(get_craftnce_data('is_show_blog_section')) :
+    ?>
+
     <!-- Blog Section -->
     <section class="py-5">
         <div class="container py-50">
@@ -412,43 +414,40 @@
             <h2 class="text-uppercase fw-900">Our recent blog</h2>
 
             <div class="row mt-4">
-                <div class="col-md-6 col-xl-4 mt-4">
-                    <div class="card shadow-lg p-3 border-0">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog.png" alt="">
+                <div class="portfo-box col-md-6 col-lg-4 mt-4">
+                    <div class="card border-0 bg-white rounded-3 blog-card">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/webdesign.jpg" class="img-fluid w-100 h-100" alt="">
 
-                        <div class="mt-4">
-                            <h4 class="fw-bold">Lorem ipsum dolor sit amet consectetur.</h4>
-
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident officiis itaque fugit veniam. Suscipit accusantium tempore, impedit consequuntur necessitatibus totam!</p>
-
-                            <a href="#!" class="text-sm text-dark fw-bolder text-decoration-none">Read More <i class="ri-arrow-right-line"></i></a>
+                        <div>
+                            <h4 class="fw-bold my-3">Where does it come?</h4>
+                            <p class="text-sm m-0 lh-base excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis culpa, eligendi corporis at facilis animi possimus accusamus mollitia veritatis natus nesciunt beatae, consequatur, illum quae.</p>
                         </div>
+
+                        <a href="single-blog.html" class="single-blog-read-more-btn position-relative mt-3 text-dark text-decoration-none w-max">Read More</a>
                     </div>
                 </div>
-                <div class="col-md-6 col-xl-4 mt-4">
-                    <div class="card shadow-lg p-3 border-0">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog.png" alt="">
+                <div class="portfo-box col-md-6 col-lg-4 mt-4">
+                    <div class="card border-0 bg-white rounded-3 blog-card">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/webdesign.jpg" class="img-fluid w-100 h-100" alt="">
 
-                        <div class="mt-4">
-                            <h4 class="fw-bold">Lorem ipsum dolor sit amet consectetur.</h4>
-
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident officiis itaque fugit veniam. Suscipit accusantium tempore, impedit consequuntur necessitatibus totam!</p>
-
-                            <a href="#!" class="text-sm text-dark fw-bolder text-decoration-none">Read More <i class="ri-arrow-right-line"></i></a>
+                        <div>
+                            <h4 class="fw-bold my-3">Where does it come?</h4>
+                            <p class="text-sm m-0 lh-base excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis culpa, eligendi corporis at facilis animi possimus accusamus mollitia veritatis natus nesciunt beatae, consequatur, illum quae.</p>
                         </div>
+
+                        <a href="single-blog.html" class="single-blog-read-more-btn position-relative mt-3 text-dark text-decoration-none w-max">Read More</a>
                     </div>
                 </div>
-                <div class="col-md-6 col-xl-4 mt-4">
-                    <div class="card shadow-lg p-3 border-0">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog.png" alt="">
+                <div class="portfo-box col-md-6 col-lg-4 mt-4">
+                    <div class="card border-0 bg-white rounded-3 blog-card">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/webdesign.jpg" class="img-fluid w-100 h-100" alt="">
 
-                        <div class="mt-4">
-                            <h4 class="fw-bold">Lorem ipsum dolor sit amet consectetur.</h4>
-
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident officiis itaque fugit veniam. Suscipit accusantium tempore, impedit consequuntur necessitatibus totam!</p>
-
-                            <a href="#!" class="text-sm text-dark fw-bolder text-decoration-none">Read More <i class="ri-arrow-right-line"></i></a>
+                        <div>
+                            <h4 class="fw-bold my-3">Where does it come?</h4>
+                            <p class="text-sm m-0 lh-base excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis culpa, eligendi corporis at facilis animi possimus accusamus mollitia veritatis natus nesciunt beatae, consequatur, illum quae.</p>
                         </div>
+
+                        <a href="single-blog.html" class="single-blog-read-more-btn position-relative mt-3 text-dark text-decoration-none w-max">Read More</a>
                     </div>
                 </div>
             </div>
@@ -458,6 +457,9 @@
             </div>
         </div>
     </section>
+    <?php
+        endif;
+    ?>
 
 <?php
     get_footer();
