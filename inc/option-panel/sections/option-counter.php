@@ -1,50 +1,50 @@
 <?php
-    // Services Section
+    // Counter Section
     CSF::createSection($option_prefix, array(
-        'title'                     =>  __('Services', 'craftnce'),
+        'title'                     =>  __('Counter', 'craftnce'),
+        'parent'                    =>  'sections',
         'fields'                    =>  array(
             array(
                 'type'    => 'notice',
                 'style'   => 'info',
-                'content' => __('<h1>Services</h1>', 'craftnce'),
+                'content' => __('<h1>Case Study Counter</h1>', 'craftnce'),
             ),
             array(
                 'title'                     =>  __('Show Section'),
-                'id'                        =>  'is_show_service_section',
+                'id'                        =>  'is_show_counter_section',
                 'type'                      =>  'switcher',
             ),
             array(
                 'title'                     =>  __('Section Subtitle'),
-                'id'                        =>  'service_section_subtitle',
+                'id'                        =>  'service_counter_subtitle',
                 'type'                      =>  'text',
             ),
             array(
                 'title'                     =>  __('Section Title'),
-                'id'                        =>  'service_section_title',
+                'id'                        =>  'service_counter_title',
                 'type'                      =>  'text',
             ),
             array(
-                'title'                     =>  __('Services Item'),
-                'id'                        =>  'service_items',
+                'title'                     =>  __('Counter Item'),
+                'id'                        =>  'counter_items',
                 'type'                      =>  'repeater',
                 'min'                       =>  1,
+                'max'                       =>  4,
                 'fields'                    =>  array(
                     array(
                         'title'             =>  __('Icon', 'craftnce'),
-                        'id'                =>  'service_icon',
-                        'type'              =>  'media',
+                        'id'                =>  'counter_icon',
+                        'type'              =>  'icon',
                     ),
                     array(
-                        'title'             =>  __('Item Title', 'craftnce'),
-                        'id'                =>  'service_item_title',
+                        'title'             =>  __('Countable Numbers', 'craftnce'),
+                        'id'                =>  'countable_numbers',
                         'type'              =>  'text',
                     ),
                     array(
-                        'title'             =>  __('Item Description', 'craftnce'),
-                        'id'                =>  'service_item_description',
-                        'type'              =>  'wp_editor',
-                        'height'            =>  '100px',
-                        'media_buttons'     =>  false
+                        'title'             =>  __('Title', 'craftnce'),
+                        'id'                =>  'counter_title',
+                        'type'              =>  'text',
                     ),
                 ),
             ),

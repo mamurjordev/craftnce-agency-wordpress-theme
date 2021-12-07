@@ -2,6 +2,7 @@
     // Brand Slider Section
     CSF::createSection($option_prefix, array(
         'title'                     =>  __('Brands', 'craftnce'),
+        'parent'                    =>  'sections',
         'fields'                    =>  array(
             array(
                 'type'    => 'notice',

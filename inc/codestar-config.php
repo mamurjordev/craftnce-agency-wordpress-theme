@@ -16,9 +16,5 @@
         include_once get_template_directory().'/inc/option-panel/option-blog.php';
 
         // Common Sections
-        include_once get_template_directory().'/inc/option-panel/option-service.php';
-        include_once get_template_directory().'/inc/option-panel/option-counter.php';
-        include_once get_template_directory().'/inc/option-panel/option-testimonial.php';
-        include_once get_template_directory().'/inc/option-panel/option-brand-logo.php';
-        include_once get_template_directory().'/inc/option-panel/option-blog-section.php';
+        include_once get_template_directory().'/inc/option-panel/sections/sections.php';
     }

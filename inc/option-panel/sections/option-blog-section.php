@@ -2,6 +2,7 @@
     // Blog Section
     CSF::createSection($option_prefix, array(
         'title'                     =>  __('Blog Section', 'craftnce'),
+        'parent'                    =>  'sections',
         'fields'                    =>  array(
             array(
                 'type'    => 'notice',

@@ -2,6 +2,7 @@
     // Testimonial Section
     CSF::createSection($option_prefix, array(
         'title'                     =>  __('Testimonial', 'craftnce'),
+        'parent'                    =>  'sections',
         'fields'                    =>  array(
             array(
                 'type'    => 'notice',
