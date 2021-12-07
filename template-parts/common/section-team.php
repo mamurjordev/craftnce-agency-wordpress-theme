@@ -23,7 +23,7 @@
             <div class="col-md-6 col-lg-4 col-xxl-3 mt-4">
                 <div class="team-member-card card border-0 overflow-hidden d-flex flex-column justify-content-between">
                     <div class="team-avatar text-center">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/images.png" class="img-fluid team-avatar-img rounded-circle mx-auto" alt="">
+                        <img src="<?php echo esc_url($team_member_items[$i]['team_member_thumbnail']['url']); ?>" class="img-fluid team-avatar-img rounded-circle mx-auto" alt="">
                     </div>
                     
                     <div class="text-center">
