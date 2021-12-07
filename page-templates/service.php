@@ -8,11 +8,11 @@
 
 <?php get_template_part('template-parts/common/breadcrumb'); ?>
 
+    <?php
+        if(get_craftnce_data('is_show_service_tab_info_section')) :
+    ?>
     <section>
         <div class="container py-5">
-            <?php
-                if(get_craftnce_data('is_show_service_tab_info_section')) :
-            ?>
             <div class="row">
                 <div class="col-xl-6">
                     <h2 class="fs-48 fw-900">
@@ -28,15 +28,27 @@
                             $service_tabs_count = count((array)$service_tabs);
                             
                             if(!empty($service_tabs)) :
-                                for($i = 0; $i < $service_tabs_count; $i++) :
+                                for($i = 0; $i < 1; $i++) :
                         ?>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="home-tab" data-bs-toggle="tab" data-bs-target="#<?php echo 'service_info_tabs_' . $i; ?>" type="button" role="tab" aria-controls="home" aria-selected="true">
+                            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#<?php echo 'service_info_tabs_' . $i; ?>" type="button" role="tab" aria-controls="home" aria-selected="true">
                                 <?php
                                     echo $service_tabs[$i]['service_tabs_title'];
                                 ?>
                             </button>
                         </li>
+                        <?php
+                            endfor;
+
+                            for($i = 1; $i < $service_tabs_count; $i++) :
+                                ?>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="home-tab" data-bs-toggle="tab" data-bs-target="#<?php echo 'service_info_tabs_' . $i; ?>" type="button" role="tab" aria-controls="home" aria-selected="true">
+                                        <?php
+                                            echo $service_tabs[$i]['service_tabs_title'];
+                                        ?>
+                                    </button>
+                                </li>
                         <?php
                                 endfor;
                             endif;
@@ -48,7 +60,7 @@
                             $service_tabs_content_count = count((array)$service_tabs_content);
                             
                             if(!empty($service_tabs_content)) :
-                                for($i = 0; $i < $service_tabs_content_count; $i++) :
+                                for($i = 0; $i < 1; $i++) :
                         ?>
                         <div class="tab-pane fade show active" id="<?php echo 'service_info_tabs_' . $i; ?>" role="tabpanel" aria-labelledby="home-tab">
                             <p>
@@ -58,6 +70,18 @@
                             </p>
                         </div>
                         <?php
+                            endfor;
+
+                            for($i = 1; $i < $service_tabs_content_count; $i++) :
+                        ?>
+                            <div class="tab-pane fade show" id="<?php echo 'service_info_tabs_' . $i; ?>" role="tabpanel" aria-labelledby="home-tab">
+                                <p>
+                                    <?php
+                                        echo $service_tabs[$i]['service_tabs_description'];
+                                    ?>
+                                </p>
+                            </div>
+                        <?php
                                 endfor;
                             endif;
                         ?>
@@ -65,54 +89,11 @@
                 </div>
             </div>
             <?php
-                endif;
+                get_template_part('template-parts/common/section-service');
             ?>
-            <div class="row my-5">
-                <div class="col-md-6 col-lg-4 mt-4">
-                    <div class="card service p-4 border-0">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/product 1.png" alt="">
-                        <h4 class="fw-bold my-3">Where does it come?</h4>
-                        <p class="text-md text-muted lh-base">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mt-4">
-                    <div class="card service p-4 border-0">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/protection 1.png" alt="">
-                        <h4 class="fw-bold my-3">Where does it come?</h4>
-                        <p class="text-md text-muted lh-base">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mt-4">
-                    <div class="card service p-4 border-0">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/scalable 1.png" alt="">
-                        <h4 class="fw-bold my-3">Where does it come?</h4>
-                        <p class="text-md text-muted lh-base">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mt-4">
-                    <div class="card service p-4 border-0">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/shdhsjhd 1.png" alt="">
-                        <h4 class="fw-bold my-3">Where does it come?</h4>
-                        <p class="text-md text-muted lh-base">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mt-4">
-                    <div class="card service p-4 border-0">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/product 1.png" alt="">
-                        <h4 class="fw-bold my-3">Where does it come?</h4>
-                        <p class="text-md text-muted lh-base">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mt-4">
-                    <div class="card service p-4 border-0">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/protection 1.png" alt="">
-                        <h4 class="fw-bold my-3 ">Where does it come?</h4>
-                        <p class="text-md text-muted lh-base">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin</p>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
+    <?php endif; ?>
 
     <!-- Info Section -->
     <section class="home-info py-5">
