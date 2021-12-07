@@ -10,35 +10,63 @@
 
     <section>
         <div class="container py-5">
+            <?php
+                if(get_craftnce_data('is_show_service_tab_info_section')) :
+            ?>
             <div class="row">
                 <div class="col-xl-6">
-                    <h2 class="fs-48 fw-900">Service that lead the way to better business</h2>
+                    <h2 class="fs-48 fw-900">
+                        <?php
+                            echo get_craftnce_data('service_tab_info_section_title');
+                        ?>
+                    </h2>
                 </div>
                 <div class="col-xl-6">
                     <ul class="nav nav-tabs mb-3" id="myTab" role="tablist">
+                        <?php
+                            $service_tabs = get_craftnce_data('service_tab_section');
+                            $service_tabs_count = count((array)$service_tabs);
+                            
+                            if(!empty($service_tabs)) :
+                                for($i = 0; $i < $service_tabs_count; $i++) :
+                        ?>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
+                            <button class="nav-link" id="home-tab" data-bs-toggle="tab" data-bs-target="#<?php echo 'service_info_tabs_' . $i; ?>" type="button" role="tab" aria-controls="home" aria-selected="true">
+                                <?php
+                                    echo $service_tabs[$i]['service_tabs_title'];
+                                ?>
+                            </button>
                         </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Contact</button>
-                        </li>
+                        <?php
+                                endfor;
+                            endif;
+                        ?>
                     </ul>
                     <div class="tab-content" id="myTabContent">
-                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione vel a, recusandae excepturi voluptates expedita necessitatibus nesciunt, placeat tempore autem eos reiciendis nostrum quas nihil illo nemo magni! Esse, laborum!</p>
+                        <?php
+                            $service_tabs_content = get_craftnce_data('service_tab_section');
+                            $service_tabs_content_count = count((array)$service_tabs_content);
+                            
+                            if(!empty($service_tabs_content)) :
+                                for($i = 0; $i < $service_tabs_content_count; $i++) :
+                        ?>
+                        <div class="tab-pane fade show active" id="<?php echo 'service_info_tabs_' . $i; ?>" role="tabpanel" aria-labelledby="home-tab">
+                            <p>
+                                <?php
+                                    echo $service_tabs[$i]['service_tabs_description'];
+                                ?>
+                            </p>
                         </div>
-                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione vel a, recusandae excepturi voluptates expedita necessitatibus nesciunt, placeat tempore autem eos reiciendis nostrum quas nihil illo nemo magni! Esse, laborum!</p>
-                        </div>
-                        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione vel a, recusandae excepturi voluptates expedita necessitatibus nesciunt, placeat tempore autem eos reiciendis nostrum quas nihil illo nemo magni! Esse, laborum!</p>
-                        </div>
-                    </div>                      
+                        <?php
+                                endfor;
+                            endif;
+                        ?>
+                    </div>
                 </div>
             </div>
+            <?php
+                endif;
+            ?>
             <div class="row my-5">
                 <div class="col-md-6 col-lg-4 mt-4">
                     <div class="card service p-4 border-0">

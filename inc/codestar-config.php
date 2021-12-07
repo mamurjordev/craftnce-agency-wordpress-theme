@@ -14,6 +14,7 @@
         // Page Specific Options
         include_once get_template_directory().'/inc/option-panel/page/option-front-page.php';
         include_once get_template_directory().'/inc/option-panel/page/option-about.php';
+        include_once get_template_directory().'/inc/option-panel/page/option-service.php';
         include_once get_template_directory().'/inc/option-panel/page/option-blog.php';
 
         // Common Sections
