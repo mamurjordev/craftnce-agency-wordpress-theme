@@ -129,10 +129,27 @@
 
     <?php
         endif;
+
+        if(get_craftnce_data('is_show_front_page_service_section')) :
     ?>
 
     <!-- Service Section -->
-    <?php get_template_part('template-parts/common/section-service'); ?>
+    <section>
+        <div class="container py-5">
+            <div class="row text-center">
+                <h6 class="text-uppercase fw-bold text-md text-primary">
+                    <?php echo get_craftnce_data('service_section_subtitle'); ?>
+                </h6>
+                <h2 class="text-capitalize fw-900 text-xl mt-3">
+                    <?php echo get_craftnce_data('service_section_title'); ?>
+                </h2>
+            </div>
+            <?php get_template_part('template-parts/common/section-service'); ?>
+        </div>
+    </section>
+    <?php
+        endif;
+    ?>
 
     <!-- Counter Section -->
     <?php get_template_part('template-parts/common/section-counter'); ?>
