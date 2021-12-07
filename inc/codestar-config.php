@@ -8,7 +8,13 @@
             'menu_icon'                 =>  'dashicons-screenoptions'
         ));
 
+        // General Options
         include_once get_template_directory().'/inc/option-panel/option-general.php';
-        include_once get_template_directory().'/inc/option-panel/page/option-front-page.php';
+
+        // Page Specific Options
+        include_once get_template_directory().'/inc/option-panel/option-front-page.php';
         include_once get_template_directory().'/inc/option-panel/option-blog.php';
+
+        // Common Sections
+        include_once get_template_directory().'/inc/option-panel/sections/sections.php';
     }
