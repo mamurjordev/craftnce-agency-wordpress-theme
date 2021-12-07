@@ -194,3 +194,60 @@
             ),
         ),
     ));
+
+    // Improve the stability Section
+    CSF::createSection($option_prefix, array(
+        'title'                     =>  __('Improve the stability', 'craftnce'),
+        'parent'                    =>  'about_page',
+        'fields'                    =>  array(
+            array(
+                'type'    => 'notice',
+                'style'   => 'info',
+                'content' => __('<h1>Info Section</h1>', 'craftnce'),
+            ),
+            array(
+                'title'                 =>  __('Show Section', 'craftnce'),
+                'id'                    =>  'is_show_improve_the_stability_section',
+                'type'                  =>  'switcher',
+            ),
+            array(
+                'title'                 =>  __('Title', 'craftnce'),
+                'id'                    =>  'improve_the_stability_title',
+                'type'                  =>  'text',
+            ),
+            array(
+                'title'                 =>  __('Description', 'craftnce'),
+                'id'                    =>  'improve_the_stability_description',
+                'type'                  =>  'wp_editor',
+                'media_buttons'         =>  false,
+                'height'                =>  '100px',
+            ),
+            
+            array(
+                'title'                 =>  __('Stability Items', 'craftnce'),
+                'id'                    =>  'stability_items',
+                'type'                  =>  'repeater',
+                'min'                   =>  1,
+                'max'                   =>  6,
+                'fields'                =>  array(
+                    array(
+                        'title'             =>  __('Title', 'craftnce'),
+                        'id'                =>  'stability_items_title',
+                        'type'              =>  'text'
+                    ),
+                    array(
+                        'title'             =>  __('Icon', 'craftnce'),
+                        'id'                =>  'stability_items_icon',
+                        'type'              =>  'media',
+                    ),
+                    array(
+                        'title'                 =>  __('Description', 'craftnce'),
+                        'id'                    =>  'stability_items_description',
+                        'type'                  =>  'wp_editor',
+                        'media_buttons'         =>  false,
+                        'height'                =>  '100px',
+                    ),
+                ),
+            ),
+        ),
+    ));

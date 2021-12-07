@@ -198,6 +198,8 @@
 
     <?php
         endif;
+
+        if(get_craftnce_data('is_show_improve_the_stability_section')) :
     ?>
 
     <!-- Improve The Stability -->
@@ -208,24 +210,33 @@
                 <p class="text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
             </div>
             <div class="row text-center mt-5">
+                <?php
+                    $stability_items = get_craftnce_data('stability_items');
+                    $stability_item_count = count((array)$stability_items);
+                    
+                    for($i = 0; $i < $stability_item_count; $i++) :
+                ?>
                 <div class="col-md-6 col-xl-4 mt-4">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/ss-01.png" alt="">
-                    <h3 class="mt-2">Unlimited Content</h3>
-                    <p class="lh-base text-muted">Stars air over land bring life female stars dry be abundantly may green te which fill after our behold very god pair.</p>
+                    <img src="<?php echo esc_attr($stability_items[$i]['stability_items_icon']['url']); ?>" alt="">
+                    <h3 class="mt-2">
+                        <?php
+                            echo $stability_items[$i]['stability_items_title'];
+                        ?>
+                    </h3>
+                    <p class="lh-base text-muted">
+                        <?php
+                            echo $stability_items[$i]['stability_items_description'];
+                        ?>
+                    </p>
                 </div>
-                <div class="col-md-6 col-xl-4 mt-4">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/ss-02.png" alt="">
-                    <h3 class="mt-2">Unlimited Content</h3>
-                    <p class="lh-base text-muted">Stars air over land bring life female stars dry be abundantly may green te which fill after our behold very god pair.</p>
-                </div>
-                <div class="col-md-6 col-xl-4 mt-4">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/ss-03.png" alt="">
-                    <h3 class="mt-2">Unlimited Content</h3>
-                    <p class="lh-base text-muted">Stars air over land bring life female stars dry be abundantly may green te which fill after our behold very god pair.</p>
-                </div>
+                <?php endfor; ?>
             </div>
         </div>
     </section>
+
+    <?php
+        endif;
+    ?>
 
     <!-- Team Section -->
     <section class="team-sction py-5">
