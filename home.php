@@ -9,8 +9,8 @@
         <div class="container py-5">
             <div class="row text-center pb-5">
                 <div class="col-md-7 mx-auto">
-                    <h6 class="fw-bold fs-6 text-uppercase text-primary"><?php echo _e(craftnce_get_data('blog_page_subheader')); ?></h6>
-                    <h2 class="fs-48 fw-900 text-uppercase"><?php echo _e(craftnce_get_data('blog_page_header')); ?></h2>
+                    <h6 class="fw-bold fs-6 text-uppercase text-primary"><?php echo _e(get_craftnce_data('blog_page_subheader')); ?></h6>
+                    <h2 class="fs-48 fw-900 text-uppercase"><?php echo _e(get_craftnce_data('blog_page_header')); ?></h2>
                 </div>
             </div>
               
