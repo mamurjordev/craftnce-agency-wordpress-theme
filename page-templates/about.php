@@ -247,16 +247,28 @@
     <!-- Newsletter Section -->
     <?php get_template_part('template-parts/common/section-newsletter'); ?>
 
+    <?php
+        if(get_craftnce_data('is_show_brand_logo_slider_section')) :
+    ?>
     <!-- Band Logo Section -->
     <section class="py-5">
         <div class="container py-5">
             <div class="mb-4 text-center">
-                <h2 class="fs-48 fw-900">Trusted over 100+ companies</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum asperiores labore tenetur?</p>
+                <h2 class="fs-48 fw-900">
+                    <?php
+                        echo get_craftnce_data('brand_logo_slider_section_title');
+                    ?>
+                </h2>
+                <p>
+                    <?php
+                        echo get_craftnce_data('brand_logo_slider_section_subtitle');
+                    ?>
+                </p>
             </div>
             <?php get_template_part('template-parts/common/section-brand-logo'); ?>
         </div>
     </section>
+    <?php endif; ?>
 
 <?php
     get_footer();
