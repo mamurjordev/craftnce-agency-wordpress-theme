@@ -91,7 +91,7 @@
                             ?>
                             <div class="col-sm-6 mt-4 mt-sm-0">
                                 <div class="d-flex">
-                                    <i class="<?php echo $about_page_case_study[$i]['case_study_info_grid_icon']; ?> info2-col-ico me-3 mt-1 text-primary fs-5"></i>
+                                    <i class="<?php echo esc_attr($about_page_case_study[$i]['case_study_info_grid_icon']); ?> info2-col-ico me-3 mt-1 text-primary fs-5"></i>
                                     <div>
                                         <h5>
                                             <?php
@@ -124,37 +124,7 @@
     ?>
 
     <!-- Counter Section -->
-    <section class="counter-bg">
-        <div class="counter-overlay py-50">
-            <div class="container text-center py-5">
-                <h6 class="text-uppercase text-md fw-bold counter-section-subtitle">featured case study</h6>
-                <h2 class="text-uppercase text-light fw-bolder text-xl mt-3">Helping dreams to do</h2>
-
-                <div class="row mt-5">
-                    <div class="col-sm-6 col-lg-3 text-uppercase">
-                        <i class="ri-code-s-slash-line text-warning fs-48"></i>
-                        <h2 class="text-uppercase text-light fw-900 fs-72">200k</h2>
-                        <p class="text-white">Lines of code</p>
-                    </div>
-                    <div class="col-sm-6 col-lg-3 text-uppercase">
-                        <i class="ri-user-line text-warning fs-48"></i>
-                        <h2 class="text-uppercase text-light fw-900 fs-72">100+</h2>
-                        <p class="text-white">Happy clients</p>
-                    </div>
-                    <div class="col-sm-6 col-lg-3 text-uppercase">
-                        <i class="ri-code-s-slash-line text-warning fs-48"></i>
-                        <h2 class="text-uppercase text-light fw-900 fs-72">250+</h2>
-                        <p class="text-white">projects</p>
-                    </div>
-                    <div class="col-sm-6 col-lg-3 text-uppercase">
-                        <i class="ri-award-fill text-warning fs-48"></i>
-                        <h2 class="text-uppercase text-light fw-900 fs-72">30</h2>
-                        <p class="text-white">awards</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <?php get_template_part('template-parts/common/section-counter'); ?>
 
     <!-- Skill Progressbar Section -->
     <section class="home-info">
