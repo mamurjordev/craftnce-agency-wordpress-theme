@@ -1,6 +1,6 @@
 <?php
     CSF::createSection($option_prefix, array(
-        'title'                 =>  __('Blog', 'craftnce'),
+        'title'                 =>  __('Blog Page', 'craftnce'),
         'fields'                =>  array(
             array(
                 'title'                 =>  __('Blog Page Subheader', 'craftnce'),
