@@ -251,3 +251,32 @@
             ),
         ),
     ));
+
+    CSF::createSection($option_prefix, array(
+        'title'                     =>  __('Brand Logo', 'craftnce'),
+        'parent'                    =>  'about_page',
+        'fields'                    =>  array(
+            array(
+                'type'    => 'notice',
+                'style'   => 'info',
+                'content' => __('<h1>Brand Logo Slider</h1>', 'craftnce'),
+            ),
+            array(
+                'title'                 =>  __('Show Section', 'craftnce'),
+                'id'                    =>  'is_show_brand_logo_slider_section',
+                'type'                  =>  'switcher',
+            ),
+            array(
+                'title'                 =>  __('Title', 'craftnce'),
+                'id'                    =>  'brand_logo_slider_section_title',
+                'type'                  =>  'text',
+            ),
+            array(
+                'title'                 =>  __('Subtitle', 'craftnce'),
+                'id'                    =>  'brand_logo_slider_section_subtitle',
+                'type'                  =>  'wp_editor',
+                'media_buttons'         =>  false,
+                'height'                =>  '100px',
+            ),
+        ),
+    ));

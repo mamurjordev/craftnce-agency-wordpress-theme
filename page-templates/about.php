@@ -242,258 +242,33 @@
     <?php get_template_part('template-parts/common/section-team'); ?>
 
     <!-- Testimonial Section -->
-    <section>
-        <div class="py-50">
-            <div class="container text-center py-5">
-                <h6 class="text-uppercase text-md fw-bold text-primary">
-                    testimonial
-                </h6>
-                <h2 class="text-uppercase fw-bolder text-xl mt-3">Our worldwide clients<br>says about us</h2>
+    <?php get_template_part('template-parts/common/section-testimonial'); ?>
 
-                <div class="row position-relative mt-5 pt-5">
-                    <div class="col-xl-10 offset-xl-1" >
-                        <div class="testimonial-nav mb-30 d-flex justify-items-center">
-                            <div class="testimonial-thumb">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/avatar.png" alt="">
-                            </div>
-                            <div class="testimonial-thumb">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/avatar.png" alt="">
-                            </div>
-                            <div class="testimonial-thumb">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/avatar.png" alt="">
-                            </div>
-                            <div class="testimonial-thumb">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/avatar.png" alt="">
-                            </div>
-                            <div class="testimonial-thumb">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/avatar.png" alt="">
-                            </div>
+    <!-- Newsletter Section -->
+    <?php get_template_part('template-parts/common/section-newsletter'); ?>
 
-                            <div class="testimonial-thumb">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/avatar.png" alt="">
-                            </div>
-                            <div class="testimonial-thumb">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/avatar.png" alt="">
-                            </div>
-                            <div class="testimonial-thumb">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/avatar.png" alt="">
-                            </div>
-                            <div class="testimonial-thumb">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/avatar.png" alt="">
-                            </div>
-
-                            <div class="testimonial-thumb">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/avatar.png" alt="">
-                            </div>
-                        </div>
-                        <div class="testimonial-active mt-5">
-                            <div class="testimonial-item text-center">
-                                <div class="designation mb-30">
-                                    <h3>- Tanvir Ahamed -</h3>
-                                    <span>Digital Marketer</span>
-                                </div>
-                                <p>“ Fruitful was seasons unto won't the fowl light deep more then regular before piece sixth them dominion cattle fish cattle first midst moved greater divided so love nature tree days for two every wherein green fruitful also</p>
-                                <div class="rating w-max mx-auto d-flex">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                </div>
-                            </div>
-                            <div class="testimonial-item text-center">
-                                <div class="designation mb-30">
-                                    <h3>- Mousumi Ahamed -</h3>
-                                    <span>Graphic Designer</span>
-                                </div>
-                                <p>“ Fruitful was seasons unto won't the fowl light deep more then regular before piece sixth them dominion cattle fish cattle first midst moved greater divided so love nature tree days for two every wherein green fruitful also</p>
-                                <div class="rating w-max mx-auto d-flex">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                </div>
-                            </div>
-                            <div class="testimonial-item text-center">
-                                <div class="designation mb-30">
-                                    <h3>- Tanvir Ahamed -</h3>
-                                    <span>Web Developer</span>
-                                </div>
-                                <p>“ Days for two every wherein green fruitful also fruitful was seasons unto won't the fowl light deep more then regular before piece sixth them dominion cattle fish cattle first midst moved greater divided so dove nature tree disappear relax bring Cattle fish cattle first midst moved greater divided so bring.”</p>
-                                <div class="rating w-max mx-auto d-flex">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                </div>
-                            </div>
-                            <div class="testimonial-item text-center">
-                                <div class="designation mb-30">
-                                    <h3>- Walid Hossaing -</h3>
-                                    <span>Software Engineer</span>
-                                </div>
-                                <p>“ Fruitful was seasons unto won't the fowl light deep more then regular before piece sixth them dominion cattle fish cattle first midst moved greater divided so dove nature tree bisapper relan days for two every wherein green fruitful also bring Cattle fish cattle first midst moved greater divided so bring.”</p>
-                                <div class="rating w-max mx-auto d-flex">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                </div>
-                            </div>
-                            <div class="testimonial-item text-center">
-                                <div class="designation mb-30">
-                                    <h3>- Walid Hossaing -</h3>
-                                    <span>Software Engineer</span>
-                                </div>
-                                <p>“ Fruitful was seasons unto won't the fowl light deep more then regular before piece sixth them dominion cattle fish cattle first midst moved greater divided so dove nature tree bisapper relan days for two every wherein green fruitful also bring Cattle fish cattle first midst moved greater divided so bring.”</p>
-                                <div class="rating w-max mx-auto d-flex">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                </div>
-                            </div>
-                            <div class="testimonial-item text-center">
-                                <div class="designation mb-30">
-                                    <h3>- Walid Hossaing -</h3>
-                                    <span>Software Engineer</span>
-                                </div>
-                                <p>“ Fruitful was seasons unto won't the fowl light deep more then regular before piece sixth them dominion cattle fish cattle first midst moved greater divided so dove nature tree bisapper relan days for two every wherein green fruitful also bring Cattle fish cattle first midst moved greater divided so bring.”</p>
-                                <div class="rating w-max mx-auto d-flex">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                </div>
-                            </div>
-                            <div class="testimonial-item text-center">
-                                <div class="designation mb-30">
-                                    <h3>- Walid Hossaing -</h3>
-                                    <span>Software Engineer</span>
-                                </div>
-                                <p>“ Fruitful was seasons unto won't the fowl light deep more then regular before piece sixth them dominion cattle fish cattle first midst moved greater divided so dove nature tree bisapper relan days for two every wherein green fruitful also bring Cattle fish cattle first midst moved greater divided so bring.”</p>
-                                <div class="rating w-max mx-auto d-flex">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                </div>
-                            </div>
-                            <div class="testimonial-item text-center">
-                                <div class="designation mb-30">
-                                    <h3>- Walid Hossaing -</h3>
-                                    <span>Software Engineer</span>
-                                </div>
-                                <p>“ Fruitful was seasons unto won't the fowl light deep more then regular before piece sixth them dominion cattle fish cattle first midst moved greater divided so dove nature tree bisapper relan days for two every wherein green fruitful also bring Cattle fish cattle first midst moved greater divided so bring.”</p>
-                                <div class="rating w-max mx-auto d-flex">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                </div>
-                            </div>
-                            <div class="testimonial-item text-center">
-                                <div class="designation mb-30">
-                                    <h3>- Walid Hossaing -</h3>
-                                    <span>Software Engineer</span>
-                                </div>
-                                <p>“ Fruitful was seasons unto won't the fowl light deep more then regular before piece sixth them dominion cattle fish cattle first midst moved greater divided so dove nature tree bisapper relan days for two every wherein green fruitful also bring Cattle fish cattle first midst moved greater divided so bring.”</p>
-                                <div class="rating w-max mx-auto d-flex">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                </div>
-                            </div>
-
-                            <div class="testimonial-item text-center">
-                                <div class="designation mb-30">
-                                    <h3>- Walid Hossaing -</h3>
-                                    <span>Software Engineer</span>
-                                </div>
-                                <p>“ Fruitful was seasons unto won't the fowl light deep more then regular before piece sixth them dominion cattle fish cattle first midst moved greater divided so dove nature tree bisapper relan days for two every wherein green fruitful also bring Cattle fish cattle first midst moved greater divided so bring.”</p>
-                                <div class="rating w-max mx-auto d-flex">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-between top-50 position-absolute">
-                        <button type="button" class="prev btn btn-primary rounded-0 px-2 py-0 fs-3"><i class="ri-arrow-left-s-line"></i></button>
-                        <button type="button" class="next btn btn-primary rounded-0 px-2 py-0 fs-3"><i class="ri-arrow-right-s-line"></i></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Newsletter -->
-    <section class="news-letter">
-        <div class="newsletter-overlay py-50">
-            <div class="container text-center py-5">
-                <h2 class="text-uppercase text-light fw-bolder text-xl mt-3">SignUp Our Newslater</h2>
-                <p class="text-light">Get in touch by subscribing here with your</p>
-                <form action="" method="">
-                    <div class="row">
-                        <div class="container">
-                            <div class="col-md-7 col-lg-5 mx-auto position-relative">
-                                <input type="email" placeholder="Enter Your Email" class="form-control py-3">
-                                <button type="submit" class="btn btn-primary text-uppercase position-absolute top-0 end-0 mt-2 me-2"><i class="far fa-envelope me-2"></i>Subscribe</button>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </section>
-
+    <?php
+        if(get_craftnce_data('is_show_brand_logo_slider_section')) :
+    ?>
     <!-- Band Logo Section -->
     <section class="py-5">
         <div class="container py-5">
             <div class="mb-4 text-center">
-                <h2 class="fs-48 fw-900">Trusted over 100+ companies</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum asperiores labore tenetur?</p>
+                <h2 class="fs-48 fw-900">
+                    <?php
+                        echo get_craftnce_data('brand_logo_slider_section_title');
+                    ?>
+                </h2>
+                <p>
+                    <?php
+                        echo get_craftnce_data('brand_logo_slider_section_subtitle');
+                    ?>
+                </p>
             </div>
-            <div class="brand my-5">
-                <div>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/brand-01.png" alt="">
-                </div>
-                <div>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/brand-02.png" alt="">
-                </div>
-                <div>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/brand-03.png" alt="">
-                </div>
-                <div>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/brand-04.png" alt="">
-                </div>
-                <div>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/brand-05.png" alt="">
-                </div>
-                <div>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/brand-03.png" alt="">
-                </div>
-                <div>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/brand-06.png" alt="">
-                </div>
-                <div>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/brand-02.png" alt="">
-                </div>
-            </div>
+            <?php get_template_part('template-parts/common/section-brand-logo'); ?>
         </div>
     </section>
+    <?php endif; ?>
 
 <?php
     get_footer();
