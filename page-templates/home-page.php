@@ -201,7 +201,11 @@
     ?>
 
     <!-- Brand Logo Section -->
-    <?php get_template_part('template-parts/common/section-brand-logo'); ?>
+    <section class="py-5">
+        <div class="container py-5">
+            <?php get_template_part('template-parts/common/section-brand-logo'); ?>
+        </div>
+    </section>
 
     <!-- Newsletter Section -->
     <?php get_template_part('template-parts/common/section-newsletter'); ?>
