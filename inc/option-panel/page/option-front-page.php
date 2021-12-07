@@ -56,7 +56,7 @@
             array(
                 'title'                 =>  __('First Button Font Awesome Icon Class', 'craftnce'),
                 'id'                    =>  'hero_first_button_icon_class',
-                'type'                  =>  'text',
+                'type'                  =>  'icon',
             ),
             // Second Button
             array(
@@ -77,7 +77,7 @@
             array(
                 'title'                 =>  __('Second Button Font Awesome Icon Class', 'craftnce'),
                 'id'                    =>  'hero_second_button_icon_class',
-                'type'                  =>  'text',
+                'type'                  =>  'icon',
             ),
         ),
     ));
@@ -140,9 +140,10 @@
             array(
                 'title'                 =>  __('FontAwesome Icon Class', 'craftnce'),
                 'id'                    =>  'about_us_info_first_button_icon',
-                'type'                  =>  'text',
+                'type'                  =>  'icon',
             ),
 
+            // Second Button
             array(
                 'title'                 =>  __('Show Second Button', 'craftnce'),
                 'id'                    =>  'is_show_about_us_info_second_button',
@@ -161,7 +162,7 @@
             array(
                 'title'                 =>  __('FontAwesome Icon Class', 'craftnce'),
                 'id'                    =>  'about_us_info_second_button_icon',
-                'type'                  =>  'text',
+                'type'                  =>  'icon',
             ),
         ),
     ));
@@ -191,7 +192,7 @@
                     array(
                         'title'             =>  __('Font-awesome Icon Class', 'craftnce'),
                         'id'                =>  'features_item_icon_class',
-                        'type'              =>  'text',
+                        'type'              =>  'icon',
                     ),
                     array(
                         'title'             =>  __('Item Title', 'craftnce'),
