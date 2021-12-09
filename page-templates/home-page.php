@@ -16,26 +16,30 @@
                 <div class="col-lg-7">
                     <h6 class="text-uppercase fw-bold text-sm text-primary">
                         <?php
-                            echo get_craftnce_data('hero_section_subtitle');
+                            echo get_theme_mod('craftnce_home_hero_subheading_setting', 'digital service agency');
                         ?>
                     </h6>
-                    <h1 class="home-hero-title text-uppercase"><?php echo get_craftnce_data('hero_section_title'); ?></h1>
+                    <h1 class="home-hero-title text-uppercase">
+                        <?php
+                            echo get_theme_mod('craftnce_home_hero_heading_setting', 'digital service agency');
+                        ?>
+                    </h1>
                     
                     <div class="d-flex mt-4">
                         <?php
-                            if(get_craftnce_data('is_show_hero_first_buttons')) :
+                            if(get_theme_mod('craftnce_home_hero_show_btn1_setting')) :
                         ?>
-                        <a href="<?php echo esc_url(get_craftnce_data('hero_first_button_link')['url']); ?>" class="btn btn-primary text-sm py-2 px-3 rounded-pill me-2">
-                            <i class="<?php echo esc_attr(get_craftnce_data('hero_first_button_icon_class')); ?> me-1"></i>
-                            <?php echo get_craftnce_data('hero_first_button_label'); ?>
+                        <a href="<?php echo esc_url(get_theme_mod('craftnce_home_hero_btn1_link_setting')); ?>" class="btn btn-primary text-capitalize text-sm py-2 px-3 rounded-pill me-2">
+                            <i class="<?php echo esc_attr(get_theme_mod('craftnce_home_hero_btn1_icon_setting')); ?> me-1"></i>
+                            <?php echo get_theme_mod('craftnce_home_hero_btn1_label_setting'); ?>
                         </a>
                         <?php
                             endif;
-                            if(get_craftnce_data('is_show_hero_second_buttons')) :
+                            if(get_theme_mod('craftnce_home_hero_show_btn2_setting')) :
                         ?>
-                        <a href="<?php echo esc_url(get_craftnce_data('hero_second_button_link')['url']); ?>" class="btn btn-outline-primary text-sm py-2 px-3 rounded-pill">
-                            <i class="<?php echo esc_attr(get_craftnce_data('hero_second_button_icon_class')); ?> me-1"></i></i>
-                            <?php echo get_craftnce_data('hero_second_button_label'); ?>
+                        <a href="<?php echo esc_url(get_theme_mod('craftnce_home_hero_btn2_link_setting')); ?>" class="btn btn-outline-primary text-capitalize text-sm py-2 px-3 rounded-pill">
+                            <i class="<?php echo esc_attr(get_theme_mod('craftnce_home_hero_btn2_icon_setting')); ?> me-1"></i></i>
+                            <?php echo get_theme_mod('craftnce_home_hero_btn2_label_setting'); ?>
                         </a>
                         <?php
                             endif;
@@ -43,7 +47,7 @@
                     </div>
                 </div>
                 <div class="col-lg-5" data-aos="fade-left">
-                    <img src="<?php echo esc_url(get_craftnce_data('hero_section_image')['url']); ?>" class="img-fluid mt-4 mt-md-0" alt="">
+                    <img src="<?php echo esc_url(get_theme_mod('craftnce_home_hero_featured_image_setting')); ?>" class="img-fluid mt-4 mt-md-0" alt="">
                 </div>
             </div>
         </div>
