@@ -5,6 +5,8 @@
     get_template_part('inc/option-panel/customizer/customizer');
     get_template_part('lib/bootstrap5-nav-walker');
 
+    require get_theme_file_path( '/inc/pe-customizer.php' );
+
     // Codestar Initialize
     get_template_part('lib/codestar-framework/codestar-framework');
     get_template_part('inc/codestar-config');
