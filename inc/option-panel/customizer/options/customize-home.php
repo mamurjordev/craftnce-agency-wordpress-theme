@@ -57,6 +57,7 @@
      * Hero Section - First Button Label
      */
     $wp_customize->add_setting('craftnce_home_hero_btn1_label_setting', array(
+        'default'           =>  'first button',
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod'
@@ -118,6 +119,7 @@
      * Hero Section - Second Button Label
      */
     $wp_customize->add_setting('craftnce_home_hero_btn2_label_setting', array(
+        'default'           =>  'second button',
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod'
