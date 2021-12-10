@@ -21,8 +21,8 @@
         ));
         $wp_customize->add_panel( $homePagePanel );
 
-
         // Home page hero options
         require_once get_theme_file_path('/inc/option-panel/customizer/options/home-hero.php');
+        require_once get_theme_file_path('/inc/option-panel/customizer/options/home-info.php');
     }
     add_action('customize_register', 'craftnce_customizer');

@@ -1,6 +1,6 @@
 <?php
     $wp_customize->add_section( 'craftnce_home_page_hero', array(
-        'title'      => esc_html__( 'Hero Section', 'craftnce' ),
+        'title'      => __( 'Hero Section', 'craftnce' ),
         'capability' => 'edit_theme_options',
         'panel'      => 'home_page_panel',
     ));
