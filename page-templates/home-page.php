@@ -57,42 +57,42 @@
     ?>
 
     <?php
-        if(get_craftnce_data('is_show_info_under_hero')) :
+        if(get_theme_mod('craftnce_show_home_info_section_setting')) :
     ?>
     <!-- Info Section -->
     <section class="home-info">
         <div class="container">
             <div class="row hero-h align-items-center py-5 py-lg-0">
                 <div class="col-lg-5">
-                    <img src="<?php echo esc_url(get_craftnce_data('first_info_section_left_image')['url']); ?>" class="img-fluid mt-4 mt-md-0 px-4 px-md-0 pe-md-5" alt="">
+                    <img src="<?php echo esc_url(get_theme_mod('craftnce_home_info_section_featured_image_setting')); ?>" class="img-fluid mt-4 mt-md-0 px-4 px-md-0 pe-md-5" alt="">
                 </div>
                 <div class="col-lg-7 mt-5 mt-lg-0">
                     <h6 class="text-uppercase fw-bold text-sm text-primary">
-                        <?php echo get_craftnce_data('first_info_section_subtitle'); ?>
+                        <?php echo get_theme_mod('craftnce_home_info_subheading_setting'); ?>
                     </h6>
                     <h2 class="info-title text-uppercase">
                         <?php
-                            echo get_craftnce_data('first_info_section_title');
+                            echo get_theme_mod('craftnce_home_info_heading_setting');
                         ?>
                     </h2>
                     <p class="info-sec-p text-muted my-3">
                         <?php
-                            echo get_craftnce_data('first_info_section_description');
+                            echo get_theme_mod('craftnce_home_info_description_setting');
                         ?>
                     </p>
                     <div class="d-flex mt-4">
                         <?php
-                            if(get_craftnce_data('is_show_about_us_info_first_button')) :
+                            if(get_theme_mod('craftnce_home_info_show_btn1_setting')) :
                         ?>
-                        <a href="<?php echo esc_url(get_craftnce_data('about_us_info_first_button_link')['url']); ?>" class="btn btn-primary text-sm py-2 px-3 rounded-pill me-2"><i class="<?php echo esc_attr(get_craftnce_data('about_us_info_first_button_icon')); ?> me-1"></i>
-                            <?php echo get_craftnce_data('about_us_info_first_button_label'); ?>
+                        <a href="<?php echo esc_url(get_theme_mod('craftnce_home_info_btn1_link_setting')); ?>" class="btn btn-primary text-sm py-2 px-3 rounded-pill me-2 text-capitalize"><i class="<?php echo esc_attr(get_theme_mod('craftnce_home_info_btn1_icon_setting')); ?> me-1"></i>
+                            <?php echo get_theme_mod('craftnce_home_info_btn1_label_setting'); ?>
                         </a>
                         <?php
                             endif;
-                            if(get_craftnce_data('is_show_about_us_info_second_button')) :
+                            if(get_theme_mod('craftnce_home_info_show_btn2_setting')) :
                         ?>
-                        <a href="<?php echo esc_url(get_craftnce_data('about_us_info_second_button_link')['url']); ?>" class="btn btn-outline-primary text-sm py-2 px-3 rounded-pill me-2"><i class="<?php echo esc_attr(get_craftnce_data('about_us_info_second_button_icon')); ?> me-1"></i>
-                            <?php echo get_craftnce_data('about_us_info_second_button_label'); ?>
+                        <a href="<?php echo esc_url(get_theme_mod('craftnce_home_info_btn2_link_setting')); ?>" class="btn btn-outline-primary text-sm py-2 px-3 rounded-pill me-2 text-capitalize"><i class="<?php echo esc_attr(get_theme_mod('craftnce_home_info_btn2_icon_setting')); ?> me-1"></i>
+                            <?php echo get_theme_mod('craftnce_home_info_btn2_label_setting'); ?>
                         </a>
                         <?php endif; ?>
                     </div>
