@@ -1,8 +1,8 @@
 <?php
-    $wp_customize->add_section( 'craftnce_home_page', array(
-        'title'      => esc_html__( 'Home Page', 'craftnce' ),
+    $wp_customize->add_section( 'craftnce_home_page_hero', array(
+        'title'      => esc_html__( 'Hero Section', 'craftnce' ),
         'capability' => 'edit_theme_options',
-        'panel'      => 'craftnce_options',
+        'panel'      => 'home_page_panel',
     ));
 
     /**
@@ -16,7 +16,7 @@
     ));
     $wp_customize->add_control('craftnce_home_hero_heading_ctrl', array(
         'label'             =>  __('Hero Heading', 'craftnce'),
-        'section'           =>  'craftnce_home_page',
+        'section'           =>  'craftnce_home_page_hero',
         'settings'          =>  'craftnce_home_hero_heading_setting',
         'type'              =>  'text'
     ));
@@ -32,7 +32,7 @@
     ));
     $wp_customize->add_control('craftnce_home_hero_subheading_ctrl', array(
         'label'             =>  __('Hero Sub-Heading', 'craftnce'),
-        'section'           =>  'craftnce_home_page',
+        'section'           =>  'craftnce_home_page_hero',
         'settings'          =>  'craftnce_home_hero_subheading_setting',
         'type'              =>  'text'
     ));
@@ -48,7 +48,7 @@
     ));
     $wp_customize->add_control('craftnce_home_hero_show_btn1_ctrl', array(
         'label'             =>  __('Show Hero First Button', 'craftnce'),
-        'section'           =>  'craftnce_home_page',
+        'section'           =>  'craftnce_home_page_hero',
         'settings'          =>  'craftnce_home_hero_show_btn1_setting',
         'type'              =>  'checkbox'
     ));
@@ -64,7 +64,7 @@
     ));
     $wp_customize->add_control('craftnce_home_hero_btn1_label_ctrl', array(
         'label'             =>  __('First Button Label', 'craftnce'),
-        'section'           =>  'craftnce_home_page',
+        'section'           =>  'craftnce_home_page_hero',
         'settings'          =>  'craftnce_home_hero_btn1_label_setting',
         'type'              =>  'text'
     ));
@@ -79,7 +79,7 @@
     ));
     $wp_customize->add_control('craftnce_home_hero_btn1_link_ctrl', array(
         'label'             =>  __('First Button Link', 'craftnce'),
-        'section'           =>  'craftnce_home_page',
+        'section'           =>  'craftnce_home_page_hero',
         'settings'          =>  'craftnce_home_hero_btn1_link_setting',
         'type'              =>  'text'
     ));
@@ -94,7 +94,7 @@
     ));
     $wp_customize->add_control('craftnce_home_hero_btn1_icon_ctrl', array(
         'label'             =>  __('First Button Icon Class', 'craftnce'),
-        'section'           =>  'craftnce_home_page',
+        'section'           =>  'craftnce_home_page_hero',
         'settings'          =>  'craftnce_home_hero_btn1_icon_setting',
         'type'              =>  'text'
     ));
@@ -110,7 +110,7 @@
     ));
     $wp_customize->add_control('craftnce_home_hero_show_btn2_ctrl', array(
         'label'             =>  __('Show Hero Second Button', 'craftnce'),
-        'section'           =>  'craftnce_home_page',
+        'section'           =>  'craftnce_home_page_hero',
         'settings'          =>  'craftnce_home_hero_show_btn2_setting',
         'type'              =>  'checkbox'
     ));
@@ -126,7 +126,7 @@
     ));
     $wp_customize->add_control('craftnce_home_hero_btn2_label_ctrl', array(
         'label'             =>  __('Second Button Label', 'craftnce'),
-        'section'           =>  'craftnce_home_page',
+        'section'           =>  'craftnce_home_page_hero',
         'settings'          =>  'craftnce_home_hero_btn2_label_setting',
         'type'              =>  'text'
     ));
@@ -141,7 +141,7 @@
     ));
     $wp_customize->add_control('craftnce_home_hero_btn2_link_ctrl', array(
         'label'             =>  __('Second Button Link', 'craftnce'),
-        'section'           =>  'craftnce_home_page',
+        'section'           =>  'craftnce_home_page_hero',
         'settings'          =>  'craftnce_home_hero_btn2_link_setting',
         'type'              =>  'text'
     ));
@@ -156,7 +156,7 @@
     ));
     $wp_customize->add_control('craftnce_home_hero_btn2_icon_ctrl', array(
         'label'             =>  __('Second Button Icon Class', 'craftnce'),
-        'section'           =>  'craftnce_home_page',
+        'section'           =>  'craftnce_home_page_hero',
         'settings'          =>  'craftnce_home_hero_btn2_icon_setting',
         'type'              =>  'text'
     ));
@@ -171,7 +171,7 @@
     ));
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'craftnce_home_hero_featured_image_ctrl', array(
         'label'             =>  __('Hero Featured Image', 'craftnce'),
-        'section'           =>  'craftnce_home_page',
+        'section'           =>  'craftnce_home_page_hero',
         'settings'          =>  'craftnce_home_hero_featured_image_setting',
         'button_labels'     => array(
             'select'    => 'Select Image',

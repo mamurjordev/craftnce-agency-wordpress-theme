@@ -60,7 +60,7 @@ function pe_customize_register( $wp_customize ) {
   // Add three levels on panels
   $lvl1ParentPanel = new PE_WP_Customize_Panel( $wp_customize, 'lvl_1_parent_panel', array(
     'title' => 'Level 1',
-    'priority' => 131,
+    'priority' => 1,
   ));
 
   $wp_customize->add_panel( $lvl1ParentPanel );
