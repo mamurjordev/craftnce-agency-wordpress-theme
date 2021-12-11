@@ -516,7 +516,7 @@ body {
     background-color: #fff;
 }
 
-.sidebar-top, .sidebar-category, .sidebar-tag {
+.sidebar-area, .sidebar-category, .sidebar-tag {
     background-color: var(--secondary-color);
 }
 
