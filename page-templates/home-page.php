@@ -167,7 +167,7 @@
             get_template_part('template-parts/common/section-testimonial');
         }
     
-        if(get_craftnce_data('is_show_infography_section')) :
+        if(get_theme_mod('craftnce_show_home_infography_section_setting')) :
     ?>
 
     <!-- Infography Section -->
@@ -177,45 +177,46 @@
                 <div class="col-lg-6 mt-5 mt-lg-0">
                     <h2 class="fs-1 fw-900 text-light text-uppercase">
                         <?php
-                            echo get_craftnce_data('infography_section_title');
+                            echo get_theme_mod('craftnce_home_infography_heading_setting');
                         ?>
                     </h2>
                     <p class="info-sec-p text-light my-3">
                         <?php
-                            echo get_craftnce_data('infography_section_subtitle');
+                            echo get_theme_mod('craftnce_home_infography_subheading_setting');
                         ?>
                     </p>
                     
                     <div class="accordion accordion-flush mt-4" id="accordionFlushExample">
                         <?php
-                            $infography_accordion_items = get_craftnce_data('infography_accordion_items');
-                            $accordion_count = count((array)$infography_accordion_items);
-                            
-                            for($i = 0; $i < $accordion_count; $i++) :
+                            $craftnce_features_repeater = get_theme_mod('craftnce_home_infography_item_settings');
+                            $craftnce_features_repeater_decoded = json_decode($craftnce_features_repeater);
+                            if(!empty($craftnce_features_repeater_decoded)) :
+                                foreach($craftnce_features_repeater_decoded as $key => $repeater_item) :
                         ?>
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="flush-headingOne">
-                            <button class="accordion-button collapsed text-light" type="button" data-bs-toggle="collapse" data-bs-target="#<?php echo 'infography_accordion_' . $i; ?>" aria-expanded="false" aria-controls="flush-collapseOne">
+                            <button class="accordion-button collapsed text-light" type="button" data-bs-toggle="collapse" data-bs-target="#<?php echo 'infography_accordion_' . $key; ?>" aria-expanded="false" aria-controls="flush-collapseOne">
                                 <?php
-                                    echo $infography_accordion_items[$i]['infography_accordion_title'];
+                                    echo $repeater_item->title;
                                 ?>
                             </button>
                             </h2>
-                            <div id="<?php echo 'infography_accordion_' . $i; ?>" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div id="<?php echo 'infography_accordion_' . $key; ?>" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body text-light">
                                 <?php
-                                    echo $infography_accordion_items[$i]['infography_accordion_description'];
+                                    echo $repeater_item->text;
                                 ?>
                             </div>
                             </div>
                         </div>
                         <?php
-                            endfor;
+                                endforeach;
+                            endif;
                         ?>
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <img src="<?php echo esc_url(get_craftnce_data('infography_image')['url']); ?>" class="img-fluid mt-4 mt-md-0 px-4 px-md-0 pe-md-5" alt="">
+                    <img src="<?php echo esc_url(get_theme_mod('craftnce_home_infography_section_featured_image_setting')); ?>" class="img-fluid mt-4 mt-md-0 px-4 px-md-0 pe-md-5" alt="">
                 </div>
             </div>
         </div>
