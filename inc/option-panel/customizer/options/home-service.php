@@ -21,6 +21,39 @@
         'type'              =>  'checkbox'
     ));
 
+    /**
+     * service Section - Heading
+     */
+    $wp_customize->add_setting('craftnce_home_service_heading_setting', array(
+        'default'           => ' Your Success With Solution',
+        'capability'        => 'edit_theme_options',
+        'transport'         => 'refresh',
+        'type'              => 'theme_mod'
+    ));
+    $wp_customize->add_control('craftnce_home_service_heading_ctrl', array(
+        'label'             =>  __('Heading', 'craftnce'),
+        'section'           =>  'craftnce_home_page_service',
+        'settings'          =>  'craftnce_home_service_heading_setting',
+        'type'              =>  'text'
+    ));
+
+    /**
+     * service Section - Sub-heading
+     */
+    $wp_customize->add_setting('craftnce_home_service_subheading_setting', array(
+        'default'           => ' Our amazing services',
+        'capability'        => 'edit_theme_options',
+        'transport'         => 'refresh',
+        'type'              => 'theme_mod'
+    ));
+    $wp_customize->add_control('craftnce_home_service_subheading_ctrl', array(
+        'label'             =>  __('Sub-heading', 'craftnce'),
+        'section'           =>  'craftnce_home_page_service',
+        'settings'          =>  'craftnce_home_service_subheading_setting',
+        'type'              =>  'text'
+    ));
+    
+    // Service Items
     $wp_customize->add_setting( 'craftnce_home_service_item_settings', array(
         'sanitize_callback' => 'customizer_repeater_sanitize'
     ));
@@ -32,5 +65,4 @@
         'customizer_repeater_image_control'                 =>  true,
         'customizer_repeater_title_control'                 =>  true,
         'customizer_repeater_text_control'                  =>  true,
-        
     )));
