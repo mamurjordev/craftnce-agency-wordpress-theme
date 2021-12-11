@@ -223,6 +223,8 @@
     </section>
     <?php
         endif;
+
+        if(get_theme_mod('craftnce_show_home_brand_section_setting')) :
     ?>
 
     <!-- Brand Logo Section -->
@@ -232,11 +234,19 @@
         </div>
     </section>
 
-    <!-- Newsletter Section -->
-    <?php get_template_part('template-parts/common/section-newsletter'); ?>
+    <?php
+        endif;
 
-    <!-- Blog Section -->
-    <?php get_template_part('template-parts/common/section-blog'); ?>
+        // Newsletter Section
+        if(get_theme_mod('craftnce_show_home_newsletter_section_setting')) {
+            get_template_part('template-parts/common/section-newsletter');
+        }
+
+        // Blog Part
+        if(get_theme_mod('')) {
+            get_template_part('template-parts/common/section-blog');
+        }
+    ?>
 
 <?php
     get_footer();
