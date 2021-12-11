@@ -13,6 +13,18 @@
         ));
         $wp_customize->add_panel( $craftnceOptionMainPanel );
 
+        // Page Layout
+        $homePagePanel = new PE_WP_Customize_Panel( $wp_customize,'page_layout_panel', array(
+            'title'                     =>  __('Page Layout', 'craftnce'),
+            'priority'                  =>  '2',
+            'capability'                =>  'edit_theme_options',
+            'panel'                     =>  'craftnce_options'
+        ));
+        $wp_customize->add_panel( $homePagePanel );
+
+        // Page Layout Options
+        require_once get_theme_file_path('/inc/option-panel/customizer/options/option-page-layout.php');
+
         $homePagePanel = new PE_WP_Customize_Panel( $wp_customize,'home_page_panel', array(
             'title'                     =>  __('Home Page', 'craftnce'),
             'priority'                  =>  '1',
