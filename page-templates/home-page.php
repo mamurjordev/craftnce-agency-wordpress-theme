@@ -111,22 +111,29 @@
         <div class="container py-4 py-lg-5">
             <div class="row">
                 <?php
-                    $features_items = get_craftnce_data('features_items');
-                    $_count = count((array)$features_items);
 
-                    for($i = 0; $i < $_count; $i++) :
+                    $craftnce_features_repeater = get_theme_mod('craftnce_home_features_item_settings');
+                    $craftnce_features_repeater_decoded = json_decode($craftnce_features_repeater);
+                    if(!empty($craftnce_features_repeater_decoded)) :
+                        foreach($craftnce_features_repeater_decoded as $repeater_item) :
                 ?>
+
                 <div class="col-sm-6 col-lg-3 mt-2">
                     <div class="features-box d-flex">
-                        <i class="<?php echo esc_attr($features_items[$i]['features_item_icon_class']); ?> fs-4 me-3 mt-1"></i>
+                        <i class="<?php echo esc_attr($repeater_item->icon_value); ?> fs-4 me-3 mt-1"></i>
                         <h5 class="features-item-title">
                             <?php
-                                echo $features_items[$i]['features_item_title'];
+                                echo $repeater_item->title;
                             ?>
                         </h5>
                     </div>
                 </div>
-                <?php endfor; ?>
+
+                <?php
+                        endforeach;
+                    endif;
+                ?>
+                
             </div>
         </div>
     </section>
@@ -134,7 +141,7 @@
     <?php
         endif;
 
-        if(get_craftnce_data('is_show_front_page_service_section')) :
+        if(get_theme_mod('craftnce_show_home_service_section_setting')) :
     ?>
 
     <!-- Service Section -->
@@ -142,10 +149,10 @@
         <div class="container py-5">
             <div class="row text-center">
                 <h6 class="text-uppercase fw-bold text-md text-primary">
-                    <?php echo get_craftnce_data('service_section_subtitle'); ?>
+                    <?php echo get_theme_mod('craftnce_home_service_subheading_setting'); ?>
                 </h6>
                 <h2 class="text-capitalize fw-900 text-xl mt-3">
-                    <?php echo get_craftnce_data('service_section_title'); ?>
+                    <?php echo get_theme_mod('craftnce_home_service_heading_setting'); ?>
                 </h2>
             </div>
             <?php get_template_part('template-parts/common/section-service'); ?>
