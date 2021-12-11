@@ -15,7 +15,7 @@
         'type'              => 'theme_mod'
     ));
     $wp_customize->add_control('craftnce_page_layout_settings', array(
-        'label'             =>  __('Show blog section', 'craftnce'),
+        'label'             =>  __('Page Layout', 'craftnce'),
         'section'           =>  'craftnce_page_layouts',
         'settings'          =>  'craftnce_page_layout_settings',
         'type'              =>  'select',
