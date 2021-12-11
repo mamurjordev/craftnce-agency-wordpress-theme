@@ -63,3 +63,17 @@
         wp_enqueue_script('craftnce-main-js', get_template_directory_uri().'/assets/js/main.js', array('jquery'), time(), true);
     }
     add_action('wp_enqueue_scripts', 'craftnce_assets_enqueue');
+
+    // Sidebars and Widgets
+    function craftnce_sidebar_widget_area() {
+        register_sidebar( array(
+            'name'          => __( 'Page Sidebar', 'craftnce' ),
+            'id'            => 'page_sidebar',
+            'description'   => __( 'Default page sidebar what will display in page if not select full width layout', 'craftnce' ),
+            'before_widget' => '<div id="%1$s" class="sidebar-area rounded-3 p-4">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h4 class="mb-1">',
+            'after_title'   => '</h4>',
+        ));
+    }
+    add_action('widgets_init', 'craftnce_sidebar_widget_area');
