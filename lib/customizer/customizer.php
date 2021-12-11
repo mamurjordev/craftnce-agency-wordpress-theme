@@ -31,6 +31,7 @@
         require_once get_theme_file_path('/inc/option-panel/customizer/options/home-service.php');
         require_once get_theme_file_path('/inc/option-panel/customizer/options/home-counter.php');
         require_once get_theme_file_path('/inc/option-panel/customizer/options/home-testimonials.php');
+        require_once get_theme_file_path('/inc/option-panel/customizer/options/home-infography.php');
     }
     add_action('customize_register', 'craftnce_customizer');
 
