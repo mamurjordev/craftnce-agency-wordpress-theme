@@ -163,7 +163,11 @@
     ?>
 
     <!-- Counter Section -->
-    <?php get_template_part('template-parts/common/section-counter'); ?>
+    <?php
+        if(get_theme_mod('craftnce_show_home_counter_section_setting')) {
+            get_template_part('template-parts/common/section-counter');
+        }
+    ?>
 
     <!-- Testimonial Section -->
     <?php get_template_part('template-parts/common/section-testimonial'); ?>
