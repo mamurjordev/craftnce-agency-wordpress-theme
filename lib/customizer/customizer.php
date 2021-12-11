@@ -21,8 +21,27 @@
         ));
         $wp_customize->add_panel( $homePagePanel );
 
+        // Customizer Repeater Class
+        require_once get_theme_file_path('/lib/customizer/customizer-repeater.php');
+
         // Home page hero options
         require_once get_theme_file_path('/inc/option-panel/customizer/options/home-hero.php');
         require_once get_theme_file_path('/inc/option-panel/customizer/options/home-info.php');
+        require_once get_theme_file_path('/inc/option-panel/customizer/options/home-features.php');
     }
     add_action('customize_register', 'craftnce_customizer');
+
+    // Sanitize Customizer Control
+    function customizer_repeater_sanitize($input){
+        $input_decoded = json_decode($input,true);
+    
+        if(!empty($input_decoded)) {
+            foreach ($input_decoded as $boxk => $box ){
+                foreach ($box as $key => $value){
+                        $input_decoded[$boxk][$key] = wp_kses_post( force_balance_tags( $value ) );
+                }
+            }
+            return json_encode($input_decoded);
+        }
+        return $input;
+    }

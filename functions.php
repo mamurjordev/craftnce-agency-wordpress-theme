@@ -2,7 +2,7 @@
     // TGM
     get_template_part('inc/required-plugins');
     get_template_part('inc/craftnce-functions');
-    get_template_part('inc/option-panel/customizer/customizer');
+    get_template_part('lib/customizer/customizer');
     get_template_part('lib/bootstrap5-nav-walker');
 
     // Codestar Initialize

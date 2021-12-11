@@ -103,7 +103,7 @@
     <?php
         endif;
 
-        if(get_craftnce_data('is_show_features_section')) :
+        if(get_theme_mod('craftnce_show_home_features_section_setting')) :
     ?>
 
     <!-- Features Section -->
