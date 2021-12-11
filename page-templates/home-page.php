@@ -4,11 +4,9 @@
      */
 
     get_header();
-?>
 
-    <?php
-        if(get_craftnce_data('is_show_hero_section')) :
-    ?>
+    if(get_craftnce_data('is_show_hero_section')) :
+?>
     <!-- Homepage Hero -->
     <section class="home-hero">
         <div class="container">
@@ -54,9 +52,7 @@
     </section>
     <?php
         endif;
-    ?>
 
-    <?php
         if(get_theme_mod('craftnce_show_home_info_section_setting')) :
     ?>
     <!-- Info Section -->
@@ -128,12 +124,10 @@
                         </h5>
                     </div>
                 </div>
-
                 <?php
                         endforeach;
                     endif;
                 ?>
-                
             </div>
         </div>
     </section>
@@ -163,14 +157,16 @@
     ?>
 
     <!-- Counter Section -->
-    <?php get_template_part('template-parts/common/section-counter'); ?>
-
-    <!-- Testimonial Section -->
-    <?php get_template_part('template-parts/common/section-testimonial'); ?>
-    
-    
-    
     <?php
+        if(get_theme_mod('craftnce_show_home_counter_section_setting')) {
+            get_template_part('template-parts/common/section-counter');
+        }
+        
+        // Testimonial Section
+        if(get_theme_mod('craftnce_show_home_testimonials_section_setting')) {
+            get_template_part('template-parts/common/section-testimonial');
+        }
+    
         if(get_craftnce_data('is_show_infography_section')) :
     ?>
 

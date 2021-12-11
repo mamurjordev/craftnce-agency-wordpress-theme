@@ -8,32 +8,35 @@
         <div class="container text-center py-5">
             <h6 class="text-uppercase text-md fw-bold counter-section-subtitle">
                 <?php
-                    echo get_craftnce_data('service_counter_subtitle');
+                    echo get_theme_mod('craftnce_home_counter_subheading_setting');
                 ?>
             </h6>
             <h2 class="text-uppercase text-light fw-900 text-xl mt-3">
                 <?php
-                    echo get_craftnce_data('service_counter_title');
+                    echo get_theme_mod('craftnce_home_counter_heading_setting');
                 ?>
             </h2>
 
             <div class="row mt-5">
                 <?php
-                    $counter_items = get_craftnce_data('counter_items');
-                    $_counter = count((array)$counter_items);
-                    
-                    for($i = 0; $i < $_counter; $i++) :
+                    $craftnce_counter_repeater = get_theme_mod('craftnce_home_counter_item_settings');
+                    $craftnce_counter_repeater_decoded = json_decode($craftnce_counter_repeater);
+                    if(!empty($craftnce_counter_repeater_decoded)) :
+                        foreach($craftnce_counter_repeater_decoded as $repeater_item) :
                 ?>
                 <div class="col-sm-6 col-lg-3 text-uppercase">
-                    <i class="<?php echo esc_attr($counter_items[$i]['counter_icon']); ?> text-warning fs-48 mb-3"></i>
+                    <i class="<?php echo esc_attr($repeater_item->icon_value); ?> text-warning fs-48 mb-3"></i>
                     <h2 class="text-uppercase text-light fw-900 fs-48">
-                        <?php echo $counter_items[$i]['countable_numbers']; ?>
+                        <?php echo $repeater_item->title; ?>
                     </h2>
                     <p class="text-white">
-                        <?php echo $counter_items[$i]['counter_title']; ?>
+                        <?php echo $repeater_item->text; ?>
                     </p>
                 </div>
-                <?php endfor; ?>
+                <?php
+                        endforeach;
+                    endif;
+                ?>
             </div>
         </div>
     </div>

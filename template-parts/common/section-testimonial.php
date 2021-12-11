@@ -1,7 +1,3 @@
-<?php
-    if(get_craftnce_data('is_show_testimonial_section')) :
-?>
-
 <!-- Testimonial Section -->
 <section>
     <div class="py-50">
@@ -10,12 +6,12 @@
                 <div class="col-lg-7 mx-auto">
                     <h6 class="text-uppercase text-md fw-bold text-primary">
                         <?php
-                            echo get_craftnce_data('testimonial_section_subtitle');
+                            echo get_theme_mod('craftnce_home_testimonials_subheading_setting');
                         ?>
                     </h6>
                     <h2 class="text-uppercase fw-900 text-xl mt-3">
                         <?php
-                            echo get_craftnce_data('testimonial_section_title');
+                            echo get_theme_mod('craftnce_home_testimonials_heading_setting');
                         ?>
                     </h2>
                 </div>
@@ -25,50 +21,73 @@
                 <div class="col-xl-10 offset-xl-1" >
                     <div class="testimonial-nav mb-30 d-flex justify-items-center">
                         <?php
-                            $testimonial_items_avatar = get_craftnce_data('testimonial_items');
-                            $testimonial_avatar_count = count((array)$testimonial_items_avatar);
-                            
-                            for($i = 0; $i < $testimonial_avatar_count; $i++) :
+                            $craftnce_features_repeater = get_theme_mod('craftnce_home_testimonials_item_settings');
+                            $craftnce_features_repeater_decoded = json_decode($craftnce_features_repeater);
+                            if(!empty($craftnce_features_repeater_decoded)) :
+                                foreach($craftnce_features_repeater_decoded as $repeater_item) :
                         ?>
                         <div class="testimonial-thumb">
-                            <img src="<?php echo esc_url($testimonial_items_avatar[$i]['testimonial_thumbnail']['url']); ?>" alt="">
+                            <img src="<?php echo esc_url($repeater_item->image_url); ?>" class="rounded-circle" alt="">
                         </div>
-                        <?php endfor; ?>
+                        <?php
+                                endforeach;
+                            endif;
+                        ?>
                     </div>
                     <div class="testimonial-active mt-5">
                         <?php
-                            $testimonial_items = get_craftnce_data('testimonial_items');
-                            $testimonial_count = count((array)$testimonial_items);
-                            
-                            for($i = 0; $i < $testimonial_count; $i++) :
+                            $craftnce_features_repeater_content = get_theme_mod('craftnce_home_testimonials_item_settings');
+                            $craftnce_features_repeater_decoded_content = json_decode($craftnce_features_repeater_content);
+                            if(!empty($craftnce_features_repeater_decoded_content)) :
+                                foreach($craftnce_features_repeater_decoded_content as $repeater_item_content) :
                         ?>
                         <div class="testimonial-item text-center">
                             <div class="designation mb-30">
-                                <h3>
-                                    <?php
-                                        echo $testimonial_items[$i]['testimonial_title'];
-                                    ?>
-                                </h3>
-                                <span>
-                                    <?php
-                                        echo $testimonial_items[$i]['testimonial_person_designation'];
-                                    ?>
-                                </span>
+                                <h3><?php echo $repeater_item_content->title; ?></h3>
                             </div>
                             <p>
-                                <?php
-                                    echo $testimonial_items[$i]['testimonial_message'];
-                                ?>
+                                <?php echo $repeater_item_content->text; ?>
                             </p>
                             <div class="rating w-max mx-auto d-flex">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/star.png" alt="">
+                                <?php
+                                    if($repeater_item_content->subtitle == 5) {
+                                        echo '<i class="ri-star-fill text-warning"></i>';
+                                        echo '<i class="ri-star-fill text-warning"></i>';
+                                        echo '<i class="ri-star-fill text-warning"></i>';
+                                        echo '<i class="ri-star-fill text-warning"></i>';
+                                        echo '<i class="ri-star-fill text-warning"></i>';
+                                    } elseif ($repeater_item_content->subtitle == 4) {
+                                        echo '<i class="ri-star-fill text-warning"></i>';
+                                        echo '<i class="ri-star-fill text-warning"></i>';
+                                        echo '<i class="ri-star-fill text-warning"></i>';
+                                        echo '<i class="ri-star-fill text-warning"></i>';
+                                        echo '<i class="ri-star-fill text-muted"></i>';
+                                    } elseif ($repeater_item_content->subtitle == 3) {
+                                        echo '<i class="ri-star-fill text-warning"></i>';
+                                        echo '<i class="ri-star-fill text-warning"></i>';
+                                        echo '<i class="ri-star-fill text-warning"></i>';
+                                        echo '<i class="ri-star-fill text-muted"></i>';
+                                        echo '<i class="ri-star-fill text-muted"></i>';
+                                    } elseif ($repeater_item_content->subtitle == 2) {
+                                        echo '<i class="ri-star-fill text-warning"></i>';
+                                        echo '<i class="ri-star-fill text-warning"></i>';
+                                        echo '<i class="ri-star-fill text-muted"></i>';
+                                        echo '<i class="ri-star-fill text-muted"></i>';
+                                        echo '<i class="ri-star-fill text-muted"></i>';
+                                    } elseif ($repeater_item_content->subtitle == 1) {
+                                        echo '<i class="ri-star-fill text-warning"></i>';
+                                        echo '<i class="ri-star-fill text-muted"></i>';
+                                        echo '<i class="ri-star-fill text-muted"></i>';
+                                        echo '<i class="ri-star-fill text-muted"></i>';
+                                        echo '<i class="ri-star-fill text-muted"></i>';
+                                    }
+                                ?>
                             </div>
                         </div>
-                        <?php endfor; ?>
+                        <?php
+                                endforeach;
+                            endif;
+                        ?>
                     </div>
                 </div>
                 <div class="d-flex justify-content-between top-50 position-absolute">
@@ -79,6 +98,3 @@
         </div>
     </div>
 </section>
-<?php
-    endif;
-?>

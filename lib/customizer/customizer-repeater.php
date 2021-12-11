@@ -118,7 +118,7 @@
             wp_enqueue_style( 'customizer-repeater-fontawesome-iconpicker', get_template_directory_uri() . '/assets/css/fontawesome-iconpicker.min.css', array(), CUSTOMIZER_REPEATER_VERSION );
     
             wp_enqueue_script( 'customizer-repeater-script', get_template_directory_uri() . '/assets/js/customizer-repeater.js', array('jquery', 'jquery-ui-draggable', 'wp-color-picker' ), CUSTOMIZER_REPEATER_VERSION, true  );
-            wp_enqueue_script( 'customizer-repeater-fontawesome-iconpicker-script', get_template_directory_uri() . '/assets/js/fontawesome-iconpicker.min.js', array( 'jquery' ), CUSTOMIZER_REPEATER_VERSION, true );
+            // wp_enqueue_script( 'customizer-repeater-fontawesome-iconpicker-script', get_template_directory_uri() . '/assets/js/fontawesome-iconpicker.min.js', array( 'jquery' ), CUSTOMIZER_REPEATER_VERSION, true );
         }
     
         public function render_content() {
