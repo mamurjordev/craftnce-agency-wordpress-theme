@@ -5,16 +5,13 @@
 <!-- Band Logo Section -->
 <div class="brand my-5">
     <?php
-        global $craftnce_options;
-
-        $gallery_opt = get_craftnce_data('brand_slider_logo');
-        $gallery_ids = explode( ',', $gallery_opt );
-        
-        if ( ! empty( $gallery_ids ) ) :
-            foreach ( $gallery_ids as $gallery_item_id ) :
+        $craftnce_brand_repeater = get_theme_mod('craftnce_home_brand_item_settings');
+        $craftnce_brand_repeater_decoded = json_decode($craftnce_brand_repeater);
+        if(!empty($craftnce_brand_repeater_decoded)) :
+            foreach($craftnce_brand_repeater_decoded as $repeater_item) :
     ?>
     <div>
-        <img src="<?php echo wp_get_attachment_url($gallery_item_id); ?>" alt="">
+        <img src="<?php echo esc_url($repeater_item->image_url); ?>" alt="">
     </div>
     <?php
             endforeach;
