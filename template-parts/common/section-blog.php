@@ -9,13 +9,13 @@
             <span class="left_bar me-2"></span>
             <h6 class="text-uppercase">
                 <?php
-                    echo get_craftnce_data('blog_section_subtitle');
+                    echo get_theme_mod('craftnce_home_blog_subtext_setting');
                 ?>
             </h6>
         </div>
         <h2 class="text-uppercase fw-900">
             <?php
-                echo get_craftnce_data('blog_section_title');
+                echo get_theme_mod('craftnce_home_blog_heading_setting');
             ?>
         </h2>
 
@@ -60,18 +60,18 @@
             ?>
         </div>
         <?php
-            if(get_craftnce_data('is_show_see_more_blog_btn')) :
+            if(get_theme_mod('craftnce_home_blog_show_btn_setting')) :
         ?>
         <div class="mt-5 w-max mx-auto">
-            <a href="<?php echo esc_url(get_craftnce_data('see_full_blog_button_url')['url']); ?>" class="btn btn-outline-primary">
+            <a href="<?php echo esc_url(get_theme_mod('craftnce_home_blog_btn_link_setting')); ?>" class="btn btn-outline-primary">
                 <?php
                     if(get_craftnce_data('see_full_blog_button_icon')) :
                 ?>
-                <i class="<?php echo get_craftnce_data('see_full_blog_button_icon'); ?> me-2"></i>
+                <i class="<?php echo get_theme_mod('craftnce_home_blog_btn_icon_setting'); ?> me-2"></i>
                 <?php
                     endif;
                 ?>
-                <?php echo get_craftnce_data('see_full_blog_button_label'); ?>
+                <?php echo get_theme_mod('craftnce_home_blog_btn_label_setting'); ?>
             </a>
         </div>
         <?php

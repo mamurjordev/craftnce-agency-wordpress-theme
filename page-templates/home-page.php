@@ -243,7 +243,7 @@
         }
 
         // Blog Part
-        if(get_theme_mod('')) {
+        if(get_theme_mod('craftnce_show_home_blog_section_setting')) {
             get_template_part('template-parts/common/section-blog');
         }
     ?>
