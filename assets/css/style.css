@@ -571,3 +571,13 @@ body {
     text-decoration: none;
     color: #000;
 }
+
+.testimonial-thumb.slick-slide, .slick-list.draggable {
+    width: 100% !important;
+}
+
+.slick-track {
+    width: 100%;
+    transform: translate3d(18px, 0px, 0px);
+    display: inline-flex;
+}
