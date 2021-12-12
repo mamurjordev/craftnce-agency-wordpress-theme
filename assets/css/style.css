@@ -107,6 +107,9 @@ body {
 input:focus {
     outline: none;
 }
+.sticky-top {
+	top: 1.5em;
+}
 
 /* =WordPress Core
 -------------------------------------------------------------- */
