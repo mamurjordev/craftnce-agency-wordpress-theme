@@ -29,7 +29,11 @@
                         ?>
 
                         <div>
-                            <h4 class="fw-bold my-3"><?php the_title(); ?></h4>
+                            <a class="text-dark text-decoration-none" href="<?php the_permalink(); ?>">
+                                <h4 class="fw-bold my-3">
+                                    <?php the_title(); ?>
+                                </h4>
+                            </a>
                             <p class="text-sm m-0 lh-base excerpt">
                                 <?php the_excerpt(); ?>
                             </p>
@@ -41,6 +45,15 @@
                     </div>
                 </div>
                 <?php endwhile; ?>
+            </div>
+            <div class="pagination text-center w-max mx-auto mt-4">
+                <?php
+                    the_posts_pagination( array(
+                        'screen_reader_text'            =>  ' ',
+                        'prev_text'                     =>  '<i class="ri-arrow-left-s-fill"></i>',
+                        'next_text'                     =>  '<i class="ri-arrow-right-s-fill"></i>',
+                    ));
+                ?>
             </div>
             <?php endif; ?>
         </div>

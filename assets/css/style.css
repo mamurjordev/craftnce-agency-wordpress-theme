@@ -691,3 +691,27 @@ body {
     transform: translate3d(18px, 0px, 0px);
     display: inline-flex;
 }
+
+.pagination .nav-links .page-numbers {
+    color: #000;
+    margin: 0 5px;
+    text-decoration: none;
+    display: inline-block;
+}
+  
+.next.page-numbers, .prev.page-numbers {
+    background-color: var(--primary-color);
+    color: #fff !important;
+    margin-left: 3px;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+}
+.page-numbers.current {
+    background-color: var(--primary-color);
+    color: #fff !important;
+    padding: 2px 5px 2px 5px;
+    margin-left: 3px;
+    border-radius: 2px;
+}
