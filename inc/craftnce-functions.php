@@ -46,6 +46,15 @@
         elseif (is_author()) {echo'<li class="breadcrumb-item active">Author Archive'; echo'</li>';}
         elseif (isset($_GET['paged']) && !empty($_GET['paged'])) {echo '<li class="breadcrumb-item active">Blog Archives'; echo'</li>';}
         elseif (is_search()) {echo'<li class="breadcrumb-item active">Search Results'; echo'</li>';}
+        elseif (!is_single() && is_home()) {echo '<li class="breadcrumb-item"><a href="';
+            echo get_option('home');
+            echo '">';
+            echo 'Home';
+            echo '</a></li>';
+            echo '<li class="text-muted mx-2"> / </li><li class="breadcrumb-item active">';
+            echo get_the_title(get_option('page_for_posts', true));
+            echo '</li>';
+        }
         echo '</ol>';
     }
 
