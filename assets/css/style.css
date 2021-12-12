@@ -360,6 +360,10 @@ input:focus {
     background-color: #fff;
     border-radius: 100%;
 }
+
+.breadcrumb {
+    margin-bottom: 0;
+}
 .breadcrumb a {
     text-decoration: none;
 }
