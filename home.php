@@ -7,15 +7,21 @@
     <!-- Blog -->
     <section class="pb-5">
         <div class="container py-5">
+            <?php
+                if(get_theme_mod('craftnce_show_blog_page_header_section_setting')) :
+            ?>
             <div class="row text-center pb-5">
                 <div class="col-md-7 mx-auto">
-                    <h6 class="fw-bold fs-6 text-uppercase text-primary"><?php echo _e(get_craftnce_data('blog_page_subheader')); ?></h6>
-                    <h2 class="fs-48 fw-900 text-uppercase"><?php echo _e(get_craftnce_data('blog_page_header')); ?></h2>
+                    <h6 class="fw-bold fs-6 text-uppercase text-primary"><?php echo _e(get_theme_mod('craftnce_blog_page_heading_setting')); ?></h6>
+                    <h2 class="fs-48 fw-900 text-uppercase"><?php echo _e(get_theme_mod('craftnce_blog_page_subheading_setting')); ?></h2>
                 </div>
             </div>
-              
-            <?php if(have_posts()) : ?>
-            <div class="articles-wrapper row align-items-center py-5 mb-5 py-lg-0">
+            <?php
+                endif;
+
+                if(have_posts()) :
+            ?>
+            <div class="articles-wrapper row py-5 mb-5 py-lg-0">
                 <?php
                     while(have_posts()) :
                         the_post();
