@@ -48,7 +48,7 @@
     ));
 
     /**
-     * counter Section - Show Section
+     * Show breadcrumb
      */
     $wp_customize->add_setting('craftnce_show_breadcrumb_setting', array(
         'default'           => 1,

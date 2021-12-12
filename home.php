@@ -1,7 +1,7 @@
 <?php
     get_header();
 
-    if(get_theme_mod('craftnce_show_breadcrumb_setting')) {
+    if(get_theme_mod('craftnce_blog_page_show_breadcrumb_setting')) {
         get_template_part('template-parts/common/breadcrumb'); 
     }
 ?>
