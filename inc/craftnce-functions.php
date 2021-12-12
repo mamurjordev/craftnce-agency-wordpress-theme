@@ -6,14 +6,15 @@
             :root {
                 --primary-color: <?php echo get_theme_mod('craftnce_primary_color_settings'); ?>;
                 --secondary-color: <?php echo get_theme_mod('craftnce_secondary_color_settings'); ?>;
+                --section-bg: <?php echo get_theme_mod('craftnce_section_bg_color_settings'); ?>;
+                --overlay: <?php echo get_theme_mod('craftnce_overlay_color_settings') . 'd6'; ?>;
+                
                 --orange-color: #FFC700;
                 --primary-gray: #dedede;
-                --section-bg: <?php echo get_theme_mod('craftnce_section_bg_color_settings'); ?>;
-                --font-inconsolata: 'Inconsolata', monospace;
-                --overlay: <?php echo get_theme_mod('craftnce_overlay_color_settings') . 'd6'; ?>;
-
-                --primary-font: 'Inter', sans-serif;
                 --main-shadow: 20px 20px 100px 40px rgba(73, 103, 255, 0.07);
+
+                --font-inconsolata: 'Inconsolata', monospace;
+                --primary-font: 'Inter', sans-serif;
             }
 
             .counter-bg {

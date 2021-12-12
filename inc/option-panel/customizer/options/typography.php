@@ -9,7 +9,7 @@
      * Primary Color
      */
     $wp_customize->add_setting('craftnce_primary_color_settings', array(
-        'default'           => '#45ace0',
+        'default'           => '#007FE4',
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod'
