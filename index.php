@@ -42,6 +42,13 @@
                 </div>
                 <?php endwhile; ?>
             </div>
+            <div class="pagination text-center">
+                <?php the_posts_pagination( array(
+                    'screen_reader_text'            =>  ' ',
+                    'prev_text'                     =>  '<i class="ri-arrow-left-s-fill"></i>',
+                    'next_text'                     =>  '<i class="ri-arrow-right-s-fill"></i>',
+                ) ); ?>
+            </div>
             <?php endif; ?>
         </div>
     </section>
