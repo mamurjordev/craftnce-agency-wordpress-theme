@@ -15,7 +15,7 @@
             </div>
             
             <?php if(have_posts()) : ?>
-            <div class="articles-wrapper row align-items-center py-5 mb-5 py-lg-0">
+            <div class="articles-wrapper row py-5 mb-5 py-lg-0">
                 <?php
                     while(have_posts()) :
                         the_post();
