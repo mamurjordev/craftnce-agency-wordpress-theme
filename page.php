@@ -1,11 +1,14 @@
 <?php
     get_header();
     the_post();
-    get_template_part('template-parts/common/breadcrumb'); 
+
+    if(get_theme_mod('craftnce_show_breadcrumb_setting')) {
+        get_template_part('template-parts/common/breadcrumb'); 
+    }
  
     if( !is_page_template('elementor_header_footer')) {
 ?>
-<div class="container">
+<div class="container <?php echo get_theme_mod('craftnce_page_top_bottom_container_padding_setting') ? 'py-4' : ''; ?>">
 <?php 
     }
 ?>

@@ -1,8 +1,10 @@
 <?php
     get_header();
-?>
 
-    <?php get_template_part('template-parts/common/breadcrumb'); ?>
+    if(get_theme_mod('craftnce_show_breadcrumb_setting')) {
+        get_template_part('template-parts/common/breadcrumb'); 
+    }
+?>
 
     <!-- Blog -->
     <section class="pb-5">

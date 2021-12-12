@@ -1,8 +1,11 @@
 <?php
     get_header();
     the_post();
+
+    if(get_theme_mod('craftnce_show_breadcrumb_setting')) {
+        get_template_part('template-parts/common/breadcrumb'); 
+    }
 ?>
-<?php get_template_part('template-parts/common/breadcrumb'); ?>
 
 <div class="container my-4 my-md-5">
     <div class="row">
