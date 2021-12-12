@@ -21,7 +21,7 @@
     ));
 
     /**
-     * Blog page Section - Heading
+     * Blog page - Heading
      */
     $wp_customize->add_setting('craftnce_blog_page_heading_setting', array(
         'default'           => 'ARTICLES',
@@ -37,7 +37,7 @@
     ));
 
     /**
-     * Blog page Section - Sub-heading
+     * Blog page - Sub-heading
      */
     $wp_customize->add_setting('craftnce_blog_page_sub_heading_settings', array(
         'default'           => 'SEE LATEST BLOG',
@@ -50,4 +50,37 @@
         'section'           =>  'craftnce_blog_page',
         'settings'          =>  'craftnce_blog_page_sub_heading_settings',
         'type'              =>  'text'
+    ));
+
+
+    /**
+     * brand Section - Show brand Section
+     */
+    $wp_customize->add_setting('craftnce_show_blog_page_brand_section_setting', array(
+        'default'           =>  1,
+        'capability'        => 'edit_theme_options',
+        'transport'         => 'refresh',
+        'type'              => 'theme_mod'
+    ));
+    $wp_customize->add_control('craftnce_show_home_brand_section_ctrl', array(
+        'label'             =>  __('Show brand section', 'craftnce'),
+        'section'           =>  'craftnce_blog_page',
+        'settings'          =>  'craftnce_show_blog_page_brand_section_setting',
+        'type'              =>  'checkbox'
+    ));
+
+    /**
+     * newsletter Section - Show brand Section
+     */
+    $wp_customize->add_setting('craftnce_show_blog_page_newsletter_section_setting', array(
+        'default'           =>  1,
+        'capability'        => 'edit_theme_options',
+        'transport'         => 'refresh',
+        'type'              => 'theme_mod'
+    ));
+    $wp_customize->add_control('craftnce_show_home_newsletter_section_ctrl', array(
+        'label'             =>  __('Show newsletter section', 'craftnce'),
+        'section'           =>  'craftnce_blog_page',
+        'settings'          =>  'craftnce_show_blog_page_newsletter_section_setting',
+        'type'              =>  'checkbox'
     ));

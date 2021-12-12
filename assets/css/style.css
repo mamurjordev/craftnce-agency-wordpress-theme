@@ -108,7 +108,7 @@ input:focus {
     outline: none;
 }
 .sticky-top {
-	top: 1.5em;
+	top: 0;
 }
 
 /* =WordPress Core

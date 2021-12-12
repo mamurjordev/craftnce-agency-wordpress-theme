@@ -228,11 +228,7 @@
     ?>
 
     <!-- Brand Logo Section -->
-    <section class="py-5">
-        <div class="container py-5">
-            <?php get_template_part('template-parts/common/section-brand-logo'); ?>
-        </div>
-    </section>
+    <?php get_template_part('template-parts/common/section-brand-logo'); ?>
 
     <?php
         endif;

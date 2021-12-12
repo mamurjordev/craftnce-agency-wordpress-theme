@@ -24,7 +24,7 @@
      * brand_section Section - Heading
      */
     $wp_customize->add_setting('craftnce_brand_section_heading_setting', array(
-        'default'           => 'digital service agency',
+        'default'           => 'Trusted over 100+ companies',
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod'
@@ -37,10 +37,10 @@
     ));
 
     /**
-     * brand_section Section - Sub-Heading
+     * brand Section - Sub-Heading
      */
-    $wp_customize->add_setting('craftnce_brand_section_sub_heading_ctrl', array(
-        'default'           => 'digital service agency',
+    $wp_customize->add_setting('craftnce_brand_section_short_description_setting', array(
+        'default'           => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum asperiores labore tenetur?',
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod'
