@@ -9,16 +9,47 @@
      * brand Section - Show brand Section
      */
     $wp_customize->add_setting('craftnce_show_home_brand_section_setting', array(
-        'default'           => 1,
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod'
     ));
     $wp_customize->add_control('craftnce_show_home_brand_section_ctrl', array(
-        'label'             =>  __('Show brand First Button', 'craftnce'),
+        'label'             =>  __('Show brand section', 'craftnce'),
         'section'           =>  'craftnce_home_page_brand',
         'settings'          =>  'craftnce_show_home_brand_section_setting',
         'type'              =>  'checkbox'
+    ));
+
+    /**
+     * brand_section Section - Heading
+     */
+    $wp_customize->add_setting('craftnce_brand_section_heading_setting', array(
+        'default'           => 'digital service agency',
+        'capability'        => 'edit_theme_options',
+        'transport'         => 'refresh',
+        'type'              => 'theme_mod'
+    ));
+    $wp_customize->add_control('craftnce_brand_section_heading_ctrl', array(
+        'label'             =>  __('Brand Heading', 'craftnce'),
+        'section'           =>  'craftnce_home_page_brand',
+        'settings'          =>  'craftnce_brand_section_heading_setting',
+        'type'              =>  'text'
+    ));
+
+    /**
+     * brand_section Section - Sub-Heading
+     */
+    $wp_customize->add_setting('craftnce_brand_section_sub_heading_ctrl', array(
+        'default'           => 'digital service agency',
+        'capability'        => 'edit_theme_options',
+        'transport'         => 'refresh',
+        'type'              => 'theme_mod'
+    ));
+    $wp_customize->add_control('craftnce_brand_section_sub_heading_ctrl', array(
+        'label'             =>  __('Sub Heading', 'craftnce'),
+        'section'           =>  'craftnce_home_page_brand',
+        'settings'          =>  'craftnce_brand_section_short_description_setting',
+        'type'              =>  'textarea'
     ));
     
     /**
