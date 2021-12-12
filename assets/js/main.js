@@ -93,9 +93,4 @@
 	$('#video').on('hidden.bs.modal', function () {
 		$('#video .modal-body').empty();
 	});
-	
-	// AOS Init
-	AOS.init({
-		duration: 1000,
-	});
 }(jQuery)); 
