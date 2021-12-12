@@ -94,3 +94,16 @@
 		$('#video .modal-body').empty();
 	});
 }(jQuery)); 
+
+
+
+document.addEventListener('scroll', () => {
+	const siteHeader = document.getElementById("site-header");
+	siteHeader.style.transition = '.5s'
+
+	if (window.scrollY > 100) {
+		siteHeader.classList.add('shadow-sm');
+	} else if (window.scrollY < 100) {
+		siteHeader.classList.remove('shadow-sm');
+	}
+})
