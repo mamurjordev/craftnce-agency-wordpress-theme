@@ -85,8 +85,10 @@
             </div>
             <hr class="footer-line">
 
-            <div class="text-center pt-4 text-light">
-                <p>Copyright @ Thrivence | All Right Reserved | 2021</p>
+            <div class="text-center pt-4 text-light text-sm">
+                <?php
+                    echo get_theme_mod('craftnce_copyright_text_settings');
+                ?>
             </div>
         </div>
     </footer>

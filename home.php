@@ -1,8 +1,10 @@
 <?php
     get_header();
-?>
 
-    <?php get_template_part('template-parts/common/breadcrumb'); ?>
+    if(get_theme_mod('craftnce_blog_page_show_breadcrumb_setting')) {
+        get_template_part('template-parts/common/breadcrumb'); 
+    }
+?>
 
     <!-- Blog -->
     <section class="pb-5">
@@ -21,7 +23,7 @@
 
                 if(have_posts()) :
             ?>
-            <div class="articles-wrapper row py-5 mb-5 py-lg-0">
+            <div class="articles-wrapper row mb-5">
                 <?php
                     while(have_posts()) :
                         the_post();
