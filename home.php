@@ -26,7 +26,7 @@
                     while(have_posts()) :
                         the_post();
                 ?>
-                <div class="portfo-box col-md-6 col-lg-4 mt-4">
+                <div <?php post_class('portfo-box col-md-6 col-lg-4 mt-4'); ?>>
                     <div class="card border-0  rounded-3 blog-card">
                         <?php
                             if(has_post_thumbnail()) {
