@@ -24,7 +24,7 @@
      * Secondary Color
      */
     $wp_customize->add_setting('craftnce_secondary_color_settings', array(
-        'default'           => '#45ace0',
+        'default'           => '#EDF5FB',
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod'
@@ -39,7 +39,7 @@
      * Overlay Color
      */
     $wp_customize->add_setting('craftnce_overlay_color_settings', array(
-        'default'           => '#45ace0',
+        'default'           => '#082032',
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod'
@@ -48,4 +48,19 @@
         'label'             =>  __('Overlay Color', 'craftnce'),
         'section'           =>  'craftnce_typography',
         'settings'          =>  'craftnce_overlay_color_settings',
+    )));
+
+    /**
+     * Section Background Color
+     */
+    $wp_customize->add_setting('craftnce_section_bg_color_settings', array(
+        'default'           => '#082032',
+        'capability'        => 'edit_theme_options',
+        'transport'         => 'refresh',
+        'type'              => 'theme_mod'
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'craftnce_section_bg_color_ctrl', array(
+        'label'             =>  __('Section Background Color', 'craftnce'),
+        'section'           =>  'craftnce_typography',
+        'settings'          =>  'craftnce_section_bg_color_settings',
     )));

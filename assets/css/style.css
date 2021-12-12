@@ -283,7 +283,7 @@ input:focus {
 }
 
 .infography-section {
-    background: #082032;
+    background: var(--section-bg);
 }
 
 .accordion-button, .accordion-body {
@@ -304,7 +304,6 @@ input:focus {
 }
 
 .news-letter {
-    background: url('../img/newsletter-bg.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -321,7 +320,7 @@ input:focus {
 }
 
 .main-footer {
-    background-color: #082032;
+    background-color: var(--section-bg);
 }
 .footer-list-group a {
     margin: 7px 0;

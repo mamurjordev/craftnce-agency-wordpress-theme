@@ -4,12 +4,13 @@
         ?>
         <style>
             :root {
-                --primary-color: <?php echo get_theme_mod('craftnce_primary_color_settings', '#007FE6'); ?>;
-                --secondary-color: <?php echo get_theme_mod('craftnce_secondary_color_settings', '#EDF5FB') . '20'; ?>;
+                --primary-color: <?php echo get_theme_mod('craftnce_primary_color_settings'); ?>;
+                --secondary-color: <?php echo get_theme_mod('craftnce_secondary_color_settings'); ?>;
                 --orange-color: #FFC700;
                 --primary-gray: #dedede;
+                --section-bg: <?php echo get_theme_mod('craftnce_section_bg_color_settings'); ?>;
                 --font-inconsolata: 'Inconsolata', monospace;
-                --overlay: <?php echo get_theme_mod('craftnce_overlay_color_settings', '#082032') . 'd6'; ?>;
+                --overlay: <?php echo get_theme_mod('craftnce_overlay_color_settings') . 'd6'; ?>;
 
                 --primary-font: 'Inter', sans-serif;
                 --main-shadow: 20px 20px 100px 40px rgba(73, 103, 255, 0.07);
@@ -17,6 +18,9 @@
 
             .counter-bg {
                 background: url('<?php echo esc_url(get_theme_mod('craftnce_home_counter_section_featured_image_setting')); ?>');
+            }
+            .news-letter {
+                background: url('<?php echo esc_url(get_theme_mod('craftnce_home_newsletter_section_background_image_setting')); ?>');
             }
         </style>
         <?php
