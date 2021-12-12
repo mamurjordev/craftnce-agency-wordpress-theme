@@ -22,6 +22,21 @@
     ));
 
     /**
+     * Blog Header Section - Show Section
+     */
+    $wp_customize->add_setting('craftnce_show_blog_page_header_section_setting', array(
+        'capability'        => 'edit_theme_options',
+        'transport'         => 'refresh',
+        'type'              => 'theme_mod'
+    ));
+    $wp_customize->add_control('craftnce_show_blog_page_header_section_ctrl', array(
+        'label'             =>  __('Show Blog Page Header', 'craftnce'),
+        'section'           =>  'craftnce_blog_page',
+        'settings'          =>  'craftnce_show_blog_page_header_section_setting',
+        'type'              =>  'checkbox'
+    ));
+
+    /**
      * brand Section - Show brand Section
      */
     $wp_customize->add_setting('craftnce_show_blog_page_brand_section_setting', array(
@@ -50,21 +65,6 @@
         'label'             =>  __('Show newsletter section', 'craftnce'),
         'section'           =>  'craftnce_blog_page',
         'settings'          =>  'craftnce_show_blog_page_newsletter_section_setting',
-        'type'              =>  'checkbox'
-    ));
-
-    /**
-     * Blog Header Section - Show Section
-     */
-    $wp_customize->add_setting('craftnce_show_blog_page_header_section_setting', array(
-        'capability'        => 'edit_theme_options',
-        'transport'         => 'refresh',
-        'type'              => 'theme_mod'
-    ));
-    $wp_customize->add_control('craftnce_show_blog_page_header_section_ctrl', array(
-        'label'             =>  __('Show Blog Page Header', 'craftnce'),
-        'section'           =>  'craftnce_blog_page',
-        'settings'          =>  'craftnce_show_blog_page_header_section_setting',
         'type'              =>  'checkbox'
     ));
 
