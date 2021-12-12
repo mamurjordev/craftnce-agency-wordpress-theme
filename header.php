@@ -11,13 +11,16 @@
     <?php wp_body_open(); ?>
     <!-- Header Navigation -->
     <header class="sticky-top bg-light">
-        <nav class="navbar navbar-expand-lg navbar-light py-3">
+        <nav class="navbar navbar-expand-lg navbar-light py-2">
             <div class="container">
                 <a class="navbar-brand text-primary fw-bolder" href="<?php echo home_url(); ?>">
-                    <!-- <img src="<?php //echo get_template_directory_uri(); ?>/assets/img/logo.png" class="img-fluid" alt=""> -->
                     <?php
-                        if(current_theme_supports('custom-log')) {
-                            the_custom_logo('large', array('class'=>'img-fluid'));
+                        if(current_theme_supports('custom-logo')) {
+                            $craftnce_custom_logo_id = get_theme_mod( 'custom_logo' );
+                            $logo = wp_get_attachment_image_src( $craftnce_custom_logo_id , 'full' );
+                    ?>
+                    <img src="<?php echo esc_url($logo[0]); ?>" class="img-fluid" alt="">
+                    <?php
                         } else {
                     ?>
                     <h4 class="mb-0"><?php bloginfo('title-tag'); ?></h4>
@@ -42,7 +45,13 @@
                             'walker' => new bootstrap_5_wp_nav_menu_walker(),
                         ));
                     ?>
-                    <a href="#!" class="btn btn-primary rounded-pill text-sm">Contact Us</a>
+                    <?php
+                        if(get_theme_mod('craftnce_header_menu_show_last_button_label_settings')) :
+                    ?>
+                    <a href="<?php echo esc_url(get_theme_mod('craftnce_header_menu_last_button_link_settings')); ?>" class="btn btn-primary rounded-pill text-sm">
+                        <?php echo get_theme_mod('craftnce_header_menu_last_button_label_settings'); ?>
+                    </a>
+                    <?php endif; ?>
                 </div>
             </div>
         </nav>

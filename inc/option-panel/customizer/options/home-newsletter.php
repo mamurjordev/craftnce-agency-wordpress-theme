@@ -1,6 +1,6 @@
 <?php
     $wp_customize->add_section( 'craftnce_home_page_newsletter', array(
-        'title'      => __( 'newsletter Section', 'craftnce' ),
+        'title'      => __( 'Newsletter Section', 'craftnce' ),
         'capability' => 'edit_theme_options',
         'panel'      => 'home_page_panel',
     ));
@@ -52,3 +52,22 @@
         'settings'          =>  'craftnce_home_newsletter_subtext_setting',
         'type'              =>  'text'
     ));
+
+    /**
+     * newsletter Section - background Image
+     */
+    $wp_customize->add_setting('craftnce_home_newsletter_section_background_image_setting', array(
+        'capability'        => 'edit_theme_options',
+        'transport'         => 'refresh',
+        'type'              => 'theme_mod'
+    ));
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'craftnce_home_newsletter_background_image_ctrl', array(
+        'label'             =>  __('Newsletter Section background image', 'craftnce'),
+        'section'           =>  'craftnce_home_page_newsletter',
+        'settings'          =>  'craftnce_home_newsletter_section_background_image_setting',
+        'button_labels'     => array(
+            'select'    => 'Select Image',
+            'remove'    => 'Remove Image',
+            'change'    => 'Change Image',
+        )
+    )));

@@ -16,7 +16,7 @@
         // Page Layout
         $page_layout_panel = new PE_WP_Customize_Panel( $wp_customize,'page_layout_panel', array(
             'title'                     =>  __('Page Layout', 'craftnce'),
-            'priority'                  =>  '2',
+            'priority'                  =>  1,
             'capability'                =>  'edit_theme_options',
             'panel'                     =>  'craftnce_options'
         ));
@@ -25,9 +25,33 @@
         // Page Layout Options
         require_once get_theme_file_path('/inc/option-panel/customizer/options/option-page-layout.php');
 
+        // Typography
+        $typography_panel = new PE_WP_Customize_Panel( $wp_customize,'typography_panel', array(
+            'title'                     =>  __('Typography', 'craftnce'),
+            'priority'                  =>  2,
+            'capability'                =>  'edit_theme_options',
+            'panel'                     =>  'craftnce_options'
+        ));
+        $wp_customize->add_panel( $typography_panel );
+
+        // Typography Options
+        require_once get_theme_file_path('/inc/option-panel/customizer/options/typography.php');
+
+        // Header
+        $craftnce_header = new PE_WP_Customize_Panel( $wp_customize,'header_panel', array(
+            'title'                     =>  __('Typography', 'craftnce'),
+            'priority'                  =>  2,
+            'capability'                =>  'edit_theme_options',
+            'panel'                     =>  'craftnce_options'
+        ));
+        $wp_customize->add_panel( $craftnce_header );
+
+        // Typography Options
+        require_once get_theme_file_path('/inc/option-panel/customizer/options/option-header.php');
+
         $homePagePanel = new PE_WP_Customize_Panel( $wp_customize,'home_page_panel', array(
             'title'                     =>  __('Home Page', 'craftnce'),
-            'priority'                  =>  '1',
+            'priority'                  =>  3,
             'capability'                =>  'edit_theme_options',
             'panel'                     =>  'craftnce_options'
         ));

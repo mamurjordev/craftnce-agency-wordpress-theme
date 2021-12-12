@@ -1,4 +1,33 @@
 <?php
+    // Typography Colors
+    function craftnce_color() {
+        ?>
+        <style>
+            :root {
+                --primary-color: <?php echo get_theme_mod('craftnce_primary_color_settings'); ?>;
+                --secondary-color: <?php echo get_theme_mod('craftnce_secondary_color_settings'); ?>;
+                --section-bg: <?php echo get_theme_mod('craftnce_section_bg_color_settings'); ?>;
+                --overlay: <?php echo get_theme_mod('craftnce_overlay_color_settings') . 'd6'; ?>;
+
+                --orange-color: #FFC700;
+                --primary-gray: #dedede;
+                --main-shadow: 20px 20px 100px 40px rgba(73, 103, 255, 0.07);
+
+                --font-inconsolata: 'Inconsolata', monospace;
+                --primary-font: 'Inter', sans-serif;
+            }
+
+            .counter-bg {
+                background: url('<?php echo esc_url(get_theme_mod('craftnce_home_counter_section_featured_image_setting')); ?>');
+            }
+            .news-letter {
+                background: url('<?php echo esc_url(get_theme_mod('craftnce_home_newsletter_section_background_image_setting')); ?>');
+            }
+        </style>
+        <?php
+    }
+    add_action( 'wp_head', 'craftnce_color');
+
     // Get Codestar Option
     if ( ! function_exists( 'get_craftnce_data' ) ) {
         function get_craftnce_data( $option = '', $default = null ) {
@@ -63,3 +92,8 @@
 		return substr($e,0,200);
 	}
 	add_filter('get_the_excerpt','excerpt_char_limit');
+
+    function theme_prefix_register_elementor_locations( $elementor_theme_manager ) {
+        $elementor_theme_manager->register_all_core_location();
+    }
+    add_action( 'elementor/theme/register_locations', 'theme_prefix_register_elementor_locations' );
