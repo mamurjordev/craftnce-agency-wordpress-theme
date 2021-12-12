@@ -4,7 +4,7 @@
     get_template_part('template-parts/common/breadcrumb');
 ?>
 
-    <!-- Portfolio Gallery -->
+    <!-- Post -->
     <section class="pb-5">
         <div class="container py-5">
             <div class="row text-center pb-5">
