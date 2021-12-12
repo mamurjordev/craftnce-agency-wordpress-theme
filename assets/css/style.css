@@ -1,14 +1,3 @@
-:root {
-    --primary-color: #007FE6;
-    --secondary-color: rgba(215, 233, 247, 0.46);
-    --orange-color: #FFC700;
-    --primary-gray: #dedede;
-    --font-inconsolata: 'Inconsolata', monospace;
-
-    --primary-font: 'Inter', sans-serif;
-    --main-shadow: 20px 20px 100px 40px rgba(73, 103, 255, 0.07);
-}
-
 /* Basic Typography */
 body {
     font-family: var(--primary-font) !important;
@@ -68,8 +57,9 @@ body {
 .bg-secondary {
     background-color: var(--secondary-color) !important;
 }
-.btn-primary {
-    background-color: var(--primary-color)
+.btn-primary, .btn-primary:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
 }
 .btn-outline-primary {
 	color: var(--primary-color);
@@ -233,6 +223,7 @@ input:focus {
 }
 .home-hero {
     background: var(--secondary-color);
+    
 }
 
 .home-hero-title {
@@ -259,13 +250,12 @@ input:focus {
 }
 
 .counter-bg {
-    background: url('../img/counter-bg.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .counter-overlay {
-    background: rgba(8, 32, 50, 0.87);
+    background: var(--overlay);
 }
 .counter-section-subtitle {
     color: var(--orange-color);
@@ -321,7 +311,7 @@ input:focus {
 }
 
 .newsletter-overlay {
-    background: rgba(23, 45, 62, 0.7);
+    background: var(--overlay)
 }
 
 .left_bar {

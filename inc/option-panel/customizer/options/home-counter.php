@@ -22,6 +22,22 @@
     ));
 
     /**
+     * counter Section - Show Section
+     */
+    $wp_customize->add_setting('craftnce_home_counter_section_bg_setting', array(
+        'default'           => 1,
+        'capability'        => 'edit_theme_options',
+        'transport'         => 'refresh',
+        'type'              => 'theme_mod'
+    ));
+    $wp_customize->add_control('craftnce_home_counter_section_bg_ctrl', array(
+        'label'             =>  __('Show counter section', 'craftnce'),
+        'section'           =>  'craftnce_home_page_counter',
+        'settings'          =>  'craftnce_home_counter_section_bg_setting',
+        'type'              =>  'checkbox'
+    ));
+
+    /**
      * counter Section - Heading
      */
     $wp_customize->add_setting('craftnce_home_counter_heading_setting', array(
@@ -75,3 +91,23 @@
        return $string;
     }
     add_filter( 'repeater_input_labels_filter','repeater_labels', 10 , 3 );
+
+
+    /**
+     * Counter Section - Featured Image
+     */
+    $wp_customize->add_setting('craftnce_home_counter_section_featured_image_setting', array(
+        'capability'        => 'edit_theme_options',
+        'transport'         => 'refresh',
+        'type'              => 'theme_mod'
+    ));
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'craftnce_home_counter_featured_image_ctrl', array(
+        'label'             =>  __('Counter Section Featured Image', 'craftnce'),
+        'section'           =>  'craftnce_home_page_counter',
+        'settings'          =>  'craftnce_home_counter_section_featured_image_setting',
+        'button_labels'     => array(
+            'select'    => 'Select Image',
+            'remove'    => 'Remove Image',
+            'change'    => 'Change Image',
+        )
+    )));
