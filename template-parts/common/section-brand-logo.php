@@ -1,7 +1,3 @@
-<?php
-    if(get_craftnce_data('is_show_brand_slider_section')) :
-?>
-
 <!-- Band Logo Section -->
 <section class="py-5">
     <div class="container py-5">
@@ -10,7 +6,7 @@
                 <?php echo get_theme_mod('craftnce_brand_section_heading_setting'); ?>
             </h2>
             <p>
-                <?php echo get_theme_mod('craftnce_blog_page_short_description_setting'); ?>
+                <?php echo get_theme_mod('craftnce_brand_section_short_description_setting'); ?>
             </p>
         </div>
         <div class="brand my-5 d-flex justify-content-between flex-wrap align-items-center align-content-center">
@@ -30,7 +26,3 @@
         </div>
     </div>
 </section>
-
-<?php
-    endif;
-?>
