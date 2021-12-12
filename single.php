@@ -1,5 +1,6 @@
 <?php
     get_header();
+    the_post();
 ?>
 <?php get_template_part('template-parts/common/breadcrumb'); ?>
 
@@ -44,58 +45,6 @@
                     <?php
                         the_content();
                     ?>
-
-                    <div class="my-4">
-                        <h4 class="mb-3">What you’ll learn</h4>
-                        <div class="row">
-                            <div class="col-md-6 d-flex">
-                                <i class="fas fa-check-circle fs-4 text-primary me-2"></i>
-                                <p>Become a UI/UX designer.</p>
-                            </div>
-                            <div class="col-md-6 d-flex">
-                                <i class="fas fa-check-circle fs-4 text-primary me-2"></i>
-                                <p>Build & test a complete mobile app.</p>
-                            </div>
-                            <div class="col-md-6 d-flex">
-                                <i class="fas fa-check-circle fs-4 text-primary me-2"></i>
-                                <p>You will be able to start earning money </p>
-                            </div>
-                            <div class="col-md-6 d-flex">
-                                <i class="fas fa-check-circle fs-4 text-primary me-2"></i>
-                                <p>Learn to design mobile apps </p>
-                            </div>
-                            <div class="col-md-6 d-flex">
-                                <i class="fas fa-check-circle fs-4 text-primary me-2"></i>
-                                <p>Build a UI project from beginning to end.</p>
-                            </div>
-                            <div class="col-md-6 d-flex">
-                                <i class="fas fa-check-circle fs-4 text-primary me-2"></i>
-                                <p>Design 3 different logos.</p>
-                            </div>
-                            <div class="col-md-6 d-flex">
-                                <i class="fas fa-check-circle fs-4 text-primary me-2"></i>
-                                <p>Work with colors & fonts.</p>
-                            </div>
-                            <div class="col-md-6 d-flex">
-                                <i class="fas fa-check-circle fs-4 text-primary me-2"></i>
-                                <p>Create low-fidelity wireframe</p>
-                            </div>
-                            <div class="col-md-6 d-flex">
-                                <i class="fas fa-check-circle fs-4 text-primary me-2"></i>
-                                <p>You will create your own UI Kit.</p>
-                            </div>
-                            <div class="col-md-6 d-flex">
-                                <i class="fas fa-check-circle fs-4 text-primary me-2"></i>
-                                <p>Downloadable exercise files.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <p>Moody’s was founded by John Moody in 1909 to produce manuals of statistics related to stocks and bonds and bond ratings. Moody’s was acquired by Dun & Bradstreet in 1962. In 2000, Dun & Bradstreet spun off Moody’s Corporation as a separate company that was listed on the NYSE under MCO. In 2007, Moody’s Corporation was split into two operating divisions, Moody’s Investors Service, the rating agency, and Moody’s Analytics, with all of its other products.</p>
-            
-                    <p>Moody’s Corporation, often referred to as Moody’s, is an American business and financial services company. It is the holding company for Moody’s Investors Service (MIS), an American credit rating agency, and Moody’s Analytics (MA), an American provider of financial analysis software and services.</p>
-
-                    <p>Moody’s was founded by John Moody in 1909 to produce manuals of statistics related to stocks and bonds and bond ratings. Moody’s was acquired by Dun & Bradstreet in 1962. In 2000, Dun & Bradstreet spun off Moody’s Corporation as a separate company that was listed on the NYSE under MCO. In 2007, Moody’s Corporation was split into two operating divisions, Moody’s Investors Service, the rating agency, and Moody’s Analytics, with all of its other products.</p>
                 </div>
             </div>
 

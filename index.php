@@ -35,7 +35,7 @@
                                 </h4>
                             </a>
                             <p class="text-sm m-0 lh-base excerpt">
-                                <?php get_the_excerpt(); ?>
+                                <?php echo get_the_excerpt(); ?>
                             </p>
                         </div>
 
