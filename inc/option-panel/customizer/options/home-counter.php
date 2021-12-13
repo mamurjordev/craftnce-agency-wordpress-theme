@@ -58,7 +58,7 @@
         'sanitize_callback' => 'customizer_repeater_sanitize'
     ));
     $wp_customize->add_control( new Customizer_Repeater( $wp_customize, 'craftnce_show_home_counter_item_ctrl', array(
-        'label'                                             =>  esc_html_e('Counter Item','craftnce'),
+        'label'                                             =>  __('Counter Item','craftnce'),
         'section'                                           =>  'craftnce_home_page_counter',
         'settings'                                          =>  'craftnce_home_counter_item_settings',
         'customizer_repeater_icon_control'                  =>  true,
