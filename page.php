@@ -13,14 +13,6 @@
             if(get_theme_mod('craftnce_page_layout_settings') === 'left_sidebar') {
                 get_sidebar();
             }
-
-            if(get_theme_mod('craftnce_page_layout_settings') === 'left_sidebar') {
-                $middle_column = 8;
-            } elseif(get_theme_mod('craftnce_page_layout_settings') === 'right_sidebar') {
-                $middle_column = 8;
-            } elseif(get_theme_mod('craftnce_page_layout_settings') === 'no_sidebar') {
-                $middle_column = 12;
-            }
         ?>
         <div class="col-xl-<?php echo esc_attr($middle_column); ?>">
             <div class="row">

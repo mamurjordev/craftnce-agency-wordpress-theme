@@ -1,7 +1,7 @@
 <?php
     get_header();
 
-    if(get_theme_mod('craftnce_blog_page_show_breadcrumb_setting')) {
+    if(get_theme_mod('craftnce_blog_page_show_breadcrumb_setting', 1)) {
         get_template_part('template-parts/common/breadcrumb'); 
     }
 ?>
@@ -10,7 +10,7 @@
     <section class="pb-5">
         <div class="container py-5">
             <?php
-                if(get_theme_mod('craftnce_show_blog_page_header_section_setting')) :
+                if(get_theme_mod('craftnce_show_blog_page_header_section_setting', 1)) :
             ?>
             <div class="row text-center pb-5">
                 <div class="col-md-7 mx-auto">

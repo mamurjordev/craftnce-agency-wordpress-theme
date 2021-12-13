@@ -6,56 +6,21 @@
     ));
 
     /**
-     * Page Layout Select
+     * Show breadcrumb
      */
-    $wp_customize->add_setting('craftnce_page_layout_settings', array(
-        'default'           => 'full_width',
+    $wp_customize->add_setting('craftnce_blog_single_full_width_setting', array(
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod',
-        'sanitize_callback' => function( $input, $setting ) {
-            $input = sanitize_key($input);
-            $choices = $setting->manager->get_control( $setting->id )->choices;
-            return ( array_key_exists( $input, $choices ) ? $input : $setting->default );                
+        'sanitize_callback' => function( $input ) {
+            return ( ( isset( $input ) && true == $input ) ? true : false );
         }
     ));
-
-    $wp_customize->add_control('craftnce_page_layout_ctrl', array(
-        'label'             =>  __('Page Layout', 'craftnce'),
+    $wp_customize->add_control('craftnce_blog_single_full_width_ctrl', array(
+        'label'             =>  __('Blog Single Full-width', 'craftnce'),
         'section'           =>  'craftnce_page_layouts',
-        'settings'          =>  'craftnce_page_layout_settings',
-        'type'              =>  'select',
-        'choices' => array(
-            'no_sidebar'                =>  __( 'Full Width', 'craftnce'),
-            'left_sidebar'              =>  __( 'Left Sidebar', 'craftnce'),
-            'right_sidebar'             =>  __( 'Right Sidebar', 'craftnce'),
-        ),
-    ));
-
-    /**
-     * Blog Single Page Layout Select
-     */
-    $wp_customize->add_setting('craftnce_single_blog_page_layout_settings', array(
-        'default'           => 'full_width',
-        'capability'        => 'edit_theme_options',
-        'transport'         => 'refresh',
-        'type'              => 'theme_mod',
-        'sanitize_callback' => function( $input, $setting ) {
-            $input = sanitize_key($input);
-            $choices = $setting->manager->get_control( $setting->id )->choices;
-            return ( array_key_exists( $input, $choices ) ? $input : $setting->default );                
-        }
-    ));
-    $wp_customize->add_control('craftnce_single_blog_page_layout_ctrl', array(
-        'label'             =>  __('Blog Single Layout', 'craftnce'),
-        'section'           =>  'craftnce_page_layouts',
-        'settings'          =>  'craftnce_single_blog_page_layout_settings',
-        'type'              =>  'select',
-        'choices' => array(
-            'no_sidebar'                =>  __( 'Full Width', 'craftnce'),
-            'left_sidebar'              =>  __( 'Left Sidebar', 'craftnce'),
-            'right_sidebar'             =>  __( 'Right Sidebar', 'craftnce'),
-        ),
+        'settings'          =>  'craftnce_blog_single_full_width_setting',
+        'type'              =>  'checkbox'
     ));
 
     /**
@@ -66,12 +31,12 @@
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod',
-        'sanitize_callback' => function( $input ){
-            return ( isset( $input ) ? true : false );
+        'sanitize_callback' => function( $input ) {
+            return ( ( isset( $input ) && true == $input ) ? true : false );
         }
     ));
     $wp_customize->add_control('craftnce_show_breadcrumb_ctrl', array(
-        'label'             =>  __('Show breadcrumb', 'craftnce'),
+        'label'             =>  __('Show page breadcrumb', 'craftnce'),
         'section'           =>  'craftnce_page_layouts',
         'settings'          =>  'craftnce_show_breadcrumb_setting',
         'type'              =>  'checkbox'
@@ -102,6 +67,7 @@
 
      
     $wp_customize->add_setting('craftnce_single_blog_page_social_share_setting', array(
+        'default'           => 1,
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod',

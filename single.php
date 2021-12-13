@@ -7,20 +7,7 @@
 
 <div class="container my-4 my-md-5">
     <div class="row">
-        <?php
-            if(get_theme_mod('craftnce_single_blog_page_layout_settings') === 'left_sidebar') {
-                get_sidebar();
-            }
-
-            if(get_theme_mod('craftnce_single_blog_page_layout_settings') === 'left_sidebar') {
-                $middle_column = 8;
-            } elseif(get_theme_mod('craftnce_single_blog_page_layout_settings') === 'right_sidebar') {
-                $middle_column = 8;
-            } elseif(get_theme_mod('craftnce_single_blog_page_layout_settings') === 'no_sidebar') {
-                $middle_column = 12;
-            }
-        ?>
-        <div class="col-xl-<?php echo esc_attr($middle_column); ?>">
+        <div class="col-xl-<?php echo esc_attr(!get_theme_mod('craftnce_blog_single_full_width_setting') ? '8' : '12'); ?>">
             <div class="row">
                 <div class="col">
                     <h2>
@@ -80,7 +67,7 @@
             ?>
         </div>
         <?php
-            if(get_theme_mod('craftnce_single_blog_page_layout_settings') === 'right_sidebar') {
+            if(!get_theme_mod('craftnce_blog_single_full_width_setting')) {
                 get_sidebar();
             }
         ?>

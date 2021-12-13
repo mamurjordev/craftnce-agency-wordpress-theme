@@ -28,6 +28,7 @@
      * Blog Header Section - Show Section
      */
     $wp_customize->add_setting('craftnce_show_blog_page_header_section_setting', array(
+        'default'           => 1,
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod',
