@@ -131,7 +131,7 @@
     <?php
         endif;
 
-        if(get_theme_mod('craftnce_show_home_service_section_setting')) :
+        if(get_theme_mod('craftnce_show_home_service_section_setting', 1)) :
     ?>
 
     <!-- Service Section -->
