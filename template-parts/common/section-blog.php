@@ -1,7 +1,3 @@
-<?php
-    if(get_craftnce_data('is_show_blog_section')) :
-?>
-
 <!-- Blog Section -->
 <section class="py-5">
     <div class="container py-50">
@@ -9,13 +5,13 @@
             <span class="left_bar me-2"></span>
             <h6 class="text-uppercase">
                 <?php
-                    echo esc_html( get_theme_mod('craftnce_home_blog_subtext_setting') );
+                    echo esc_html( get_theme_mod('craftnce_home_blog_subtext_setting', 'blog posts') );
                 ?>
             </h6>
         </div>
         <h2 class="text-uppercase fw-900">
             <?php
-                echo esc_html( get_theme_mod('craftnce_home_blog_heading_setting') );
+                echo esc_html( get_theme_mod('craftnce_home_blog_heading_setting', 'Our recent blog') );
             ?>
         </h2>
 
@@ -71,7 +67,7 @@
                 <?php
                     endif;
                 ?>
-                <?php echo esc_html( get_theme_mod('craftnce_home_blog_btn_label_setting') ); ?>
+                <?php echo esc_html( get_theme_mod('craftnce_home_blog_btn_label_setting', 'see more') ); ?>
             </a>
         </div>
         <?php
@@ -79,6 +75,3 @@
         ?>
     </div>
 </section>
-<?php
-    endif;
-?>
