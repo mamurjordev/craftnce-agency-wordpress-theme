@@ -12,7 +12,8 @@
         'default'           => 'Copyright @ Craftnce | All Right Reserved | 2021',
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
-        'type'              => 'theme_mod'
+        'type'              => 'theme_mod',
+        'sanitize_callback' => 'wp_filter_nohtml_kses'
     ));
     $wp_customize->add_control('craftnce_copyright_text_ctrl', array(
         'label'             =>  __('Copyright Text', 'craftnce'),

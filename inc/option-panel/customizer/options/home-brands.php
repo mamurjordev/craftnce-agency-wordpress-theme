@@ -9,12 +9,16 @@
      * brand Section - Show brand Section
      */
     $wp_customize->add_setting('craftnce_show_home_brand_section_setting', array(
+        'default'           => 1,
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
-        'type'              => 'theme_mod'
+        'type'              => 'theme_mod',
+        'sanitize_callback' => function( $input ) {
+            return ( ( isset( $input ) && true == $input ) ? true : false );
+        }
     ));
     $wp_customize->add_control('craftnce_show_home_brand_section_ctrl', array(
-        'label'             =>  __('Show brand section', 'craftnce'),
+        'label'             =>  __('Show brand logo section', 'craftnce'),
         'section'           =>  'craftnce_home_page_brand',
         'settings'          =>  'craftnce_show_home_brand_section_setting',
         'type'              =>  'checkbox'
@@ -27,7 +31,8 @@
         'default'           => 'Trusted over 100+ companies',
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
-        'type'              => 'theme_mod'
+        'type'              => 'theme_mod',
+        'sanitize_callback' => 'wp_filter_nohtml_kses'
     ));
     $wp_customize->add_control('craftnce_brand_section_heading_ctrl', array(
         'label'             =>  __('Brand Heading', 'craftnce'),
@@ -43,7 +48,8 @@
         'default'           => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum asperiores labore tenetur?',
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
-        'type'              => 'theme_mod'
+        'type'              => 'theme_mod',
+        'sanitize_callback' => 'wp_filter_nohtml_kses'
     ));
     $wp_customize->add_control('craftnce_brand_section_sub_heading_ctrl', array(
         'label'             =>  __('Sub Heading', 'craftnce'),

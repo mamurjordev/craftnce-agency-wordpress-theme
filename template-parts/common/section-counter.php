@@ -1,19 +1,15 @@
-<?php
-    if(get_craftnce_data('is_show_counter_section')) :
-?>
-
 <!-- Counter Section -->
 <section class="counter-bg">
     <div class="counter-overlay py-50">
         <div class="container text-center py-5">
             <h6 class="text-uppercase text-md fw-bold counter-section-subtitle">
                 <?php
-                    echo get_theme_mod('craftnce_home_counter_subheading_setting');
+                    echo esc_html( get_theme_mod('craftnce_home_counter_subheading_setting', 'featured case study') );
                 ?>
             </h6>
             <h2 class="text-uppercase text-light fw-900 text-xl mt-3">
                 <?php
-                    echo get_theme_mod('craftnce_home_counter_heading_setting');
+                    echo esc_html( get_theme_mod('craftnce_home_counter_heading_setting', 'Helping dreams to do') );
                 ?>
             </h2>
 
@@ -41,6 +37,3 @@
         </div>
     </div>
 </section>
-<?php
-    endif;
-?>

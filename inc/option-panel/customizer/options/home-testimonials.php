@@ -12,7 +12,10 @@
         'default'           => 1,
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
-        'type'              => 'theme_mod'
+        'type'              => 'theme_mod',
+        'sanitize_callback' => function( $input ) {
+            return ( ( isset( $input ) && true == $input ) ? true : false );
+        }
     ));
     $wp_customize->add_control('craftnce_show_home_testimonials_section_ctrl', array(
         'label'             =>  __('Show testimonials section', 'craftnce'),
@@ -28,7 +31,8 @@
         'default'           => 'Our worldwide clients says about us ',
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
-        'type'              => 'theme_mod'
+        'type'              => 'theme_mod',
+        'sanitize_callback' => 'wp_filter_nohtml_kses'
     ));
     $wp_customize->add_control('craftnce_home_testimonials_heading_ctrl', array(
         'label'             =>  __('Heading', 'craftnce'),
@@ -44,7 +48,8 @@
         'default'           => 'testimonial',
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
-        'type'              => 'theme_mod'
+        'type'              => 'theme_mod',
+        'sanitize_callback' => 'wp_filter_nohtml_kses'
     ));
     $wp_customize->add_control('craftnce_home_testimonials_subheading_ctrl', array(
         'label'             =>  __('Sub-heading', 'craftnce'),
@@ -55,10 +60,13 @@
     
     // testimonials Items
     $wp_customize->add_setting( 'craftnce_home_testimonials_item_settings', array(
-        'sanitize_callback' => 'customizer_repeater_sanitize'
+        'capability'            => 'edit_theme_options',
+        'transport'             => 'refresh',
+        'type'                  => 'theme_mod',
+        'sanitize_callback'     => 'customizer_repeater_sanitize',
     ));
     $wp_customize->add_control( new Customizer_Repeater( $wp_customize, 'craftnce_home_testimonials_items_control', array(
-        'label'                                             =>  esc_html__('testimonials Item','craftnce'),
+        'label'                                             =>  esc_html__('Testimonials Item','craftnce'),
         'section'                                           =>  'craftnce_home_page_testimonials',
         'settings'                                          =>  'craftnce_home_testimonials_item_settings',
         'customizer_repeater_icon_control'                  =>  true,

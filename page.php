@@ -5,13 +5,9 @@
     if(get_theme_mod('craftnce_show_breadcrumb_setting')) {
         get_template_part('template-parts/common/breadcrumb'); 
     }
- 
-    if( !is_page_template('elementor_header_footer')) {
 ?>
-<div class="container <?php echo get_theme_mod('craftnce_page_top_bottom_container_padding_setting') ? 'py-4' : ''; ?>">
-<?php 
-    }
-?>
+
+<div class="container <?php echo esc_attr(get_theme_mod('craftnce_page_top_bottom_container_padding_setting') ? 'py-4' : ''); ?>">
     <div class="row">
         <?php
             if(get_theme_mod('craftnce_page_layout_settings') === 'left_sidebar') {

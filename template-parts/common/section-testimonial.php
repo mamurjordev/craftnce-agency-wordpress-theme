@@ -6,12 +6,12 @@
                 <div class="col-lg-7 mx-auto">
                     <h6 class="text-uppercase text-md fw-bold text-primary">
                         <?php
-                            echo get_theme_mod('craftnce_home_testimonials_subheading_setting');
+                            echo esc_html( get_theme_mod('craftnce_home_testimonials_subheading_setting', 'testimonials') );
                         ?>
                     </h6>
                     <h2 class="text-uppercase fw-900 text-xl mt-3">
                         <?php
-                            echo get_theme_mod('craftnce_home_testimonials_heading_setting');
+                            echo esc_html( get_theme_mod('craftnce_home_testimonials_heading_setting', 'Our worldwide clients says about us') );
                         ?>
                     </h2>
                 </div>

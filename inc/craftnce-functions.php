@@ -4,10 +4,11 @@
         ?>
         <style>
             :root {
-                --primary-color: <?php echo get_theme_mod('craftnce_primary_color_settings'); ?>;
-                --secondary-color: <?php echo get_theme_mod('craftnce_secondary_color_settings'); ?>;
-                --section-bg: <?php echo get_theme_mod('craftnce_section_bg_color_settings'); ?>;
-                --overlay: <?php echo get_theme_mod('craftnce_overlay_color_settings') . 'd6'; ?>;
+                --primary-color: <?php echo sanitize_hex_color(get_theme_mod('craftnce_primary_color_settings', '#007FE4')); ?>;
+                --secondary-color: <?php echo sanitize_hex_color(get_theme_mod('craftnce_secondary_color_settings', '#EDF5FB')); ?>;
+                --section-bg: <?php echo sanitize_hex_color(get_theme_mod('craftnce_section_bg_color_settings', '#082032')); ?>;
+                --footer-bg: <?php echo sanitize_hex_color(get_theme_mod('craftnce_footer_bg_color_settings', '#082032')); ?>;
+                --overlay: <?php echo sanitize_hex_color(get_theme_mod('craftnce_overlay_color_settings', '#082032')); ?>;
 
                 --orange-color: #FFC700;
                 --primary-gray: #dedede;
@@ -19,9 +20,15 @@
 
             .counter-bg {
                 background: url('<?php echo esc_url(get_theme_mod('craftnce_home_counter_section_featured_image_setting')); ?>');
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
             }
-            .news-letter {
+            .newsletter-bg {
                 background: url('<?php echo esc_url(get_theme_mod('craftnce_home_newsletter_section_background_image_setting')); ?>');
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
             }
         </style>
         <?php
@@ -42,7 +49,7 @@
         echo '<ol class="breadcrumb mb-0">';
         if (!is_home()) {
             echo '<li class="breadcrumb-item"><a href="';
-            echo get_option('home');
+            echo esc_url(home_url());
             echo '">';
             echo 'Home';
             echo '</a></li>';
@@ -76,7 +83,7 @@
         elseif (isset($_GET['paged']) && !empty($_GET['paged'])) {echo '<li class="breadcrumb-item active">Blog Archives'; echo'</li>';}
         elseif (is_search()) {echo'<li class="breadcrumb-item active">Search Results'; echo'</li>';}
         elseif (!is_single() && is_home()) {echo '<li class="breadcrumb-item"><a href="';
-            echo get_option('home');
+            echo esc_url(home_url());
             echo '">';
             echo 'Home';
             echo '</a></li>';
@@ -97,3 +104,11 @@
         $elementor_theme_manager->register_all_core_location();
     }
     add_action( 'elementor/theme/register_locations', 'theme_prefix_register_elementor_locations' );
+
+
+    function craftnce_comment_text_before($arg) {
+        $arg['comment_notes_before'] = "<p class='comment-policy'>We are glad you have chosen to leave a comment.</p>";
+        return $arg;
+    }
+      
+    add_filter('comment_form_defaults', 'craftnce_comment_text_before');

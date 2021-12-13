@@ -9,13 +9,16 @@
      * Features Section - Show Section
      */
     $wp_customize->add_setting('craftnce_show_home_features_section_setting', array(
-        'default'           => 1,
+        'default'           => '1',
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
-        'type'              => 'theme_mod'
+        'type'              => 'theme_mod',
+        'sanitize_callback' => function( $input ) {
+            return ( ( isset( $input ) && true == $input ) ? true : false );
+        }
     ));
     $wp_customize->add_control('craftnce_show_home_features_section_ctrl', array(
-        'label'             =>  __('Show info section', 'craftnce'),
+        'label'             =>  __('Show features section', 'craftnce'),
         'section'           =>  'craftnce_home_page_features',
         'settings'          =>  'craftnce_show_home_features_section_setting',
         'type'              =>  'checkbox'
