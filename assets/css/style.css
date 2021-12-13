@@ -259,6 +259,7 @@ input:focus {
 }
 .counter-overlay {
     background: var(--overlay);
+    opacity: .8;
 }
 .counter-section-subtitle {
     color: var(--orange-color);
@@ -313,7 +314,8 @@ input:focus {
 }
 
 .newsletter-overlay {
-    background: var(--overlay)
+    background: var(--overlay);
+    opacity: .8;
 }
 
 .left_bar {
