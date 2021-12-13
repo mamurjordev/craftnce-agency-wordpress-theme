@@ -20,9 +20,15 @@
 
             .counter-bg {
                 background: url('<?php echo esc_url(get_theme_mod('craftnce_home_counter_section_featured_image_setting')); ?>');
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
             }
-            .news-letter {
+            .newsletter-bg {
                 background: url('<?php echo esc_url(get_theme_mod('craftnce_home_newsletter_section_background_image_setting')); ?>');
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
             }
         </style>
         <?php

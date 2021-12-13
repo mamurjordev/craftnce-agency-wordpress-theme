@@ -1,5 +1,5 @@
 <!-- Newsletter -->
-<section class="news-letter">
+<section class="newsletter-bg">
     <div class="newsletter-overlay py-50">
         <div class="container text-center py-5">
             <h2 class="text-uppercase text-light fw-bolder text-xl mt-3">

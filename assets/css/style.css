@@ -252,11 +252,6 @@ input:focus {
     width: 40px;
 }
 
-.counter-bg {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 .counter-overlay {
     background: var(--overlay);
     opacity: .8;
@@ -305,12 +300,6 @@ input:focus {
 }
 .accordion-item {
     margin-top: 10px;
-}
-
-.news-letter {
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 .newsletter-overlay {
