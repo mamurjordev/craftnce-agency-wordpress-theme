@@ -41,6 +41,7 @@
      * Overlay Color
      */
     $wp_customize->add_setting('craftnce_overlay_color_settings', array(
+        'default'           => '#082032',
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod',
