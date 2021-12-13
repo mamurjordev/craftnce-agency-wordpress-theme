@@ -60,7 +60,7 @@
                 if(comments_open()) {
                     comments_template();
                 } else {
-                    _e('<p class="py-5">You can not comment in this post right now!</p>');
+                    _e('<p class="py-5">You can not comment in this post right now!</p>', 'craftnce');
                 }
             ?>
         </div>

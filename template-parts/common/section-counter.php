@@ -8,12 +8,12 @@
         <div class="container text-center py-5">
             <h6 class="text-uppercase text-md fw-bold counter-section-subtitle">
                 <?php
-                    echo get_theme_mod('craftnce_home_counter_subheading_setting');
+                    echo esc_html( get_theme_mod('craftnce_home_counter_subheading_setting') );
                 ?>
             </h6>
             <h2 class="text-uppercase text-light fw-900 text-xl mt-3">
                 <?php
-                    echo get_theme_mod('craftnce_home_counter_heading_setting');
+                    echo esc_html( get_theme_mod('craftnce_home_counter_heading_setting') );
                 ?>
             </h2>
 

@@ -14,12 +14,12 @@
                 <div class="col-lg-7">
                     <h6 class="text-uppercase fw-bold text-sm text-primary">
                         <?php
-                            echo get_theme_mod('craftnce_home_hero_subheading_setting', 'digital service agency');
+                            echo esc_html( get_theme_mod('craftnce_home_hero_subheading_setting', 'digital service agency') );
                         ?>
                     </h6>
                     <h1 class="home-hero-title text-uppercase">
                         <?php
-                            echo get_theme_mod('craftnce_home_hero_heading_setting', 'digital service agency');
+                            echo esc_html( get_theme_mod('craftnce_home_hero_heading_setting', 'digital service agency') );
                         ?>
                     </h1>
                     
@@ -29,7 +29,7 @@
                         ?>
                         <a href="<?php echo esc_url(get_theme_mod('craftnce_home_hero_btn1_link_setting')); ?>" class="btn btn-primary text-capitalize text-sm py-2 px-3 rounded-pill me-2">
                             <i class="<?php echo esc_attr(get_theme_mod('craftnce_home_hero_btn1_icon_setting')); ?> me-1"></i>
-                            <?php echo get_theme_mod('craftnce_home_hero_btn1_label_setting'); ?>
+                            <?php echo esc_html( get_theme_mod('craftnce_home_hero_btn1_label_setting') ); ?>
                         </a>
                         <?php
                             endif;
@@ -37,7 +37,7 @@
                         ?>
                         <a href="<?php echo esc_url(get_theme_mod('craftnce_home_hero_btn2_link_setting')); ?>" class="btn btn-outline-primary text-capitalize text-sm py-2 px-3 rounded-pill">
                             <i class="<?php echo esc_attr(get_theme_mod('craftnce_home_hero_btn2_icon_setting')); ?> me-1"></i></i>
-                            <?php echo get_theme_mod('craftnce_home_hero_btn2_label_setting'); ?>
+                            <?php echo esc_html( get_theme_mod('craftnce_home_hero_btn2_label_setting') ); ?>
                         </a>
                         <?php
                             endif;
@@ -64,16 +64,16 @@
                 </div>
                 <div class="col-lg-7 mt-5 mt-lg-0">
                     <h6 class="text-uppercase fw-bold text-sm text-primary">
-                        <?php echo get_theme_mod('craftnce_home_info_subheading_setting'); ?>
+                        <?php echo esc_html( get_theme_mod('craftnce_home_info_subheading_setting') ); ?>
                     </h6>
                     <h2 class="info-title text-uppercase">
                         <?php
-                            echo get_theme_mod('craftnce_home_info_heading_setting');
+                            echo esc_html( get_theme_mod('craftnce_home_info_heading_setting') );
                         ?>
                     </h2>
                     <p class="info-sec-p text-muted my-3">
                         <?php
-                            echo get_theme_mod('craftnce_home_info_description_setting');
+                            echo esc_html( get_theme_mod('craftnce_home_info_description_setting') );
                         ?>
                     </p>
                     <div class="d-flex mt-4">
@@ -81,14 +81,14 @@
                             if(get_theme_mod('craftnce_home_info_show_btn1_setting')) :
                         ?>
                         <a href="<?php echo esc_url(get_theme_mod('craftnce_home_info_btn1_link_setting')); ?>" class="btn btn-primary text-sm py-2 px-3 rounded-pill me-2 text-capitalize"><i class="<?php echo esc_attr(get_theme_mod('craftnce_home_info_btn1_icon_setting')); ?> me-1"></i>
-                            <?php echo get_theme_mod('craftnce_home_info_btn1_label_setting'); ?>
+                            <?php echo esc_html( get_theme_mod('craftnce_home_info_btn1_label_setting') ); ?>
                         </a>
                         <?php
                             endif;
                             if(get_theme_mod('craftnce_home_info_show_btn2_setting')) :
                         ?>
                         <a href="<?php echo esc_url(get_theme_mod('craftnce_home_info_btn2_link_setting')); ?>" class="btn btn-outline-primary text-sm py-2 px-3 rounded-pill me-2 text-capitalize"><i class="<?php echo esc_attr(get_theme_mod('craftnce_home_info_btn2_icon_setting')); ?> me-1"></i>
-                            <?php echo get_theme_mod('craftnce_home_info_btn2_label_setting'); ?>
+                            <?php echo esc_html( get_theme_mod('craftnce_home_info_btn2_label_setting') ); ?>
                         </a>
                         <?php endif; ?>
                     </div>
@@ -143,10 +143,10 @@
         <div class="container py-5">
             <div class="row text-center">
                 <h6 class="text-uppercase fw-bold text-md text-primary">
-                    <?php echo get_theme_mod('craftnce_home_service_subheading_setting'); ?>
+                    <?php echo esc_html( get_theme_mod('craftnce_home_service_subheading_setting') ); ?>
                 </h6>
                 <h2 class="text-capitalize fw-900 text-xl mt-3">
-                    <?php echo get_theme_mod('craftnce_home_service_heading_setting'); ?>
+                    <?php echo esc_html( get_theme_mod('craftnce_home_service_heading_setting') ); ?>
                 </h2>
             </div>
             <?php get_template_part('template-parts/common/section-service'); ?>
@@ -177,12 +177,12 @@
                 <div class="col-lg-6 mt-5 mt-lg-0">
                     <h2 class="fs-1 fw-900 text-light text-uppercase">
                         <?php
-                            echo get_theme_mod('craftnce_home_infography_heading_setting');
+                            echo esc_html( get_theme_mod('craftnce_home_infography_heading_setting') );
                         ?>
                     </h2>
                     <p class="info-sec-p text-light my-3">
                         <?php
-                            echo get_theme_mod('craftnce_home_infography_subheading_setting');
+                            echo esc_html( get_theme_mod('craftnce_home_infography_subheading_setting') );
                         ?>
                     </p>
                     

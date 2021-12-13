@@ -3,10 +3,10 @@
     <div class="container py-5">
         <div class="mb-4 text-center">
             <h2 class="fs-48 fw-900 text-uppercase">
-                <?php echo get_theme_mod('craftnce_brand_section_heading_setting'); ?>
+                <?php echo esc_html( get_theme_mod('craftnce_brand_section_heading_setting') ); ?>
             </h2>
             <p>
-                <?php echo get_theme_mod('craftnce_brand_section_short_description_setting'); ?>
+                <?php echo esc_html( get_theme_mod('craftnce_brand_section_short_description_setting') ); ?>
             </p>
         </div>
         <div class="brand my-5 d-flex justify-content-between flex-wrap align-items-center align-content-center">

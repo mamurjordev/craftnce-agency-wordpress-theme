@@ -9,13 +9,13 @@
             <span class="left_bar me-2"></span>
             <h6 class="text-uppercase">
                 <?php
-                    echo get_theme_mod('craftnce_home_blog_subtext_setting');
+                    echo esc_html( get_theme_mod('craftnce_home_blog_subtext_setting') );
                 ?>
             </h6>
         </div>
         <h2 class="text-uppercase fw-900">
             <?php
-                echo get_theme_mod('craftnce_home_blog_heading_setting');
+                echo esc_html( get_theme_mod('craftnce_home_blog_heading_setting') );
             ?>
         </h2>
 
@@ -67,11 +67,11 @@
                 <?php
                     if(get_craftnce_data('see_full_blog_button_icon')) :
                 ?>
-                <i class="<?php echo get_theme_mod('craftnce_home_blog_btn_icon_setting'); ?> me-2"></i>
+                <i class="<?php echo esc_attr(get_theme_mod('craftnce_home_blog_btn_icon_setting')); ?> me-2"></i>
                 <?php
                     endif;
                 ?>
-                <?php echo get_theme_mod('craftnce_home_blog_btn_label_setting'); ?>
+                <?php echo esc_html( get_theme_mod('craftnce_home_blog_btn_label_setting') ); ?>
             </a>
         </div>
         <?php
