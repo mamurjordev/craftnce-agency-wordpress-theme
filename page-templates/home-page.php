@@ -139,10 +139,10 @@
         <div class="container py-5">
             <div class="row text-center">
                 <h6 class="text-uppercase fw-bold text-md text-primary">
-                    <?php echo esc_html( get_theme_mod('craftnce_home_service_subheading_setting') ); ?>
+                    <?php echo esc_html( get_theme_mod('craftnce_home_service_subheading_setting', 'Our amazing services') ); ?>
                 </h6>
                 <h2 class="text-capitalize fw-900 text-xl mt-3">
-                    <?php echo esc_html( get_theme_mod('craftnce_home_service_heading_setting') ); ?>
+                    <?php echo esc_html( get_theme_mod('craftnce_home_service_heading_setting', 'Your Success With Solution') ); ?>
                 </h2>
             </div>
             <?php get_template_part('template-parts/common/section-service'); ?>
