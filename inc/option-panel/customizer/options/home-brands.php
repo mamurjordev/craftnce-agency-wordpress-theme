@@ -14,7 +14,7 @@
         'type'              => 'theme_mod'
     ));
     $wp_customize->add_control('craftnce_show_home_brand_section_ctrl', array(
-        'label'             =>  __('Show brand section', 'craftnce'),
+        'label'             =>  __('Show brand logo section', 'craftnce'),
         'section'           =>  'craftnce_home_page_brand',
         'settings'          =>  'craftnce_show_home_brand_section_setting',
         'type'              =>  'checkbox'

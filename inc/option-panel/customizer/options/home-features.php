@@ -15,7 +15,7 @@
         'type'              => 'theme_mod'
     ));
     $wp_customize->add_control('craftnce_show_home_features_section_ctrl', array(
-        'label'             =>  __('Show info section', 'craftnce'),
+        'label'             =>  __('Show features section', 'craftnce'),
         'section'           =>  'craftnce_home_page_features',
         'settings'          =>  'craftnce_show_home_features_section_setting',
         'type'              =>  'checkbox'

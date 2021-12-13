@@ -4,8 +4,6 @@
      */
 
     get_header();
-
-    if(get_craftnce_data('is_show_hero_section')) :
 ?>
     <!-- Homepage Hero -->
     <section class="home-hero">
@@ -51,8 +49,6 @@
         </div>
     </section>
     <?php
-        endif;
-
         if(get_theme_mod('craftnce_show_home_info_section_setting')) :
     ?>
     <!-- Info Section -->
@@ -167,10 +163,10 @@
             get_template_part('template-parts/common/section-testimonial');
         }
     
+        // Infography Section
         if(get_theme_mod('craftnce_show_home_infography_section_setting')) :
     ?>
-
-    <!-- Infography Section -->
+    
     <section class="infography-section">
         <div class="container">
             <div class="row align-items-center py-5">
@@ -224,14 +220,10 @@
     <?php
         endif;
 
-        if(get_theme_mod('craftnce_show_home_brand_section_setting')) :
-    ?>
-
-    <!-- Brand Logo Section -->
-    <?php get_template_part('template-parts/common/section-brand-logo'); ?>
-
-    <?php
-        endif;
+        // Brand Logo
+        if(get_theme_mod('craftnce_show_home_brand_section_setting')) {
+            get_template_part('template-parts/common/section-brand-logo');
+        };
 
         // Newsletter Section
         if(get_theme_mod('craftnce_show_home_newsletter_section_setting')) {

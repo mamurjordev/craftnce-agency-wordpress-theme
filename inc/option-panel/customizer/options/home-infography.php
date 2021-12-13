@@ -15,7 +15,7 @@
         'type'              => 'theme_mod'
     ));
     $wp_customize->add_control('craftnce_show_home_infography_section_ctrl', array(
-        'label'             =>  __('Show infography First Button', 'craftnce'),
+        'label'             =>  __('Show infography section', 'craftnce'),
         'section'           =>  'craftnce_home_page_infography',
         'settings'          =>  'craftnce_show_home_infography_section_setting',
         'type'              =>  'checkbox'
