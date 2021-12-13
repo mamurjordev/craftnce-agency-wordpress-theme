@@ -43,7 +43,7 @@
         echo '<ol class="breadcrumb mb-0">';
         if (!is_home()) {
             echo '<li class="breadcrumb-item"><a href="';
-            echo get_option('home');
+            echo home_url();
             echo '">';
             echo 'Home';
             echo '</a></li>';
@@ -77,7 +77,7 @@
         elseif (isset($_GET['paged']) && !empty($_GET['paged'])) {echo '<li class="breadcrumb-item active">Blog Archives'; echo'</li>';}
         elseif (is_search()) {echo'<li class="breadcrumb-item active">Search Results'; echo'</li>';}
         elseif (!is_single() && is_home()) {echo '<li class="breadcrumb-item"><a href="';
-            echo get_option('home');
+            echo home_url();
             echo '">';
             echo 'Home';
             echo '</a></li>';

@@ -13,7 +13,7 @@
     <header id="site-header" class="sticky-top bg-light shadow-sm">
         <nav class="navbar navbar-expand-lg navbar-light py-2">
             <div class="container">
-                <a class="navbar-brand text-primary fw-bolder" href="<?php echo home_url(); ?>">
+                <a class="navbar-brand text-primary fw-bolder" href="<?php echo esc_url(home_url()); ?>">
                     <?php
                         if(current_theme_supports('custom-logo')) {
                             $craftnce_custom_logo_id = get_theme_mod( 'custom_logo' );
@@ -56,7 +56,9 @@
                         if(get_theme_mod('craftnce_header_menu_show_last_button_label_settings')) :
                     ?>
                     <a href="<?php echo esc_url(get_theme_mod('craftnce_header_menu_last_button_link_settings')); ?>" class="btn btn-primary rounded-pill text-sm">
-                        <?php echo get_theme_mod('craftnce_header_menu_last_button_label_settings'); ?>
+                        <?php
+                            echo esc_html( get_theme_mod('craftnce_header_menu_last_button_label_settings') );
+                        ?>
                     </a>
                     <?php endif; ?>
                 </div>

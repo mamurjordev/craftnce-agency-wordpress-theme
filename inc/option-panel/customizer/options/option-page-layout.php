@@ -20,9 +20,9 @@
         'settings'          =>  'craftnce_page_layout_settings',
         'type'              =>  'select',
         'choices' => array(
-            'no_sidebar'                =>  __( 'Full Width' ),
-            'left_sidebar'              =>  __( 'Left Sidebar' ),
-            'right_sidebar'             =>  __( 'Right Sidebar' ),
+            'no_sidebar'                =>  __( 'Full Width', 'craftnce'),
+            'left_sidebar'              =>  __( 'Left Sidebar', 'craftnce'),
+            'right_sidebar'             =>  __( 'Right Sidebar', 'craftnce'),
         ),
     ));
 
