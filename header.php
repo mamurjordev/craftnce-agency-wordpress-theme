@@ -10,7 +10,7 @@
 <body class="<?php body_class(); ?>">
     <?php wp_body_open(); ?>
     <!-- Header Navigation -->
-    <header id="site-header" class="sticky-top bg-light <?php if(is_page() && !is_front_page()) { echo esc_attr('shadow-sm'); } ?>">
+    <header id="site-header" class="sticky-top bg-light <?php if(is_page() && !is_front_page() && is_home()) { echo esc_attr('shadow-sm'); } ?>">
         <nav class="navbar navbar-expand-lg navbar-light py-2">
             <div class="container">
                 <a class="navbar-brand text-primary fw-bolder" href="<?php echo home_url(); ?>">
@@ -32,9 +32,6 @@
                     ?>
                 </a>
     
-                <?php
-                    if(has_nav_menu('primary-menu')) {
-                ?>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                 </button>
@@ -44,11 +41,11 @@
                         wp_nav_menu(array(
                             'theme_location'            =>  'primary-menu',
                             'menu_class'                =>  '',
-                            'menu-container'            =>  'true',
-                            'fallback_cb' => '__return_false',
-                            'items_wrap' => '<ul id="%1$s" class="navbar-nav ms-auto mb-2 mb-lg-0 text-sm %2$s">%3$s</ul>',
-                            'depth' => 2,
-                            'walker' => new bootstrap_5_wp_nav_menu_walker(),
+                            'menu-container'            =>  'false',
+                            'fallback_cb'               => '__return_false',
+                            'items_wrap'                => '<ul id="%1$s" class="navbar-nav ms-auto mb-2 mb-lg-0 text-sm %2$s">%3$s</ul>',
+                            'depth'                     => 2,
+                            'walker'                    => new bootstrap_5_wp_nav_menu_walker(),
                         ));
                     ?>
                     <?php
@@ -59,11 +56,6 @@
                     </a>
                     <?php endif; ?>
                 </div>
-                <?php
-                    } else {
-                        echo '<a href="'.home_url('/').'wp-admin/nav-menus.php';
-                    }
-                ?>
             </div>
         </nav>
     </header>
