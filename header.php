@@ -32,6 +32,9 @@
                     ?>
                 </a>
     
+                <?php
+                    if(has_nav_menu('primary-menu')) {
+                ?>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                 </button>
@@ -56,6 +59,11 @@
                     </a>
                     <?php endif; ?>
                 </div>
+                <?php
+                    } else {
+                        echo '<a href="'.home_url('/').'wp-admin/nav-menus.php';
+                    }
+                ?>
             </div>
         </nav>
     </header>
