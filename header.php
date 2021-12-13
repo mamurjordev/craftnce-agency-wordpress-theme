@@ -18,13 +18,16 @@
                         if(current_theme_supports('custom-logo')) {
                             $craftnce_custom_logo_id = get_theme_mod( 'custom_logo' );
                             $logo = wp_get_attachment_image_src( $craftnce_custom_logo_id , 'full' );
+
+                            if($logo) {
                     ?>
                     <img src="<?php echo esc_url($logo[0]); ?>" class="img-fluid" alt="">
                     <?php
-                        } else {
-                    ?>
-                    <h4 class="mb-0"><?php bloginfo('title-tag'); ?></h4>
-                    <?php
+                            } else {
+                                ?>
+                                <h4 class="mb-0"><?php bloginfo('title-tag'); ?></h4>
+                                <?php
+                            }
                         }
                     ?>
                 </a>
