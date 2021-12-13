@@ -49,7 +49,7 @@
                                 'walker'                    => new bootstrap_5_wp_nav_menu_walker(),
                             ));
                         } else {
-                            echo '<a class="text-decoration-none text-primary text-sm nav-menu-create-notice" href="'.home_url('/wp-admin/nav-menus.php').'">Create nav menu first</a>';
+                            echo '<a class="text-primary text-sm nav-menu-create-notice" href="'.home_url('/wp-admin/nav-menus.php').'">Create nav menu first</a>';
                         }
                     ?>
                     <?php

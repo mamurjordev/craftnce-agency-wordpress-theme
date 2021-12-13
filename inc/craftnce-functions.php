@@ -4,11 +4,11 @@
         ?>
         <style>
             :root {
-                --primary-color: <?php echo get_theme_mod('craftnce_primary_color_settings'); ?>;
-                --secondary-color: <?php echo get_theme_mod('craftnce_secondary_color_settings'); ?>;
-                --section-bg: <?php echo get_theme_mod('craftnce_section_bg_color_settings'); ?>;
+                --primary-color: <?php echo get_theme_mod('craftnce_primary_color_settings', '#007FE4'); ?>;
+                --secondary-color: <?php echo get_theme_mod('craftnce_secondary_color_settings', '#EDF5FB'); ?>;
+                --section-bg: <?php echo get_theme_mod('craftnce_section_bg_color_settings', '#082032'); ?>;
                 --footer-bg: <?php echo get_theme_mod('craftnce_footer_bg_color_settings', '#082032'); ?>;
-                --overlay: <?php echo get_theme_mod('craftnce_overlay_color_settings') . 'd6'; ?>;
+                --overlay: <?php echo get_theme_mod('craftnce_overlay_color_settings') . 'd6', '#082032'; ?>;
 
                 --orange-color: #FFC700;
                 --primary-gray: #dedede;
