@@ -1,7 +1,3 @@
-<?php
-    if(get_craftnce_data('is_show_counter_section')) :
-?>
-
 <!-- Counter Section -->
 <section class="counter-bg">
     <div class="counter-overlay py-50">
@@ -41,6 +37,3 @@
         </div>
     </div>
 </section>
-<?php
-    endif;
-?>
