@@ -47,8 +47,8 @@
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod',
-        'sanitize_callback' => function( $input ){
-            return ( isset( $input ) ? true : false );
+        'sanitize_callback' => function( $input ) {
+            return ( ( isset( $input ) && true == $input ) ? true : false );
         }
     ));
     $wp_customize->add_control('craftnce_home_hero_show_btn1_ctrl', array(
@@ -115,8 +115,8 @@
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod',
-        'sanitize_callback' => function( $input ){
-            return ( isset( $input ) ? true : false );
+        'sanitize_callback' => function( $input ) {
+            return ( ( isset( $input ) && true == $input ) ? true : false );
         }
     ));
     $wp_customize->add_control('craftnce_home_hero_show_btn2_ctrl', array(

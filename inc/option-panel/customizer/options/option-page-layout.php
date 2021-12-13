@@ -85,8 +85,8 @@
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod',
-        'sanitize_callback' =>  function( $input ){
-            return ( isset( $input ) ? true : false );
+        'sanitize_callback' => function( $input ) {
+            return ( ( isset( $input ) && true == $input ) ? true : false );
         }
     ));
     $wp_customize->add_control('craftnce_page_top_bottom_container_padding_ctrl', array(
@@ -105,8 +105,8 @@
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod',
-        'sanitize_callback' =>  function( $input ){
-            return ( isset( $input ) ? true : false );
+        'sanitize_callback' => function( $input ) {
+            return ( ( isset( $input ) && true == $input ) ? true : false );
         }
     ));
     $wp_customize->add_control('craftnce_single_blog_page_social_share_ctrl', array(

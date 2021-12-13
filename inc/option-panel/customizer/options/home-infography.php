@@ -13,8 +13,8 @@
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod',
-        'sanitize_callback' => function( $input ){
-            return ( isset( $input ) ? true : false );
+        'sanitize_callback' => function( $input ) {
+            return ( ( isset( $input ) && true == $input ) ? true : false );
         }
     ));
     $wp_customize->add_control('craftnce_show_home_infography_section_ctrl', array(

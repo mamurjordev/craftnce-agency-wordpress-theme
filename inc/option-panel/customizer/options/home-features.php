@@ -9,12 +9,12 @@
      * Features Section - Show Section
      */
     $wp_customize->add_setting('craftnce_show_home_features_section_setting', array(
-        'default'           => 1,
+        'default'           => '1',
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod',
-        'sanitize_callback' => function( $input ){
-            return ( isset( $input ) ? true : false );
+        'sanitize_callback' => function( $input ) {
+            return ( ( isset( $input ) && true == $input ) ? true : false );
         }
     ));
     $wp_customize->add_control('craftnce_show_home_features_section_ctrl', array(

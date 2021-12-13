@@ -95,7 +95,7 @@
     <?php
         endif;
 
-        if(get_theme_mod('craftnce_show_home_features_section_setting', 1)) :
+        if(get_theme_mod('craftnce_show_home_features_section_setting')) :
     ?>
 
     <!-- Features Section -->
