@@ -205,8 +205,8 @@
         'section'           =>  'craftnce_home_page_info',
         'settings'          =>  'craftnce_home_info_section_featured_image_setting',
         'button_labels'     => array(
-            'select'    => _e('Select Image', 'craftnce'),
-            'remove'    => _e('Remove Image', 'craftnce'),
-            'change'    => _e('Change Image', 'craftnce'),
+            'select'    => 'Select Image',
+            'remove'    => 'Remove Image',
+            'change'    => 'Change Image',
         )
     )));
