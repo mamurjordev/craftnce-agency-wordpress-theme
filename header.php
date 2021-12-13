@@ -54,9 +54,9 @@
                     <?php
                         if(get_theme_mod('craftnce_header_menu_show_last_button_label_settings')) :
                     ?>
-                    <a href="<?php echo esc_url(get_theme_mod('craftnce_header_menu_last_button_link_settings')); ?>" class="btn btn-primary rounded-pill text-sm">
+                    <a href="<?php echo esc_url(get_theme_mod('craftnce_header_menu_last_button_link_settings', 1)); ?>" class="btn btn-primary rounded-pill text-sm">
                         <?php
-                            echo esc_html( get_theme_mod('craftnce_header_menu_last_button_label_settings') );
+                            echo esc_html( get_theme_mod('craftnce_header_menu_last_button_label_settings', 'contact us') );
                         ?>
                     </a>
                     <?php endif; ?>

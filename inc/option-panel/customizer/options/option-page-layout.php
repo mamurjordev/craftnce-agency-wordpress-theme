@@ -66,7 +66,7 @@
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod',
-        'sanitize_callback' =>  function( $input ){
+        'sanitize_callback' => function( $input ){
             return ( isset( $input ) ? true : false );
         }
     ));

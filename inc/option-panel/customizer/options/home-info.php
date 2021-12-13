@@ -13,10 +13,8 @@
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod',
-        'sanitize_callback' => function( $input, $setting ) {
-            $input = sanitize_key($input);
-            $choices = $setting->manager->get_control( $setting->id )->choices;
-            return ( array_key_exists( $input, $choices ) ? $input : $setting->default );                
+        'sanitize_callback' => function( $input ){
+            return ( isset( $input ) ? true : false );
         }
     ));
     $wp_customize->add_control('craftnce_show_home_info_section_ctrl', array(
@@ -84,10 +82,8 @@
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod',
-        'sanitize_callback' => function( $input, $setting ) {
-            $input = sanitize_key($input);
-            $choices = $setting->manager->get_control( $setting->id )->choices;
-            return ( array_key_exists( $input, $choices ) ? $input : $setting->default );                
+        'sanitize_callback' => function( $input ){
+            return ( isset( $input ) ? true : false );
         }
     ));
     $wp_customize->add_control('craftnce_home_info_show_btn1_ctrl', array(
@@ -154,10 +150,8 @@
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod',
-        'sanitize_callback' => function( $input, $setting ) {
-            $input = sanitize_key($input);
-            $choices = $setting->manager->get_control( $setting->id )->choices;
-            return ( array_key_exists( $input, $choices ) ? $input : $setting->default );                
+        'sanitize_callback' => function( $input ){
+            return ( isset( $input ) ? true : false );
         }
     ));
     $wp_customize->add_control('craftnce_home_info_show_btn2_ctrl', array(
