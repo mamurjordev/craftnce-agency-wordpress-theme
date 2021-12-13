@@ -84,8 +84,6 @@
             echo '<li class="text-muted mx-2"> / </li><li class="breadcrumb-item active">';
             echo get_the_title(get_option('page_for_posts', true));
             echo '</li>';
-        } else {
-            _e('Home', 'craftnce');
         }
         echo '</ol>';
     }
