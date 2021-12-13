@@ -88,7 +88,7 @@
      * info Section - First Button Label
      */
     $wp_customize->add_setting('craftnce_home_info_btn1_label_setting', array(
-        'default'           =>  1,
+        'default'           =>  'get started',
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod'
