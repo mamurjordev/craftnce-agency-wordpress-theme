@@ -173,12 +173,12 @@
                 <div class="col-lg-6 mt-5 mt-lg-0">
                     <h2 class="fs-1 fw-900 text-light text-uppercase">
                         <?php
-                            echo esc_html( get_theme_mod('craftnce_home_infography_heading_setting') );
+                            echo esc_html( get_theme_mod('craftnce_home_infography_heading_setting', 'Do you have any projects in your mind?') );
                         ?>
                     </h2>
                     <p class="info-sec-p text-light my-3">
                         <?php
-                            echo esc_html( get_theme_mod('craftnce_home_infography_subheading_setting') );
+                            echo esc_html( get_theme_mod('craftnce_home_infography_subheading_setting', 'We achived honour experience in last 25 years.') );
                         ?>
                     </p>
                     

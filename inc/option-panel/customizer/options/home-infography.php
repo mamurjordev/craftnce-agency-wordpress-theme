@@ -41,7 +41,7 @@
      * Infography Section - Sub-heading
      */
     $wp_customize->add_setting('craftnce_home_infography_subheading_setting', array(
-        'default'           => 'We achived honour experience in last <span>25 years</span>.',
+        'default'           => 'We achived honour experience in last 25 years.',
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod'
