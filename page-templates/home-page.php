@@ -26,16 +26,16 @@
                             if(get_theme_mod('craftnce_home_hero_show_btn1_setting', 1)) :
                         ?>
                         <a href="<?php echo esc_url(get_theme_mod('craftnce_home_hero_btn1_link_setting')); ?>" class="btn btn-primary text-capitalize text-sm py-2 px-3 rounded-pill me-2">
-                            <i class="<?php echo esc_attr(get_theme_mod('craftnce_home_hero_btn1_icon_setting')); ?> me-1"></i>
                             <?php echo esc_html( get_theme_mod('craftnce_home_hero_btn1_label_setting', 'get started') ); ?>
+                            <i class="<?php echo esc_attr(get_theme_mod('craftnce_home_hero_btn1_icon_setting')); ?> ms-1"></i>
                         </a>
                         <?php
                             endif;
                             if(get_theme_mod('craftnce_home_hero_show_btn2_setting', 1)) :
                         ?>
                         <a href="<?php echo esc_url(get_theme_mod('craftnce_home_hero_btn2_link_setting')); ?>" class="btn btn-outline-primary text-capitalize text-sm py-2 px-3 rounded-pill">
-                            <i class="<?php echo esc_attr(get_theme_mod('craftnce_home_hero_btn2_icon_setting')); ?> me-1"></i></i>
                             <?php echo esc_html( get_theme_mod('craftnce_home_hero_btn2_label_setting', 'get started') ); ?>
+                            <i class="<?php echo esc_attr(get_theme_mod('craftnce_home_hero_btn2_icon_setting')); ?> ms-1"></i>
                         </a>
                         <?php
                             endif;
