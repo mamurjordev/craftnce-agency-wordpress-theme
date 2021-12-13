@@ -49,6 +49,20 @@
                         the_content();
                         wp_link_pages();
                     ?>
+                    <?php
+                        $tags = get_the_tag_list('<ul class="post-tags mb-0 list-unstyled d-flex flex-wrap"><li class="mx-1">', '</li><li class="mx-1">', '</li></ul>');
+
+                        if($tags) :
+                    ?>
+
+                    <div class="d-flex">
+                        <h5 class="w-max mb-0"><?php _e('Tags - ', 'craftnce'); ?></h5>
+                        <div class="align-self-center text-sm">
+                            <?php echo $tags; ?>
+                        </div>
+                    </div>
+
+                    <?php endif; ?>
                 </div>
             </div>
 

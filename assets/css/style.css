@@ -213,6 +213,8 @@ input:focus {
   z-index: 100000;
   /* Above WP toolbar. */
 }
+.bypostauthor{}
+.gallery-caption{}
 
 /* Header Section */
 .navbar-brand img {
@@ -891,4 +893,12 @@ p.comment-policy {
 }
 .nav-menu-create-notice:hover {
     text-decoration: underline;
+}
+
+.post-tags li a {
+	color: #000;
+	text-decoration: none;
+	padding: 4px 7px;
+	border: 1px solid #e6e6e6;
+	font-size: 12px;
 }

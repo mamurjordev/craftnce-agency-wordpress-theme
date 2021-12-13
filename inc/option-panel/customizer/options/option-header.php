@@ -9,7 +9,7 @@
      * Show Button
      */
     $wp_customize->add_setting('craftnce_header_menu_show_last_button_label_settings', array(
-        'default'           => -1,
+        'default'           => 1,
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod',
