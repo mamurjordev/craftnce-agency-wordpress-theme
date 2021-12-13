@@ -59,6 +59,22 @@
     ));
 
     /**
+     * newsletter Section - Sub-heading
+     */
+    $wp_customize->add_setting('craftnce_home_newsletter_form_shortcode_setting', array(
+        'capability'        => 'edit_theme_options',
+        'transport'         => 'refresh',
+        'type'              => 'theme_mod',
+        'sanitize_callback' => 'wp_filter_nohtml_kses'
+    ));
+    $wp_customize->add_control('craftnce_home_newsletter_form_shortcode_ctrl', array(
+        'label'             =>  __('Mail subscription form shortcode', 'craftnce'),
+        'section'           =>  'craftnce_home_page_newsletter',
+        'settings'          =>  'craftnce_home_newsletter_form_shortcode_setting',
+        'type'              =>  'textarea'
+    ));
+
+    /**
      * newsletter Section - background Image
      */
     $wp_customize->add_setting('craftnce_home_newsletter_section_background_image_setting', array(
