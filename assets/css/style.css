@@ -895,3 +895,7 @@ p.comment-policy {
     font-size: small;
     font-style: italic;
 }
+
+.nav-menu-create-notice:hover {
+    text-decoration: underline;
+}
