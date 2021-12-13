@@ -41,7 +41,8 @@
                         wp_nav_menu(array(
                             'theme_location'            =>  'primary-menu',
                             'menu_class'                =>  '',
-                            'menu-container'            =>  'false',
+                            'menu-container'            =>  'true',
+                            'fallback_cb' => '__return_false',
                             'items_wrap' => '<ul id="%1$s" class="navbar-nav ms-auto mb-2 mb-lg-0 text-sm %2$s">%3$s</ul>',
                             'depth' => 2,
                             'walker' => new bootstrap_5_wp_nav_menu_walker(),
