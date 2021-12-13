@@ -12,8 +12,14 @@
         'default'           => 'full_width',
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
-        'type'              => 'theme_mod'
+        'type'              => 'theme_mod',
+        'sanitize_callback' => function( $input, $setting ) {
+            $input = sanitize_key($input);
+            $choices = $setting->manager->get_control( $setting->id )->choices;
+            return ( array_key_exists( $input, $choices ) ? $input : $setting->default );                
+        }
     ));
+
     $wp_customize->add_control('craftnce_page_layout_ctrl', array(
         'label'             =>  __('Page Layout', 'craftnce'),
         'section'           =>  'craftnce_page_layouts',
@@ -33,7 +39,12 @@
         'default'           => 'full_width',
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
-        'type'              => 'theme_mod'
+        'type'              => 'theme_mod',
+        'sanitize_callback' => function( $input, $setting ) {
+            $input = sanitize_key($input);
+            $choices = $setting->manager->get_control( $setting->id )->choices;
+            return ( array_key_exists( $input, $choices ) ? $input : $setting->default );                
+        }
     ));
     $wp_customize->add_control('craftnce_single_blog_page_layout_ctrl', array(
         'label'             =>  __('Blog Single Layout', 'craftnce'),
@@ -54,7 +65,10 @@
         'default'           => 1,
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
-        'type'              => 'theme_mod'
+        'type'              => 'theme_mod',
+        'sanitize_callback' =>  function( $input ){
+            return ( isset( $input ) ? true : false );
+        }
     ));
     $wp_customize->add_control('craftnce_show_breadcrumb_ctrl', array(
         'label'             =>  __('Show breadcrumb', 'craftnce'),
@@ -70,7 +84,10 @@
         'default'           => 1,
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
-        'type'              => 'theme_mod'
+        'type'              => 'theme_mod',
+        'sanitize_callback' =>  function( $input ){
+            return ( isset( $input ) ? true : false );
+        }
     ));
     $wp_customize->add_control('craftnce_page_top_bottom_container_padding_ctrl', array(
         'label'             =>  __('Page container default padding (top & bottom)', 'craftnce'),
@@ -87,7 +104,10 @@
     $wp_customize->add_setting('craftnce_single_blog_page_social_share_setting', array(
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
-        'type'              => 'theme_mod'
+        'type'              => 'theme_mod',
+        'sanitize_callback' =>  function( $input ){
+            return ( isset( $input ) ? true : false );
+        }
     ));
     $wp_customize->add_control('craftnce_single_blog_page_social_share_ctrl', array(
         'label'             =>  __('Show ingle blog page social share', 'craftnce'),

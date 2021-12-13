@@ -12,7 +12,12 @@
         'default'           => 1,
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
-        'type'              => 'theme_mod'
+        'type'              => 'theme_mod',
+        'sanitize_callback' => function( $input, $setting ) {
+            $input = sanitize_key($input);
+            $choices = $setting->manager->get_control( $setting->id )->choices;
+            return ( array_key_exists( $input, $choices ) ? $input : $setting->default );                
+        }
     ));
     $wp_customize->add_control('craftnce_show_home_newsletter_section_ctrl', array(
         'label'             =>  __('Show newsletter section', 'craftnce'),
@@ -28,7 +33,8 @@
         'default'           => 'SignUp Our Newsletter',
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
-        'type'              => 'theme_mod'
+        'type'              => 'theme_mod',
+        'sanitize_callback' => 'wp_filter_nohtml_kses'
     ));
     $wp_customize->add_control('craftnce_home_newsletter_heading_ctrl', array(
         'label'             =>  __('Heading', 'craftnce'),
@@ -44,7 +50,8 @@
         'default'           => 'Get in touch by subscribing here with your',
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
-        'type'              => 'theme_mod'
+        'type'              => 'theme_mod',
+        'sanitize_callback' => 'wp_filter_nohtml_kses'
     ));
     $wp_customize->add_control('craftnce_home_newsletter_subtext_ctrl', array(
         'label'             =>  __('Sub-heading', 'craftnce'),
@@ -59,7 +66,17 @@
     $wp_customize->add_setting('craftnce_home_newsletter_section_background_image_setting', array(
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
-        'type'              => 'theme_mod'
+        'type'              => 'theme_mod',
+        'sanitize_callback' =>  function( $file, $setting ) {
+            $mimes = array(
+                'jpg|jpeg|jpe' => 'image/jpeg',
+                'gif'          => 'image/gif',
+                'png'          => 'image/png'
+            );
+
+            $file_ext = wp_check_filetype( $file, $mimes );
+            return ( $file_ext['ext'] ? $file : $setting->default );
+        }
     ));
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'craftnce_home_newsletter_background_image_ctrl', array(
         'label'             =>  __('Newsletter Section background image', 'craftnce'),

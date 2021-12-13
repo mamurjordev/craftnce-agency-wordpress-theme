@@ -51,6 +51,7 @@
         wp_enqueue_style('theme-default-css', get_stylesheet_uri());
 
         // JS Enqueue
+        wp_enqueue_script( 'comment-reply' );
         wp_enqueue_script('craftnce-popper-js', '//cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js', null, time(), true);
         wp_enqueue_script('craftnce-bootstrap-js', '//cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js', null, time(), true);
         wp_enqueue_script('craftnce-slick-slider-js', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', null, time(), true);

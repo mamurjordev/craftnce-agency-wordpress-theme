@@ -12,7 +12,12 @@
         'default'           => 1,
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
-        'type'              => 'theme_mod'
+        'type'              => 'theme_mod',
+        'sanitize_callback' => function( $input, $setting ) {
+            $input = sanitize_key($input);
+            $choices = $setting->manager->get_control( $setting->id )->choices;
+            return ( array_key_exists( $input, $choices ) ? $input : $setting->default );                
+        }
     ));
     $wp_customize->add_control('craftnce_show_home_testimonials_section_ctrl', array(
         'label'             =>  __('Show testimonials section', 'craftnce'),
@@ -28,7 +33,8 @@
         'default'           => 'Our worldwide clients says about us ',
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
-        'type'              => 'theme_mod'
+        'type'              => 'theme_mod',
+        'sanitize_callback' => 'wp_filter_nohtml_kses'
     ));
     $wp_customize->add_control('craftnce_home_testimonials_heading_ctrl', array(
         'label'             =>  __('Heading', 'craftnce'),
@@ -44,7 +50,8 @@
         'default'           => 'testimonial',
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
-        'type'              => 'theme_mod'
+        'type'              => 'theme_mod',
+        'sanitize_callback' => 'wp_filter_nohtml_kses'
     ));
     $wp_customize->add_control('craftnce_home_testimonials_subheading_ctrl', array(
         'label'             =>  __('Sub-heading', 'craftnce'),

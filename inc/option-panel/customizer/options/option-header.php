@@ -12,7 +12,12 @@
         'default'           => -1,
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
-        'type'              => 'theme_mod'
+        'type'              => 'theme_mod',
+        'sanitize_callback' => function( $input, $setting ) {
+            $input          = sanitize_key($input);
+            $choices        = $setting->manager->get_control( $setting->id )->choices;
+            return ( array_key_exists( $input, $choices ) ? $input : $setting->default );                
+        }
     ));
     $wp_customize->add_control('craftnce_header_menu_show_last_button_label_ctrl', array(
         'label'             =>  __('Show Button', 'craftnce'),
@@ -28,7 +33,8 @@
         'default'           => 'Contact Us',
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
-        'type'              => 'theme_mod'
+        'type'              => 'theme_mod',
+        'sanitize_callback' => 'wp_filter_nohtml_kses'
     ));
     $wp_customize->add_control('craftnce_header_menu_last_button_label_ctrl', array(
         'label'             =>  __('Button Label', 'craftnce'),
@@ -43,7 +49,8 @@
     $wp_customize->add_setting('craftnce_header_menu_last_button_link_settings', array(
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
-        'type'              => 'theme_mod'
+        'type'              => 'theme_mod',
+        'sanitize_callback' => 'wp_filter_nohtml_kses'
     ));
     $wp_customize->add_control('craftnce_header_menu_last_button_link_ctrl', array(
         'label'             =>  __('Button Link', 'craftnce'),

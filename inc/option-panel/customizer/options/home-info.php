@@ -12,7 +12,12 @@
         'default'           => 1,
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
-        'type'              => 'theme_mod'
+        'type'              => 'theme_mod',
+        'sanitize_callback' => function( $input, $setting ) {
+            $input = sanitize_key($input);
+            $choices = $setting->manager->get_control( $setting->id )->choices;
+            return ( array_key_exists( $input, $choices ) ? $input : $setting->default );                
+        }
     ));
     $wp_customize->add_control('craftnce_show_home_info_section_ctrl', array(
         'label'             =>  __('Show info section', 'craftnce'),
@@ -28,7 +33,8 @@
         'default'           => 'WE\'RE LEADING DIGITAL BUSINESS AGENCY',
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
-        'type'              => 'theme_mod'
+        'type'              => 'theme_mod',
+        'sanitize_callback' => 'wp_filter_nohtml_kses'
     ));
     $wp_customize->add_control('craftnce_home_info_heading_ctrl', array(
         'label'             =>  __('Heading', 'craftnce'),
@@ -44,7 +50,8 @@
         'default'           => 'ABOUT CRAFTNCE',
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
-        'type'              => 'theme_mod'
+        'type'              => 'theme_mod',
+        'sanitize_callback' => 'wp_filter_nohtml_kses'
     ));
     $wp_customize->add_control('craftnce_home_info_subheading_ctrl', array(
         'label'             =>  __('Sub-heading', 'craftnce'),
@@ -59,7 +66,8 @@
     $wp_customize->add_setting('craftnce_home_info_description_setting', array(
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
-        'type'              => 'theme_mod'
+        'type'              => 'theme_mod',
+        'sanitize_callback' => 'wp_filter_nohtml_kses'
     ));
     $wp_customize->add_control('craftnce_home_info_description_ctrl', array(
         'label'             =>  __('Description', 'craftnce'),
@@ -75,7 +83,12 @@
         'default'           => 1,
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
-        'type'              => 'theme_mod'
+        'type'              => 'theme_mod',
+        'sanitize_callback' => function( $input, $setting ) {
+            $input = sanitize_key($input);
+            $choices = $setting->manager->get_control( $setting->id )->choices;
+            return ( array_key_exists( $input, $choices ) ? $input : $setting->default );                
+        }
     ));
     $wp_customize->add_control('craftnce_home_info_show_btn1_ctrl', array(
         'label'             =>  __('Show info First Button', 'craftnce'),
@@ -91,7 +104,8 @@
         'default'           =>  'get started',
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
-        'type'              => 'theme_mod'
+        'type'              => 'theme_mod',
+        'sanitize_callback' => 'wp_filter_nohtml_kses'
     ));
     $wp_customize->add_control('craftnce_home_info_btn1_label_ctrl', array(
         'label'             =>  __('First Button Label', 'craftnce'),
@@ -106,7 +120,8 @@
     $wp_customize->add_setting('craftnce_home_info_btn1_link_setting', array(
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
-        'type'              => 'theme_mod'
+        'type'              => 'theme_mod',
+        'sanitize_callback' => 'wp_filter_nohtml_kses'
     ));
     $wp_customize->add_control('craftnce_home_info_btn1_link_ctrl', array(
         'label'             =>  __('First Button Link', 'craftnce'),
@@ -121,7 +136,8 @@
     $wp_customize->add_setting('craftnce_home_info_btn1_icon_setting', array(
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
-        'type'              => 'theme_mod'
+        'type'              => 'theme_mod',
+        'sanitize_callback' => 'wp_filter_nohtml_kses'
     ));
     $wp_customize->add_control('craftnce_home_info_btn1_icon_ctrl', array(
         'label'             =>  __('First Button Icon Class', 'craftnce'),
@@ -137,7 +153,12 @@
         'default'           => 1,
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
-        'type'              => 'theme_mod'
+        'type'              => 'theme_mod',
+        'sanitize_callback' => function( $input, $setting ) {
+            $input = sanitize_key($input);
+            $choices = $setting->manager->get_control( $setting->id )->choices;
+            return ( array_key_exists( $input, $choices ) ? $input : $setting->default );                
+        }
     ));
     $wp_customize->add_control('craftnce_home_info_show_btn2_ctrl', array(
         'label'             =>  __('Show info Second Button', 'craftnce'),
@@ -153,7 +174,8 @@
         'default'           =>  'second button',
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
-        'type'              => 'theme_mod'
+        'type'              => 'theme_mod',
+        'sanitize_callback' => 'wp_filter_nohtml_kses'
     ));
     $wp_customize->add_control('craftnce_home_info_btn2_label_ctrl', array(
         'label'             =>  __('Second Button Label', 'craftnce'),
@@ -168,7 +190,8 @@
     $wp_customize->add_setting('craftnce_home_info_btn2_link_setting', array(
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
-        'type'              => 'theme_mod'
+        'type'              => 'theme_mod',
+        'sanitize_callback' => 'wp_filter_nohtml_kses'
     ));
     $wp_customize->add_control('craftnce_home_info_btn2_link_ctrl', array(
         'label'             =>  __('Second Button Link', 'craftnce'),
@@ -183,7 +206,8 @@
     $wp_customize->add_setting('craftnce_home_info_btn2_icon_setting', array(
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
-        'type'              => 'theme_mod'
+        'type'              => 'theme_mod',
+        'sanitize_callback' => 'wp_filter_nohtml_kses'
     ));
     $wp_customize->add_control('craftnce_home_info_btn2_icon_ctrl', array(
         'label'             =>  __('Second Button Icon Class', 'craftnce'),
@@ -198,7 +222,17 @@
     $wp_customize->add_setting('craftnce_home_info_section_featured_image_setting', array(
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
-        'type'              => 'theme_mod'
+        'type'              => 'theme_mod',
+        'sanitize_callback' =>  function( $file, $setting ) {
+            $mimes = array(
+                'jpg|jpeg|jpe' => 'image/jpeg',
+                'gif'          => 'image/gif',
+                'png'          => 'image/png'
+            );
+
+            $file_ext = wp_check_filetype( $file, $mimes );
+            return ( $file_ext['ext'] ? $file : $setting->default );
+        }
     ));
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'craftnce_home_info_featured_image_ctrl', array(
         'label'             =>  __('Info Featured Image', 'craftnce'),

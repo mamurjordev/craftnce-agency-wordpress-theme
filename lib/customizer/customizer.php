@@ -5,6 +5,21 @@
         $wp_customize->register_panel_type( 'PE_WP_Customize_Panel' );
         $wp_customize->register_section_type( 'PE_WP_Customize_Section' );
 
+        // Sanitize Customizer Control
+        function customizer_repeater_sanitize($input){
+            $input_decoded = json_decode($input,true);
+        
+            if(!empty($input_decoded)) {
+                foreach ($input_decoded as $boxk => $box ){
+                    foreach ($box as $key => $value){
+                            $input_decoded[$boxk][$key] = wp_kses_post( force_balance_tags( $value ) );
+                    }
+                }
+                return json_encode($input_decoded);
+            }
+            return $input;
+        }
+
         $craftnceOptionMainPanel = new PE_WP_Customize_Panel( $wp_customize,'craftnce_options', array(
             'title'                     =>  __('Craftnce Options', 'craftnce'),
             'priority'                  =>  '1',
@@ -85,18 +100,3 @@
         require_once get_theme_file_path('/inc/option-panel/customizer/options/option-blog-page.php');
     }
     add_action('customize_register', 'craftnce_customizer');
-
-    // Sanitize Customizer Control
-    function customizer_repeater_sanitize($input){
-        $input_decoded = json_decode($input,true);
-    
-        if(!empty($input_decoded)) {
-            foreach ($input_decoded as $boxk => $box ){
-                foreach ($box as $key => $value){
-                        $input_decoded[$boxk][$key] = wp_kses_post( force_balance_tags( $value ) );
-                }
-            }
-            return json_encode($input_decoded);
-        }
-        return $input;
-    }
