@@ -23,19 +23,19 @@
                     
                     <div class="d-flex mt-4">
                         <?php
-                            if(get_theme_mod('craftnce_home_hero_show_btn1_setting')) :
+                            if(get_theme_mod('craftnce_home_hero_show_btn1_setting', 1)) :
                         ?>
                         <a href="<?php echo esc_url(get_theme_mod('craftnce_home_hero_btn1_link_setting')); ?>" class="btn btn-primary text-capitalize text-sm py-2 px-3 rounded-pill me-2">
                             <i class="<?php echo esc_attr(get_theme_mod('craftnce_home_hero_btn1_icon_setting')); ?> me-1"></i>
-                            <?php echo esc_html( get_theme_mod('craftnce_home_hero_btn1_label_setting') ); ?>
+                            <?php echo esc_html( get_theme_mod('craftnce_home_hero_btn1_label_setting', 'get started') ); ?>
                         </a>
                         <?php
                             endif;
-                            if(get_theme_mod('craftnce_home_hero_show_btn2_setting')) :
+                            if(get_theme_mod('craftnce_home_hero_show_btn2_setting', 1)) :
                         ?>
                         <a href="<?php echo esc_url(get_theme_mod('craftnce_home_hero_btn2_link_setting')); ?>" class="btn btn-outline-primary text-capitalize text-sm py-2 px-3 rounded-pill">
                             <i class="<?php echo esc_attr(get_theme_mod('craftnce_home_hero_btn2_icon_setting')); ?> me-1"></i></i>
-                            <?php echo esc_html( get_theme_mod('craftnce_home_hero_btn2_label_setting') ); ?>
+                            <?php echo esc_html( get_theme_mod('craftnce_home_hero_btn2_label_setting', 'get started') ); ?>
                         </a>
                         <?php
                             endif;
@@ -49,7 +49,7 @@
         </div>
     </section>
     <?php
-        if(get_theme_mod('craftnce_show_home_info_section_setting')) :
+        if(get_theme_mod('craftnce_show_home_info_section_setting', 1)) :
     ?>
     <!-- Info Section -->
     <section class="home-info">
@@ -60,31 +60,31 @@
                 </div>
                 <div class="col-lg-7 mt-5 mt-lg-0">
                     <h6 class="text-uppercase fw-bold text-sm text-primary">
-                        <?php echo esc_html( get_theme_mod('craftnce_home_info_subheading_setting') ); ?>
+                        <?php echo esc_html( get_theme_mod('craftnce_home_info_subheading_setting', 'ABOUT CRAFTNCE') ); ?>
                     </h6>
                     <h2 class="info-title text-uppercase">
                         <?php
-                            echo esc_html( get_theme_mod('craftnce_home_info_heading_setting') );
+                            echo esc_html( get_theme_mod('craftnce_home_info_heading_setting', 'WE\'RE LEADING DIGITAL BUSINESS AGENCY') );
                         ?>
                     </h2>
                     <p class="info-sec-p text-muted my-3">
                         <?php
-                            echo esc_html( get_theme_mod('craftnce_home_info_description_setting') );
+                            echo esc_html( get_theme_mod('craftnce_home_info_description_setting', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate dolore non reiciendis explicabo eius nihil.') );
                         ?>
                     </p>
                     <div class="d-flex mt-4">
                         <?php
-                            if(get_theme_mod('craftnce_home_info_show_btn1_setting')) :
+                            if(get_theme_mod('craftnce_home_info_show_btn1_setting', 1)) :
                         ?>
                         <a href="<?php echo esc_url(get_theme_mod('craftnce_home_info_btn1_link_setting')); ?>" class="btn btn-primary text-sm py-2 px-3 rounded-pill me-2 text-capitalize"><i class="<?php echo esc_attr(get_theme_mod('craftnce_home_info_btn1_icon_setting')); ?> me-1"></i>
-                            <?php echo esc_html( get_theme_mod('craftnce_home_info_btn1_label_setting') ); ?>
+                            <?php echo esc_html( get_theme_mod('craftnce_home_info_btn1_label_setting', 'get started') ); ?>
                         </a>
                         <?php
                             endif;
-                            if(get_theme_mod('craftnce_home_info_show_btn2_setting')) :
+                            if(get_theme_mod('craftnce_home_info_show_btn2_setting', 1)) :
                         ?>
                         <a href="<?php echo esc_url(get_theme_mod('craftnce_home_info_btn2_link_setting')); ?>" class="btn btn-outline-primary text-sm py-2 px-3 rounded-pill me-2 text-capitalize"><i class="<?php echo esc_attr(get_theme_mod('craftnce_home_info_btn2_icon_setting')); ?> me-1"></i>
-                            <?php echo esc_html( get_theme_mod('craftnce_home_info_btn2_label_setting') ); ?>
+                            <?php echo esc_html( get_theme_mod('craftnce_home_info_btn2_label_setting', 'get started') ); ?>
                         </a>
                         <?php endif; ?>
                     </div>
@@ -95,7 +95,7 @@
     <?php
         endif;
 
-        if(get_theme_mod('craftnce_show_home_features_section_setting')) :
+        if(get_theme_mod('craftnce_show_home_features_section_setting', 1)) :
     ?>
 
     <!-- Features Section -->
@@ -154,17 +154,17 @@
 
     <!-- Counter Section -->
     <?php
-        if(get_theme_mod('craftnce_show_home_counter_section_setting')) {
+        if(get_theme_mod('craftnce_show_home_counter_section_setting', 1)) {
             get_template_part('template-parts/common/section-counter');
         }
         
         // Testimonial Section
-        if(get_theme_mod('craftnce_show_home_testimonials_section_setting')) {
+        if(get_theme_mod('craftnce_show_home_testimonials_section_setting', 1)) {
             get_template_part('template-parts/common/section-testimonial');
         }
     
         // Infography Section
-        if(get_theme_mod('craftnce_show_home_infography_section_setting')) :
+        if(get_theme_mod('craftnce_show_home_infography_section_setting', 1)) :
     ?>
     
     <section class="infography-section">
@@ -221,17 +221,17 @@
         endif;
 
         // Brand Logo
-        if(get_theme_mod('craftnce_show_home_brand_section_setting')) {
+        if(get_theme_mod('craftnce_show_home_brand_section_setting', 1)) {
             get_template_part('template-parts/common/section-brand-logo');
         };
 
         // Newsletter Section
-        if(get_theme_mod('craftnce_show_home_newsletter_section_setting')) {
+        if(get_theme_mod('craftnce_show_home_newsletter_section_setting', 1)) {
             get_template_part('template-parts/common/section-newsletter');
         }
 
         // Blog Part
-        if(get_theme_mod('craftnce_show_home_blog_section_setting')) {
+        if(get_theme_mod('craftnce_show_home_blog_section_setting', 1)) {
             get_template_part('template-parts/common/section-blog');
         }
     ?>

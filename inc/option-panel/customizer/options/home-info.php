@@ -88,7 +88,7 @@
      * info Section - First Button Label
      */
     $wp_customize->add_setting('craftnce_home_info_btn1_label_setting', array(
-        'default'           =>  'first button',
+        'default'           =>  1,
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod'
@@ -178,7 +178,7 @@
     ));
 
     /**
-     * info Section - First Button Icon
+     * info Section - second Button Icon
      */
     $wp_customize->add_setting('craftnce_home_info_btn2_icon_setting', array(
         'capability'        => 'edit_theme_options',
@@ -205,8 +205,8 @@
         'section'           =>  'craftnce_home_page_info',
         'settings'          =>  'craftnce_home_info_section_featured_image_setting',
         'button_labels'     => array(
-            'select'    => 'Select Image',
-            'remove'    => 'Remove Image',
-            'change'    => 'Change Image',
+            'select'    => _e('Select Image', 'craftnce'),
+            'remove'    => _e('Remove Image', 'craftnce'),
+            'change'    => _e('Change Image', 'craftnce'),
         )
     )));
