@@ -8,7 +8,7 @@
                 --secondary-color: <?php echo esc_html(get_theme_mod('craftnce_secondary_color_settings', '#EDF5FB')); ?>;
                 --section-bg: <?php echo get_theme_mod('craftnce_section_bg_color_settings', '#082032'); ?>;
                 --footer-bg: <?php echo get_theme_mod('craftnce_footer_bg_color_settings', '#082032'); ?>;
-                --overlay: <?php echo get_theme_mod('craftnce_overlay_color_settings', 'd6'), '#082032'; ?>;
+                --overlay: <?php echo get_theme_mod('craftnce_overlay_color_settings'), '#082032'; ?>;
 
                 --orange-color: #FFC700;
                 --primary-gray: #dedede;
