@@ -22,26 +22,10 @@
     ));
 
     /**
-     * counter Section - Show Section
-     */
-    $wp_customize->add_setting('craftnce_home_counter_section_bg_setting', array(
-        'default'           => 1,
-        'capability'        => 'edit_theme_options',
-        'transport'         => 'refresh',
-        'type'              => 'theme_mod'
-    ));
-    $wp_customize->add_control('craftnce_home_counter_section_bg_ctrl', array(
-        'label'             =>  __('Show counter section', 'craftnce'),
-        'section'           =>  'craftnce_home_page_counter',
-        'settings'          =>  'craftnce_home_counter_section_bg_setting',
-        'type'              =>  'checkbox'
-    ));
-
-    /**
      * counter Section - Heading
      */
     $wp_customize->add_setting('craftnce_home_counter_heading_setting', array(
-        'default'           => 'Helping dreams to do ',
+        'default'           => 'Helping dreams to do',
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod'
@@ -74,7 +58,7 @@
         'sanitize_callback' => 'customizer_repeater_sanitize'
     ));
     $wp_customize->add_control( new Customizer_Repeater( $wp_customize, 'craftnce_show_home_counter_item_ctrl', array(
-        'label'                                             =>  esc_html__('Counter Item','craftnce'),
+        'label'                                             =>  esc_html_e('Counter Item','craftnce'),
         'section'                                           =>  'craftnce_home_page_counter',
         'settings'                                          =>  'craftnce_home_counter_item_settings',
         'customizer_repeater_icon_control'                  =>  true,
