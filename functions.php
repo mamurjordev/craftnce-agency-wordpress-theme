@@ -1,13 +1,7 @@
 <?php
-    // TGM
-    get_template_part('inc/required-plugins');
     get_template_part('inc/craftnce-functions');
     get_template_part('lib/customizer/customizer');
     get_template_part('lib/bootstrap5-nav-walker');
-
-    // Codestar Initialize
-    get_template_part('lib/codestar-framework/codestar-framework');
-    get_template_part('inc/codestar-config');
 
     if(!function_exists('craftnce_theme_setup')) {
         function craftnce_theme_setup() {

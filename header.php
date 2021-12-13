@@ -10,7 +10,7 @@
 <body class="<?php body_class(); ?>">
     <?php wp_body_open(); ?>
     <!-- Header Navigation -->
-    <header class="sticky-top bg-light">
+    <header id="site-header" class="sticky-top bg-light <?php if(is_page() && !is_front_page()) { echo esc_attr('shadow-sm'); } ?>">
         <nav class="navbar navbar-expand-lg navbar-light py-2">
             <div class="container">
                 <a class="navbar-brand text-primary fw-bolder" href="<?php echo home_url(); ?>">

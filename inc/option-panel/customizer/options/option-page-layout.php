@@ -78,3 +78,20 @@
         'settings'          =>  'craftnce_page_top_bottom_container_padding_setting',
         'type'              =>  'checkbox'
     ));
+
+    /**
+     * Page - Social Share
+     */
+
+     
+    $wp_customize->add_setting('craftnce_single_blog_page_social_share_setting', array(
+        'capability'        => 'edit_theme_options',
+        'transport'         => 'refresh',
+        'type'              => 'theme_mod'
+    ));
+    $wp_customize->add_control('craftnce_single_blog_page_social_share_ctrl', array(
+        'label'             =>  __('Show ingle blog page social share', 'craftnce'),
+        'section'           =>  'craftnce_page_layouts',
+        'settings'          =>  'craftnce_single_blog_page_social_share_setting',
+        'type'              =>  'checkbox'
+    ));

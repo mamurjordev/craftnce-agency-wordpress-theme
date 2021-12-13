@@ -7,6 +7,7 @@
                 --primary-color: <?php echo get_theme_mod('craftnce_primary_color_settings'); ?>;
                 --secondary-color: <?php echo get_theme_mod('craftnce_secondary_color_settings'); ?>;
                 --section-bg: <?php echo get_theme_mod('craftnce_section_bg_color_settings'); ?>;
+                --footer-bg: <?php echo get_theme_mod('craftnce_footer_bg_color_settings'); ?>;
                 --overlay: <?php echo get_theme_mod('craftnce_overlay_color_settings') . 'd6'; ?>;
 
                 --orange-color: #FFC700;
@@ -97,3 +98,11 @@
         $elementor_theme_manager->register_all_core_location();
     }
     add_action( 'elementor/theme/register_locations', 'theme_prefix_register_elementor_locations' );
+
+
+    function craftnce_comment_text_before($arg) {
+        $arg['comment_notes_before'] = "<p class='comment-policy'>We are glad you have chosen to leave a comment.</p>";
+        return $arg;
+    }
+      
+    add_filter('comment_form_defaults', 'craftnce_comment_text_before');

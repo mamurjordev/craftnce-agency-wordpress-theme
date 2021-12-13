@@ -64,3 +64,18 @@
         'section'           =>  'craftnce_typography',
         'settings'          =>  'craftnce_section_bg_color_settings',
     )));
+
+    /**
+     * Footer Background Color
+     */
+    $wp_customize->add_setting('craftnce_footer_bg_color_settings', array(
+        'default'           => '#082032',
+        'capability'        => 'edit_theme_options',
+        'transport'         => 'refresh',
+        'type'              => 'theme_mod'
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'craftnce_footer_bg_color_ctrl', array(
+        'label'             =>  __('Footer Section Background Color', 'craftnce'),
+        'section'           =>  'craftnce_typography',
+        'settings'          =>  'craftnce_footer_bg_color_settings',
+    )));
