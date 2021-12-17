@@ -106,4 +106,4 @@ document.addEventListener('scroll', () => {
 	} else if (window.scrollY < 100) {
 		siteHeader.classList.remove('shadow-sm');
 	}
-})
+});

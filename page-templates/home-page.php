@@ -52,7 +52,7 @@
         if(get_theme_mod('craftnce_show_home_info_section_setting', 1)) :
     ?>
     <!-- Info Section -->
-    <section class="home-info">
+    <section id="content" class="home-info">
         <div class="container">
             <div class="row hero-h align-items-center py-5 py-lg-0">
                 <div class="col-lg-5">

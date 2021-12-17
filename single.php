@@ -5,7 +5,7 @@
     get_template_part('template-parts/common/breadcrumb');
 ?>
 
-<div class="container my-4 my-md-5">
+<div id="content" class="container my-4 my-md-5">
     <div class="row">
         <div class="col-xl-<?php echo esc_attr(!get_theme_mod('craftnce_blog_single_full_width_setting') ? '8' : '12'); ?>">
             <div class="row">

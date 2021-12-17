@@ -1,7 +1,7 @@
 <?php
     get_template_part('inc/craftnce-functions');
-    get_template_part('lib/customizer/customizer');
-    get_template_part('lib/bootstrap5-nav-walker');
+    get_template_part('lib/customizer/craftnce-customizer');
+    get_template_part('lib/craftnce-nav-walker');
 
     if(!function_exists('craftnce_theme_setup')) {
         function craftnce_theme_setup() {
@@ -48,7 +48,7 @@
         wp_enqueue_style('craftnce-slick-css', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css');
         wp_enqueue_style('craftnce-main-style', get_template_directory_uri().'/assets/css/style.css');
         wp_enqueue_style('craftnce-responsive-style', get_template_directory_uri().'/assets/css/responsive.css');
-        wp_enqueue_style('theme-default-css', get_stylesheet_uri());
+        wp_enqueue_style('craftnce-theme-default-css', get_stylesheet_uri());
 
         // JS Enqueue
         wp_enqueue_script( 'comment-reply' );

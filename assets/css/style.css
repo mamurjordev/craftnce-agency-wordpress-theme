@@ -193,7 +193,7 @@ input:focus {
   padding: 0;
   position: absolute !important;
   width: 1px;
-  word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+  word-wrap: normal !important;
 }
   
 .screen-reader-text:focus {
@@ -213,18 +213,27 @@ input:focus {
   z-index: 100000;
   /* Above WP toolbar. */
 }
+#content[tabindex="-1"]:focus {
+    outline: 0;
+}
 .bypostauthor{}
 .gallery-caption{}
 
+
+
 /* Header Section */
+#site-header {
+    z-index: 9999;
+}
 .navbar-brand img {
     width: 120px;
 }
 .navbar-toggler {
 	border: none;
+    border-radius: 0;
 }
 .navbar-toggler:focus {
-    box-shadow: none;
+    box-shadow: 0 0 0 0.1rem;
 }
 .home-hero {
     background: var(--secondary-color);

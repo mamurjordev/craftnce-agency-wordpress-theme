@@ -42,3 +42,13 @@ GNU General Public License for more details.
 
 
 Craftnce is derived from Saifullah, (C) 2020.
+
+Image for theme screenshot
+Copyright (c) pxhere.
+License: CCO License, Free for personal and commercial use, No attribution required
+Source: https://pxhere.com/en/photo/918233?utm_content=shareClip&utm_medium=referral&utm_source=pxhere
+
+Image for theme screenshot
+Copyright (c) 2021 Kampus Production
+License: Free for personal and commercial use, No attribution required
+Source: https://www.pexels.com/photo/people-woman-creative-desk-6248957/

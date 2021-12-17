@@ -5,7 +5,7 @@
 ?>
 
     <!-- Post -->
-    <section class="pb-5">
+    <section class="pb-5" id="content">
         <div class="container py-5">
             <div class="row text-center pb-5">
                 <div class="col-md-7 mx-auto">

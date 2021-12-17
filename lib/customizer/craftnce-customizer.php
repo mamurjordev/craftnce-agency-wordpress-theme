@@ -82,7 +82,7 @@
         $wp_customize->add_panel( $homePagePanel );
 
         // Customizer Repeater Class
-        require_once get_theme_file_path('/lib/customizer/customizer-repeater.php');
+        require_once get_theme_file_path('/lib/customizer/craftnce-customizer-repeater.php');
 
         // Home page hero options
         require_once get_theme_file_path('/inc/option-panel/customizer/options/home-hero.php');
