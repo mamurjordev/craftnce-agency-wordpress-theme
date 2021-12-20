@@ -91,8 +91,12 @@
                     </div>
                 </div>
                 <div class="d-flex justify-content-between top-50 position-absolute">
-                    <button type="button" class="prev btn btn-primary rounded-0 px-2 py-0 fs-3"><i class="ri-arrow-left-s-line"></i></button>
-                    <button type="button" class="next btn btn-primary rounded-0 px-2 py-0 fs-3"><i class="ri-arrow-right-s-line"></i></button>
+                    <button type="button" class="prev btn btn-primary rounded-0 px-2 py-0 fs-3">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button type="button" class="next btn btn-primary rounded-0 px-2 py-0 fs-3">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
                 </div>
             </div>
         </div>

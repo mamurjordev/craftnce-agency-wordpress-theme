@@ -112,10 +112,8 @@
     
         /*Enqueue resources for the control*/
         public function enqueue() {
-            wp_enqueue_style( 'craftnce-font-awesome', '//use.fontawesome.com/releases/v5.15.4/css/all.css', array(), craftnce_CUSTOMIZER_REPEATER_VERSION );
             wp_enqueue_style( 'craftnce-customizer-repeater-admin-stylesheet', get_template_directory_uri().'/assets/css/craftnce-customize-repeater.css', array(), craftnce_CUSTOMIZER_REPEATER_VERSION );
             wp_enqueue_style( 'wp-color-picker' );
-            wp_enqueue_style( 'craftnce-customizer-repeater-fontawesome-iconpicker', get_template_directory_uri() . '/assets/css/craftnce-iconpicker.min.css', array(), craftnce_CUSTOMIZER_REPEATER_VERSION );
     
             wp_enqueue_script( 'craftnce-customizer-repeater-script', get_template_directory_uri() . '/assets/js/craftnce-customizer-repeater.js', array('jquery', 'jquery-ui-draggable', 'wp-color-picker' ), craftnce_CUSTOMIZER_REPEATER_VERSION, true  );
         }

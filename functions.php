@@ -1,5 +1,6 @@
 <?php
     get_template_part('inc/craftnce-functions');
+    get_template_part('inc/craftnce-plugins');
     get_template_part('lib/customizer/craftnce-customizer');
     get_template_part('lib/craftnce-nav-walker');
 
@@ -41,8 +42,6 @@
     function craftnce_assets_enqueue() {
         // Stylesheets Enqueue
         wp_enqueue_style('craftnce-bootstrap-css', get_template_directory_uri().'/assets/css/bootstrap.css');
-        wp_enqueue_style('craftnce-fontawesome-css', get_template_directory_uri().'/assets/icon-font/all.css');
-        wp_enqueue_style('craftnce-remixicon-css', get_template_directory_uri().'/assets/icon-font/remixicon.css');
         wp_enqueue_style('craftnce-google-fonts', '//fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
         wp_enqueue_style('craftnce-slick-css', get_template_directory_uri().'/assets/css/slick.css');
         wp_enqueue_style('craftnce-slick-theme-css', get_template_directory_uri().'/assets/css/slick-theme.css');
@@ -52,6 +51,7 @@
 
         // JS Enqueue
         wp_enqueue_script( 'comment-reply' );
+        wp_enqueue_script('craftnce-popper-js', get_template_directory_uri().'/assets/js/popper.js', null, time(), true);
         wp_enqueue_script('craftnce-bootstrap-js', get_template_directory_uri().'/assets/js/bootstrap.js', null, time(), true);
         wp_enqueue_script('craftnce-slick-slider-js', get_template_directory_uri().'/assets/js/slick.js', null, time(), true);
         wp_enqueue_script('craftnce-main-js', get_template_directory_uri().'/assets/js/main.js', array('jquery'), time(), true);
