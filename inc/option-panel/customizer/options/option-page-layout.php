@@ -26,9 +26,9 @@
         'settings'          =>  'craftnce_page_layout_settings',
         'type'              =>  'select',
         'choices' => array(
-            'no_sidebar'                =>  __( 'Full Width', 'craftnce'),
-            'left_sidebar'              =>  __( 'Left Sidebar', 'craftnce'),
-            'right_sidebar'             =>  __( 'Right Sidebar', 'craftnce'),
+            'no_sidebar'                =>  'Full Width',
+            'left_sidebar'              =>  'Left Sidebar',
+            'right_sidebar'             =>  'Right Sidebar',
         ),
     ));
 
@@ -52,9 +52,9 @@
         'settings'          =>  'craftnce_single_blog_page_layout_settings',
         'type'              =>  'select',
         'choices' => array(
-            'no_sidebar'                =>  __( 'Full Width', 'craftnce'),
-            'left_sidebar'              =>  __( 'Left Sidebar', 'craftnce'),
-            'right_sidebar'             =>  __( 'Right Sidebar', 'craftnce'),
+            'no_sidebar'                =>  'Full Width',
+            'left_sidebar'              =>  'Left Sidebar',
+            'right_sidebar'             =>  'Right Sidebar',
         ),
     ));
 
@@ -66,8 +66,8 @@
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod',
-        'sanitize_callback' => function( $input ){
-            return ( isset( $input ) ? true : false );
+        'sanitize_callback' => function( $input ) {
+            return ( ( isset( $input ) && true == $input ) ? true : false );
         }
     ));
     $wp_customize->add_control('craftnce_show_breadcrumb_ctrl', array(
