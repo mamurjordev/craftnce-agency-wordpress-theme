@@ -666,7 +666,6 @@ input:focus {
 }
 
 .accordion-button:not(.collapsed)::after {
-	background-image: url("../img/icons/down-icon.svg");
 	transform: rotate(180deg);
 }
 .accordion-button::after {
@@ -675,7 +674,6 @@ input:focus {
 	height: 1.25rem;
 	margin-left: auto;
 	content: "";
-	background-image: url("../img/icons/down-icon.svg");
 	background-repeat: no-repeat;
 	background-size: 1.25rem;
 	transition: transform .2s ease-in-out;
