@@ -1,6 +1,6 @@
 <?php
     if ( class_exists( 'WP_Customize_Panel' ) ) {
-        class PE_WP_Customize_Panel extends WP_Customize_Panel {
+        class craftnce_WP_Customize_Panel extends WP_Customize_Panel {
             public $panel;
             public $type = 'pe_panel';
             public function json() {
@@ -16,7 +16,7 @@
     }
 
     if ( class_exists( 'WP_Customize_Section' ) ) {
-        class PE_WP_Customize_Section extends WP_Customize_Section {
+        class craftnce_WP_Customize_Section extends WP_Customize_Section {
             public $section;
             public $type = 'pe_section';
             public function json() {
@@ -37,12 +37,12 @@
     }
 
     // Enqueue our scripts and styles
-    function pe_customize_controls_scripts() {
-        wp_enqueue_script( 'pe-customize-controls', get_theme_file_uri( '/assets/js/craftnce-customize-controls.js' ), array(), '1.0', true );
+    function craftnce_customize_controls_scripts() {
+        wp_enqueue_script( 'craftnce-customize-controls', get_theme_file_uri( '/assets/js/craftnce-customize-controls.js' ), array(), '1.0', true );
     }
-    add_action( 'customize_controls_enqueue_scripts', 'pe_customize_controls_scripts' );
+    add_action( 'customize_controls_enqueue_scripts', 'craftnce_customize_controls_scripts' );
 
-    function pe_customize_controls_styles() {
-        wp_enqueue_style( 'pe-customize-controls', get_theme_file_uri( '/assets/css/craftnce-customize-controls.css' ), array(), '1.0' );
+    function craftnce_customize_controls_styles() {
+        wp_enqueue_style( 'craftnce-customize-controls', get_theme_file_uri( '/assets/css/craftnce-customize-controls.css' ), array(), '1.0' );
     }
-    add_action( 'customize_controls_print_styles', 'pe_customize_controls_styles' );
+    add_action( 'customize_controls_print_styles', 'craftnce_customize_controls_styles' );
