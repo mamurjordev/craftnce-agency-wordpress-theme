@@ -51,35 +51,35 @@
                             <div class="rating w-max mx-auto d-flex">
                                 <?php
                                     if($repeater_item_content->subtitle == 5) {
-                                        echo '<i class="ri-star-fill text-warning"></i>';
-                                        echo '<i class="ri-star-fill text-warning"></i>';
-                                        echo '<i class="ri-star-fill text-warning"></i>';
-                                        echo '<i class="ri-star-fill text-warning"></i>';
-                                        echo '<i class="ri-star-fill text-warning"></i>';
+                                        echo '<i class="fas fa-star text-warning"></i>';
+                                        echo '<i class="fas fa-star text-warning"></i>';
+                                        echo '<i class="fas fa-star text-warning"></i>';
+                                        echo '<i class="fas fa-star text-warning"></i>';
+                                        echo '<i class="fas fa-star text-warning"></i>';
                                     } elseif ($repeater_item_content->subtitle == 4) {
-                                        echo '<i class="ri-star-fill text-warning"></i>';
-                                        echo '<i class="ri-star-fill text-warning"></i>';
-                                        echo '<i class="ri-star-fill text-warning"></i>';
-                                        echo '<i class="ri-star-fill text-warning"></i>';
-                                        echo '<i class="ri-star-fill text-muted"></i>';
+                                        echo '<i class="fas fa-star text-warning"></i>';
+                                        echo '<i class="fas fa-star text-warning"></i>';
+                                        echo '<i class="fas fa-star text-warning"></i>';
+                                        echo '<i class="fas fa-star text-warning"></i>';
+                                        echo '<i class="fas fa-star text-muted"></i>';
                                     } elseif ($repeater_item_content->subtitle == 3) {
-                                        echo '<i class="ri-star-fill text-warning"></i>';
-                                        echo '<i class="ri-star-fill text-warning"></i>';
-                                        echo '<i class="ri-star-fill text-warning"></i>';
-                                        echo '<i class="ri-star-fill text-muted"></i>';
-                                        echo '<i class="ri-star-fill text-muted"></i>';
+                                        echo '<i class="fas fa-star text-warning"></i>';
+                                        echo '<i class="fas fa-star text-warning"></i>';
+                                        echo '<i class="fas fa-star text-warning"></i>';
+                                        echo '<i class="fas fa-star text-muted"></i>';
+                                        echo '<i class="fas fa-star text-muted"></i>';
                                     } elseif ($repeater_item_content->subtitle == 2) {
-                                        echo '<i class="ri-star-fill text-warning"></i>';
-                                        echo '<i class="ri-star-fill text-warning"></i>';
-                                        echo '<i class="ri-star-fill text-muted"></i>';
-                                        echo '<i class="ri-star-fill text-muted"></i>';
-                                        echo '<i class="ri-star-fill text-muted"></i>';
+                                        echo '<i class="fas fa-star text-warning"></i>';
+                                        echo '<i class="fas fa-star text-warning"></i>';
+                                        echo '<i class="fas fa-star text-muted"></i>';
+                                        echo '<i class="fas fa-star text-muted"></i>';
+                                        echo '<i class="fas fa-star text-muted"></i>';
                                     } elseif ($repeater_item_content->subtitle == 1) {
-                                        echo '<i class="ri-star-fill text-warning"></i>';
-                                        echo '<i class="ri-star-fill text-muted"></i>';
-                                        echo '<i class="ri-star-fill text-muted"></i>';
-                                        echo '<i class="ri-star-fill text-muted"></i>';
-                                        echo '<i class="ri-star-fill text-muted"></i>';
+                                        echo '<i class="fas fa-star text-warning"></i>';
+                                        echo '<i class="fas fa-star text-muted"></i>';
+                                        echo '<i class="fas fa-star text-muted"></i>';
+                                        echo '<i class="fas fa-star text-muted"></i>';
+                                        echo '<i class="fas fa-star text-muted"></i>';
                                     }
                                 ?>
                             </div>
@@ -91,8 +91,12 @@
                     </div>
                 </div>
                 <div class="d-flex justify-content-between top-50 position-absolute">
-                    <button type="button" class="prev btn btn-primary rounded-0 px-2 py-0 fs-3"><i class="ri-arrow-left-s-line"></i></button>
-                    <button type="button" class="next btn btn-primary rounded-0 px-2 py-0 fs-3"><i class="ri-arrow-right-s-line"></i></button>
+                    <button type="button" class="prev btn btn-primary rounded-0 px-2 py-0 fs-3">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button type="button" class="next btn btn-primary rounded-0 px-2 py-0 fs-3">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
                 </div>
             </div>
         </div>
