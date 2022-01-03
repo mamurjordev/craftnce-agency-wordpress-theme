@@ -54,8 +54,8 @@
             echo 'Home';
             echo '</a></li>';
             if (is_category() || is_single()) {
-                echo '<li class="breadcrumb-item">';
-                the_category(' </li><li class="breadcrumb-item active"> / </li><li> ');
+                $category = get_the_category();
+                echo '<li class="breadcrumb-item active">' . $category[0]->cat_name . '</li><li>';
                 if (is_single()) {
                     echo '</li><li class="text-muted mx-2"> / </li><li class="breadcrumb-item active">';
                     the_title();
