@@ -29,7 +29,7 @@
                         <?php
                                 } else {
                                     ?>
-                                    <img src="<?php get_stylesheet_directory_uri() . '/images/header.png' ?>">
+                                    <img src="<?php echo get_template_directory_uri() . '/assets/img/craftnce.png' ?>">
                                     <?php
                                 }
                             }
