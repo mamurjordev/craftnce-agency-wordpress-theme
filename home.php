@@ -14,8 +14,8 @@
             ?>
             <div class="row text-center pb-5">
                 <div class="col-md-7 mx-auto">
-                    <h6 class="fw-bold fs-6 text-uppercase text-primary"><?php echo esc_html( get_theme_mod('craftnce_blog_page_sub_heading_settings') ); ?></h6>
-                    <h2 class="fs-48 fw-900 text-uppercase"><?php echo esc_html( get_theme_mod('craftnce_blog_page_heading_setting') ); ?></h2>
+                    <h6 class="fw-bold fs-6 text-uppercase text-primary"><?php echo esc_html( get_theme_mod('craftnce_blog_page_sub_heading_settings', 'SEE LATEST BLOG') ); ?></h6>
+                    <h2 class="fs-48 fw-900 text-uppercase"><?php echo esc_html( get_theme_mod('craftnce_blog_page_heading_setting', 'ARTICLES') ); ?></h2>
                 </div>
             </div>
             <?php
