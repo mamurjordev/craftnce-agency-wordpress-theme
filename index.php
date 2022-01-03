@@ -6,14 +6,7 @@
 
     <!-- Post -->
     <section class="pb-5" id="content">
-        <div class="container py-5">
-            <div class="row text-center pb-5">
-                <div class="col-md-7 mx-auto">
-                    <h6 class="fw-bold fs-6 text-uppercase text-primary"><?php _e('Recent blog', 'craftnce'); ?></h6>
-                    <h2 class="fs-48 fw-900 text-uppercase"><?php _e('articles', 'craftnce'); ?></h2>
-                </div>
-            </div>
-            
+        <div class="container py-5">            
             <?php if(have_posts()) : ?>
             <div class="articles-wrapper row py-5 mb-5 py-lg-0">
                 <?php
