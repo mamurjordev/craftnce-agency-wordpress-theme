@@ -29,7 +29,7 @@
                         <?php
                                 } else {
                                     ?>
-                                    <h4 class="mb-0"><?php bloginfo('title-tag'); ?></h4>
+                                    <img src="<?php get_stylesheet_directory_uri() . '/images/header.png' ?>">
                                     <?php
                                 }
                             }

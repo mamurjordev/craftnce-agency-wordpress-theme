@@ -9,7 +9,7 @@
      * Copyright Text
      */
     $wp_customize->add_setting('craftnce_copyright_text_settings', array(
-        'default'           => 'Copyright @ Craftnce | All Right Reserved | 2021',
+        'default'           => '@ Craftnce | Developed by <a href="https://mamurjor.com/">Mamurjor</a> | 2021',
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod',
