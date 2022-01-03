@@ -58,8 +58,8 @@
                 <?php
                     the_posts_pagination( array(
                         'screen_reader_text'            =>  ' ',
-                        'prev_text'                     =>  '<i class="ri-arrow-left-s-fill"></i>',
-                        'next_text'                     =>  '<i class="ri-arrow-right-s-fill"></i>',
+                        'prev_text'                     =>  '<i class="fas fa-angle-left"></i>',
+                        'next_text'                     =>  '<i class="fas fa-angle-right"></i>',
                     ));
                 ?>
             </div>
