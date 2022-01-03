@@ -1,4 +1,4 @@
-<div class="row mt-5">
+<div class="row my-5">
     <div class="d-flex flex-wrap">
         <h4 class="mt-2 mt-md-0">
             <?php

@@ -64,4 +64,5 @@ v1.0.6
 * Add font awesome icon pack
 * Pagination Icon Fix
 * Sidebar Sticky Design Issue Fix
-* 
+* Category issues on breadcrumb fix
+* Home page header content show issue fix

@@ -31,9 +31,13 @@
                 <div <?php post_class('portfo-box col-md-6 col-lg-4 mt-4'); ?>>
                     <div class="card border-0  rounded-3 blog-card">
                         <?php
-                            if(has_post_thumbnail()) {
-                                the_post_thumbnail('large', array('class'=>'img-fluid w-100 h-100'));
-                            }
+                            if(has_post_thumbnail()) :
+                        ?>
+                        <a href="<?php the_permalink(); ?>">
+                            <?php the_post_thumbnail('large', array('class'=>'img-fluid w-100 h-100')); ?>
+                        </a>
+                        <?php
+                            endif;
                         ?>
 
                         <div>

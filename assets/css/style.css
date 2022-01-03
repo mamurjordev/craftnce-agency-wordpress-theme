@@ -913,3 +913,11 @@ p.comment-policy {
 .sticky-sidebar {
 	top: 100px;
 }
+.copyright-text a {
+    color: #d3d3d3;
+    text-decoration: none;
+    font-weight: 800;
+}
+.copyright-text a:hover {
+    text-decoration: underline;
+}
