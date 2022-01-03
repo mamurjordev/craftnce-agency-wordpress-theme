@@ -1,6 +1,5 @@
 <?php
     get_template_part('inc/craftnce-functions');
-    get_template_part('inc/craftnce-plugins');
     get_template_part('lib/customizer/craftnce-customizer');
     get_template_part('lib/craftnce-nav-walker');
 
@@ -45,6 +44,8 @@
         wp_enqueue_style('craftnce-google-fonts', '//fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
         wp_enqueue_style('craftnce-slick-css', get_template_directory_uri().'/assets/css/slick.css');
         wp_enqueue_style('craftnce-slick-theme-css', get_template_directory_uri().'/assets/css/slick-theme.css');
+        wp_enqueue_style('craftnce-fontawesome-main', get_template_directory_uri().'/assets/css/fontawesome.css');
+        wp_enqueue_style('craftnce-fontawesome-all', get_template_directory_uri().'/assets/css/all.css');
         wp_enqueue_style('craftnce-main-style', get_template_directory_uri().'/assets/css/style.css');
         wp_enqueue_style('craftnce-responsive-style', get_template_directory_uri().'/assets/css/responsive.css');
         wp_enqueue_style('craftnce-theme-default-css', get_stylesheet_uri());
