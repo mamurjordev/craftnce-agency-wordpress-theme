@@ -1,5 +1,5 @@
-=== Craftnce ===
-Contributors: saifullah(dot)co
+=== Craftnce - Multipurpose Agency WordPress Theme ===
+Contributors: saifullah(dot)co, Hadi Jaman, MD Niamatullah Atif, Abdullah Al Mamun, Sujon Mia, Rasel Mia
 Requires at least: 5.3
 Tested up to: 5.8
 Requires PHP: 5.6
