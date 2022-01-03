@@ -52,3 +52,14 @@ Image for theme screenshot
 Copyright (c) pxhere.
 License: CCO License, Free for personal and commercial use, No attribution required
 Source: https://pxhere.com/en/photo/1629587
+
+Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com
+License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+
+
+=== Changelog ===
+
+v1.0.6
+* Remove TGM
+* Add font awesome icon pack
+* Pagination Icon Fix
