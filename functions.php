@@ -71,3 +71,12 @@
         ));
     }
     add_action('widgets_init', 'craftnce_sidebar_widget_area');
+
+    function sample_admin_notice__success() {
+?>
+        <div class="notice notice-success is-dismissible">
+            <p><?php _e( 'Thanks for installing Craftnce', 'craftnce' ); ?></p>
+        </div>
+<?php
+    }
+    add_action( 'admin_notices', 'sample_admin_notice__success' );
