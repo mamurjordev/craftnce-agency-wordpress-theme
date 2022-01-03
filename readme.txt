@@ -63,3 +63,5 @@ v1.0.6
 * Remove TGM
 * Add font awesome icon pack
 * Pagination Icon Fix
+* Sidebar Sticky Design Issue Fix
+* 
