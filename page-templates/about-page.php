@@ -44,12 +44,12 @@
             <div class="row">
                 <div class="col-md-6">
                     <h2 class="fw-900 fs-1">
-                        <?php echo get_theme_mod('craftnce_about_case_study_heading_setting', 'For the next generation of big businesses'); ?>
+                        <?php echo get_theme_mod('craftnce_about_casestudy_heading_setting', 'For the next generation of big businesses'); ?>
                     </h2>
                 </div>
                 <div class="col-md-6 align-self-center">
                     <p>
-                        <?php echo esc_html( get_theme_mod('craftnce_about_case_study_description_setting', 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour. If you are going to use a passage of Lorem Ipsum, you need to be sure.')); ?>
+                        <?php echo esc_html( get_theme_mod('craftnce_about_casestudy_description_setting', 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour. If you are going to use a passage of Lorem Ipsum, you need to be sure.')); ?>
                     </p>
                 </div>
             </div>
