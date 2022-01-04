@@ -28,7 +28,7 @@
      * Info Section - Heading
      */
     $wp_customize->add_setting('craftnce_about_info_heading_setting', array(
-        'default'           => 'WE\'RE LEADING DIGITAL BUSINESS AGENCY',
+        'default'           => 'For the next generation of big businesses',
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod',
@@ -45,7 +45,7 @@
      * Info Section - Sub-heading
      */
     $wp_customize->add_setting('craftnce_about_info_subheading_setting', array(
-        'default'           => 'ABOUT CRAFTNCE',
+        'default'           => 'history',
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod',
@@ -73,143 +73,7 @@
         'settings'          =>  'craftnce_about_info_description_setting',
         'type'              =>  'textarea'
     ));
-
-    /**
-     * info Section - Show First Button
-     */
-    $wp_customize->add_setting('craftnce_about_info_show_btn1_setting', array(
-        'default'           => 1,
-        'capability'        => 'edit_theme_options',
-        'transport'         => 'refresh',
-        'type'              => 'theme_mod',
-        'sanitize_callback' => function( $input ) {
-            return ( ( isset( $input ) && true == $input ) ? true : false );
-        }
-    ));
-    $wp_customize->add_control('craftnce_about_info_show_btn1_ctrl', array(
-        'label'             =>  __('Show info First Button', 'craftnce'),
-        'section'           =>  'craftnce_about_page_info',
-        'settings'          =>  'craftnce_about_info_show_btn1_setting',
-        'type'              =>  'checkbox'
-    ));
-
-    /**
-     * info Section - First Button Label
-     */
-    $wp_customize->add_setting('craftnce_about_info_btn1_label_setting', array(
-        'default'           =>  'get started',
-        'capability'        => 'edit_theme_options',
-        'transport'         => 'refresh',
-        'type'              => 'theme_mod',
-        'sanitize_callback' => 'wp_filter_nohtml_kses'
-    ));
-    $wp_customize->add_control('craftnce_about_info_btn1_label_ctrl', array(
-        'label'             =>  __('First Button Label', 'craftnce'),
-        'section'           =>  'craftnce_about_page_info',
-        'settings'          =>  'craftnce_about_info_btn1_label_setting',
-        'type'              =>  'text'
-    ));
-
-    /**
-     * info Section - First Button Link
-     */
-    $wp_customize->add_setting('craftnce_about_info_btn1_link_setting', array(
-        'capability'        => 'edit_theme_options',
-        'transport'         => 'refresh',
-        'type'              => 'theme_mod',
-        'sanitize_callback' => 'wp_filter_nohtml_kses'
-    ));
-    $wp_customize->add_control('craftnce_about_info_btn1_link_ctrl', array(
-        'label'             =>  __('First Button Link', 'craftnce'),
-        'section'           =>  'craftnce_about_page_info',
-        'settings'          =>  'craftnce_about_info_btn1_link_setting',
-        'type'              =>  'text'
-    ));
-
-    /**
-     * info Section - First Button Icon
-     */
-    $wp_customize->add_setting('craftnce_about_info_btn1_icon_setting', array(
-        'capability'        => 'edit_theme_options',
-        'transport'         => 'refresh',
-        'type'              => 'theme_mod',
-        'sanitize_callback' => 'wp_filter_nohtml_kses'
-    ));
-    $wp_customize->add_control('craftnce_about_info_btn1_icon_ctrl', array(
-        'label'             =>  __('First Button Icon Class', 'craftnce'),
-        'section'           =>  'craftnce_about_page_info',
-        'settings'          =>  'craftnce_about_info_btn1_icon_setting',
-        'type'              =>  'text'
-    ));
-
-    /**
-     * info Section - Show Second Button
-     */
-    $wp_customize->add_setting('craftnce_about_info_show_btn2_setting', array(
-        'default'           => 1,
-        'capability'        => 'edit_theme_options',
-        'transport'         => 'refresh',
-        'type'              => 'theme_mod',
-        'sanitize_callback' => function( $input ) {
-            return ( ( isset( $input ) && true == $input ) ? true : false );
-        }
-    ));
-    $wp_customize->add_control('craftnce_about_info_show_btn2_ctrl', array(
-        'label'             =>  __('Show info Second Button', 'craftnce'),
-        'section'           =>  'craftnce_about_page_info',
-        'settings'          =>  'craftnce_about_info_show_btn2_setting',
-        'type'              =>  'checkbox'
-    ));
-
-    /**
-     * info Section - Second Button Label
-     */
-    $wp_customize->add_setting('craftnce_about_info_btn2_label_setting', array(
-        'default'           =>  'second button',
-        'capability'        => 'edit_theme_options',
-        'transport'         => 'refresh',
-        'type'              => 'theme_mod',
-        'sanitize_callback' => 'wp_filter_nohtml_kses'
-    ));
-    $wp_customize->add_control('craftnce_about_info_btn2_label_ctrl', array(
-        'label'             =>  __('Second Button Label', 'craftnce'),
-        'section'           =>  'craftnce_about_page_info',
-        'settings'          =>  'craftnce_about_info_btn2_label_setting',
-        'type'              =>  'text'
-    ));
-
-    /**
-     * info Section - Second Button Link
-     */
-    $wp_customize->add_setting('craftnce_about_info_btn2_link_setting', array(
-        'capability'        => 'edit_theme_options',
-        'transport'         => 'refresh',
-        'type'              => 'theme_mod',
-        'sanitize_callback' => 'wp_filter_nohtml_kses'
-    ));
-    $wp_customize->add_control('craftnce_about_info_btn2_link_ctrl', array(
-        'label'             =>  __('Second Button Link', 'craftnce'),
-        'section'           =>  'craftnce_about_page_info',
-        'settings'          =>  'craftnce_about_info_btn2_link_setting',
-        'type'              =>  'text'
-    ));
-
-    /**
-     * info Section - second Button Icon
-     */
-    $wp_customize->add_setting('craftnce_about_info_btn2_icon_setting', array(
-        'capability'        => 'edit_theme_options',
-        'transport'         => 'refresh',
-        'type'              => 'theme_mod',
-        'sanitize_callback' => 'wp_filter_nohtml_kses'
-    ));
-    $wp_customize->add_control('craftnce_about_info_btn2_icon_ctrl', array(
-        'label'             =>  __('Second Button Icon Class', 'craftnce'),
-        'section'           =>  'craftnce_about_page_info',
-        'settings'          =>  'craftnce_about_info_btn2_icon_setting',
-        'type'              =>  'text'
-    ));
-
+    
     /**
      * Info Section - Featured Image
      */
