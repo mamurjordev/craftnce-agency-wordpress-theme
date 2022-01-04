@@ -27,7 +27,7 @@
     /**
      * casestudy Section - Heading
      */
-    $wp_customize->add_setting('craftnce_about_case_study_heading_setting', array(
+    $wp_customize->add_setting('craftnce_about_casestudy_heading_setting', array(
         'default'           => 'For the next generation of big businesses',
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
@@ -44,7 +44,7 @@
     /**
      * casestudy Section - Description
      */
-    $wp_customize->add_setting('craftnce_about_case_study_description_setting', array(
+    $wp_customize->add_setting('craftnce_about_casestudy_description_setting', array(
         'default'           =>  'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour. If you are going to use a passage of Lorem Ipsum, you need to be sure.',
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
