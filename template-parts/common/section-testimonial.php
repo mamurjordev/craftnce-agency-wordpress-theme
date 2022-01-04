@@ -33,7 +33,7 @@
                                 endforeach;
                             endif;
                         ?>
-                    </div>
+                </div>
                     <div class="testimonial-active mt-5">
                         <?php
                             $craftnce_features_repeater_content = get_theme_mod('craftnce_home_testimonials_item_settings');
@@ -42,7 +42,7 @@
                                 foreach($craftnce_features_repeater_decoded_content as $repeater_item_content) :
                         ?>
                         <div class="testimonial-item text-center">
-                            <div class="designation mb-30">
+                            <div class="designation mb-30 fw-bolder">
                                 <h3><?php echo $repeater_item_content->title; ?></h3>
                             </div>
                             <p>

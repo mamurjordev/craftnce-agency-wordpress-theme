@@ -84,7 +84,7 @@
         // Customizer Repeater Class
         require_once get_theme_file_path('/lib/customizer/craftnce-customizer-repeater.php');
 
-        // Home page hero options
+        // Home page
         require_once get_theme_file_path('/inc/option-panel/customizer/options/home-hero.php');
         require_once get_theme_file_path('/inc/option-panel/customizer/options/home-info.php');
         require_once get_theme_file_path('/inc/option-panel/customizer/options/home-features.php');
@@ -98,5 +98,20 @@
 
         // Blog page options
         require_once get_theme_file_path('/inc/option-panel/customizer/options/option-blog-page.php');
+
+        /**
+         *  This options will be used for about page template options.
+         *  You can customize those informations from Customizer > Craftnce Options > About Page Panel.
+         *  You can also override the functions using child theme provided by Craftnce
+         */
+        $about_page_panel = new craftnce_WP_Customize_Panel( $wp_customize,'about_page_panel', array(
+            'title'                     =>  __('About Page', 'craftnce'),
+            'capability'                =>  'edit_theme_options',
+            'panel'                     =>  'craftnce_options'
+        ));
+        $wp_customize->add_panel( $about_page_panel );
+
+        require_once get_theme_file_path('/inc/option-panel/customizer/options/page/about-page/about-page-info.php');
+        require_once get_theme_file_path('/inc/option-panel/customizer/options/page/about-page/about-page-casestudy.php');
     }
     add_action('customize_register', 'craftnce_customizer');
