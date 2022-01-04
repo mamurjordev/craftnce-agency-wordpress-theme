@@ -36,20 +36,20 @@
     </section>
     <?php
         endif;
+
+        if(get_theme_mod('craftnce_show_about_page_casestudy_section_setting', 1)) :
     ?>
     <section>
         <div class="container mb-5">
             <div class="row">
                 <div class="col-md-6">
                     <h2 class="fw-900 fs-1">
-                        We're Leading Digital<br>Business Agency
+                        <?php echo get_theme_mod('craftnce_about_case_study_heading_setting', 'For the next generation of big businesses'); ?>
                     </h2>
                 </div>
                 <div class="col-md-6 align-self-center">
                     <p>
-                        There are many variations of passages of Lorem Ipsum available, but the
-                        majority have suffered alteration in some form, by injected humour. If you
-                        are going to use a passage of Lorem Ipsum, you need to be sure.
+                        <?php echo esc_html( get_theme_mod('craftnce_about_case_study_description_setting', 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour. If you are going to use a passage of Lorem Ipsum, you need to be sure.')); ?>
                     </p>
                 </div>
             </div>
@@ -100,7 +100,9 @@
             </div>
         </div>
     </section>
-
+    <?php
+        endif;
+    ?>
     <!-- Counter Section -->
     <section class="counter-bg">
         <div class="counter-overlay py-50">
