@@ -112,5 +112,6 @@
         $wp_customize->add_panel( $about_page_panel );
 
         require_once get_theme_file_path('/inc/option-panel/customizer/options/page/about-page/about-page-info.php');
+        require_once get_theme_file_path('/inc/option-panel/customizer/options/page/about-page/about-page-casestudy.php');
     }
     add_action('customize_register', 'craftnce_customizer');
