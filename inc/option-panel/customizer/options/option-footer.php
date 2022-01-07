@@ -9,15 +9,15 @@
      * Copyright Text
      */
     $wp_customize->add_setting('craftnce_copyright_text_settings', array(
-        'default'           => '@ Craftnce | hwtyetrqoi498r46583t58trhuryrDeveloped by <a href="https://mamurjor.com/">Mamurjor</a> | 2021',
+        'default'           => '@ Craftnce | Developed by <a href="https://mamurjor.com/">Mamurjor</a> | 2021',
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod',
         'sanitize_callback' => 'wp_filter_nohtml_kses'
     ));
     $wp_customize->add_control('craftnce_copyright_text_ctrl', array(
-        'label'             =>  __('Copyright Text', 'ditsyudfyufsfuitzdftweurwn'),
+        'label'             =>  __('Copyright Text', 'craftnce'),
         'section'           =>  'craftnce_footer',
         'settings'          =>  'craftnce_copyright_text_settings',
         'type'              =>  'textarea',
-    ));lkdsufisagerpofu b98ry i
+    ));
