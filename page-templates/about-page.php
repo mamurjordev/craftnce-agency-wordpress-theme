@@ -53,15 +53,25 @@
                     </p>
                 </div>
             </div>
+            <?php
+                if(get_theme_mod('show_case_study_box')) :
+            ?>
             <div class="row position-relative mt-4 pe-0">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about-info2.png" class="img-fluid" alt="">
+                <img src="<?php echo esc_url(get_theme_mod('craftnce_about_casestudy_section_featured_image_setting')); ?>" class="img-fluid" alt="">
 
+                <?php
+                    if(get_theme_mod('show_case_study_box_content')) :
+                ?>
                 <div class="about-info2-inner-box info2_bg-light bottom-0 end-0 pt-4 ps-4 pe-4 pe-lg-0 col-lg-7 me-2point5">
                     <h5 class="fw-bold">
-                        If you are going to use a passage of Lorem Ipsum you need to be sure. Compare us between others companies.
+                        <?php
+                            echo esc_html(get_theme_mod('craftnce_about_casestudy_box_heading_setting', 'If you are going to use a passage of Lorem Ipsum you need to be sure. Compare us between others companies.'));
+                        ?>
                     </h5>
                     <p class="text-muted text-md">
-                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour. If you are going to use a passage of Lorem Ipsum, you need to be sure.
+                        <?php
+                            echo esc_html(get_theme_mod('craftnce_about_box_casestudy_description_setting'));
+                        ?>
                     </p>
 
                     <div class="border border-2 border-primary info2_border p-3 mt-4">
@@ -97,7 +107,9 @@
                         </div>
                     </div>
                 </div>
+                <?php endif; ?>
             </div>
+            <?php endif; ?>
         </div>
     </section>
     <?php
