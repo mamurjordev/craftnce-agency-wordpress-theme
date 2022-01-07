@@ -27,7 +27,7 @@
     /**
      * casestudy Section - Heading
      */
-    $wp_customize->add_setting('craftnce_about_case_study_heading_setting', array(
+    $wp_customize->add_setting('craftnce_about_casestudy_heading_setting', array(
         'default'           => 'For the next generation of big businesses',
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
@@ -44,7 +44,7 @@
     /**
      * casestudy Section - Description
      */
-    $wp_customize->add_setting('craftnce_about_case_study_description_setting', array(
+    $wp_customize->add_setting('craftnce_about_casestudy_description_setting', array(
         'default'           =>  'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour. If you are going to use a passage of Lorem Ipsum, you need to be sure.',
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
@@ -55,6 +55,77 @@
         'label'             =>  __('Description', 'craftnce'),
         'section'           =>  'craftnce_about_page_casestudy',
         'settings'          =>  'craftnce_about_casestudy_description_setting',
+        'type'              =>  'textarea'
+    ));
+
+    /**
+     * casestudy Section - Show casestudy box Section
+     */
+    $wp_customize->add_setting('show_case_study_box', array(
+        'default'           => 1,
+        'capability'        => 'edit_theme_options',
+        'transport'         => 'refresh',
+        'type'              => 'theme_mod',
+        'sanitize_callback' => function( $input ) {
+            return ( ( isset( $input ) && true == $input ) ? true : false );
+        }
+    ));
+    $wp_customize->add_control('show_case_study_box_ctrl', array(
+        'label'             =>  __('Show casestudy box', 'craftnce'),
+        'section'           =>  'craftnce_about_page_casestudy',
+        'settings'          =>  'show_case_study_box',
+        'type'              =>  'checkbox'
+    ));
+
+    /**
+     * casestudy Section - Show casestudy box content Section
+     */
+    $wp_customize->add_setting('show_case_study_box_content', array(
+        'capability'        => 'edit_theme_options',
+        'transport'         => 'refresh',
+        'type'              => 'theme_mod',
+        'sanitize_callback' => function( $input ) {
+            return ( ( isset( $input ) && true == $input ) ? true : false );
+        }
+    ));
+    $wp_customize->add_control('show_case_study_box_content_ctrl', array(
+        'label'             =>  __('Show casestudy box content section', 'craftnce'),
+        'section'           =>  'craftnce_about_page_casestudy',
+        'settings'          =>  'show_case_study_box_content',
+        'type'              =>  'checkbox'
+    ));
+
+    /**
+     * casestudy Box Section - Heading
+     */
+    $wp_customize->add_setting('craftnce_about_casestudy_box_heading_setting', array(
+        'default'           => 'If you are going to use a passage of Lorem Ipsum you need to be sure. Compare us between others companies.',
+        'capability'        => 'edit_theme_options',
+        'transport'         => 'refresh',
+        'type'              => 'theme_mod',
+        'sanitize_callback' => 'wp_filter_nohtml_kses'
+    ));
+    $wp_customize->add_control('craftnce_about_casestudy_heading_ctrl', array(
+        'label'             =>  __('Case Study Box Heading', 'craftnce'),
+        'section'           =>  'craftnce_about_page_casestudy',
+        'settings'          =>  'craftnce_about_casestudy_box_heading_setting',
+        'type'              =>  'text'
+    ));
+
+    /**
+     * casestudy Section - Description
+     */
+    $wp_customize->add_setting('craftnce_about_box_casestudy_description_setting', array(
+        'default'           =>  'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour. If you are going to use a passage of Lorem Ipsum, you need to be sure.',
+        'capability'        => 'edit_theme_options',
+        'transport'         => 'refresh',
+        'type'              => 'theme_mod',
+        'sanitize_callback' => 'wp_filter_nohtml_kses'
+    ));
+    $wp_customize->add_control('craftnce_about_casestudy_box_description_ctrl', array(
+        'label'             =>  __('Case Study Box Description', 'craftnce'),
+        'section'           =>  'craftnce_about_page_casestudy',
+        'settings'          =>  'craftnce_about_box_casestudy_description_setting',
         'type'              =>  'textarea'
     ));
     
