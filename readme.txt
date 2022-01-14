@@ -60,9 +60,14 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 === Changelog ===
 
 v1.0.6
-* Remove TGM
-* Add font awesome icon pack
-* Pagination Icon Fix
-* Sidebar Sticky Design Issue Fix
-* Category issues on breadcrumb fix
-* Home page header content show issue fix
+- Text Field Special Character Issue Fix
+- About Page Template Option Panel Add
+- About Page Heading Field Issue Fix
+
+v1.0.6
+- Remove TGM
+- Add font awesome icon pack
+- Pagination Icon Fix
+- Sidebar Sticky Design Issue Fix
+- Category issues on breadcrumb fix
+- Home page header content show issue fix

@@ -44,7 +44,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <h2 class="fw-900 fs-1">
-                        <?php echo get_theme_mod('craftnce_about_casestudy_heading_setting', 'For the next generation of big businesses'); ?>
+                        <?php echo esc_html( get_theme_mod('craftnce_about_casestudy_heading_setting', 'For the next generation of big businesses') ); ?>
                     </h2>
                 </div>
                 <div class="col-md-6 align-self-center">
@@ -74,38 +74,34 @@
                         ?>
                     </p>
 
+                    <?php
+                        $craftnce_casestudy_box_repeater = get_theme_mod('craftnce_about_casestudy_box_item_settings');
+                        $craftnce_casestudy_box_repeater_decoded = json_decode($craftnce_casestudy_box_repeater);
+                        if(!empty($craftnce_casestudy_box_repeater_decoded)) :
+                    ?>
+
                     <div class="border border-2 border-primary info2_border p-3 mt-4">
                         <div class="row pe-0">
+                            <?php
+                                foreach($craftnce_casestudy_box_repeater_decoded as $box_repeater_item) :
+                            ?>
                             <div class="col-sm-6">
                                 <div class="d-flex">
-                                    <i class="fas fa-tools info2-col-ico me-3 mt-1 text-primary fs-5"></i>
+                                    <i class="<?php echo esc_attr($box_repeater_item->icon_value); ?> info2-col-ico me-3 mt-1 text-primary fs-5"></i>
                                     <div>
-                                        <h5>Standard Lorem Ipsum</h5>
+                                        <h5>
+                                            <?php echo esc_html( $box_repeater_item->title ); ?>
+                                        </h5>
                                         <p class="text-md text-muted lh-base mb-0">
-                                            There are many variations of
-                                            passages of Lorem Ipsum available.
-                                            There are many variations of
-                                            passages of Lorem.
+                                            <?php echo esc_html( $box_repeater_item->text ); ?>
                                         </p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-6 mt-4 mt-sm-0">
-                                <div class="d-flex">
-                                    <i class="fas fa-tools info2-col-ico me-3 mt-1 text-primary fs-5"></i>
-                                    <div>
-                                        <h5>Standard Lorem Ipsum</h5>
-                                        <p class="text-md text-muted lh-base mb-0">
-                                            There are many variations of
-                                            passages of Lorem Ipsum available.
-                                            There are many variations of
-                                            passages of.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                            <?php endforeach; ?>
                         </div>
                     </div>
+                    <?php endif; ?>
                 </div>
                 <?php endif; ?>
             </div>
