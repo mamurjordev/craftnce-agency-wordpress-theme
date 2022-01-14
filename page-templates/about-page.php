@@ -44,7 +44,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <h2 class="fw-900 fs-1">
-                        <?php echo get_theme_mod('craftnce_about_casestudy_heading_setting', 'For the next generation of big businesses'); ?>
+                        <?php echo esc_html( get_theme_mod('craftnce_about_casestudy_heading_setting', 'For the next generation of big businesses') ); ?>
                     </h2>
                 </div>
                 <div class="col-md-6 align-self-center">

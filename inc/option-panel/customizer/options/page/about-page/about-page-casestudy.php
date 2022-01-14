@@ -34,7 +34,7 @@
         'type'              => 'theme_mod',
         'sanitize_callback' => 'sanitize_text_field'
     ));
-    $wp_customize->add_control('craftnce_about_casestudy_heading_ctrl', array(
+    $wp_customize->add_control('craftnce_about_info_heading_ctrl', array(
         'label'             =>  __('Heading', 'craftnce'),
         'section'           =>  'craftnce_about_page_casestudy',
         'settings'          =>  'craftnce_about_casestudy_heading_setting',
