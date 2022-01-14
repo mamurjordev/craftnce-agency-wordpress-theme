@@ -62,7 +62,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 v1.0.6
 - Text Field Special Character Issue Fix
 - About Page Template Option Panel Add
-- 
+- About Page Heading Field Issue Fix
 
 v1.0.6
 - Remove TGM
