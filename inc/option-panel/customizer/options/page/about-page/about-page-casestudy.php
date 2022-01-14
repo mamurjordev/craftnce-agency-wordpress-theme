@@ -157,3 +157,16 @@
             'change'        => __('Change Image', 'craftnce'),
         )
     )));
+
+    // Case Study Box Grid Item
+    $wp_customize->add_setting( 'craftnce_about_casestudy_box_item_settings', array(
+        'sanitize_callback' => 'customizer_repeater_sanitize'
+    ));
+    $wp_customize->add_control( new Customizer_Repeater( $wp_customize, 'craftnce_about_casestudy_box_item_ctrl', array(
+        'label'                                             =>  __('Casestudy Box Item','craftnce'),
+        'section'                                           =>  'craftnce_about_page_casestudy',
+        'settings'                                          =>  'craftnce_about_casestudy_box_item_settings',
+        'customizer_repeater_icon_control'                  =>  true,
+        'customizer_repeater_title_control'                 =>  true,
+        'customizer_repeater_text_control'                  =>  true,
+    )));
