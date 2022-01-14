@@ -32,7 +32,7 @@
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod',
-        'sanitize_callback' => 'wp_filter_nohtml_kses'
+        'sanitize_callback' => 'sanitize_text_field'
     ));
     $wp_customize->add_control('craftnce_home_infography_heading_ctrl', array(
         'label'             =>  __('Heading', 'craftnce'),
@@ -49,7 +49,7 @@
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod',
-        'sanitize_callback' => 'wp_filter_nohtml_kses'
+        'sanitize_callback' => 'sanitize_text_field'
     ));
     $wp_customize->add_control('craftnce_home_infography_subheading_ctrl', array(
         'label'             =>  __('Sub-heading', 'craftnce'),
