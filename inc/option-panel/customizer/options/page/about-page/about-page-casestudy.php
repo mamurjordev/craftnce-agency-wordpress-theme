@@ -49,7 +49,7 @@
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod',
-        'sanitize_callback' => 'wp_filter_nohtml_kses'
+        'sanitize_callback' => 'sanitize_text_field'
     ));
     $wp_customize->add_control('craftnce_about_casestudy_description_ctrl', array(
         'label'             =>  __('Description', 'craftnce'),
@@ -103,7 +103,7 @@
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod',
-        'sanitize_callback' => 'wp_filter_nohtml_kses'
+        'sanitize_callback' => 'sanitize_text_field'
     ));
     $wp_customize->add_control('craftnce_about_casestudy_heading_ctrl', array(
         'label'             =>  __('Case Study Box Heading', 'craftnce'),
@@ -120,7 +120,7 @@
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod',
-        'sanitize_callback' => 'wp_filter_nohtml_kses'
+        'sanitize_callback' => 'sanitize_text_field'
     ));
     $wp_customize->add_control('craftnce_about_casestudy_box_description_ctrl', array(
         'label'             =>  __('Case Study Box Description', 'craftnce'),

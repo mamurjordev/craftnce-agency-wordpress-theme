@@ -32,7 +32,7 @@
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod',
-        'sanitize_callback' => 'wp_filter_nohtml_kses'
+        'sanitize_callback' => 'sanitize_text_field'
     ));
     $wp_customize->add_control('craftnce_home_blog_heading_ctrl', array(
         'label'             =>  __('Heading', 'craftnce'),
@@ -49,7 +49,7 @@
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod',
-        'sanitize_callback' => 'wp_filter_nohtml_kses'
+        'sanitize_callback' => 'sanitize_text_field'
     ));
     $wp_customize->add_control('craftnce_home_blog_subtext_ctrl', array(
         'label'             =>  __('Sub-heading', 'craftnce'),
@@ -86,7 +86,7 @@
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod',
-        'sanitize_callback' => 'wp_filter_nohtml_kses'
+        'sanitize_callback' => 'sanitize_text_field'
     ));
     $wp_customize->add_control('craftnce_home_blog_btn_label_ctrl', array(
         'label'             =>  __('Button Label', 'craftnce'),
@@ -102,7 +102,7 @@
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod',
-        'sanitize_callback' => 'wp_filter_nohtml_kses'
+        'sanitize_callback' => 'sanitize_text_field'
     ));
     $wp_customize->add_control('craftnce_home_blog_btn_link_ctrl', array(
         'label'             =>  __('Button Link', 'craftnce'),
@@ -118,7 +118,7 @@
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod',
-        'sanitize_callback' => 'wp_filter_nohtml_kses'
+        'sanitize_callback' => 'sanitize_text_field'
     ));
     $wp_customize->add_control('craftnce_home_blog_btn_icon_ctrl', array(
         'label'             =>  __('Font-awesome Icon Class', 'craftnce'),
