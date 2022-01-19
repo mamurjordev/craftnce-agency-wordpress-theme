@@ -28,7 +28,14 @@
         ));
         $wp_customize->add_panel( $craftnceOptionMainPanel );
 
-        // Page Layout
+        /**
+         *  ================================================
+         *  ============ Page Layout Panel =================
+         *  ================================================
+         * 
+         *  You can customize those information from Customizer > Craftnce Options > Footer Section Panel.
+         *  You can also override the functions using child theme provided by Craftnce
+         */
         $page_layout_panel = new craftnce_WP_Customize_Panel( $wp_customize,'page_layout_panel', array(
             'title'                     =>  __('Page Layout', 'craftnce'),
             'capability'                =>  'edit_theme_options',
@@ -36,10 +43,16 @@
         ));
         $wp_customize->add_panel( $page_layout_panel );
 
-        // Page Layout Options
         require_once get_theme_file_path('/inc/option-panel/customizer/options/option-page-layout.php');
 
-        // Typography
+        /**
+         *  ================================================
+         *  ============ Typography Panel ==================
+         *  ================================================
+         * 
+         *  You can customize those information from Customizer > Craftnce Options > Footer Section Panel.
+         *  You can also override the functions using child theme provided by Craftnce
+         */
         $typography_panel = new craftnce_WP_Customize_Panel( $wp_customize,'typography_panel', array(
             'title'                     =>  __('Typography', 'craftnce'),
             'capability'                =>  'edit_theme_options',
@@ -47,21 +60,33 @@
         ));
         $wp_customize->add_panel( $typography_panel );
 
-        // Typography Options
         require_once get_theme_file_path('/inc/option-panel/customizer/options/typography.php');
 
-        // Header
+        /**
+         *  ================================================
+         *  ============ Typography Section Panel ==============
+         *  ================================================
+         * 
+         *  You can customize those information from Customizer > Craftnce Options > Typography Section Panel.
+         *  You can also override the functions using child theme provided by Craftnce
+         */
         $craftnce_header = new craftnce_WP_Customize_Panel( $wp_customize,'header_panel', array(
-            'title'                     =>  __('Typography', 'craftnce'),
+            'title'                     =>  __('Header', 'craftnce'),
             'capability'                =>  'edit_theme_options',
             'panel'                     =>  'craftnce_options'
         ));
         $wp_customize->add_panel( $craftnce_header );
 
-        // Typography Options
         require_once get_theme_file_path('/inc/option-panel/customizer/options/option-header.php');
 
-        // Header
+        /**
+         *  ================================================
+         *  ============ Footer Section Panel ==============
+         *  ================================================
+         * 
+         *  You can customize those information from Customizer > Craftnce Options > Footer Section Panel.
+         *  You can also override the functions using child theme provided by Craftnce
+         */
         $craftnce_footer = new craftnce_WP_Customize_Panel( $wp_customize,'footer_panel', array(
             'title'                     =>  __('Footer', 'craftnce'),
             'capability'                =>  'edit_theme_options',
@@ -69,11 +94,18 @@
         ));
         $wp_customize->add_panel( $craftnce_footer );
 
-        // Typography Options
         require_once get_theme_file_path('/inc/option-panel/customizer/options/option-footer.php');
 
+        
 
-
+        /**
+         *  ================================================
+         *  ============ Home Page Panel ===================
+         *  ================================================
+         * 
+         *  You can customize those information from Customizer > Craftnce Options > Home Page Panel.
+         *  You can also override the functions using child theme provided by Craftnce
+         */
         $homePagePanel = new craftnce_WP_Customize_Panel( $wp_customize,'home_page_panel', array(
             'title'                     =>  __('Home Page', 'craftnce'),
             'capability'                =>  'edit_theme_options',
@@ -89,7 +121,6 @@
         require_once get_theme_file_path('/inc/option-panel/customizer/options/home-info.php');
         require_once get_theme_file_path('/inc/option-panel/customizer/options/home-features.php');
         require_once get_theme_file_path('/inc/option-panel/customizer/options/home-service.php');
-        require_once get_theme_file_path('/inc/option-panel/customizer/options/home-counter.php');
         require_once get_theme_file_path('/inc/option-panel/customizer/options/home-testimonials.php');
         require_once get_theme_file_path('/inc/option-panel/customizer/options/home-infography.php');
         require_once get_theme_file_path('/inc/option-panel/customizer/options/home-brands.php');
@@ -100,8 +131,11 @@
         require_once get_theme_file_path('/inc/option-panel/customizer/options/option-blog-page.php');
 
         /**
-         *  This options will be used for about page template options.
-         *  You can customize those informations from Customizer > Craftnce Options > About Page Panel.
+         *  ================================================
+         *  ============ About Page Panel ==================
+         *  ================================================
+         * 
+         *  You can customize those information from Customizer > Craftnce Options > About Page Panel.
          *  You can also override the functions using child theme provided by Craftnce
          */
         $about_page_panel = new craftnce_WP_Customize_Panel( $wp_customize,'about_page_panel', array(
@@ -113,5 +147,22 @@
 
         require_once get_theme_file_path('/inc/option-panel/customizer/options/page/about-page/about-page-info.php');
         require_once get_theme_file_path('/inc/option-panel/customizer/options/page/about-page/about-page-casestudy.php');
+
+        /**
+         *  ================================================
+         *  ============ Common Section Panel ==============
+         *  ================================================
+         * 
+         *  You can customize those information from Customizer > Craftnce Options > Common Section Panel.
+         *  You can also override the functions using child theme provided by Craftnce
+         */
+        $craftnce_common_sections = new craftnce_WP_Customize_Panel( $wp_customize,'common_section_panel', array(
+            'title'                     =>  __('Common', 'craftnce'),
+            'capability'                =>  'edit_theme_options',
+            'panel'                     =>  'craftnce_options'
+        ));
+        $wp_customize->add_panel( $craftnce_common_sections );
+
+        require_once get_theme_file_path('/inc/option-panel/customizer/options/common/section-counter.php');
     }
     add_action('customize_register', 'craftnce_customizer');

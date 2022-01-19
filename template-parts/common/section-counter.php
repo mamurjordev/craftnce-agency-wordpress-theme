@@ -4,18 +4,18 @@
         <div class="container text-center py-5">
             <h6 class="text-uppercase text-md fw-bold counter-section-subtitle">
                 <?php
-                    echo esc_html( get_theme_mod('craftnce_home_counter_subheading_setting', 'featured case study') );
+                    echo esc_html( get_theme_mod('craftnce_section_counter_subheading_setting', 'featured case study') );
                 ?>
             </h6>
             <h2 class="text-uppercase text-light fw-900 text-xl mt-3">
                 <?php
-                    echo esc_html( get_theme_mod('craftnce_home_counter_heading_setting', 'Helping dreams to do') );
+                    echo esc_html( get_theme_mod('craftnce_section_counter_heading_setting', 'Helping dreams to do') );
                 ?>
             </h2>
 
             <div class="row mt-5">
                 <?php
-                    $craftnce_counter_repeater = get_theme_mod('craftnce_home_counter_item_settings');
+                    $craftnce_counter_repeater = get_theme_mod('craftnce_section_counter_item_settings');
                     $craftnce_counter_repeater_decoded = json_decode($craftnce_counter_repeater);
                     if(!empty($craftnce_counter_repeater_decoded)) :
                         foreach($craftnce_counter_repeater_decoded as $repeater_item) :
