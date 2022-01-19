@@ -154,7 +154,7 @@
 
     <!-- Counter Section -->
     <?php
-        if(get_theme_mod('craftnce_show_home_counter_section_setting', 1)) {
+        if(get_theme_mod('craftnce_show_section_counter_section_setting', 1)) {
             get_template_part('template-parts/common/section-counter');
         }
         

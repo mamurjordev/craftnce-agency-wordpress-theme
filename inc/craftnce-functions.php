@@ -19,7 +19,7 @@
             }
 
             .counter-bg {
-                background: url('<?php echo esc_url(get_theme_mod('craftnce_home_counter_section_featured_image_setting')); ?>');
+                background: url('<?php echo esc_url(get_theme_mod('craftnce_section_counter_section_featured_image_setting')); ?>');
                 background-position: center;
                 background-size: cover;
                 background-repeat: no-repeat;
