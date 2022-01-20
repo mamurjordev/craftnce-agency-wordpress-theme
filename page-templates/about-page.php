@@ -112,14 +112,22 @@
         endif;
     ?>
     <!-- Counter Section -->
-    <?php get_template_part('template-parts/common/section-counter'); ?>
+    <?php
+        get_template_part('template-parts/common/section-counter');
+        
+        if(get_theme_mod('craftnce_show_about_page_skills_section_setting', 1)) :
+    ?>
 
     <!-- Skill Progressbar Section -->
     <section class="home-info">
         <div class="container">
             <div class="row progress-bar-h align-items-center py-5 py-lg-0">
                 <div class="col-lg-6 mt-5 mt-lg-0">
-                    <h2 class="info-title text-capitalize">We Have achieved<br>Experiences & Skills</h2>
+                    <h2 class="info-title text-capitalize">
+                        <?php
+                            echo esc_html( get_theme_mod('craftnce_about_skills_heading_setting', 'We Have achieved Experiences & Skills') );
+                        ?>
+                    </h2>
 
                     <div class="d-flex py-4">
                         <i class="fas fa-award fs-72 text-primary me-4"></i>
@@ -189,7 +197,9 @@
             </div>
         </div>
     </section>
-
+    <?php
+        endif;
+    ?>
     <!-- Improve The Stability -->
     <section class="improve-the-stability">
         <div class="container py-5">

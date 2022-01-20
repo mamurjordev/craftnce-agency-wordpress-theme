@@ -71,3 +71,5 @@ v1.0.6
 - Sidebar Sticky Design Issue Fix
 - Category issues on breadcrumb fix
 - Home page header content show issue fix
+- Improve Sections Customization Options
+- 
