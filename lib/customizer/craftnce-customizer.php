@@ -148,6 +148,7 @@
         require_once get_theme_file_path('/inc/option-panel/customizer/options/page/about-page/about-page-info.php');
         require_once get_theme_file_path('/inc/option-panel/customizer/options/page/about-page/about-page-casestudy.php');
         require_once get_theme_file_path('/inc/option-panel/customizer/options/page/about-page/about-page-skills.php');
+        require_once get_theme_file_path('/inc/option-panel/customizer/options/page/about-page/about-page-stability.php');
 
         /**
          *  ================================================
