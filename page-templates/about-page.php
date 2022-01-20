@@ -130,70 +130,43 @@
                     </h2>
 
                     <div class="d-flex py-4">
-                        <i class="fas fa-award fs-72 text-primary me-4"></i>
-                        <h2 class="award-text-whidth fw-bold">25 Awards is in our hands</h2>
+                        <i class="<?php echo esc_attr(get_theme_mod('craftnce_about_skills_award_icon_setting', 'fas fa-award')); ?> fs-72 text-primary me-4"></i>
+                        <h2 class="award-text-whidth fw-bold">
+                            <?php
+                                echo esc_html( get_theme_mod('craftnce_about_skills_award_heading_setting', '25 Awards is in our hands'));
+                            ?>
+                        </h2>
                     </div>
 
                     <p class="info-sec-p text-muted my-3">
-                        There are many variations of passages of Lorem Ipsum available but the majority have  suffered alteration in some form, by injected humour. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.
+                        <?php
+                            echo esc_html( get_theme_mod('craftnce_about_skills_desc_setting') );
+                        ?>
                     </p>
                 </div>
+                <?php
+                    $craftnce_skills_item_settings_repeater = get_theme_mod('craftnce_skills_item_settings');
+                    $craftnce_skills_item_settings_repeater_decoded = json_decode($craftnce_skills_item_settings_repeater);
+                    if(!empty($craftnce_skills_item_settings_repeater_decoded)) :
+                ?>
                 <div class="col-lg-6">
+                    <?php
+                        foreach($craftnce_skills_item_settings_repeater_decoded as $skills_repeater_item) :
+                    ?>
                     <div class="progress-item">
                         <div class="d-flex justify-content-between">
-                            <h6>Web Design</h6>
-                            <h6>85%</h6>
+                            <h6><?php echo esc_html( $skills_repeater_item->title ); ?></h6>
+                            <h6><?php echo esc_html( $skills_repeater_item->subtitle ); ?>%</h6>
                         </div>
                         <div class="progress mt-2">
-                            <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar" role="progressbar" style="width: <?php echo esc_html( $skills_repeater_item->subtitle ); ?>%" aria-valuenow="<?php echo esc_html( $skills_repeater_item->subtitle ); ?>" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
-                    <div class="progress-item">
-                        <div class="d-flex justify-content-between">
-                            <h6>Web Design</h6>
-                            <h6>85%</h6>
-                        </div>
-                        <div class="progress mt-2">
-                            <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="progress-item">
-                        <div class="d-flex justify-content-between">
-                            <h6>Web Design</h6>
-                            <h6>85%</h6>
-                        </div>
-                        <div class="progress mt-2">
-                            <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="progress-item">
-                        <div class="d-flex justify-content-between">
-                            <h6>Web Design</h6>
-                            <h6>85%</h6>
-                        </div>
-                        <div class="progress mt-2">
-                            <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="progress-item">
-                        <div class="d-flex justify-content-between">
-                            <h6>Web Design</h6>
-                            <h6>85%</h6>
-                        </div>
-                        <div class="progress mt-2">
-                            <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="progress-item">
-                        <div class="d-flex justify-content-between">
-                            <h6>Web Design</h6>
-                            <h6>85%</h6>
-                        </div>
-                        <div class="progress mt-2">
-                            <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
+                    <?php endforeach; ?>
                 </div>
+                <?php
+                    endif;
+                ?>
             </div>
         </div>
     </section>
