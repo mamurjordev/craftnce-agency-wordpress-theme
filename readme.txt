@@ -72,4 +72,4 @@ v1.0.6
 - Category issues on breadcrumb fix
 - Home page header content show issue fix
 - Improve Sections Customization Options
-- 
+- New section added to about page template panel in customizer
