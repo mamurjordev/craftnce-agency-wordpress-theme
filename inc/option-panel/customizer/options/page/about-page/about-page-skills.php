@@ -40,3 +40,20 @@
         'settings'          =>  'craftnce_about_skills_heading_setting',
         'type'              =>  'text'
     ));
+
+    /**
+     * skills Section - First Button Icon
+     */
+    $wp_customize->add_setting('craftnce_about_skills_award_icon_setting', array(
+        'default'           =>  'fas fa-award',
+        'capability'        => 'edit_theme_options',
+        'transport'         => 'refresh',
+        'type'              => 'theme_mod',
+        'sanitize_callback' => 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('craftnce_home_skills_award_icon_ctrl', array(
+        'label'             =>  __('Award Icon Class', 'craftnce'),
+        'section'           =>  'craftnce_about_page_skills',
+        'settings'          =>  'craftnce_about_skills_award_icon_setting',
+        'type'              =>  'text'
+    ));
