@@ -1,9 +1,9 @@
-Craftnce Theme by Saifullah
+Craftnce Theme by Mamurjor
 =========================
 
 == Copyright ==
 
-Craftnce WordPress Theme, 2021 saifullah.co
+Craftnce WordPress Theme, 2021, mamurjor.com | saifullah.co
 Craftnce is distributed under the terms of the GNU GPL.
 
 -------
