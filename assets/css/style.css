@@ -216,10 +216,6 @@ input:focus {
 #content[tabindex="-1"]:focus {
     outline: 0;
 }
-.bypostauthor{}
-.gallery-caption{}
-
-
 
 /* Header Section */
 #site-header {
@@ -920,4 +916,8 @@ p.comment-policy {
 }
 .copyright-text a:hover {
     text-decoration: underline;
+}
+
+.award-text-whidth {
+	width: 200px;
 }
