@@ -76,16 +76,6 @@
         'customizer_repeater_subtitle_control'              =>  true,
     )));
 
-    function repeater_image_labels( $string, $id, $control ) {
-        if ( $id === 'craftnce_home_testimonials_items_control' ) {
-            if ( $control === 'customizer_repeater_image_control' ) {
-                return esc_html__( 'Avatar','craftnce' );
-            }
-       }
-       return $string;
-    }
-    add_filter( 'repeater_input_labels_filter','repeater_image_labels', 10 , 3 );
-
     function repeater_title_labels( $string, $id, $control ) {
         if ( $id === 'craftnce_home_testimonials_items_control' ) {
             if ( $control === 'customizer_repeater_title_control' ) {
