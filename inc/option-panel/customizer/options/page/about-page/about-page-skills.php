@@ -90,3 +90,27 @@
         'settings'          =>  'craftnce_about_skills_desc_setting',
         'type'              =>  'textarea'
     ));
+
+    /**
+     * Skills Section - Skills Progress Items
+     */
+    $wp_customize->add_setting( 'craftnce_skills_item_settings', array(
+        'sanitize_callback' => 'customizer_repeater_sanitize'
+    ));
+    $wp_customize->add_control( new Customizer_Repeater( $wp_customize, 'craftnce_skills_item_ctrl', array(
+        'label'                                             =>  esc_html__('Skill Progressbar Item','craftnce'),
+        'section'                                           =>  'craftnce_about_page_skills',
+        'settings'                                          =>  'craftnce_skills_item_settings',
+        'customizer_repeater_title_control'                 =>  true,
+        'customizer_repeater_subtitle_control'              =>  true,
+    )));
+
+    function craftnce_repeater_labels( $string, $id, $control ) {
+        if ( $id === 'craftnce_skills_item_ctrl' ) {
+            if ( $control === 'customizer_repeater_subtitle_control' ) {
+                return esc_html__( 'Progress Number','craftnce' );
+            }
+       }
+       return $string;
+    }
+    add_filter( 'repeater_input_labels_filter','craftnce_repeater_labels', 10 , 3 );
