@@ -42,7 +42,7 @@
     ));
 
     /**
-     * skills Section - First Button Icon
+     * Award Icon Class
      */
     $wp_customize->add_setting('craftnce_about_skills_award_icon_setting', array(
         'default'           =>  'fas fa-award',
@@ -56,4 +56,37 @@
         'section'           =>  'craftnce_about_page_skills',
         'settings'          =>  'craftnce_about_skills_award_icon_setting',
         'type'              =>  'text'
+    ));
+
+    /**
+     * Skills Section - Award Heading
+     */
+    $wp_customize->add_setting('craftnce_about_skills_award_heading_setting', array(
+        'default'           => '25 Awards is in our hands',
+        'capability'        => 'edit_theme_options',
+        'transport'         => 'refresh',
+        'type'              => 'theme_mod',
+        'sanitize_callback' => 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('craftnce_about_skills_award_heading_ctrl', array(
+        'label'             =>  __('Award Box Text', 'craftnce'),
+        'section'           =>  'craftnce_about_page_skills',
+        'settings'          =>  'craftnce_about_skills_award_heading_setting',
+        'type'              =>  'text'
+    ));
+
+    /**
+     * Skills Section - Description
+     */
+    $wp_customize->add_setting('craftnce_about_skills_desc_setting', array(
+        'capability'        => 'edit_theme_options',
+        'transport'         => 'refresh',
+        'type'              => 'theme_mod',
+        'sanitize_callback' => 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('craftnce_about_skills_desc_ctrl', array(
+        'label'             =>  __('Award Box Text', 'craftnce'),
+        'section'           =>  'craftnce_about_page_skills',
+        'settings'          =>  'craftnce_about_skills_desc_setting',
+        'type'              =>  'textarea'
     ));
