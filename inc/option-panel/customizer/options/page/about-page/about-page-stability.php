@@ -28,7 +28,7 @@
      * stability Section - Heading
      */
     $wp_customize->add_setting('craftnce_about_page_stability_heading_setting', array(
-        'default'           => ' Your Success With Solution',
+        'default'           => 'Our amazing stabilities',
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod',
@@ -45,17 +45,17 @@
      * stability Section - Sub-heading
      */
     $wp_customize->add_setting('craftnce_about_page_stability_subheading_setting', array(
-        'default'           => ' Our amazing stabilitys',
+        'default'           => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy',
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod',
         'sanitize_callback' => 'sanitize_text_field'
     ));
     $wp_customize->add_control('craftnce_about_page_stability_subheading_ctrl', array(
-        'label'             =>  __('Sub-heading', 'craftnce'),
+        'label'             =>  __('Description', 'craftnce'),
         'section'           =>  'craftnce_about_page_stability',
         'settings'          =>  'craftnce_about_page_stability_subheading_setting',
-        'type'              =>  'text'
+        'type'              =>  'textarea'
     ));
     
     // stability Items
