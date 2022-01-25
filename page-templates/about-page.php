@@ -172,34 +172,54 @@
     </section>
     <?php
         endif;
+
+        if(get_theme_mod('craftnce_show_about_page_stability_section_setting', 1)) :
     ?>
     <!-- Improve The Stability -->
     <section class="improve-the-stability">
         <div class="container py-5">
             <div class="row text-center">
-                <h2 class="fs-48 fw-900">Improve the stability</h2>
-                <p class="text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
+                <h2 class="fs-48 fw-900">
+                    <?php 
+                        echo esc_html(get_theme_mod('craftnce_about_page_stability_heading_setting', 'Your Success With Solution'));
+                    ?>
+                </h2>
+                <p class="text-muted">
+                    <?php 
+                        echo esc_html(get_theme_mod('craftnce_about_page_stability_subheading_setting', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy'));
+                    ?>
+                </p>
             </div>
+            <?php
+                $craftnce_stability_item_settings_repeater = get_theme_mod('craftnce_about_page_stability_item_settings');
+                $craftnce_stability_item_settings_repeater_decoded = json_decode($craftnce_stability_item_settings_repeater);
+                if(!empty($craftnce_stability_item_settings_repeater_decoded)) :
+            ?>
             <div class="row text-center mt-5">
+                <?php
+                    foreach($craftnce_stability_item_settings_repeater_decoded as $craftnce_stability_item) :
+                ?>
                 <div class="col-md-6 col-xl-4 mt-4">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/ss-01.png" alt="">
-                    <h3 class="mt-2">Unlimited Content</h3>
-                    <p class="lh-base text-muted">Stars air over land bring life female stars dry be abundantly may green te which fill after our behold very god pair.</p>
+                    <img src="<?php echo esc_url( $craftnce_stability_item->image_url ); ?>" alt="">
+                    <h3 class="mt-2 fw-bolder text-capitalize">
+                        <?php
+                            echo esc_html( $craftnce_stability_item->title );
+                        ?>
+                    </h3>
+                    <p class="lh-base text-muted">
+                        <?php
+                            echo esc_html( $craftnce_stability_item->text );
+                        ?>
+                    </p>
                 </div>
-                <div class="col-md-6 col-xl-4 mt-4">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/ss-02.png" alt="">
-                    <h3 class="mt-2">Unlimited Content</h3>
-                    <p class="lh-base text-muted">Stars air over land bring life female stars dry be abundantly may green te which fill after our behold very god pair.</p>
-                </div>
-                <div class="col-md-6 col-xl-4 mt-4">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/ss-03.png" alt="">
-                    <h3 class="mt-2">Unlimited Content</h3>
-                    <p class="lh-base text-muted">Stars air over land bring life female stars dry be abundantly may green te which fill after our behold very god pair.</p>
-                </div>
+                <?php endforeach; ?>
             </div>
+            <?php endif; ?>
         </div>
     </section>
-
+    <?php
+        endif;
+    ?>
     <!-- Team Section -->
     <section class="team-sction py-5">
         <div class="container py-5">
