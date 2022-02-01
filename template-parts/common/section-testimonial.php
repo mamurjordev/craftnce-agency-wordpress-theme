@@ -6,12 +6,12 @@
                 <div class="col-lg-7 mx-auto">
                     <h6 class="text-uppercase text-md fw-bold text-primary">
                         <?php
-                            echo esc_html( get_theme_mod('craftnce_home_testimonials_subheading_setting', 'testimonials') );
+                            echo esc_html( get_theme_mod('craftnce_testimonials_subheading_setting', 'testimonials') );
                         ?>
                     </h6>
                     <h2 class="text-uppercase fw-900 text-xl mt-3">
                         <?php
-                            echo esc_html( get_theme_mod('craftnce_home_testimonials_heading_setting', 'Our worldwide clients says about us') );
+                            echo esc_html( get_theme_mod('craftnce_testimonials_heading_setting', 'Our worldwide clients says about us') );
                         ?>
                     </h2>
                 </div>
@@ -21,10 +21,10 @@
                 <div class="col-xl-10 offset-xl-1" >
                     <div class="testimonial-nav mb-30 d-flex justify-items-center">
                         <?php
-                            $craftnce_features_repeater = get_theme_mod('craftnce_home_testimonials_item_settings');
-                            $craftnce_features_repeater_decoded = json_decode($craftnce_features_repeater);
-                            if(!empty($craftnce_features_repeater_decoded)) :
-                                foreach($craftnce_features_repeater_decoded as $repeater_item) :
+                            $craftnce_testimonial_repeater = get_theme_mod('craftnce_testimonials_item_settings');
+                            $craftnce_testimonial_repeater_decoded = json_decode($craftnce_testimonial_repeater);
+                            if(!empty($craftnce_testimonial_repeater_decoded)) :
+                                foreach($craftnce_testimonial_repeater_decoded as $repeater_item) :
                         ?>
                         <div class="testimonial-thumb">
                             <img src="<?php echo esc_url($repeater_item->image_url); ?>" class="rounded-circle" alt="">
@@ -36,10 +36,10 @@
                 </div>
                     <div class="testimonial-active mt-5">
                         <?php
-                            $craftnce_features_repeater_content = get_theme_mod('craftnce_home_testimonials_item_settings');
-                            $craftnce_features_repeater_decoded_content = json_decode($craftnce_features_repeater_content);
-                            if(!empty($craftnce_features_repeater_decoded_content)) :
-                                foreach($craftnce_features_repeater_decoded_content as $repeater_item_content) :
+                            $craftnce_testimonial_repeater_content = get_theme_mod('craftnce_testimonials_item_settings');
+                            $craftnce_testimonial_repeater_decoded_content = json_decode($craftnce_testimonial_repeater_content);
+                            if(!empty($craftnce_testimonial_repeater_decoded_content)) :
+                                foreach($craftnce_testimonial_repeater_decoded_content as $repeater_item_content) :
                         ?>
                         <div class="testimonial-item text-center">
                             <div class="designation mb-30 fw-bolder">

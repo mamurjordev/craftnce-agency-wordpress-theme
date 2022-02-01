@@ -121,7 +121,6 @@
         require_once get_theme_file_path('/inc/option-panel/customizer/options/home-info.php');
         require_once get_theme_file_path('/inc/option-panel/customizer/options/home-features.php');
         require_once get_theme_file_path('/inc/option-panel/customizer/options/home-service.php');
-        require_once get_theme_file_path('/inc/option-panel/customizer/options/home-testimonials.php');
         require_once get_theme_file_path('/inc/option-panel/customizer/options/home-infography.php');
         require_once get_theme_file_path('/inc/option-panel/customizer/options/home-brands.php');
         require_once get_theme_file_path('/inc/option-panel/customizer/options/home-newsletter.php');
@@ -166,5 +165,6 @@
         $wp_customize->add_panel( $craftnce_common_sections );
 
         require_once get_theme_file_path('/inc/option-panel/customizer/options/common/section-counter.php');
+        require_once get_theme_file_path('/inc/option-panel/customizer/options/common/section-testimonial.php');
     }
     add_action('customize_register', 'craftnce_customizer');
