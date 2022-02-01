@@ -175,7 +175,7 @@
 
         if(get_theme_mod('craftnce_show_about_page_stability_section_setting', 1)) :
     ?>
-    <!-- Improve The Stability -->
+    <!-- Improve The Stability Section-->
     <section class="improve-the-stability">
         <div class="container py-5">
             <div class="row text-center">
