@@ -327,43 +327,12 @@
         if(get_theme_mod('craftnce_show_about_newsletter_section_setting', 1)) {
             get_template_part('template-parts/common/section-newsletter');
         }
-    ?>
 
-    <!-- Band Logo Section -->
-    <section class="py-5">
-        <div class="container py-5">
-            <div class="mb-4 text-center">
-                <h2 class="fs-48 fw-900">Trusted over 100+ companies</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum asperiores labore tenetur?</p>
-            </div>
-            <div class="brand my-5">
-                <div>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/brand-01.png" alt="">
-                </div>
-                <div>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/brand-02.png" alt="">
-                </div>
-                <div>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/brand-03.png" alt="">
-                </div>
-                <div>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/brand-04.png" alt="">
-                </div>
-                <div>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/brand-05.png" alt="">
-                </div>
-                <div>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/brand-03.png" alt="">
-                </div>
-                <div>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/brand-06.png" alt="">
-                </div>
-                <div>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/brand-02.png" alt="">
-                </div>
-            </div>
-        </div>
-    </section>
+        // Brand Logo
+        if(get_theme_mod('craftnce_show_about_brand_section_setting', 1)) {
+            get_template_part('template-parts/common/section-brand-logo');
+        };
+    ?>
 
 <?php
     get_footer();
