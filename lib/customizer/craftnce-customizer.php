@@ -166,5 +166,6 @@
         require_once get_theme_file_path('/inc/option-panel/customizer/options/common/section-newsletter.php');
         require_once get_theme_file_path('/inc/option-panel/customizer/options/common/section-brand.php');
         require_once get_theme_file_path('/inc/option-panel/customizer/options/common/section-blog.php');
+        require_once get_theme_file_path('/inc/option-panel/customizer/options/common/section-team.php');
     }
     add_action('customize_register', 'craftnce_customizer');
