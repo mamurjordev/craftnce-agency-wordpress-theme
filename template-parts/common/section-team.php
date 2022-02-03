@@ -18,6 +18,8 @@
         <div class="row mt-4">
             <?php
                 foreach($craftnce_team_member_settings_repeater_decoded as $craftnce_team_member) :
+
+                    print_r($craftnce_team_member->social_repeater);
             ?>
             <div class="col-md-6 col-lg-4 col-xxl-3 mt-4">
                 <div class="team-member-card card border-0 overflow-hidden d-flex flex-column justify-content-between">
