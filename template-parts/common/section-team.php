@@ -19,14 +19,20 @@
             <?php
                 foreach($craftnce_team_member_settings_repeater_decoded as $craftnce_team_member) :
 
-                    print_r($craftnce_team_member->social_repeater);
+                    $social_repeater = $craftnce_team_member->social_repeater;
+
+                   $social_repeater = str_replace('[','',$social_repeater);
+                   $social_repeater = str_replace(']','',$social_repeater);
+                    var_dump(json_decode($social_repeater));
+                    // print_r($social_repeater);
             ?>
             <div class="col-md-6 col-lg-4 col-xxl-3 mt-4">
                 <div class="team-member-card card border-0 overflow-hidden d-flex flex-column justify-content-between">
                     <div class="team-avatar text-center">
-                        <img src="<?php echo esc_url($craftnce_team_member->image_url); ?>" class="img-fluid team-avatar-img rounded-circle mx-auto" alt="">
+                        <img src="<?php echo esc_url($craftnce_team_member->image_url); ?>"
+                            class="img-fluid team-avatar-img rounded-circle mx-auto" alt="">
                     </div>
-                    
+
                     <div class="text-center">
                         <h3>
                             <?php
