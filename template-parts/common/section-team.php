@@ -18,19 +18,11 @@
         <div class="row mt-4">
             <?php
                 foreach($craftnce_team_member_settings_repeater_decoded as $craftnce_team_member) :
-
-                    $social_repeater = $craftnce_team_member->social_repeater;
-
-                   $social_repeater = str_replace('[','',$social_repeater);
-                   $social_repeater = str_replace(']','',$social_repeater);
-                    var_dump(json_decode($social_repeater));
-                    // print_r($social_repeater);
             ?>
             <div class="col-md-6 col-lg-4 col-xxl-3 mt-4">
                 <div class="team-member-card card border-0 overflow-hidden d-flex flex-column justify-content-between">
                     <div class="team-avatar text-center">
-                        <img src="<?php echo esc_url($craftnce_team_member->image_url); ?>"
-                            class="img-fluid team-avatar-img rounded-circle mx-auto" alt="">
+                        <img src="<?php echo esc_url($craftnce_team_member->image_url); ?>" class="img-fluid team-avatar-img rounded-circle mx-auto" alt="">
                     </div>
 
                     <div class="text-center">
@@ -48,19 +40,9 @@
 
                     <div class="team-social-container bg-primary py-2">
                         <div class="team-social w-max mx-auto">
-                            <?php
-                                $craftnce_team_social_repeater = json_decode($craftnce_team_member->social_repeater);
-
-                                // if(!empty($craftnce_team_social_repeater)) :
-                                    foreach($craftnce_team_social_repeater as $social_repeater_item) :
-                            ?>
-                            <a href="<?php echo esc_url( $social_repeater_item->link ); ?>">
-                                <i class="<?php echo esc_attr( $social_repeater_item->icon ); ?>"></i>
+                            <a href="">
+                                <i class=""></i>
                             </a>
-                            <?php
-                                    endforeach;
-                                // endif;
-                            ?>
                         </div>
                     </div>
                 </div>
