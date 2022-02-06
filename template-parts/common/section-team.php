@@ -3,7 +3,11 @@
     <div class="container py-5">
         <div class="row text-center">
             <div class="col-sm-7 col-xl-4 mx-auto">
-                <h2 class="fw-900">Meet Our Experienced & Skilled Team</h2>
+                <h2 class="fw-900">
+                    <?php
+                        echo esc_html( get_theme_mod('craftnce_team_section_heading_setting', 'Meet Our Experienced & Skilled Team') );
+                    ?>
+                </h2>
             </div>
         </div>
         <div class="row mt-4">
