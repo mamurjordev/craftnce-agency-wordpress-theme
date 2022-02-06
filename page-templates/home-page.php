@@ -67,7 +67,7 @@
                             echo esc_html( get_theme_mod('craftnce_home_info_heading_setting', 'WE\'RE LEADING DIGITAL BUSINESS AGENCY') );
                         ?>
                     </h2>
-                    <p class="info-sec-p text-muted my-3">
+                    <p class="info-sec-p text-muted my-3 font-rubik">
                         <?php
                             echo esc_html( get_theme_mod('craftnce_home_info_description_setting', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate dolore non reiciendis explicabo eius nihil.') );
                         ?>

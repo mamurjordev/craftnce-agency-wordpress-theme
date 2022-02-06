@@ -1,12 +1,12 @@
 @media only screen and (max-width: 575px) {
     .home-hero-title {
-        font-size: 35px;
-        line-height: 50px;
+        font-size: 35px !important;
+        line-height: 50px !important;
     }
     .info-title,
     .text-xl,
     .fs-48 {
-        font-size: 33px;
+        font-size: 33px !important;
     }
     .testimonial-thumb img {
         width: 50px;
@@ -19,8 +19,8 @@
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
     .home-hero-title {
-        font-size: 55px;
-        line-height: 60px;
+        font-size: 55px !important;
+        line-height: 60px !important;
     }
     .testimonial-thumb img {
         width: 50px;
@@ -33,8 +33,8 @@
 }
 @media only screen and (min-width: 768px) and (max-width: 990px) {
     .home-hero-title {
-        font-size: 55px;
-        line-height: 60px;
+        font-size: 55px !important;
+        line-height: 60px !important;
     }
 }
 @media only screen and (min-width: 991px) and (max-width: 1199px) {
@@ -42,8 +42,8 @@
         min-height: 80vh;
     }
     .home-hero-title {
-        font-size: 45px;
-        line-height: 60px;
+        font-size: 45px !important;
+        line-height: 60px !important;
     }
     .about-info2-inner-box {
         position: absolute;
@@ -57,8 +57,8 @@
         min-height: 80vh;
     }
     .home-hero-title {
-        font-size: 55px;
-        line-height: 80px;
+        font-size: 55px !important;
+        line-height: 80px !important;
     }
     .features-box {
         width: 300px;

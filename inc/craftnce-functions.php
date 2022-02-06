@@ -14,7 +14,7 @@
                 --primary-gray: #dedede;
                 --main-shadow: 20px 20px 100px 40px rgba(73, 103, 255, 0.07);
 
-                --font-inconsolata: 'Inconsolata', monospace;
+                --font-rubik: 'Rubik', sans-serif;
                 --primary-font: 'Inter', sans-serif;
             }
 
