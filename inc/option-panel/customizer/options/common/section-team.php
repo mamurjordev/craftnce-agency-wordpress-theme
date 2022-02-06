@@ -51,7 +51,7 @@
         'sanitize_callback' => 'sanitize_text_field'
     ));
     $wp_customize->add_control('craftnce_team_section_heading_ctrl', array(
-        'label'             =>  __('Heading', 'craftnce'),
+        'label'             =>  __('Section Heading', 'craftnce'),
         'section'           =>  'craftnce_team_member_section',
         'settings'          =>  'craftnce_team_section_heading_setting',
         'type'              =>  'text'
@@ -107,7 +107,7 @@
     )));
 
     function team_social_repeater_name_labels( $string, $id, $control ) {
-        if ( $id === 'craftnce_show_team_social_media_repeater_item_ctrl' ) {
+        if ( $id === 'craftnce_team_social_media_repeater_item_ctrl' ) {
             if ( $control === 'customizer_repeater_title_control' ) {
                 return esc_html__( 'Social Media Name','craftnce' );
             }
@@ -117,7 +117,7 @@
     add_filter( 'repeater_input_labels_filter','team_social_repeater_name_labels', 10 , 3 );
 
     function team_social_repeater_link_labels( $string, $id, $control ) {
-        if ( $id === 'craftnce_show_team_social_media_repeater_item_ctrl' ) {
+        if ( $id === 'craftnce_team_social_media_repeater_item_ctrl' ) {
             if ( $control === 'customizer_repeater_text_control' ) {
                 return esc_html__( 'Social Media Link','craftnce' );
             }
@@ -178,7 +178,7 @@
     )));
 
     function team_social_repeater_name_labels2( $string, $id, $control ) {
-        if ( $id === 'craftnce_show_team_social_media_repeater_item_ctrl' ) {
+        if ( $id === 'craftnce_team_social_media_repeater_item_ctrl2' ) {
             if ( $control === 'customizer_repeater_title_control' ) {
                 return esc_html__( 'Social Media Name','craftnce' );
             }
