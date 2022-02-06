@@ -62,7 +62,7 @@
     $wp_customize->add_setting( 'craftnce_home_service_item_settings', array(
         'sanitize_callback' => 'customizer_repeater_sanitize'
     ));
-    $wp_customize->add_control( new Customizer_Repeater( $wp_customize, 'craftnce_show_home_service_item_ctrl', array(
+    $wp_customize->add_control( new Customizer_Repeater( $wp_customize, 'craftnce_home_service_item_ctrl', array(
         'label'                                             =>  esc_html__('Service Item','craftnce'),
         'section'                                           =>  'craftnce_home_page_service',
         'settings'                                          =>  'craftnce_home_service_item_settings',
