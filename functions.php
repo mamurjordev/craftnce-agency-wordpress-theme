@@ -40,8 +40,8 @@
 
     function craftnce_assets_enqueue() {
         // Stylesheets Enqueue
+        wp_enqueue_style('craftnce-google-fonts', '//fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
         wp_enqueue_style('craftnce-bootstrap-css', get_template_directory_uri().'/assets/css/bootstrap.css');
-        wp_enqueue_style('craftnce-google-fonts', '//fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
         wp_enqueue_style('craftnce-slick-css', get_template_directory_uri().'/assets/css/slick.css');
         wp_enqueue_style('craftnce-slick-theme-css', get_template_directory_uri().'/assets/css/slick-theme.css');
         wp_enqueue_style('craftnce-fontawesome-main', get_template_directory_uri().'/assets/css/fontawesome.css');
