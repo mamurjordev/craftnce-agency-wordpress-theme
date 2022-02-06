@@ -155,7 +155,7 @@
          *  You can also override the functions using child theme provided by Craftnce
          */
         $craftnce_common_sections = new craftnce_WP_Customize_Panel( $wp_customize,'common_section_panel', array(
-            'title'                     =>  __('Common', 'craftnce'),
+            'title'                     =>  __('Common Sections', 'craftnce'),
             'capability'                =>  'edit_theme_options',
             'panel'                     =>  'craftnce_options'
         ));
