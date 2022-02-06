@@ -188,7 +188,7 @@
     add_filter( 'repeater_input_labels_filter','team_social_repeater_name_labels2', 10 , 3 );
 
     function team_social_repeater_link_labels2( $string, $id, $control ) {
-        if ( $id === 'craftnce_show_team_social_media_repeater_item_ctrl' ) {
+        if ( $id === 'craftnce_team_social_media_repeater_item_ctrl2' ) {
             if ( $control === 'customizer_repeater_text_control' ) {
                 return esc_html__( 'Social Media Link','craftnce' );
             }
@@ -196,3 +196,75 @@
        return $string;
     }
     add_filter( 'repeater_input_labels_filter','team_social_repeater_link_labels2', 10 , 3 );
+
+
+
+
+    /**
+     * team Section - Third team member
+     * 
+     * Name
+     */
+    $wp_customize->add_setting('craftnce_team_member_3_name_settings', array(
+        'capability'        => 'edit_theme_options',
+        'transport'         => 'refresh',
+        'type'              => 'theme_mod',
+        'sanitize_callback' => 'sanitize_text_field'
+    ));
+
+    $wp_customize->add_control('craftnce_team_member_3_name_ctrl', array(
+        'label'             =>  __('Third Team Member Name', 'craftnce'),
+        'section'           =>  'craftnce_team_member_section',
+        'settings'          =>  'craftnce_team_member_3_name_settings',
+        'type'              =>  'text'
+    ));
+
+    /**
+     * Designation
+     */
+    $wp_customize->add_setting('craftnce_team_member_3_designation_settings', array(
+        'capability'        => 'edit_theme_options',
+        'transport'         => 'refresh',
+        'type'              => 'theme_mod',
+        'sanitize_callback' => 'sanitize_text_field'
+    ));
+
+    $wp_customize->add_control('craftnce_team_member_3_designation_ctrl', array(
+        'label'             =>  __('Third Team Member Designation', 'craftnce'),
+        'section'           =>  'craftnce_team_member_section',
+        'settings'          =>  'craftnce_team_member_3_designation_settings',
+        'type'              =>  'text'
+    ));
+
+    // Service Items
+    $wp_customize->add_setting( 'craftnce_team_social_media_repeater_item_settings3', array(
+        'sanitize_callback' => 'customizer_repeater_sanitize'
+    ));
+    $wp_customize->add_control( new Customizer_Repeater( $wp_customize, 'craftnce_team_social_media_repeater_item_ctrl3', array(
+        'label'                                             =>  esc_html__('Social Media','craftnce'),
+        'section'                                           =>  'craftnce_team_member_section',
+        'settings'                                          =>  'craftnce_team_social_media_repeater_item_settings3',
+        'customizer_repeater_icon_control'                  =>  true,
+        'customizer_repeater_title_control'                 =>  true,
+        'customizer_repeater_text_control'                  =>  true,
+    )));
+
+    function team_social_repeater_name_labels3( $string, $id, $control ) {
+        if ( $id === 'craftnce_team_social_media_repeater_item_ctrl3' ) {
+            if ( $control === 'customizer_repeater_title_control' ) {
+                return esc_html__( 'Social Media Name','craftnce' );
+            }
+       }
+       return $string;
+    }
+    add_filter( 'repeater_input_labels_filter','team_social_repeater_name_labels3', 10 , 3 );
+
+    function team_social_repeater_link_labels3( $string, $id, $control ) {
+        if ( $id === 'craftnce_team_social_media_repeater_item_ctrl3' ) {
+            if ( $control === 'customizer_repeater_text_control' ) {
+                return esc_html__( 'Social Media Link','craftnce' );
+            }
+       }
+       return $string;
+    }
+    add_filter( 'repeater_input_labels_filter','team_social_repeater_link_labels3', 10 , 3 );
