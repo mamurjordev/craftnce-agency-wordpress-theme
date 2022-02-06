@@ -89,7 +89,7 @@
                                 <div class="d-flex">
                                     <i class="<?php echo esc_attr($box_repeater_item->icon_value); ?> info2-col-ico me-3 mt-1 text-primary fs-5"></i>
                                     <div>
-                                        <h5>
+                                        <h5 class="fw-bold">
                                             <?php echo esc_html( $box_repeater_item->title ); ?>
                                         </h5>
                                         <p class="text-md text-muted lh-base mb-0">
