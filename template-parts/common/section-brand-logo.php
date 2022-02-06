@@ -5,7 +5,7 @@
             <h2 class="fs-48 fw-900 text-uppercase">
                 <?php echo esc_html( get_theme_mod('craftnce_brand_section_heading_setting', 'Trusted over 100+ companies') ); ?>
             </h2>
-            <p>
+            <p class="text-muted">
                 <?php echo esc_html( get_theme_mod('craftnce_brand_section_short_description_setting', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum asperiores labore tenetur?') ); ?>
             </p>
         </div>
