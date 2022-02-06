@@ -1,6 +1,6 @@
 /* Basic Typography */
 body {
-    font-family: var(--font-rubik) !important;
+    font-family: var(--font-rubik);
 }
 h1,
 h2,
@@ -8,7 +8,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: var(--primary-font) !important;
+    font-family: var(--primary-font);
 }
 .text-xsm {
     font-size: 12px;
@@ -928,4 +928,7 @@ p.comment-policy {
 
 .award-text-whidth {
 	width: 210px;
+}
+.progress {
+	border-radius: 0;
 }
