@@ -6,7 +6,7 @@
 
     <?php wp_head(); ?>
 </head>
-<body class="<?php body_class(); ?>">
+<body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
     <div id="page" class="craftnce_site">
         <a class="skip-link screen-reader-text" href="#content">

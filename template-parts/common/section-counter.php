@@ -7,7 +7,7 @@
                     echo esc_html( get_theme_mod('craftnce_section_counter_subheading_setting', 'featured case study') );
                 ?>
             </h6>
-            <h2 class="text-uppercase text-light fw-900 text-xl mt-3">
+            <h2 class="text-uppercase text-light fw-900 text-xl mt-3 font-inter">
                 <?php
                     echo esc_html( get_theme_mod('craftnce_section_counter_heading_setting', 'Helping dreams to do') );
                 ?>

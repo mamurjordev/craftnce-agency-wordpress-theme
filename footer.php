@@ -77,7 +77,7 @@
 
                         <form action="">
                             <div class="email_sub position-relative">
-                                <input type="text" name="email_sub" id="email_sub" class="email_sub_inp bg-dark form-control rounded-0 text-light border-0">
+                                <input type="text" name="email_sub" id="email_sub" class="email_sub_inp bg-dark form-control rounded-0 text-light border-0" placeholder="Enter your email">
                                 <button class="btn btn-primary position-absolute top-0 end-0 rounded-0 border-0">
                                     <i class="fas fa-paper-plane"></i>
                                 </button>

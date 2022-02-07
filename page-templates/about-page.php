@@ -20,7 +20,7 @@
                     <h6 class="text-uppercase fw-bold text-sm text-primary">
                         <?php echo get_theme_mod('craftnce_about_info_subheading_setting', 'history'); ?>
                     </h6>
-                    <h2 class="fs-1 fw-900 text-capitalize">
+                    <h2 class="fs-1 fw-900 text-capitalize font-inter">
                         <?php
                             echo esc_html( get_theme_mod('craftnce_about_info_heading_setting', 'For the next generation of big businesses') );
                         ?>
@@ -43,7 +43,7 @@
         <div class="container mb-5">
             <div class="row">
                 <div class="col-md-6">
-                    <h2 class="fw-900 fs-1">
+                    <h2 class="fw-900 fs-1 font-inter">
                         <?php echo esc_html( get_theme_mod('craftnce_about_casestudy_heading_setting', 'For the next generation of big businesses') ); ?>
                     </h2>
                 </div>
@@ -63,7 +63,7 @@
                     if(get_theme_mod('show_case_study_box_content')) :
                 ?>
                 <div class="about-info2-inner-box info2_bg-light bottom-0 end-0 pt-4 ps-4 pe-4 pe-lg-0 col-lg-7 me-2point5">
-                    <h5 class="fw-bold">
+                    <h5 class="fw-bold font-inter">
                         <?php
                             echo esc_html(get_theme_mod('craftnce_about_casestudy_box_heading_setting', 'If you are going to use a passage of Lorem Ipsum you need to be sure. Compare us between others companies.'));
                         ?>
@@ -123,7 +123,7 @@
         <div class="container">
             <div class="row progress-bar-h align-items-center py-5 py-lg-0">
                 <div class="col-lg-6 mt-5 mt-lg-0">
-                    <h2 class="info-title text-capitalize">
+                    <h2 class="info-title text-capitalize font-inter">
                         <?php
                             echo esc_html( get_theme_mod('craftnce_about_skills_heading_setting', 'We Have achieved Experiences & Skills') );
                         ?>
@@ -179,7 +179,7 @@
     <section class="improve-the-stability">
         <div class="container py-5">
             <div class="row text-center">
-                <h2 class="fs-48 fw-900">
+                <h2 class="fw-900 font-inter">
                     <?php 
                         echo esc_html(get_theme_mod('craftnce_about_page_stability_heading_setting', 'Your Success With Solution'));
                     ?>

@@ -9,7 +9,7 @@
                             echo esc_html( get_theme_mod('craftnce_testimonials_subheading_setting', 'testimonials') );
                         ?>
                     </h6>
-                    <h2 class="text-uppercase fw-900 text-xl mt-3">
+                    <h2 class="fw-900 mt-3 font-inter">
                         <?php
                             echo esc_html( get_theme_mod('craftnce_testimonials_heading_setting', 'Our worldwide clients says about us') );
                         ?>

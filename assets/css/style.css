@@ -2,12 +2,7 @@
 body {
     font-family: var(--font-rubik);
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.font-inter {
     font-family: var(--primary-font);
 }
 .text-xsm {
@@ -245,7 +240,7 @@ input:focus {
 }
 
 .home-hero-title {
-    font-size: 72px;
+    font-size: 68px;
     font-weight: 900;
     line-height: 96.82px;
 }

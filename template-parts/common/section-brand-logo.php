@@ -2,7 +2,7 @@
 <section class="py-5">
     <div class="container py-5">
         <div class="text-center mb-5">
-            <h2 class="fs-48 fw-900 text-uppercase">
+            <h2 class="fw-900 text-uppercase font-inter">
                 <?php echo esc_html( get_theme_mod('craftnce_brand_section_heading_setting', 'Trusted over 100+ companies') ); ?>
             </h2>
             <p class="text-muted">
