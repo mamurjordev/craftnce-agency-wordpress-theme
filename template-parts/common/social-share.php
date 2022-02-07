@@ -1,6 +1,6 @@
 <div class="row my-5">
     <div class="d-flex flex-wrap">
-        <h4 class="mt-2 mt-md-0">
+        <h4 class="mt-2 mt-md-0 font-inter">
             <?php
                 _e('Social Share -', 'craftnce');
             ?>

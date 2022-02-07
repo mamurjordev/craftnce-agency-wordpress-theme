@@ -15,7 +15,7 @@
                             echo esc_html( get_theme_mod('craftnce_home_hero_subheading_setting', 'digital service agency') );
                         ?>
                     </h6>
-                    <h1 class="home-hero-title text-uppercase">
+                    <h1 class="home-hero-title text-uppercase font-inter">
                         <?php
                             echo esc_html( get_theme_mod('craftnce_home_hero_heading_setting', 'digital service agency') );
                         ?>
@@ -62,7 +62,7 @@
                     <h6 class="text-uppercase fw-bold text-sm text-primary">
                         <?php echo esc_html( get_theme_mod('craftnce_home_info_subheading_setting', 'ABOUT CRAFTNCE') ); ?>
                     </h6>
-                    <h2 class="info-title text-uppercase">
+                    <h2 class="info-title font-inter text-uppercase">
                         <?php
                             echo esc_html( get_theme_mod('craftnce_home_info_heading_setting', 'WE\'RE LEADING DIGITAL BUSINESS AGENCY') );
                         ?>
@@ -113,7 +113,7 @@
                 <div class="col-sm-6 col-lg-3 mt-2">
                     <div class="features-box d-flex">
                         <i class="<?php echo esc_attr($repeater_item->icon_value); ?> fs-4 me-3 mt-1"></i>
-                        <h5 class="features-item-title">
+                        <h5 class="features-item-title font-inter">
                             <?php
                                 echo $repeater_item->title;
                             ?>
@@ -141,7 +141,7 @@
                 <h6 class="text-uppercase fw-bold text-md text-primary">
                     <?php echo esc_html( get_theme_mod('craftnce_home_service_subheading_setting', 'Our amazing services') ); ?>
                 </h6>
-                <h2 class="text-capitalize fw-900 text-xl mt-3">
+                <h2 class="text-capitalize fw-900 font-inter text-xl mt-3">
                     <?php echo esc_html( get_theme_mod('craftnce_home_service_heading_setting', 'Your Success With Solution') ); ?>
                 </h2>
             </div>
@@ -171,7 +171,7 @@
         <div class="container">
             <div class="row align-items-center py-5">
                 <div class="col-lg-6 mt-5 mt-lg-0">
-                    <h2 class="fs-1 fw-900 text-light text-uppercase">
+                    <h2 class="fs-1 fw-900 text-light font-inter text-uppercase">
                         <?php
                             echo esc_html( get_theme_mod('craftnce_home_infography_heading_setting', 'Do you have any projects in your mind?') );
                         ?>

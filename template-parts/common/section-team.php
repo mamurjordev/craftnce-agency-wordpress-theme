@@ -1,9 +1,9 @@
 <!-- Team Section -->
 <section class="team-sction py-5">
     <div class="container py-5">
-        <div class="row text-center">
-            <div class="col-sm-7 col-xl-4 mx-auto">
-                <h2 class="fw-900">
+        <div class="row">
+            <div class="col-sm-5 mx-auto">
+                <h2 class="fw-900 font-inter text-center">
                     <?php
                         echo esc_html( get_theme_mod('craftnce_team_section_heading_setting', 'Meet Our Experienced & Skilled Team') );
                     ?>
@@ -19,7 +19,7 @@
                     </div>
 
                     <div class="text-center">
-                        <h3>Hasan Ali</h3>
+                        <h3 class="fw-bold">Hasan Ali</h3>
                         <h6>Founder & Chairman</h6>
                     </div>
 

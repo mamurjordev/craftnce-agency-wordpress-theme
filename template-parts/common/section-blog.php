@@ -9,7 +9,7 @@
                 ?>
             </h6>
         </div>
-        <h2 class="text-uppercase fw-900">
+        <h2 class="text-uppercase font-inter fw-900">
             <?php
                 echo esc_html( get_theme_mod('craftnce_home_blog_heading_setting', 'Our recent blog') );
             ?>
@@ -36,7 +36,7 @@
 
                     <div>
                         <a class="text-dark text-decoration-none" href="<?php the_permalink(); ?>">
-                            <h4 class="fw-bold my-3">
+                            <h4 class="fw-bold my-3 font-inter">
                                 <?php the_title(); ?>
                             </h4>
                         </a>
@@ -59,7 +59,7 @@
             if(get_theme_mod('craftnce_home_blog_show_btn_setting')) :
         ?>
         <div class="mt-5 w-max mx-auto">
-            <a href="<?php echo esc_url(get_theme_mod('craftnce_home_blog_btn_link_setting')); ?>" class="btn btn-outline-primary">
+            <a href="<?php echo esc_url(get_theme_mod('craftnce_home_blog_btn_link_setting')); ?>" class="btn btn-outline-primary font-inter">
                 <?php
                     if(get_craftnce_data('see_full_blog_button_icon')) :
                 ?>
