@@ -202,7 +202,36 @@
         'type'              =>  'text'
     ));
 
-    // Service Items
+    /**
+     * Avatar
+     */
+    $wp_customize->add_setting('craftnce_team_member_2_avatar_settings', array(
+        'capability'        => 'edit_theme_options',
+        'transport'         => 'refresh',
+        'type'              => 'theme_mod',
+        'sanitize_callback' =>  function( $file, $setting ) {
+            $mimes = array(
+                'jpg|jpeg|jpe' => 'image/jpeg',
+                'gif'          => 'image/gif',
+                'png'          => 'image/png'
+            );
+
+            $file_ext = wp_check_filetype( $file, $mimes );
+            return ( $file_ext['ext'] ? $file : $setting->default );
+        }
+    ));
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'craftnce_team_member_2_avatar_ctrl', array(
+        'label'             =>  __('Second Team Member Avatar', 'craftnce'),
+        'section'           =>  'craftnce_team_member_section',
+        'settings'          =>  'craftnce_team_member_2_avatar_settings',
+        'button_labels'     => array(
+            'select'        => __('Select Image', 'craftnce'),
+            'remove'        => __('Remove Image', 'craftnce'),
+            'change'        => __('Change Image', 'craftnce'),
+        )
+    )));
+
+    // Social Items
     $wp_customize->add_setting( 'craftnce_team_social_media_repeater_item_settings2', array(
         'sanitize_callback' => 'customizer_repeater_sanitize'
     ));
@@ -277,7 +306,36 @@
         'type'              =>  'text'
     ));
 
-    // Service Items
+    /**
+     * Avatar
+     */
+    $wp_customize->add_setting('craftnce_team_member_3_avatar_settings', array(
+        'capability'        => 'edit_theme_options',
+        'transport'         => 'refresh',
+        'type'              => 'theme_mod',
+        'sanitize_callback' =>  function( $file, $setting ) {
+            $mimes = array(
+                'jpg|jpeg|jpe' => 'image/jpeg',
+                'gif'          => 'image/gif',
+                'png'          => 'image/png'
+            );
+
+            $file_ext = wp_check_filetype( $file, $mimes );
+            return ( $file_ext['ext'] ? $file : $setting->default );
+        }
+    ));
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'craftnce_team_member_3_avatar_ctrl', array(
+        'label'             =>  __('Third Team Member Avatar', 'craftnce'),
+        'section'           =>  'craftnce_team_member_section',
+        'settings'          =>  'craftnce_team_member_3_avatar_settings',
+        'button_labels'     => array(
+            'select'        => __('Select Image', 'craftnce'),
+            'remove'        => __('Remove Image', 'craftnce'),
+            'change'        => __('Change Image', 'craftnce'),
+        )
+    )));
+
+    // Social Items
     $wp_customize->add_setting( 'craftnce_team_social_media_repeater_item_settings3', array(
         'sanitize_callback' => 'customizer_repeater_sanitize'
     ));
@@ -326,7 +384,7 @@
     ));
 
     $wp_customize->add_control('craftnce_team_member_4_name_ctrl', array(
-        'label'             =>  __('Third Team Member Name', 'craftnce'),
+        'label'             =>  __('Four Team Member Name', 'craftnce'),
         'section'           =>  'craftnce_team_member_section',
         'settings'          =>  'craftnce_team_member_4_name_settings',
         'type'              =>  'text'
@@ -343,13 +401,42 @@
     ));
 
     $wp_customize->add_control('craftnce_team_member_4_designation_ctrl', array(
-        'label'             =>  __('Third Team Member Designation', 'craftnce'),
+        'label'             =>  __('Four Team Member Designation', 'craftnce'),
         'section'           =>  'craftnce_team_member_section',
         'settings'          =>  'craftnce_team_member_4_designation_settings',
         'type'              =>  'text'
     ));
 
-    // Service Items
+    /**
+     * Avatar
+     */
+    $wp_customize->add_setting('craftnce_team_member_4_avatar_settings', array(
+        'capability'        => 'edit_theme_options',
+        'transport'         => 'refresh',
+        'type'              => 'theme_mod',
+        'sanitize_callback' =>  function( $file, $setting ) {
+            $mimes = array(
+                'jpg|jpeg|jpe' => 'image/jpeg',
+                'gif'          => 'image/gif',
+                'png'          => 'image/png'
+            );
+
+            $file_ext = wp_check_filetype( $file, $mimes );
+            return ( $file_ext['ext'] ? $file : $setting->default );
+        }
+    ));
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'craftnce_team_member_4_avatar_ctrl', array(
+        'label'             =>  __('Four Team Member Avatar', 'craftnce'),
+        'section'           =>  'craftnce_team_member_section',
+        'settings'          =>  'craftnce_team_member_4_avatar_settings',
+        'button_labels'     => array(
+            'select'        => __('Select Image', 'craftnce'),
+            'remove'        => __('Remove Image', 'craftnce'),
+            'change'        => __('Change Image', 'craftnce'),
+        )
+    )));
+
+    // Social Items
     $wp_customize->add_setting( 'craftnce_team_social_media_repeater_item_settings4', array(
         'sanitize_callback' => 'customizer_repeater_sanitize'
     ));
