@@ -115,7 +115,7 @@
         }
     ));
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'craftnce_team_member_1_avatar_ctrl', array(
-        'label'             =>  __('Counter Section Featured Image', 'craftnce'),
+        'label'             =>  __('First Team Member Avatar', 'craftnce'),
         'section'           =>  'craftnce_team_member_section',
         'settings'          =>  'craftnce_team_member_1_avatar_settings',
         'button_labels'     => array(
