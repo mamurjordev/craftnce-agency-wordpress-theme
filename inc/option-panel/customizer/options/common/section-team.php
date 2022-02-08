@@ -66,10 +66,11 @@
      *  You can also override the functions using child theme provided by Craftnce or you create one for you.
      */
     $wp_customize->add_setting('craftnce_team_member_1_name_settings', array(
-        'capability'        => 'edit_theme_options',
-        'transport'         => 'refresh',
-        'type'              => 'theme_mod',
-        'sanitize_callback' => 'sanitize_text_field'
+        'default'           =>  'Hasan Ali',
+        'capability'        =>  'edit_theme_options',
+        'transport'         =>  'refresh',
+        'type'              =>  'theme_mod',
+        'sanitize_callback' =>  'sanitize_text_field'
     ));
 
     $wp_customize->add_control('craftnce_team_member_1_name_ctrl', array(
@@ -83,6 +84,7 @@
      * Designation
      */
     $wp_customize->add_setting('craftnce_team_member_1_designation_settings', array(
+        'default'           =>  'Web Developer',
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod',
