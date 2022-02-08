@@ -34,11 +34,11 @@
         'capability'        =>  'edit_theme_options',
         'transport'         =>  'refresh',
         'type'              =>  'theme_mod',
-        'sanitize_callback' =>  function( $input, $setting ){
-            $input = sanitize_key($input);
-            $choices = $setting->manager->get_control( $setting->id )->choices;
-            return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
-        }
+        // 'sanitize_callback' =>  function( $input, $setting ){
+        //     $input = sanitize_key($input);
+        //     $choices = $setting->manager->get_control( $setting->id )->choices;
+        //     return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
+        // }
     ));
 
     $wp_customize->add_control( 'craftnce_footer_widget_upper_section_ctrl', array(
@@ -50,7 +50,7 @@
         'choices'       => array(
             'col_6'             => __( 'Column - 6', 'craftnce' ),
             'col_4'             => __( 'Column - 4', 'craftnce' ),
-            'col_2'             => __( 'Column - 2', 'craftnce' ),
+            'col_3'             => __( 'Column - 3', 'craftnce' ),
         ),
     ) );
 
@@ -59,11 +59,11 @@
         'capability'        =>  'edit_theme_options',
         'transport'         =>  'refresh',
         'type'              =>  'theme_mod',
-        'sanitize_callback' =>  function( $input, $setting ){
-            $input = sanitize_key($input);
-            $choices = $setting->manager->get_control( $setting->id )->choices;
-            return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
-        }
+        // 'sanitize_callback' =>  function( $input, $setting ){
+        //     $input = sanitize_key($input);
+        //     $choices = $setting->manager->get_control( $setting->id )->choices;
+        //     return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
+        // }
     ));
 
     $wp_customize->add_control( 'craftnce_footer_widget_down_section_ctrl', array(
