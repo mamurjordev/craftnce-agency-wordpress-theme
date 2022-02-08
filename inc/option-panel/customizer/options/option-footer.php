@@ -6,6 +6,25 @@
     ));
 
     /**
+     * Footer Widget Section - Show Section
+     */
+    $wp_customize->add_setting('craftnce_footer_widget_section_setting', array(
+        'default'           => 1,
+        'capability'        => 'edit_theme_options',
+        'transport'         => 'refresh',
+        'type'              => 'theme_mod',
+        'sanitize_callback' => function( $input ) {
+            return ( ( isset( $input ) && true == $input ) ? true : false );
+        }
+    ));
+    $wp_customize->add_control('craftnce_footer_widget_section_ctrl', array(
+        'label'             =>  __('Show footer widget area', 'craftnce'),
+        'section'           =>  'craftnce_footer',
+        'settings'          =>  'craftnce_footer_widget_section_setting',
+        'type'              =>  'checkbox'
+    ));
+
+    /**
      * Copyright Text
      */
     $wp_customize->add_setting('craftnce_copyright_text_settings', array(

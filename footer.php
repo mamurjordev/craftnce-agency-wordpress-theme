@@ -1,3 +1,4 @@
+        <?php if(get_theme_mod('craftnce_footer_widget_section_setting', 1)) : ?>
         <div class="footer-widget-wrapper py-5">
             <div class="container">
                 <div class="row row-cols-2 row-cols-md-3 row-cols-xl-6">
@@ -104,6 +105,7 @@
                 </div>
             </div>
         </div>
+        <?php endif; ?>
         
         <footer class="main-footer py-4">
             <div class="container">
