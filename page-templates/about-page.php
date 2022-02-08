@@ -219,10 +219,6 @@
     </section>
     <?php
         endif;
-
-        if(get_theme_mod( 'craftnce_show_team_section_section_setting', 1)) {
-            get_template_part('template-parts/common/section-team');
-        }
         
         // Testimonial Section
         if(get_theme_mod('craftnce_show_about_testimonials_section_setting', 1)) {
