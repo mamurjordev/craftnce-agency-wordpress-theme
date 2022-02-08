@@ -1,7 +1,16 @@
         <?php if(get_theme_mod('craftnce_footer_widget_section_setting', 1)) : ?>
         <div class="footer-widget-wrapper py-5">
             <div class="container">
-                <div class="row row-cols-2 row-cols-md-3 row-cols-xl-6">
+                <?php
+                    if('col_6' === get_theme_mod('craftnce_footer_widget_upper_section_setting')) {
+                        $widget_col = '6';
+                    } elseif('col_4' === get_theme_mod('craftnce_footer_widget_upper_section_setting')) {
+                        $widget_col = '4';
+                    } elseif('col_3' === get_theme_mod('craftnce_footer_widget_upper_section_setting')) {
+                        $widget_col = '3';
+                    }
+                ?>
+                <div class="row row-cols-2 row-cols-md-3 row-cols-xl-<?php esc_attr_e($widget_col); ?>">
                     <div class="col mt-4">
                         <h6 class="text-light">Hosting</h6>
                         <ul class="list-unstyled footer-menu">
