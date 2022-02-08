@@ -58,15 +58,20 @@
     ));
 
     /**
-     * team Section - First team member
+     *  ================================================
+     *  ============== First Team Member ===============
+     *  ================================================
      * 
-     * Name
+     *  You can customize those information from Customizer > Craftnce Options > Common Section Panel > Team Member
+     *  You can also override the functions using child theme provided by Craftnce or you create one for you.
      */
+    
     $wp_customize->add_setting('craftnce_team_member_1_name_settings', array(
-        'capability'        => 'edit_theme_options',
-        'transport'         => 'refresh',
-        'type'              => 'theme_mod',
-        'sanitize_callback' => 'sanitize_text_field'
+        'default'           =>  'Hasan Ali',
+        'capability'        =>  'edit_theme_options',
+        'transport'         =>  'refresh',
+        'type'              =>  'theme_mod',
+        'sanitize_callback' =>  'sanitize_text_field'
     ));
 
     $wp_customize->add_control('craftnce_team_member_1_name_ctrl', array(
@@ -80,6 +85,7 @@
      * Designation
      */
     $wp_customize->add_setting('craftnce_team_member_1_designation_settings', array(
+        'default'           =>  'Web Developer',
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod',
@@ -93,21 +99,50 @@
         'type'              =>  'text'
     ));
 
-    // Service Items
-    $wp_customize->add_setting( 'craftnce_team_social_media_repeater_item_settings', array(
+    /**
+     * Avatar
+     */
+    $wp_customize->add_setting('craftnce_team_member_1_avatar_settings', array(
+        'capability'        => 'edit_theme_options',
+        'transport'         => 'refresh',
+        'type'              => 'theme_mod',
+        'sanitize_callback' =>  function( $file, $setting ) {
+            $mimes = array(
+                'jpg|jpeg|jpe' => 'image/jpeg',
+                'gif'          => 'image/gif',
+                'png'          => 'image/png'
+            );
+
+            $file_ext = wp_check_filetype( $file, $mimes );
+            return ( $file_ext['ext'] ? $file : $setting->default );
+        }
+    ));
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'craftnce_team_member_1_avatar_ctrl', array(
+        'label'             =>  __('First Team Member Avatar', 'craftnce'),
+        'section'           =>  'craftnce_team_member_section',
+        'settings'          =>  'craftnce_team_member_1_avatar_settings',
+        'button_labels'     => array(
+            'select'        => __('Select Image', 'craftnce'),
+            'remove'        => __('Remove Image', 'craftnce'),
+            'change'        => __('Change Image', 'craftnce'),
+        )
+    )));
+
+    // Social Items
+    $wp_customize->add_setting( 'craftnce_team_social_media_repeater_item_settings1', array(
         'sanitize_callback' => 'customizer_repeater_sanitize'
     ));
-    $wp_customize->add_control( new Customizer_Repeater( $wp_customize, 'craftnce_team_social_media_repeater_item_ctrl', array(
+    $wp_customize->add_control( new Customizer_Repeater( $wp_customize, 'craftnce_team_social_media_repeater_item_ctrl1', array(
         'label'                                             =>  esc_html__('Social Media','craftnce'),
         'section'                                           =>  'craftnce_team_member_section',
-        'settings'                                          =>  'craftnce_team_social_media_repeater_item_settings',
+        'settings'                                          =>  'craftnce_team_social_media_repeater_item_settings1',
         'customizer_repeater_icon_control'                  =>  true,
         'customizer_repeater_title_control'                 =>  true,
         'customizer_repeater_text_control'                  =>  true,
     )));
 
     function team_social_repeater_name_labels( $string, $id, $control ) {
-        if ( $id === 'craftnce_team_social_media_repeater_item_ctrl' ) {
+        if ( $id === 'craftnce_team_social_media_repeater_item_ctrl1' ) {
             if ( $control === 'customizer_repeater_title_control' ) {
                 return esc_html__( 'Social Media Name','craftnce' );
             }
@@ -129,9 +164,12 @@
 
 
     /**
-     * team Section - Second team member
+     *  ================================================
+     *  ============== Second Team Member ==============
+     *  ================================================
      * 
-     * Name
+     *  You can customize those information from Customizer > Craftnce Options > Common Section Panel > Team Member
+     *  You can also override the functions using child theme provided by Craftnce or you create one for you.
      */
     $wp_customize->add_setting('craftnce_team_member_2_name_settings', array(
         'capability'        => 'edit_theme_options',
@@ -164,7 +202,36 @@
         'type'              =>  'text'
     ));
 
-    // Service Items
+    /**
+     * Avatar
+     */
+    $wp_customize->add_setting('craftnce_team_member_2_avatar_settings', array(
+        'capability'        => 'edit_theme_options',
+        'transport'         => 'refresh',
+        'type'              => 'theme_mod',
+        'sanitize_callback' =>  function( $file, $setting ) {
+            $mimes = array(
+                'jpg|jpeg|jpe' => 'image/jpeg',
+                'gif'          => 'image/gif',
+                'png'          => 'image/png'
+            );
+
+            $file_ext = wp_check_filetype( $file, $mimes );
+            return ( $file_ext['ext'] ? $file : $setting->default );
+        }
+    ));
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'craftnce_team_member_2_avatar_ctrl', array(
+        'label'             =>  __('Second Team Member Avatar', 'craftnce'),
+        'section'           =>  'craftnce_team_member_section',
+        'settings'          =>  'craftnce_team_member_2_avatar_settings',
+        'button_labels'     => array(
+            'select'        => __('Select Image', 'craftnce'),
+            'remove'        => __('Remove Image', 'craftnce'),
+            'change'        => __('Change Image', 'craftnce'),
+        )
+    )));
+
+    // Social Items
     $wp_customize->add_setting( 'craftnce_team_social_media_repeater_item_settings2', array(
         'sanitize_callback' => 'customizer_repeater_sanitize'
     ));
@@ -201,9 +268,12 @@
 
 
     /**
-     * team Section - Third team member
+     *  ================================================
+     *  ============== Third Team Member ===============
+     *  ================================================
      * 
-     * Name
+     *  You can customize those information from Customizer > Craftnce Options > Common Section Panel > Team Member
+     *  You can also override the functions using child theme provided by Craftnce or you create one for you.
      */
     $wp_customize->add_setting('craftnce_team_member_3_name_settings', array(
         'capability'        => 'edit_theme_options',
@@ -236,7 +306,36 @@
         'type'              =>  'text'
     ));
 
-    // Service Items
+    /**
+     * Avatar
+     */
+    $wp_customize->add_setting('craftnce_team_member_3_avatar_settings', array(
+        'capability'        => 'edit_theme_options',
+        'transport'         => 'refresh',
+        'type'              => 'theme_mod',
+        'sanitize_callback' =>  function( $file, $setting ) {
+            $mimes = array(
+                'jpg|jpeg|jpe' => 'image/jpeg',
+                'gif'          => 'image/gif',
+                'png'          => 'image/png'
+            );
+
+            $file_ext = wp_check_filetype( $file, $mimes );
+            return ( $file_ext['ext'] ? $file : $setting->default );
+        }
+    ));
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'craftnce_team_member_3_avatar_ctrl', array(
+        'label'             =>  __('Third Team Member Avatar', 'craftnce'),
+        'section'           =>  'craftnce_team_member_section',
+        'settings'          =>  'craftnce_team_member_3_avatar_settings',
+        'button_labels'     => array(
+            'select'        => __('Select Image', 'craftnce'),
+            'remove'        => __('Remove Image', 'craftnce'),
+            'change'        => __('Change Image', 'craftnce'),
+        )
+    )));
+
+    // Social Items
     $wp_customize->add_setting( 'craftnce_team_social_media_repeater_item_settings3', array(
         'sanitize_callback' => 'customizer_repeater_sanitize'
     ));
@@ -270,9 +369,12 @@
     add_filter( 'repeater_input_labels_filter','team_social_repeater_link_labels3', 10 , 3 );
 
     /**
-     * team Section - Third team member
+     *  ================================================
+     *  ============== Last Team Member ===============
+     *  ================================================
      * 
-     * Name
+     *  You can customize those information from Customizer > Craftnce Options > Common Section Panel > Team Member
+     *  You can also override the functions using child theme provided by Craftnce or you create one for you.
      */
     $wp_customize->add_setting('craftnce_team_member_4_name_settings', array(
         'capability'        => 'edit_theme_options',
@@ -282,7 +384,7 @@
     ));
 
     $wp_customize->add_control('craftnce_team_member_4_name_ctrl', array(
-        'label'             =>  __('Third Team Member Name', 'craftnce'),
+        'label'             =>  __('Four Team Member Name', 'craftnce'),
         'section'           =>  'craftnce_team_member_section',
         'settings'          =>  'craftnce_team_member_4_name_settings',
         'type'              =>  'text'
@@ -299,13 +401,42 @@
     ));
 
     $wp_customize->add_control('craftnce_team_member_4_designation_ctrl', array(
-        'label'             =>  __('Third Team Member Designation', 'craftnce'),
+        'label'             =>  __('Four Team Member Designation', 'craftnce'),
         'section'           =>  'craftnce_team_member_section',
         'settings'          =>  'craftnce_team_member_4_designation_settings',
         'type'              =>  'text'
     ));
 
-    // Service Items
+    /**
+     * Avatar
+     */
+    $wp_customize->add_setting('craftnce_team_member_4_avatar_settings', array(
+        'capability'        => 'edit_theme_options',
+        'transport'         => 'refresh',
+        'type'              => 'theme_mod',
+        'sanitize_callback' =>  function( $file, $setting ) {
+            $mimes = array(
+                'jpg|jpeg|jpe' => 'image/jpeg',
+                'gif'          => 'image/gif',
+                'png'          => 'image/png'
+            );
+
+            $file_ext = wp_check_filetype( $file, $mimes );
+            return ( $file_ext['ext'] ? $file : $setting->default );
+        }
+    ));
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'craftnce_team_member_4_avatar_ctrl', array(
+        'label'             =>  __('Four Team Member Avatar', 'craftnce'),
+        'section'           =>  'craftnce_team_member_section',
+        'settings'          =>  'craftnce_team_member_4_avatar_settings',
+        'button_labels'     => array(
+            'select'        => __('Select Image', 'craftnce'),
+            'remove'        => __('Remove Image', 'craftnce'),
+            'change'        => __('Change Image', 'craftnce'),
+        )
+    )));
+
+    // Social Items
     $wp_customize->add_setting( 'craftnce_team_social_media_repeater_item_settings4', array(
         'sanitize_callback' => 'customizer_repeater_sanitize'
     ));
