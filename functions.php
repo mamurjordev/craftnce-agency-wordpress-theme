@@ -61,6 +61,7 @@
 
     // Sidebars and Widgets
     function craftnce_sidebar_widget_area() {
+        // Page Sidebar
         register_sidebar( array(
             'name'          => __( 'Page Sidebar', 'craftnce' ),
             'id'            => 'page_sidebar',
@@ -69,6 +70,106 @@
             'after_widget'  => '</div>',
             'before_title'  => '<h4 class="mb-1">',
             'after_title'   => '</h4>',
+        ));
+
+        /**
+         *  ================================================
+         *  ======= Upper Panel Widget Area ================
+         *  ================================================
+         */
+        register_sidebar( array(
+            'name'          => __( '1st Upper Footer Widget Area', 'craftnce' ),
+            'id'            => 'first_upper_footer_widget_area',
+            'description'   => __( 'This widget area is for upper layout first panel', 'craftnce' ),
+            'before_widget' => '<div id="%1$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h6 class="text-light">',
+            'after_title'   => '</h6>',
+        ));
+
+        register_sidebar( array(
+            'name'          => __( '2nd Upper Footer Widget Area', 'craftnce' ),
+            'id'            => 'second_upper_footer_widget_area',
+            'description'   => __( 'This widget area is for upper layout second panel', 'craftnce' ),
+            'before_widget' => '<div id="%1$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h6 class="text-light">',
+            'after_title'   => '</h6>',
+        ));
+
+        register_sidebar( array(
+            'name'          => __( '3rd Upper Footer Widget Area', 'craftnce' ),
+            'id'            => 'third_upper_footer_widget_area',
+            'description'   => __( 'This widget area is for upper layout third panel', 'craftnce' ),
+            'before_widget' => '<div id="%1$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h6 class="text-light">',
+            'after_title'   => '</h6>',
+        ));
+
+        register_sidebar( array(
+            'name'          => __( '4th Upper Footer Widget Area', 'craftnce' ),
+            'id'            => 'fourth_upper_footer_widget_area',
+            'description'   => __( 'This widget area is for upper layout fourth panel', 'craftnce' ),
+            'before_widget' => '<div id="%1$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h6 class="text-light">',
+            'after_title'   => '</h6>',
+        ));
+
+        register_sidebar( array(
+            'name'          => __( '5th Upper Footer Widget Area', 'craftnce' ),
+            'id'            => 'fifth_upper_footer_widget_area',
+            'description'   => __( 'This widget area is for upper layout fifth panel', 'craftnce' ),
+            'before_widget' => '<div id="%1$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h6 class="text-light">',
+            'after_title'   => '</h6>',
+        ));
+
+        register_sidebar( array(
+            'name'          => __( '6th Upper Footer Widget Area', 'craftnce' ),
+            'id'            => 'sixth_upper_footer_widget_area',
+            'description'   => __( 'This widget area is for upper layout sixth panel', 'craftnce' ),
+            'before_widget' => '<div id="%1$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h6 class="text-light">',
+            'after_title'   => '</h6>',
+        ));
+
+        /**
+         *  ================================================
+         *  ======= Bottom Panel Widget Area ================
+         *  ================================================
+         */
+        register_sidebar( array(
+            'name'          => __( '1st Bottom Footer Widget Area', 'craftnce' ),
+            'id'            => 'first_bottom_footer_widget_area',
+            'description'   => __( 'This widget area is for upper layout first panel', 'craftnce' ),
+            'before_widget' => '<div id="%1$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h6 class="text-light">',
+            'after_title'   => '</h6>',
+        ));
+
+        register_sidebar( array(
+            'name'          => __( '2nd Upper Footer Widget Area', 'craftnce' ),
+            'id'            => 'second_bottom_footer_widget_area',
+            'description'   => __( 'This widget area is for upper layout first panel', 'craftnce' ),
+            'before_widget' => '<div id="%1$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h6 class="text-light">',
+            'after_title'   => '</h6>',
+        ));
+
+        register_sidebar( array(
+            'name'          => __( '3rd Upper Footer Widget Area', 'craftnce' ),
+            'id'            => 'third_bottom_footer_widget_area',
+            'description'   => __( 'This widget area is for upper layout first panel', 'craftnce' ),
+            'before_widget' => '<div id="%1$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h6 class="text-light">',
+            'after_title'   => '</h6>',
         ));
     }
     add_action('widgets_init', 'craftnce_sidebar_widget_area');
