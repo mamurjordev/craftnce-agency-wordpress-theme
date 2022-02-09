@@ -50,7 +50,7 @@
         'choices'       => array(
             'col_6'             => __( 'Column - 6', 'craftnce' ),
             'col_4'             => __( 'Column - 4', 'craftnce' ),
-            'col_3'             => __( 'Column - 3', 'craftnce' ),
+            'col_2'             => __( 'Column - 2', 'craftnce' ),
         ),
     ) );
 
