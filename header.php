@@ -40,7 +40,7 @@
                             <span class="navbar-toggler-icon"></span>
                     </button>
         
-                    <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
+                    <div class="collapse navbar-collapse flex-grow-0 gap-3" id="navbarSupportedContent">
                         <?php
                             if(has_nav_menu('primary-menu')) {
                                 wp_nav_menu(array(
