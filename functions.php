@@ -171,5 +171,40 @@
             'before_title'  => '<h6 class="text-light">',
             'after_title'   => '</h6>',
         ));
+
+        /**
+         *  ================================================
+         *  ======= Bottom Panel Widget Area ================
+         *  ================================================
+         */
+        register_sidebar( array(
+            'name'          => __( 'Footer Bottom First Widget Area', 'craftnce' ),
+            'id'            => 'footer_bottom_first_widget_area',
+            'description'   => __( 'This widget area is for bottom first area', 'craftnce' ),
+            'before_widget' => '<div id="%1$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h6 class="text-light">',
+            'after_title'   => '</h6>',
+        ));
+
+        register_sidebar( array(
+            'name'          => __( 'Footer Bottom Second Widget Area', 'craftnce' ),
+            'id'            => 'footer_bottom_second_widget_area',
+            'description'   => __( 'This widget area is for bottom second area', 'craftnce' ),
+            'before_widget' => '<div id="%1$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h6 class="text-light">',
+            'after_title'   => '</h6>',
+        ));
+
+        register_sidebar( array(
+            'name'          => __( 'Footer Bottom Third Widget Area', 'craftnce' ),
+            'id'            => 'footer_bottom_third_widget_area',
+            'description'   => __( 'This widget area is for bottom third area', 'craftnce' ),
+            'before_widget' => '<div id="%1$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h6 class="text-light">',
+            'after_title'   => '</h6>',
+        ));
     }
     add_action('widgets_init', 'craftnce_sidebar_widget_area');
