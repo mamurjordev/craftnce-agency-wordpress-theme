@@ -3,65 +3,13 @@
             <div class="container">
                 <?php
                     if('col_6' === get_theme_mod('craftnce_footer_widget_upper_section_setting')) {
-                        $widget_col = '6';
+                        get_template_part('/template-parts/footer/six-quarter');
                     } elseif('col_4' === get_theme_mod('craftnce_footer_widget_upper_section_setting')) {
-                        $widget_col = '4';
+                        get_template_part('/template-parts/footer/quarter');
                     } elseif('col_3' === get_theme_mod('craftnce_footer_widget_upper_section_setting')) {
-                        $widget_col = '3';
+                        get_template_part('/template-parts/footer/cols-2');
                     }
                 ?>
-                <div class="row row-cols-2 row-cols-md-3 row-cols-xl-<?php esc_attr_e($widget_col); ?>">
-                    <div class="col mt-4">
-                        <h6 class="text-light">Hosting</h6>
-                        <ul class="list-unstyled footer-menu">
-                            <li><a href="">Web Hosting</a></li>
-                            <li><a href="">Turbo Hosting</a></li>
-                            <li><a href="">Reseller Hosting</a></li>
-                        </ul>
-                    </div>
-                    <div class="col mt-4">
-                        <h6 class="text-light">Hosting</h6>
-                        <ul class="list-unstyled footer-menu">
-                            <li><a href="">Web Hosting</a></li>
-                            <li><a href="">Turbo Hosting</a></li>
-                            <li><a href="">Reseller Hosting</a></li>
-                        </ul>
-                    </div>
-                    <div class="col mt-4">
-                        <h6 class="text-light">Hosting</h6>
-                        <ul class="list-unstyled footer-menu">
-                            <li><a href="">Web Hosting</a></li>
-                            <li><a href="">Turbo Hosting</a></li>
-                            <li><a href="">Reseller Hosting</a></li>
-                        </ul>
-                    </div>
-                    <div class="col mt-4">
-                        <h6 class="text-light">Hosting</h6>
-                        <ul class="list-unstyled footer-menu">
-                            <li><a href="">Web Hosting</a></li>
-                            <li><a href="">Turbo Hosting</a></li>
-                            <li><a href="">Reseller Hosting</a></li>
-                        </ul>
-                    </div>
-                    <div class="col mt-4">
-                        <h6 class="text-light">Hosting</h6>
-                        <ul class="list-unstyled footer-menu">
-                            <li><a href="">Web Hosting</a></li>
-                            <li><a href="">Turbo Hosting</a></li>
-                            <li><a href="">Reseller Hosting</a></li>
-                        </ul>
-                    </div>
-                    <div class="col mt-4">
-                        <h6 class="text-light">Hosting</h6>
-                        <ul class="list-unstyled footer-menu">
-                            <li><a href="">Web Hosting</a></li>
-                            <li><a href="">Turbo Hosting</a></li>
-                            <li><a href="">Reseller Hosting</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <hr class="footer-bottom-line">
 
                 <div class="row">
                     <div class="col-6 col-xl-4 mt-4">
