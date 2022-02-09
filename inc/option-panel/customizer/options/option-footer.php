@@ -64,11 +64,18 @@
         'capability'        =>  'edit_theme_options',
         'transport'         =>  'refresh',
         'type'              =>  'theme_mod',
-        // 'sanitize_callback' =>  function( $input, $setting ){
-        //     $input = sanitize_key($input);
-        //     $choices = $setting->manager->get_control( $setting->id )->choices;
-        //     return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
-        // }
+        'sanitize_callback' => function( $input ) {
+            $valid = array(
+                'col_6' => __( 'Column - 6', 'craftnce' ),
+                'col_4' => __( 'Column - 4', 'craftnce' ),
+                'col_2' => __( 'Column - 2', 'craftnce' ),
+            );
+            if ( array_key_exists( $input, $valid ) ) {
+                return $input;
+            } else {
+                return '';
+            }
+        }
     ));
 
     $wp_customize->add_control( 'craftnce_footer_widget_upper_section_layout_ctrl', array(
@@ -89,11 +96,18 @@
         'capability'        =>  'edit_theme_options',
         'transport'         =>  'refresh',
         'type'              =>  'theme_mod',
-        // 'sanitize_callback' =>  function( $input, $setting ){
-        //     $input = sanitize_key($input);
-        //     $choices = $setting->manager->get_control( $setting->id )->choices;
-        //     return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
-        // }
+        'sanitize_callback' => function( $input ) {
+            $valid = array(
+                'col_b_3' => __( 'Column - 3', 'craftnce' ),
+                'col_b_2' => __( 'Column - 2', 'craftnce' ),
+                'col_b_1' => __( 'Column - 1', 'craftnce' ),
+            );
+            if ( array_key_exists( $input, $valid ) ) {
+                return $input;
+            } else {
+                return '';
+            }
+        }
     ));
 
     $wp_customize->add_control( 'craftnce_footer_widget_bottom_section_layout_ctrl', array(

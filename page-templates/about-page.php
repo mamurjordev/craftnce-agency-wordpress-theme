@@ -18,7 +18,7 @@
                 </div>
                 <div class="col-lg-6 mt-5 mt-lg-0">
                     <h6 class="text-uppercase fw-bold text-sm text-primary">
-                        <?php echo get_theme_mod('craftnce_about_info_subheading_setting', 'history'); ?>
+                        <?php echo esc_html( get_theme_mod('craftnce_about_info_subheading_setting', 'history') ); ?>
                     </h6>
                     <h2 class="fs-1 fw-900 text-capitalize font-inter">
                         <?php
