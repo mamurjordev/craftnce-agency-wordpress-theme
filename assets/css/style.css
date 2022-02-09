@@ -329,7 +329,11 @@ input:focus {
     font-size: 18px;
     font-family: var(--font-rubik);
 }
-.footer-menu li a,
+.widget-area ul {
+    list-style: none;
+    padding-left: 0;
+}
+.widget-area ul li a,
 .footer-widget-text {
     color: #787A87;
     font-size: 14px;
