@@ -1,19 +1,17 @@
 <div class="row row-cols-sm-2">
-    <div class="col mt-4">
-        <h6 class="text-light">Hosting</h6>
-        <ul class="list-unstyled footer-menu">
-            <li><a href="">Web Hosting</a></li>
-            <li><a href="">Turbo Hosting</a></li>
-            <li><a href="">Reseller Hosting</a></li>
-        </ul>
+    <div class="col mt-4 widget-area">
+        <?php
+            if(is_active_sidebar( 'first_upper_footer_widget_area' )) {
+                dynamic_sidebar( 'first_upper_footer_widget_area' );
+            }
+        ?>
     </div>
-    <div class="col mt-4">
-        <h6 class="text-light">Hosting</h6>
-        <ul class="list-unstyled footer-menu">
-            <li><a href="">Web Hosting</a></li>
-            <li><a href="">Turbo Hosting</a></li>
-            <li><a href="">Reseller Hosting</a></li>
-        </ul>
+    <div class="col mt-4 widget-area">
+        <?php
+            if(is_active_sidebar( 'second_upper_footer_widget_area' )) {
+                dynamic_sidebar( 'second_upper_footer_widget_area' );
+            }
+        ?>
     </div>
 </div>
 
