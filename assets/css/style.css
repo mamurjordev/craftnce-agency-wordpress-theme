@@ -338,11 +338,18 @@ input:focus {
 .footer-address-area h3,
 .footer-address-area h4,
 .footer-address-area h5,
-.footer-address-area h6 {
+.footer-address-area h6,
+.widget-area h1,
+.widget-area h2,
+.widget-area h3,
+.widget-area h4,
+.widget-area h5,
+.widget-area h6 {
     color: #FAF9F8;
 }
 .widget-area ul li a,
-.footer-address-area p {
+.footer-address-area p,
+.widget-area p {
     color: #787A87;
     font-size: 14px;
     line-height: 24px;
