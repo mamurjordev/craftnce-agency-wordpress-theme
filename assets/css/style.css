@@ -333,8 +333,16 @@ input:focus {
     list-style: none;
     padding-left: 0;
 }
+.footer-address-area h1,
+.footer-address-area h2,
+.footer-address-area h3,
+.footer-address-area h4,
+.footer-address-area h5,
+.footer-address-area h6 {
+    color: #FAF9F8;
+}
 .widget-area ul li a,
-.footer-widget-text {
+.footer-address-area p {
     color: #787A87;
     font-size: 14px;
     line-height: 24px;
