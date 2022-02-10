@@ -74,7 +74,7 @@
     ));
 
     /**
-     * newsletter Section - Sub-heading
+     * newsletter Section - Form Shortcode
      */
     $wp_customize->add_setting('craftnce_newsletter_form_shortcode_setting', array(
         'capability'        => 'edit_theme_options',

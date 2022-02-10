@@ -28,9 +28,9 @@
                         <img src="<?php echo esc_url($logo[0]); ?>" class="img-fluid" alt="">
                         <?php
                                 } else {
-                                    ?>
-                                    <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/craftnce.png'); ?>">
-                                    <?php
+                        ?>
+                        <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/craftnce.png'); ?>">
+                        <?php
                                 }
                             }
                         ?>

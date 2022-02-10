@@ -25,7 +25,7 @@
                 background-repeat: no-repeat;
             }
             .newsletter-bg {
-                background: url('<?php echo esc_url(get_theme_mod('craftnce_home_newsletter_section_background_image_setting')); ?>');
+                background: url('<?php echo esc_url(get_theme_mod('craftnce_newsletter_section_background_image_setting')); ?>');
                 background-position: center;
                 background-size: cover;
                 background-repeat: no-repeat;
