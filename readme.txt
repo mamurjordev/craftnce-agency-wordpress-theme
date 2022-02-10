@@ -54,13 +54,24 @@ Copyright (c) pxhere.
 License: CCO License, Free for personal and commercial use, No attribution required
 Source: https://pxhere.com/en/photo/1629587
 
-Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com
+Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com
 License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+Copyright 2022 Fonticons, Inc.
 
 
 === Changelog ===
 
-v1.0.6
+v2.0.0
+- Font awesome version upgrade to 6.0
+- Theme Enhancements
+- Bug Fix
+- New template and options added for about page template
+- Customizer options update
+- Separate common sections
+- Add footer widgets area
+- Improve Designs
+
+v1.0.7
 - Text Field Special Character Issue Fix
 - About Page Template Option Panel Add
 - About Page Heading Field Issue Fix
