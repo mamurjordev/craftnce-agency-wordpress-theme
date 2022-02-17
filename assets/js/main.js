@@ -8,6 +8,7 @@
 			centerMode: true,
 			autoplaySpeed: 2500,
 			fade: true,
+			centerMode: true,
 			dots: false,
 			asNavFor: ".testimonial-nav",
 		});
@@ -31,6 +32,7 @@
 			dots: false,
 			autoplay: true,
 			autoplaySpeed: 2500,
+			centerMode: true,
 			infinite: true,
 			slidesToShow: 6,
 			slidesToScroll: 2,
