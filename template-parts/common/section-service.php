@@ -7,7 +7,7 @@
     ?>
     <div class="col-md-6 col-lg-4 mt-4">
         <div class="card service p-4 border-0">
-            <img src="<?php echo esc_url($repeater_item->image_url); ?>" alt="">
+            <img src="<?php echo esc_url($repeater_item->image_url); ?>" class="service-ico" alt="">
             <h4 class="fw-bold my-3 font-inter">
                 <?php
                     echo $repeater_item->title;
